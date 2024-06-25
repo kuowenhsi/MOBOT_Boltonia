@@ -1,6 +1,6 @@
 library(tidyverse)
 
-setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/REU")
+setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
 
 correct_stem <- function(x){
@@ -32,7 +32,7 @@ correct_stem <- function(x){
 
 list.files()
 
-boltonia_data <- read_csv("Boltonia Phenotype data_20240612.csv", na = c("", "NA", "N/A", "DNR"))
+boltonia_data <- read_csv("./data/Boltonia Phenotype data_20240612.csv", na = c("", "NA", "N/A", "DNR"))
 str(boltonia_data)
 boltonia_data$flwrBud.1
 
@@ -43,10 +43,20 @@ p <- ggplot(data = boltonia_data, mapping = aes(x = label, y = stemLength.1))+
   scale_fill_distiller(palette = "RdYlBu")
 p
 
+convert_Y_TRUE <- function(x){
+  output <- case_when(x == "Y" ~ TRUE, TRUE ~ FALSE)
+  return(output)
+}
+
 
 boltonia_data_sub <- boltonia_data %>%
   filter(index <= 10) %>%
-  mutate(stemLength.2 = as.numeric(stemLength.2), label = factor(label, levels = label))
+  mutate(stemLength.2 = as.numeric(stemLength.2), label = factor(label, levels = label))%>%
+  # mutate(Surv.2 = case_when(Surv.2 == "Y" ~ TRUE, TRUE ~ FALSE))%>%
+  mutate_at(vars(matches("Surv.")), .funs = "convert_Y_TRUE")
+## modify the mutate all Surv.X columns to logical data
+
+str(boltonia_data_sub)
 
 date_info <- boltonia_data_sub %>%
   select(str_c("Date.", 1:8))%>% # add something
