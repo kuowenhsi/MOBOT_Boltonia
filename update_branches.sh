@@ -4,7 +4,7 @@
 git fetch origin
 
 # Get the list of all branches excluding the main branch
-branches=$(git branch | grep -v "main")
+branches=$(git branch -a | grep -v "main")
 
 # Iterate over each branch and merge main into it
 for branch in $branches; do
