@@ -19,4 +19,8 @@ LCMS_data <- read_csv("./data/Boltonia_LCMS_20240624.csv")%>%
 merged_data <- pheno_data %>%
   left_join(mid_data, by = c("label" = "TemporaryID"))%>%
   left_join(LCMS_data, by = "MaternalLine")%>%
-  filter(is.na(Id))
+  select("MaternalLine", "FlowerHead", "PlantingDate","FirstLeafDate","TransplantDate","Id","Country","State","County", "Latitude", "Longitude","Locality","Location Details", everything())
+
+colnames(merged_data)
+
+write_csv(merged_data, "./data/Boltonia_merged_data_20240626.csv")
