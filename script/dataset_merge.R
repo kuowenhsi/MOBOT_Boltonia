@@ -1,4 +1,5 @@
 library(tidyverse)
+library(writexl)
 
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
@@ -19,8 +20,10 @@ LCMS_data <- read_csv("./data/Boltonia_LCMS_20240624.csv")%>%
 merged_data <- pheno_data %>%
   left_join(mid_data, by = c("label" = "TemporaryID"))%>%
   left_join(LCMS_data, by = "MaternalLine")%>%
-  select("MaternalLine", "FlowerHead", "PlantingDate","FirstLeafDate","TransplantDate","Id","Country","State","County", "Latitude", "Longitude","Locality","Location Details", everything())
+  mutate(Google_cood = "")%>%
+  select("index", "label","MaternalLine", "FlowerHead", "Id","Country","State","County", "Latitude", "Longitude","Google_cood","Locality","Location Details","PlantingDate","FirstLeafDate","TransplantDate", everything())%>%
+  arrange(MaternalLine)
 
 colnames(merged_data)
 
-write_csv(merged_data, "./data/Boltonia_merged_data_20240626.csv")
+write_xlsx(merged_data, "./data/Boltonia_merged_data_20240626.xlsx")
