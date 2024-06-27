@@ -21,10 +21,20 @@ LCMS_data <- read_csv("./data/Boltonia_LCMS_20240624.csv")%>%
 merged_data <- pheno_data %>%
   left_join(mid_data, by = c("label" = "TemporaryID"))%>%
   left_join(LCMS_data, by = "MaternalLine")%>%
-  mutate(Google_cood = "")%>%
-  select("index", "label","MaternalLine", "FlowerHead", "Id","Country","State","County", "Latitude", "Longitude","Google_cood","Locality","Location Details","PlantingDate","FirstLeafDate","TransplantDate", everything())%>%
+  select("index", "label","MaternalLine", "FlowerHead", "Id","Country","State","County", "Latitude", "Longitude","Locality","Location Details","PlantingDate","FirstLeafDate","TransplantDate", everything())%>%
   arrange(MaternalLine)
 
-colnames(merged_data)
+Google_Sage <- read_csv("./data/Merged_Boltonia_data_20240626_Sage.csv")%>%
+  filter(!is.na(MaternalLine))%>%
+  select(MaternalLine, Google_cood)%>%
+  group_by(MaternalLine)%>%
+  summarize(Google_cood = unique(Google_cood))
+  
+merged_data_google <- merged_data %>%
+  left_join(Google_Sage, by = "MaternalLine")%>%
+  separate(col = Google_cood, into = c("Google_latitude", "Google_longitude"), sep = ",")%>%
+  select("index", "label","MaternalLine", "FlowerHead", "Id","Country","State","County", "Latitude", "Longitude", "Google_latitude", "Google_longitude", everything())
 
+colnames(merged_data)
+write_csv(merged_data, "./data/Boltonia_merged_data_20240627.xlsx")
 write_xlsx(merged_data, "./data/Boltonia_merged_data_20240627.xlsx")
