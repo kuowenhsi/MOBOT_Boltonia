@@ -36,5 +36,5 @@ merged_data_google <- merged_data %>%
   select("index", "label","MaternalLine", "FlowerHead", "Id","Country","State","County", "Latitude", "Longitude", "Google_latitude", "Google_longitude", everything())
 
 colnames(merged_data)
-write_csv(merged_data, "./data/Boltonia_merged_data_20240627.xlsx")
+write_csv(merged_data, "./data/Boltonia_merged_data_20240627.csv")
 write_xlsx(merged_data, "./data/Boltonia_merged_data_20240627.xlsx")
