@@ -10,7 +10,8 @@ pheno_data <- read_csv("./data/Boltonia_Phenotype_data_20240612.csv")
 
 mid_data <- read_csv("./data/Boltonia_tag_merged.csv")%>%
   select(TemporaryID, MaternalLine, PlantingDate, FirstLeafDate, TransplantDate)%>%
-  separate(col = MaternalLine, into = c("MaternalLine", "FlowerHead"), sep = " ")
+  separate(col = MaternalLine, into = c("MaternalLine", "FlowerHead"), sep = " ")%>%
+  bind_rows(tibble(TemporaryID = "8-2-11", MaternalLine = "2011-2659-1", FlowerHead = "3C", PlantingDate = "2/29/24", FirstLeafDate = NA, TransplantDate = "4/12/24"))
 
 LCMS_data <- read_csv("./data/Boltonia_LCMS_20240624.csv")%>%
   mutate(MaternalLine = str_c(Accession, Planting, sep = "-"))%>%
@@ -26,4 +27,4 @@ merged_data <- pheno_data %>%
 
 colnames(merged_data)
 
-write_xlsx(merged_data, "./data/Boltonia_merged_data_20240626.xlsx")
+write_xlsx(merged_data, "./data/Boltonia_merged_data_20240627.xlsx")
