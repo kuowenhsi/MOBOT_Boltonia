@@ -13,7 +13,9 @@ setwd("C:/Users/nyanw/Downloads/REU/MOBOT_Boltonia")
 
 # Read input data
 Boltonia_data <- read.csv("gps_cood_20240627.csv")
+unique(Boltonia_data$MaternalLine)
 
+unique(str_remove(Boltonia_data$MaternalLine, "-.$"))
 
 # Get and crop country boundaries
 usa_state <- ne_states(country = "United States of America", returnclass = "sf") %>%
@@ -31,10 +33,10 @@ mexico_state <- ne_states(country = "mexico", returnclass = "sf") %>%
 # Create PCA plot with scatter pies
 p <- ggplot(data = st_as_sf(Boltonia_data, coords = c("Google_Longitude", "Google_Latitude"), agr = "constant", crs = 4326)) +
   geom_sf(data = usa_state, fill = "lightgreen", color = "darkgreen") +
-  geom_sf(data = canada_state, fill = "lightpink", color = "hotpink") +
+  geom_sf(data = canada_state, fill = "lightgreen", color = "darkgreen") +
   geom_sf(data = mexico_state, fill = NA, color = "purple3") +
-  geom_sf(size = 2) +
-  scale_color_discrete("") +
+  geom_sf(size = 2, aes(color = MaternalLine, shape = MaternalLine)) +
+  scale_shape_manual(values = rep(15:17, 6))+
   xlab("") +
   ylab("") +
   theme_bw() +
