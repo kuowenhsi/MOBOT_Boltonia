@@ -17,40 +17,63 @@ date_info <- boltonia_data %>%
 # check the dataset
 
 boltonia_data %>% select(starts_with("stemLength"))%>%
-  colnames()
+  str()
 boltonia_data%>%select(starts_with("numFlwrBud"))%>%
   str()
 boltonia_data%>%select(starts_with("flwrBud"))%>%
   str()
-
-print(boltonia_data$flwrBud.2)
+boltonia_data%>%select(starts_with("numFlwrB"))%>%
+  str()
+boltonia_data%>%
+  str()
 
 
 # correct the dataset
 boltonia_data_corrected <- boltonia_data %>%
   mutate(flwrBud.2 = case_when(is.na(flwrBud.2) ~ as.numeric(NA),
                                !is.na(as.numeric(flwrBud.2)) ~ as.numeric(flwrBud.2),
-                               TRUE ~ 1))
+                               TRUE ~ 1))%>%
+  mutate(flwrBud.1 = case_when(is.na(flwrBud.1) ~ as.numeric(NA),
+                               flwrBud.1 == "Y" ~ 1,
+                               TRUE ~ 0))%>%
+  rename(numFlwrB.1 = numFlwrBud.1, numFlwrB.2 = flwrBud.2)%>%
+  select(-flwrBud.1)
 
+boltonia_data_corrected$flwrBud.1
+boltonia_data_corrected$flwrBud.2
 
 # check the dataset again
 boltonia_data_corrected%>%select(starts_with("flwrBud"))%>%
   str()
+boltonia_data_corrected%>%select(starts_with("numFlwrB"))%>%
+  str()
+boltonia_data$flwrBud.1
+boltonia_data_corrected%>%
+  str()
 
-print(boltonia_data_corrected$flwrBud.2)
 
 
-
-
-
-
-boltonia_data_sub_1 <- boltonia_data %>%
-  select(label, index, starts_with("stemLength"), starts_with("leafLong"), starts_with("leafWide"), starts_with("numStem"),
-         starts_with("numFlwrBud"), starts_with("numRos"))%>%
-  mutate_at(vars(matches("leafLong"), matches("stemLength"), matches("leafWide"), matches("numStem"),
-                 matches("numFlwrBud"), matches("numRos")), .funs = "as.double")%>%
-  pivot_longer(cols = c(matches("leafLong"), matches("stemLength"), matches("leafWide"), matches("numStem"),
-                        matches("numFlwrBud"), matches("numRos")), values_to = "values")%>%
+boltonia_data_sub_1 <- boltonia_data_corrected %>%
+  select(label, index, starts_with("stemLength"), starts_with("leafLong"), starts_with("leafWide"), 
+         starts_with("numStem"), starts_with("numFlwrB"), starts_with("numRos"), starts_with("numLvs"), 
+         starts_with("numLSt"), starts_with("numRayF"), starts_with("numDiscF"))%>%
+  mutate_at(vars(starts_with("stemLength"), starts_with("leafLong"), starts_with("leafWide"), 
+                 starts_with("numStem"), starts_with("numFlwrB"), starts_with("numRos"), starts_with("numLvs"), 
+                 starts_with("numLSt"), starts_with("numRayF"), starts_with("numDiscF")), .funs = "as.double")%>%
+  pivot_longer(cols = c(starts_with("stemLength"), starts_with("leafLong"), starts_with("leafWide"), 
+                        starts_with("numStem"), starts_with("numFlwrB"), starts_with("numRos"), starts_with("numLvs"), 
+                        starts_with("numLSt"), starts_with("numRayF"), starts_with("numDiscF")), values_to = "values")%>%
   arrange(index, name)%>%
   separate(col = "name", into = c("variable_name", "Date_index"), sep = "[.]")%>%
-  left_join(date_info, by = "Date_index")
+  left_join(date_info, by = "Date_index")%>%
+  mutate(Date = as.Date(Date, "%m/%d/%Y"))
+
+
+# check the result
+
+unique(boltonia_data_sub_1$variable_name)
+unique(boltonia_data_sub_1$label)
+unique(boltonia_data_sub_1$Date_index)
+unique(boltonia_data_sub_1$Date)
+
+write_csv(boltonia_data_sub_1, "tidy_boltonia_data.csv")
