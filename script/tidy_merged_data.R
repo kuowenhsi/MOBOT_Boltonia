@@ -2,7 +2,7 @@ library(tidyverse)
 
 setwd("C:/Users/nyanw/Downloads/REU/MOBOT_Boltonia")
 
-boltonia_data <- read_csv("gps_cood_20240627.csv", na = c(" ", "NA", "N/A", "DNR"))
+boltonia_data <- read_csv("./data/gps_cood_20240627.csv", na = c(" ", "NA", "N/A", "DNR"))
 
 boltonia_data
 str(boltonia_data)
@@ -54,8 +54,8 @@ boltonia_data_corrected%>%
 
 
 boltonia_data_sub_1 <- boltonia_data_corrected %>%
-  select(label, index, starts_with("stemLength"), starts_with("leafLong"), starts_with("leafWide"), 
-         starts_with("numStem"), starts_with("numFlwrB"), starts_with("numRos"), starts_with("numLvs"), 
+  select(label, index, MaternalLine, FlowerHead, PlantingDate, FirstLeafDate, Google_Latitude, Google_Longitude, State, County, starts_with("stemLength"), starts_with("leafLong"), starts_with("leafWide"),
+         starts_with("numStem"), starts_with("numFlwrB"), starts_with("numRos"), starts_with("numLvs"),
          starts_with("numLSt"), starts_with("numRayF"), starts_with("numDiscF"))%>%
   mutate_at(vars(starts_with("stemLength"), starts_with("leafLong"), starts_with("leafWide"), 
                  starts_with("numStem"), starts_with("numFlwrB"), starts_with("numRos"), starts_with("numLvs"), 
