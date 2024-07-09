@@ -1,5 +1,5 @@
 library(tidyverse)
-library(ggplot2)
+library(ggpubr)
 
 setwd("C:/Users/nyanw/Downloads/REU/MOBOT_Boltonia")
 
@@ -7,83 +7,113 @@ Boltonia_data <- read_csv("./data/tidy_boltonia_data.csv")
 
 unique(Boltonia_data$variable_name)
 
+#make flowering ratio by Date into a plot
 Boltonia_data_FlowerRatio <- Boltonia_data %>%
   filter(variable_name == "numDiscF") %>%
   mutate(values = case_when(is.na(values) ~ 0, values == 0 ~ 0, values >= 1 ~ 1, TRUE ~ as.numeric(NA))) %>%
   group_by(Date) %>%
   summarize(flowerRatio = sum(values)/n())
 
-# make flowering ratio by Date into a plot
-data <- data.frame(
-  name = c("2024-05-15", "2024-05-22", "2024-05-29","2024-06-05", "2024-06-12", "2024-06-19"),
-  value = c(0.01709402, 0.02350427, 0.09615385, 0.13247863, 0.14957265, 0.17094017))
-ggplot(data, aes(x = Date, y = Values)) + 
-  geom_bar(stat = "identity")
+P <-ggplot(data = Boltonia_data_FlowerRatio, mapping = aes(x = Date, y = flowerRatio)) + 
+  geom_col(color = "skyblue", fill = "skyblue")+
+  scale_y_continuous(limits = c(0,1))+
+  ggtitle("Flowering Ratio by Date")+
+  theme_gray()
+P
+ggsave("./figures/flwrRatio_by_date.png", width = 10, height = 7, dpi = 600)
 
 # Then plot flowering ratio by Date and County
-###Saint Clair###
-Boltonia_data_FlowerRatio <- Boltonia_data %>%
-  filter(variable_name == "numDiscF", County == "Saint Clair") %>%
+Boltonia_data_FlowerRatio_county <- Boltonia_data %>%
+  filter(variable_name == "numDiscF") %>%
   mutate(values = case_when(is.na(values) ~ 0, values == 0 ~ 0, values >= 1 ~ 1, TRUE ~ as.numeric(NA))) %>%
-  group_by(Date) %>%
-  summarize(flowerRatio = sum(values)/n())
-StClair_Ratio <- data.frame(
-  name = c("2024-05-15", "2024-05-22", "2024-05-29","2024-06-05", "2024-06-12", "2024-06-19"),
-  value = c(0.00000000, 0.00000000, 0.00000000, 0.04761905, 0.09523810, 0.09523810))
-ggplot(StClair_Ratio, aes(x = Date, y = Value)) + 
-  geom_bar(stat = "identity")
-###Fulton###
-Boltonia_data_FlowerRatio <- Boltonia_data %>%
-  filter(variable_name == "numDiscF", County == "Fulton") %>%
-  mutate(values = case_when(is.na(values) ~ 0, values == 0 ~ 0, values >= 1 ~ 1, TRUE ~ as.numeric(NA))) %>%
-  group_by(Date) %>%
-  summarize(flowerRatio = sum(values)/n())
-Fulton_Ratio <- data.frame(
-  name = c("2024-05-15", "2024-05-22", "2024-05-29","2024-06-05", "2024-06-12", "2024-06-19"),
-  value = c(0.03846154, 0.02564103, 0.14102564, 0.16666667, 0.17948718, 0.19230769))
-ggplot(Fulton_Ratio, aes(x = Date, y = Value)) + 
-  geom_bar(stat = "identity")
-###Frederick###
-Boltonia_data_FlowerRatio <- Boltonia_data %>%
-  filter(variable_name == "numDiscF", County == "Frederick") %>%
-  mutate(values = case_when(is.na(values) ~ 0, values == 0 ~ 0, values >= 1 ~ 1, TRUE ~ as.numeric(NA))) %>%
-  group_by(Date) %>%
-  summarize(flowerRatio = sum(values)/n())
-Frederick_Ratio <- data.frame(
-  name = c("2024-05-15", "2024-05-22", "2024-05-29","2024-06-05", "2024-06-12", "2024-06-19"),
-  value = c(0.00, 0.00, 0.08, 0.20, 0.24, 0.28))
-ggplot(Frederick_Ratio, aes(x = name, y = value)) + 
-  geom_bar(stat = "identity")
-###Tazewell###
-Boltonia_data_FlowerRatio <- Boltonia_data %>%
-  filter(variable_name == "numDiscF", County == "Tazewell") %>%
-  mutate(values = case_when(is.na(values) ~ 0, values == 0 ~ 0, values >= 1 ~ 1, TRUE ~ as.numeric(NA))) %>%
-  group_by(Date) %>%
-  summarize(flowerRatio = sum(values)/n())
-Tazewell_Ratio <- data.frame(
-  name = c("2024-05-15", "2024-05-22", "2024-05-29","2024-06-05", "2024-06-12", "2024-06-19"),
-  value = c(0.00, 0.00, 0.08, 0.20, 0.24, 0.28))
-ggplot(Tazewell_Ratio, aes(x = Date, y = Value)) + 
-  geom_bar(stat = "identity")
-###
+  group_by(Date, County) %>%
+  summarize(flowerRatio = sum(values)/n(), mean_Google_Latitude = mean(Google_Latitude), 
+            mean_Google_Longitude = mean(Google_Longitude))%>%
+  arrange(County, Date)
 
-# Then plot flowering ratio by Date and MaternalLine
-Boltonia_data_FlowerRatio <- Boltonia_data %>%
-  filter(variable_name == "numDiscF", MaternalLine == "2011-2598-1") %>%
+P <- ggplot(data = Boltonia_data_FlowerRatio_county, aes(x = Date, y = flowerRatio)) +
+  geom_col()+
+  ggtitle("Flowering Ratio by Date & County")+
+  facet_wrap(.~County)+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+        strip.background = element_rect(fill = "skyblue", color = "skyblue"),
+        strip.text = element_text(color = "black"))
+P
+ggsave("./figures/flwrRatio_by_datecounty.png", width = 10, height = 7, dpi = 600)
+
+###Then plot flowering ratio by Date and MaternalLine###
+Boltonia_data_FlowerRatio_MaternalLine <- Boltonia_data %>%
+  filter(variable_name == "numDiscF") %>%
   mutate(values = case_when(is.na(values) ~ 0, values == 0 ~ 0, values >= 1 ~ 1, TRUE ~ as.numeric(NA))) %>%
-  group_by(Date) %>%
+  group_by(Date, MaternalLine) %>%
   summarize(flowerRatio = sum(values)/n())
-MaternalLine_Ratio <- data.frame(
-  name = c("2024-05-15", "2024-05-22", "2024-05-29","2024-06-05", "2024-06-12", "2024-06-19"),
-  value = c(0.00000000, 0.02631579, 0.15789474, 0.23684211, 0.23684211, 0.34210526))
-ggplot(MaternalLine_Ratio, aes(x = name, y = value)) + 
-  geom_bar(stat = "identity")
+
+P <-ggplot(data = Boltonia_data_FlowerRatio_MaternalLine, aes(x = Date, y = flowerRatio)) + 
+  geom_col()+
+  ggtitle("Flowering Ratio by Date & Maternal Line")+
+  facet_wrap(.~MaternalLine)+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+        strip.background = element_rect(fill = "skyblue", color = "skyblue"),
+        strip.text = element_text(color = "black"))
+P
+ggsave("./figures/flwrRatio_by_datematernalline.png", width = 10, height = 7, dpi = 600)
+
+##Plot flowering ratio by Longitude/Latitude###
+P <- ggplot(data = Boltonia_data_FlowerRatio_county, aes(x = mean_Google_Latitude, y = flowerRatio)) +
+  geom_point()+
+  stat_smooth(method = "lm", color = "blue")+
+  stat_cor(method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(label.x.npc = 0, label.y.npc = 0.95)+
+  ggtitle("Flower Ratio by Latitude")+
+  facet_wrap(.~Date)+
+  theme(strip.background = element_rect(fill = "skyblue", color = "skyblue"),
+        strip.text = element_text(color = "black"))
+P
+ggsave("./figures/flwrRatio_by_latitude.png", width = 10, height = 7, dpi = 600)
+
+P <- ggplot(data = Boltonia_data_FlowerRatio_county, aes(x = mean_Google_Longitude, y = flowerRatio)) +
+  geom_point()+
+  stat_smooth(method = "lm", color = "blue")+
+  stat_cor(method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(label.x.npc = 0, label.y.npc = 0.95)+
+  ggtitle("Flower Ration by Longitude")+
+  facet_wrap(.~Date)+
+  theme(strip.background = element_rect(fill = "skyblue", color = "skyblue"),
+        strip.text = element_text(color = "black"))
+
+P
+ggsave("./figures/flwrRatio_by_longitude.png", width = 10, height = 7, dpi = 600)
 
 # if we do not want those dead plants in flowering ratio calculation
 mutate(values = case_when(is.na(values) ~ 0, values == 0 ~ 0, values >= 1 ~ 1, TRUE ~ as.numeric(NA)))
 
-##########################
 
+###Plot by days to flower##########
+Boltonia_floral_phenology <- read_csv("./data/Boltonia Floral Phenology_20240624.csv")
+unique(Boltonia_floral_phenology$MaternalLine)
+
+Days_to_flwr <- Boltonia_floral_phenology%>%
+  filter(date == as.Date("5/10/2024"), numRayF.1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###################################
 p <- ggplot(data = filter(Boltonia_data, variable_name == "leafLong", Date == as.Date("2024-05-01")), aes(x = County, y = values))+
   geom_violin(aes(fill = County), color = NA, alpha = 0.7)+
   geom_point()
@@ -103,7 +133,7 @@ p
 
 ##MaternalLine plots#######
 ###########################
-p <- ggplot(data = filter(Boltonia_data, variable_name == "stemLength", Date == as.Date("2024-06-19")), aes(x = MaternalLine, y = values))+
+###p <- ggplot(data = filter(Boltonia_data, variable_name == "stemLength", Date == as.Date("2024-06-19")), aes(x = MaternalLine, y = values))+
   geom_point()+
   labs(title = "Maternal Line & Stem Length")
 p
