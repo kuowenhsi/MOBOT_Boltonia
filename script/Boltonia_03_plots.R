@@ -15,6 +15,27 @@ Boltonia_data_FlowerRatio <- Boltonia_data %>%
   group_by(Date) %>%
   summarize(flowerRatio = sum(values)/n())
 
+# make days to flower data
+
+Boltonia_data_DaysToFlower <- Boltonia_data %>%
+  mutate(PlantingDate = as.Date(PlantingDate, "%m/%d/%y"), FirstLeafDate = as.Date(FirstLeafDate, "%m/%d/%y"))%>%
+  filter(variable_name %in% c("numFlwrB", "numRayF", "numDiscF"))%>%
+  mutate(values = case_when(is.na(values) ~ 0, TRUE ~ values))%>%
+  mutate(index = factor(index))%>%
+  group_by(index, variable_name)%>%
+  arrange(Date_index, .by_group = TRUE)%>%
+  mutate(is_first = case_when((lag(values) == 0 & values > 0) ~ TRUE, TRUE ~ FALSE))%>%
+  filter(is_first == TRUE)%>%
+  filter(Date_index == min(Date_index))%>%
+  select(index, PlantingDate, FirstLeafDate, variable_name, Date)%>%
+  mutate(DaysToFlower = Date -PlantingDate)%>%
+  ungroup()%>%
+  complete(index, variable_name)%>%
+  mutate(DaysToFlower = case_when(is.na(DaysToFlower) ~ as.difftime(150, "%d", "days"), TRUE ~ DaysToFlower))%>%
+  select(index, variable_name, DaysToFlower)
+  
+
+
 
 p <- ggplot(data = Boltonia_data_FlowerRatio, mapping = aes(x = Date, y = flowerRatio)) + 
   geom_col(fill = "orange")+
