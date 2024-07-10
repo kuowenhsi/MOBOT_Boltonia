@@ -32,7 +32,9 @@ Boltonia_data_DaysToFlower <- Boltonia_data %>%
   ungroup()%>%
   complete(index, variable_name)%>%
   mutate(DaysToFlower = case_when(is.na(DaysToFlower) ~ as.difftime(150, "%d", "days"), TRUE ~ DaysToFlower))%>%
-  select(index, variable_name, DaysToFlower)
+  select(index, variable_name, DaysToFlower)%>%
+  mutate(index = as.double(index))%>%
+  left_join(read_csv("./data/Boltonia_merged_data_20240627.csv") %>% select(1:12), by = "index")
   
 
 
