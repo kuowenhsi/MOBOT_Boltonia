@@ -10,10 +10,14 @@ unique(Boltonia_data$variable_name)
 # make flowering ratio by Date into a plot
 
 Boltonia_data_FlowerRatio <- Boltonia_data %>%
-  filter(variable_name == "numDiscF") %>%
+  filter(variable_name %in% c("numFlwrB", "numRayF", "numDiscF")) %>%
+  mutate(Date = factor(Date)) %>%
   mutate(values = case_when(is.na(values) ~ 0, values == 0 ~ 0, values >= 1 ~ 1, TRUE ~ as.numeric(NA))) %>%
-  group_by(Date) %>%
-  summarize(flowerRatio = sum(values)/n())
+  group_by(Date, variable_name) %>%
+  summarize(flowerRatio = sum(values)/n()) %>%
+  ungroup() %>%
+  complete(Date, variable_name) %>%
+  mutate(flowerRatio = case_when(is.na(flowerRatio) ~ 0, TRUE ~ flowerRatio), Date = as.Date(Date))
 
 # make days to flower data
 
@@ -34,40 +38,132 @@ Boltonia_data_DaysToFlower <- Boltonia_data %>%
   mutate(DaysToFlower = case_when(is.na(DaysToFlower) ~ as.difftime(150, "%d", "days"), TRUE ~ DaysToFlower))%>%
   select(index, variable_name, DaysToFlower)%>%
   mutate(index = as.double(index))%>%
-  left_join(read_csv("./data/Boltonia_merged_data_20240627.csv") %>% select(1:12), by = "index")
+  left_join(read_csv("./data/Boltonia_merged_data_20240627.csv") %>% select(1:12), by = "index", relationship = "many-to-many")
   
 
-
+# plot the total flower ration across all dates
 
 p <- ggplot(data = Boltonia_data_FlowerRatio, mapping = aes(x = Date, y = flowerRatio)) + 
-  geom_col(fill = "orange")+
-  scale_y_continuous(limits = c(0, 1))+
-  theme_bw()
+  geom_col(aes(fill = variable_name))+
+  scale_y_continuous(name = "Total flower ratio", limits = c(0, 1), expand = c(0, 0, 0, 0))+
+  scale_x_date(name = "", breaks = unique(Boltonia_data_FlowerRatio$Date), date_labels = "%b %d")+
+  facet_wrap(.~variable_name)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid.minor = element_blank(), legend.position = "none")
 
-p
+ggsave("./figures/Boltonia_total_flower_ratio.png", width = 10, height = 4)
 
 # Then plot flowering ratio by Date and County
 
+# calculate county mean coordinations
+
+Boltonia_data_county_coordinations <- Boltonia_data %>%
+  group_by(County)%>%
+  summarize(mean_Google_latitude = mean(Google_Latitude), mean_Google_longitude = mean(Google_Longitude))%>%
+  arrange(mean_Google_latitude)%>%
+  mutate(labels = paste0(County, "\n", "(", round(mean_Google_latitude, 2), ", ", round(mean_Google_longitude, 2), ")"))
+  
+
 Boltonia_data_FlowerRatio_county <- Boltonia_data %>%
-  filter(variable_name == "numDiscF") %>%
+  filter(variable_name %in% c("numFlwrB", "numRayF", "numDiscF")) %>%
+  mutate(Date = factor(Date)) %>%
   mutate(values = case_when(is.na(values) ~ 0, values == 0 ~ 0, values >= 1 ~ 1, TRUE ~ as.numeric(NA))) %>%
-  group_by(Date, County) %>%
-  summarize(flowerRatio = sum(values)/n(), mean_Google_latitude = mean(Google_Latitude), mean_Google_longitude = mean(Google_Longitude))%>%
-  arrange(County, Date)
+  group_by(Date, variable_name, County) %>%
+  summarize(flowerRatio = sum(values)/n())%>%
+  ungroup() %>%
+  complete(Date, variable_name, County) %>%
+  mutate(flowerRatio = case_when(is.na(flowerRatio) ~ 0, TRUE ~ flowerRatio), Date = as.Date(Date))%>%
+  left_join(Boltonia_data_county_coordinations, by = "County")
+
 
 
 # plot
 
 # County first
-p <- ggplot(data = Boltonia_data_FlowerRatio_county, aes(x = County, y = flowerRatio))+
-  geom_col(aes(group = Date, fill = Date), position = position_dodge())
-p
+p <- ggplot(data = Boltonia_data_FlowerRatio_county, aes(x = reorder(labels, mean_Google_latitude), y = flowerRatio))+
+  geom_col(aes(group = as.character(Date), fill = as.character(Date)), position = position_dodge())+
+  scale_fill_brewer(name = "", palette = "Spectral")+
+  scale_x_discrete(name = "")+
+  facet_wrap(.~variable_name, nrow = 3)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid.minor = element_blank(), legend.position = "bottom")
+
+ggsave("./figures/Boltonia_total_flower_ratio_by_county.png", width = 10, height = 6)
 
 
-p <- ggplot(data = Boltonia_data_FlowerRatio_county, aes(x = Date, y = flowerRatio))+
-  geom_col()+
-  facet_wrap(.~County)
-p
+# buds
+p <- ggplot(data = filter(Boltonia_data_FlowerRatio_county, variable_name == "numFlwrB"), aes(x = Date, y = flowerRatio))+
+  geom_col(aes(fill = as.character(Date)))+
+  scale_fill_brewer(name = "", palette = "Spectral")+
+  scale_y_continuous(name = "Flower bud ratio")+
+  scale_x_date(name = "")+
+  facet_wrap(.~reorder(labels, mean_Google_latitude), nrow = 3)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid = element_blank(), legend.position = "none")
+ggsave("./figures/Boltonia_total_bud_ratio_by_county.png", width = 10, height = 10)
+
+
+# Ray
+p <- ggplot(data = filter(Boltonia_data_FlowerRatio_county, variable_name == "numRayF"), aes(x = Date, y = flowerRatio))+
+  geom_col(aes(fill = as.character(Date)))+
+  scale_fill_brewer(name = "", palette = "Spectral")+
+  scale_y_continuous(name = "Flower ray flower ratio")+
+  scale_x_date(name = "")+
+  facet_wrap(.~reorder(labels, mean_Google_latitude), nrow = 3)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid = element_blank(), legend.position = "none")
+ggsave("./figures/Boltonia_total_ray_ratio_by_county.png", width = 10, height = 10)
+
+# buds
+p <- ggplot(data = filter(Boltonia_data_FlowerRatio_county, variable_name == "numDiscF"), aes(x = Date, y = flowerRatio))+
+  geom_col(aes(fill = as.character(Date)))+
+  scale_fill_brewer(name = "", palette = "Spectral")+
+  scale_y_continuous(name = "Flower disc ratio")+
+  scale_x_date(name = "")+
+  facet_wrap(.~reorder(labels, mean_Google_latitude), nrow = 3)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid = element_blank(), legend.position = "none")
+ggsave("./figures/Boltonia_total_disk_ratio_by_county.png", width = 10, height = 10)
+
+
+################
+
+# Days to flower
+
+
+p <- ggplot(data = Boltonia_data_DaysToFlower, aes(x = Google_latitude, y = as.integer(DaysToFlower)))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data_DaysToFlower, as.integer(DaysToFlower) == 150), color = "red")+
+  stat_smooth(data = filter(Boltonia_data_DaysToFlower, as.integer(DaysToFlower) < 150), method = "lm", color = "blue")+
+  stat_cor(data = filter(Boltonia_data_DaysToFlower, as.integer(DaysToFlower) < 150),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data_DaysToFlower, as.integer(DaysToFlower) < 150),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_y_continuous(name = "Days to flower")+
+  facet_wrap(.~variable_name, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom")
+  
+p  
+  
+
+ggsave("./figures/Boltonia_days_to_flower_by_latitude.png", width = 13, height = 5)
+
+
+
+p <- ggplot(data = Boltonia_data_DaysToFlower, aes(x = Google_longitude, y = as.integer(DaysToFlower)))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data_DaysToFlower, as.integer(DaysToFlower) == 150), color = "red")+
+  stat_smooth(data = filter(Boltonia_data_DaysToFlower, as.integer(DaysToFlower) < 150), method = "lm", color = "blue")+
+  stat_cor(data = filter(Boltonia_data_DaysToFlower, as.integer(DaysToFlower) < 150),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data_DaysToFlower, as.integer(DaysToFlower) < 150),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_y_continuous(name = "Days to flower")+
+  facet_wrap(.~variable_name, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom")
+
+p  
+
+
+ggsave("./figures/Boltonia_days_to_flower_by_longitude.png", width = 13, height = 5)
 
 
 # Date first
