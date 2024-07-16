@@ -5,6 +5,15 @@ setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.L
 
 Boltonia_data <- read_csv("./data/tidy_boltonia_data.csv")
 
+
+Boltonia_data_rep <- Boltonia_data %>%
+  group_by(MaternalLine, County, FlowerHead, index)%>%
+  summarize()%>%
+  group_by(MaternalLine, County, FlowerHead)%>%
+  summarise(rep = n())
+
+
+
 unique(Boltonia_data$variable_name)
 
 # make flowering ratio by Date into a plot
