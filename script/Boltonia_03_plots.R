@@ -12,8 +12,6 @@ Boltonia_data_rep <- Boltonia_data %>%
   group_by(MaternalLine, County, FlowerHead)%>%
   summarise(rep = n())
 
-
-
 unique(Boltonia_data$variable_name)
 
 # make flowering ratio by Date into a plot
