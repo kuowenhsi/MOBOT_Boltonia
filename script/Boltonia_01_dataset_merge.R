@@ -1,12 +1,68 @@
 library(tidyverse)
 library(writexl)
+library(janitor)
 
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
 list.files()
 list.files(path = "./data")
 
-pheno_data <- read_csv("./data/Boltonia_Phenotype_data_20240612.csv")
+pheno_data <- read_csv("./data/Boltonia_Phenotype_data_20240716.csv", na = c("", "NA", "N/A", "DNR")) %>%
+  rename(latBuds.1 = `# latBuds.1`) %>%
+  select(-ends_with(".12"))
+  
+flower_data <- read_csv("./data/Boltonia_Phenotype_data_20240716_flower.csv", na = c("", "NA", "N/A", "DNR"))
+
+pheno_data_date <- pheno_data %>%
+  select(starts_with("Date."))%>%
+  .[1,] %>%
+  mutate_all(function(x){str_replace(x, "/24$", "/2024")})%>%
+  mutate_all(function(x){as.Date(x, "%m/%d/%Y")}) %>%
+  mutate_all(function(x){as.numeric(x)})%>%
+  pivot_longer(cols = everything(), names_prefix = "Date.", values_to = "Date_value", names_to = "Date_index")
+  
+pheno_data_vector <- pheno_data_date$Date_value
+names(pheno_data_vector) <- pheno_data_date$Date_index
+
+flower_data_date <- flower_data %>%
+  select(starts_with("Date."))%>%
+  .[1,] %>%
+  mutate_all(function(x){str_replace(x, "/24$", "/2024")})%>%
+  mutate_all(function(x){as.Date(x, "%m/%d/%Y")}) %>%
+  mutate_all(function(x){as.numeric(x)})%>%
+  pivot_longer(cols = everything(), names_prefix = "Date.", values_to = "Date_value", names_to = "Date_index")
+
+flower_data_vector <- flower_data_date$Date_value
+names(flower_data_vector) <- flower_data_date$Date_index
+
+
+append_date_to_colname <- function(x, date_vector){
+  date_index <- sapply(x, function(x){str_split_i(x, "[.]", 2)})
+  date_value <- date_vector[date_index]
+  trait_name <- sapply(x, function(x){str_split_i(x, "[.]", 1)})
+  return(paste(trait_name, date_value, sep = "_"))
+} 
+
+append_date_to_colname(c("Date.1", "trait.2"), pheno_data_vector)
+
+pheno_data_renamed <- pheno_data %>%
+  select(-starts_with(c("Date.", "firstFlwr.", "index2"))) %>%
+  rename_with(function(x){append_date_to_colname(x, pheno_data_vector)}, .cols = 3:ncol(.))
+
+## only merge NOT duplicated data
+
+flower_data_vector_NOT_duplicated <- flower_data_vector[!(flower_data_vector %in% pheno_data_vector)]%>%
+  as.character()
+
+flower_data_renamed <- flower_data %>%
+  select(-starts_with(c("Date.", "firstFlwr.", "index2"))) %>%
+  rename_with(function(x){append_date_to_colname(x, flower_data_vector)}, .cols = 3:ncol(.))%>%
+  select(1, 2, ends_with(flower_data_vector_NOT_duplicated))
+
+pheno_data_renamed_merged <- pheno_data_renamed %>%
+  left_join(flower_data_renamed, by = c("label", "index"))%>%
+  select(1, 2, sort(colnames(.)[c(-1, -2)]))
+
 
 mid_data <- read_csv("./data/Boltonia_tag_merged.csv")%>%
   select(TemporaryID, MaternalLine, PlantingDate, FirstLeafDate, TransplantDate)%>%
@@ -18,7 +74,7 @@ LCMS_data <- read_csv("./data/Boltonia_LCMS_20240624.csv")%>%
   select(-Accession, -Planting)%>%
   select(MaternalLine, everything())
 
-merged_data <- pheno_data %>%
+merged_data <- pheno_data_renamed_merged %>%
   left_join(mid_data, by = c("label" = "TemporaryID"))%>%
   left_join(LCMS_data, by = "MaternalLine")%>%
   select("index", "label","MaternalLine", "FlowerHead", "Id","Country","State","County", "Latitude", "Longitude","Locality","Location Details","PlantingDate","FirstLeafDate","TransplantDate", everything())%>%
@@ -36,5 +92,5 @@ merged_data_google <- merged_data %>%
   select("index", "label","MaternalLine", "FlowerHead", "Id","Country","State","County", "Latitude", "Longitude", "Google_latitude", "Google_longitude", everything())
 
 colnames(merged_data)
-write_csv(merged_data_google, "./data/Boltonia_merged_data_20240627.csv")
-write_xlsx(merged_data_google, "./data/Boltonia_merged_data_20240627.xlsx")
+write_csv(merged_data_google, "./data/Boltonia_merged_data_20240716.csv")
+write_xlsx(merged_data_google, "./data/Boltonia_merged_data_20240716.xlsx")
