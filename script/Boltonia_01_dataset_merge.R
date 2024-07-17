@@ -1,6 +1,5 @@
 library(tidyverse)
 library(writexl)
-library(janitor)
 
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
@@ -43,7 +42,7 @@ append_date_to_colname <- function(x, date_vector){
   return(paste(trait_name, date_value, sep = "_"))
 } 
 
-append_date_to_colname(c("Date.1", "trait.2"), pheno_data_vector)
+append_date_to_colname(c("Date.13", "trait.2"), pheno_data_vector)
 
 pheno_data_renamed <- pheno_data %>%
   select(-starts_with(c("Date.", "firstFlwr.", "index2"))) %>%
