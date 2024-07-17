@@ -6,11 +6,11 @@ setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.L
 list.files()
 list.files(path = "./data")
 
-pheno_data <- read_csv("./data/Boltonia_Phenotype_data_20240716.csv", na = c("", "NA", "N/A", "DNR")) %>%
+pheno_data <- read_csv("./data/Boltonia_Phenotype_data_20240717.csv", na = c("", "NA", "N/A", "DNR")) %>%
   rename(latBuds.1 = `# latBuds.1`) %>%
   select(-ends_with(".12"))
   
-flower_data <- read_csv("./data/Boltonia_Phenotype_data_20240716_flower.csv", na = c("", "NA", "N/A", "DNR"))
+flower_data <- read_csv("./data/Boltonia_Phenotype_data_20240717_flower.csv", na = c("", "NA", "N/A", "DNR"))
 
 pheno_data_date <- pheno_data %>%
   select(starts_with("Date."))%>%
@@ -91,5 +91,5 @@ merged_data_google <- merged_data %>%
   select("index", "label","MaternalLine", "FlowerHead", "Id","Country","State","County", "Latitude", "Longitude", "Google_latitude", "Google_longitude", everything())
 
 colnames(merged_data)
-write_csv(merged_data_google, "./data/Boltonia_merged_data_20240716.csv")
-write_xlsx(merged_data_google, "./data/Boltonia_merged_data_20240716.xlsx")
+write_csv(merged_data_google, "./data/Boltonia_merged_data_20240717.csv")
+write_xlsx(merged_data_google, "./data/Boltonia_merged_data_20240717.xlsx")

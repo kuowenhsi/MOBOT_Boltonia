@@ -2,7 +2,7 @@ library(tidyverse)
 
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
-boltonia_data <- read_csv("./data/Boltonia_merged_data_20240716.csv")
+boltonia_data <- read_csv("./data/Boltonia_merged_data_20240717.csv")
 
 boltonia_data
 str(boltonia_data)
@@ -74,10 +74,6 @@ boltonia_data_1_chr <- boltonia_data_corrected %>%
   pivot_longer(cols = starts_with(chr_uniq_traits), names_sep = "_", names_to = c("chr_traits", "Date"),values_to = "chr_values")%>%
   arrange(index, chr_traits, Date)%>%
   mutate(Date = as.Date(as.integer(Date)))%>%
-  group_by(index, Date, chr_traits) %>%
-  summarise(n = dplyr::n(), .groups = "drop") %>%
-  filter(n > 1L) 
-  
   pivot_wider(names_from = chr_traits, values_from = chr_values)
 
 boltonia_data_1 <- boltonia_data_1_num %>%
@@ -88,4 +84,4 @@ boltonia_data_1 <- boltonia_data_1_num %>%
 unique(boltonia_data_1$label)
 unique(boltonia_data_1$Date)
 
-write_csv(boltonia_data_1, "Boltonia_merged_data_tidy_20240716.csv")
+write_csv(boltonia_data_1, "./data/Boltonia_merged_data_tidy_20240717.csv")
