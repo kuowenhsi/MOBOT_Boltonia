@@ -1,5 +1,6 @@
 library(tidyverse)
 library(ggpubr)
+library(lme4)
 
 setwd("C:/Users/nyanw/Downloads/REU/MOBOT_Boltonia")
 
@@ -139,7 +140,7 @@ p <- ggplot(data = Boltonia_data_FlowerRatio, mapping = aes(x = Date, y = flower
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid.minor = element_blank(), legend.position = "none")
 p
 
-ggsave("./figures/Boltonia_total_flower_ratio.png", width = 10, height = 4)
+ggsave("./figures/Boltonia_total_flower_ratio.png", width = 10, height = 4, dpi = 600)
 
 
 p <- ggplot(data = Boltonia_data_DaysToFlower, aes(x = Google_latitude, y = as.integer(DaysToFlower)))+
@@ -156,7 +157,7 @@ p <- ggplot(data = Boltonia_data_DaysToFlower, aes(x = Google_latitude, y = as.i
 p  
 
 
-ggsave("./figures/Boltonia_days_to_flower_by_latitude.png", width = 10, height = 7)
+ggsave("./figures/Boltonia_days_to_flower_by_latitude.png", width = 10, height = 7, dpi = 600)
 
 
 p <- ggplot(data = Boltonia_data_DaysToFlower, aes(x = Google_longitude, y = as.integer(DaysToFlower)))+
@@ -173,9 +174,162 @@ p <- ggplot(data = Boltonia_data_DaysToFlower, aes(x = Google_longitude, y = as.
 p  
 
 
-ggsave("./figures/Boltonia_days_to_flower_by_longitude.png", width = 10, height = 7)
+ggsave("./figures/Boltonia_days_to_flower_by_longitude.png", width = 10, height = 7, dpi = 600)
 
-###########ANOVA########
+#######Linear Regression######
+ggplot(data = filter(Boltonia_data, num_traits == "numLvs"), aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data, num_traits == "numLvs"), color = "blue")+
+  stat_smooth(data = filter(Boltonia_data, num_traits == "numLvs"), method = "lm", color = "black")+
+  stat_cor(data = filter(Boltonia_data, num_traits == "numLvs"),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data, num_traits == "numLvs"),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Number of Leaves")+
+  facet_wrap(.~num_traits, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom", 
+        strip.background = element_rect(fill = "skyblue", color = "black"),
+        strip.text = element_text(color = "black"))
+ggsave("./figures/numleaves_regression.png", width = 10, height = 7, dpi = 600)
+
+ggplot(data = filter(Boltonia_data, num_traits == "leafLong"), aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data, num_traits == "leafLong"), color = "blue")+
+  stat_smooth(data = filter(Boltonia_data, num_traits == "leafLong"), method = "lm", color = "black")+
+  stat_cor(data = filter(Boltonia_data, num_traits == "leafLong"),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data, num_traits == "leafLong"),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Leaf Length")+
+  facet_wrap(.~num_traits, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom", 
+        strip.background = element_rect(fill = "skyblue", color = "black"),
+        strip.text = element_text(color = "black"))
+ggsave("./figures/leaflong_regression.png", width = 10, height = 7, dpi = 600)
+
+ggplot(data = filter(Boltonia_data, num_traits == "leafWide"), aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data, num_traits == "leafWide"), color = "blue")+
+  stat_smooth(data = filter(Boltonia_data, num_traits == "leafWide"), method = "lm", color = "black")+
+  stat_cor(data = filter(Boltonia_data, num_traits == "leafWide"),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data, num_traits == "leafWide"),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Leaf Width")+
+  facet_wrap(.~num_traits, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom", 
+        strip.background = element_rect(fill = "skyblue", color = "black"),
+        strip.text = element_text(color = "black"))
+ggsave("./figures/leafwidth_regression.png", width = 10, height = 7, dpi = 600)
+
+
+ggplot(data = filter(Boltonia_data, num_traits == "numDiscF"), aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data, num_traits == "numDiscF"), color = "blue")+
+  stat_smooth(data = filter(Boltonia_data, num_traits == "numDiscF"), method = "lm", color = "black")+
+  stat_cor(data = filter(Boltonia_data, num_traits == "numDiscF"),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data, num_traits == "numDiscF"),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Number of Open Capitula")+
+  facet_wrap(.~num_traits, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom", 
+        strip.background = element_rect(fill = "skyblue", color = "black"),
+        strip.text = element_text(color = "black"))
+ggsave("./figures/capitula_regression.png", width = 10, height = 7, dpi = 600)
+
+ggplot(data = filter(Boltonia_data, num_traits == "numFlwrB"), aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data, num_traits == "numFlwrB"), color = "blue")+
+  stat_smooth(data = filter(Boltonia_data, num_traits == "numFlwrB"), method = "lm", color = "black")+
+  stat_cor(data = filter(Boltonia_data, num_traits == "numFlwrB"),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data, num_traits == "numFlwrB"),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Number of Flower Buds")+
+  facet_wrap(.~num_traits, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom", 
+        strip.background = element_rect(fill = "skyblue", color = "black"),
+        strip.text = element_text(color = "black"))
+ggsave("./figures/flwrbud_regression.png", width = 10, height = 7, dpi = 600)
+
+ggplot(data = filter(Boltonia_data, num_traits == "numLSt"), aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data, num_traits == "numLSt"), color = "blue")+
+  stat_smooth(data = filter(Boltonia_data, num_traits == "numLSt"), method = "lm", color = "black")+
+  stat_cor(data = filter(Boltonia_data, num_traits == "numLSt"),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data, num_traits == "numLSt"),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Number of Lateral Stems")+
+  facet_wrap(.~num_traits, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom", 
+        strip.background = element_rect(fill = "skyblue", color = "black"),
+        strip.text = element_text(color = "black"))
+ggsave("./figures/latstems_regression.png", width = 10, height = 7, dpi = 600)
+
+ggplot(data = filter(Boltonia_data, num_traits == "numRayF"), aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data, num_traits == "numRayF"), color = "blue")+
+  stat_smooth(data = filter(Boltonia_data, num_traits == "numRayF"), method = "lm", color = "black")+
+  stat_cor(data = filter(Boltonia_data, num_traits == "numRayF"),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data, num_traits == "numRayF"),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Number of Ray Flowers")+
+  facet_wrap(.~num_traits, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom", 
+        strip.background = element_rect(fill = "skyblue", color = "black"),
+        strip.text = element_text(color = "black"))
+ggsave("./figures/rayflwr_regression.png", width = 10, height = 7, dpi = 600)
+
+ggplot(data = filter(Boltonia_data, num_traits == "numRos"), aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data, num_traits == "numRos"), color = "blue")+
+  stat_smooth(data = filter(Boltonia_data, num_traits == "numRos"), method = "lm", color = "black")+
+  stat_cor(data = filter(Boltonia_data, num_traits == "numRos"),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data, num_traits == "numRos"),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Number of Rosettes")+
+  facet_wrap(.~num_traits, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom", 
+        strip.background = element_rect(fill = "skyblue", color = "black"),
+        strip.text = element_text(color = "black"))
+ggsave("./figures/rosette_regression.png", width = 10, height = 7, dpi = 600)
+
+ggplot(data = filter(Boltonia_data, num_traits == "numStem"), aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data, num_traits == "numStem"), color = "blue")+
+  stat_smooth(data = filter(Boltonia_data, num_traits == "numStem"), method = "lm", color = "black")+
+  stat_cor(data = filter(Boltonia_data, num_traits == "numStem"),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data, num_traits == "numStem"),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Number of Stems")+
+  facet_wrap(.~num_traits, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom", 
+        strip.background = element_rect(fill = "skyblue", color = "black"),
+        strip.text = element_text(color = "black"))
+ggsave("./figures/numstem_regression.png", width = 10, height = 7, dpi = 600)
+
+ggplot(data = filter(Boltonia_data, num_traits == "stemLength"), aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data, num_traits == "stemLength"), color = "blue")+
+  stat_smooth(data = filter(Boltonia_data, num_traits == "stemLength"), method = "lm", color = "black")+
+  stat_cor(data = filter(Boltonia_data, num_traits == "stemLength"),method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
+  stat_regline_equation(data = filter(Boltonia_data, num_traits == "stemLength"),label.x.npc = 0, label.y.npc = 0.95)+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Stem Length")+
+  facet_wrap(.~num_traits, nrow = 1)+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom", 
+        strip.background = element_rect(fill = "skyblue", color = "black"),
+        strip.text = element_text(color = "black"))
+ggsave("./figures/stemlength_regression.png", width = 10, height = 7, dpi = 600)
+
+
+###########Accession/County ANOVA########
 stemLength_data <- filter(Boltonia_data_CountyLabels, num_traits == "stemLength")%>%
   filter(Date == as.Date("2024-07-03"))
 stemLength_model <- as.formula(num_values ~ MaternalLine)
@@ -185,12 +339,12 @@ summary(stemLength_aov)
 p <- ggplot(data = stemLength_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Stem Length (07/03/24)")+
+  labs(title = "Accession & Stem Length (07/03/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Stem Length (cm)")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_stemlength_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_stemlength_anova.png", width = 10, height = 7, dpi = 600)
 
 
 numStem_data <- filter(Boltonia_data_CountyLabels, num_traits == "numStem")%>%
@@ -202,12 +356,12 @@ summary(numStem_aov)
 p <- ggplot(data = numStem_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Number of Stems (07/03/24)")+
+  labs(title = "Accession & Number of Stems (07/03/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Number Stems")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_numstem_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_numstem_anova.png", width = 10, height = 7, dpi = 600)
 
 numDiscF_data <- filter(Boltonia_data_CountyLabels, num_traits == "numDiscF")%>%
   filter(Date == as.Date("2024-07-03"))
@@ -218,12 +372,12 @@ summary(numDiscF_aov)
 p <- ggplot(data = numDiscF_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Number of Disc Flowers (07/03/24)")+
+  labs(title = "Accession & Number of Disc Flowers (07/03/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Number Disc Flowers")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_discflwrs_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_discflwrs_anova.png", width = 10, height = 7, dpi = 600)
 
 numRayF_data <- filter(Boltonia_data_CountyLabels, num_traits == "numRayF")%>%
   filter(Date == as.Date("2024-07-03"))
@@ -234,12 +388,12 @@ summary(numDiscF_aov)
 p <- ggplot(data = numRayF_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Number of Ray Flowers (07/03/24)")+
+  labs(title = "Accession & Number of Ray Flowers (07/03/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Number Ray Flowers")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_rayflwrs_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_rayflwrs_anova.png", width = 10, height = 7, dpi = 600)
 
 numFlwrB_data <- filter(Boltonia_data_CountyLabels, num_traits == "numFlwrB")%>%
   filter(Date == as.Date("2024-07-03"))
@@ -250,12 +404,12 @@ summary(numFlwrB_aov)
 p <- ggplot(data = numFlwrB_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Number of Flower Buds (07/03/24)")+
+  labs(title = "Accession & Number of Flower Buds (07/03/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Number Flower Buds")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_flwrbud_anova.png", width = 10, height =7)
+ggsave("./figures/accession_flwrbud_anova.png", width = 10, height = 7, dpi = 600)
 
 numRos_data <- filter(Boltonia_data_CountyLabels, num_traits == "numRos")%>%
   filter(Date == as.Date("2024-07-03"))
@@ -264,27 +418,26 @@ numRos_aov <- aov(numRos_model, data = numRos_data)
 p <- ggplot(data = numRos_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Number of Rosettes (07/03/24)")+
+  labs(title = "Accession & Number of Rosettes (07/03/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Number of Rosettes)")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_rosettes_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_rosettes_anova.png", width = 10, height = 7, dpi = 600)
 
 numDeadF_data <- filter(Boltonia_data_CountyLabels, num_traits == "numDeadF")%>%
   filter(Date == as.Date("2024-07-03"))
 numDeadF_model <- as.formula(num_values ~ MaternalLine)
 numDeadF_aov <- aov(numDeadF_model, data = numDeadF_data)
-
 p <- ggplot(data = numDeadF_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Number of Dead Flowers (07/03/24)")+
+  labs(title = "Accession & Number of Dead Flowers (07/03/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Number Dead Flowers")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_deadflwr_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_deadflwr_anova.png", width = 10, height = 7, dpi = 600)
 
 numLSt_data <- filter(Boltonia_data_CountyLabels, num_traits == "numLSt")%>%
   filter(Date == as.Date("2024-07-03"))
@@ -295,12 +448,12 @@ summary(numLSt_aov)
 p <- ggplot(data = numLSt_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Number of Lateral Stems (07/03/24)")+
+  labs(title = "Accession & Number of Lateral Stems (07/03/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Number Lateral Stems")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_lateralstems_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_lateralstems_anova.png", width = 10, height = 7, dpi = 600)
 
 numLvs_data <- filter(Boltonia_data_CountyLabels, num_traits == "numLvs")%>%
   filter(Date == as.Date("2024-05-15"))
@@ -310,12 +463,12 @@ print(numLvs_aov)
 p <- ggplot(data = numLvs_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Number of Leaves (05/15/24)")+
+  labs(title = "Accession & Number of Leaves (05/15/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Number of Leaves")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_numleaves_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_numleaves_anova.png", width = 10, height = 7, dpi = 600)
 
 latBuds_data <- filter(Boltonia_data_CountyLabels, num_traits == "latBuds")%>%
   filter(Date == as.Date("2024-05-01"))
@@ -324,12 +477,12 @@ latBuds_aov <- aov(latBuds_model, data = latBuds_data)
 p <- ggplot(data = latBuds_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Number of Lateral Buds (05/01/24)")+
+  labs(title = "Accession & Number of Lateral Buds (05/01/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Number Lateral Buds")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_latbuds_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_latbuds_anova.png", width = 10, height = 7, dpi = 600)
 
 leafLong_data <- filter(Boltonia_data_CountyLabels, num_traits == "leafLong")%>%
   filter(Date == as.Date("2024-05-15"))
@@ -338,12 +491,12 @@ leafLong_aov <- aov(leafLong_model, data = leafLong_data)
 p <- ggplot(data = leafLong_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Leaf Length (05/15/24)")+
+  labs(title = "Accession & Leaf Length (05/15/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Leaf Length")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_leaflength_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_leaflength_anova.png", width = 10, height = 7, dpi = 600)
 
 leafWide_data <- filter(Boltonia_data_CountyLabels, num_traits == "leafWide")%>%
   filter(Date == as.Date("2024-05-15"))
@@ -352,89 +505,99 @@ leafWide_aov <- aov(leafWide_model, data = leafWide_data)
 p <- ggplot(data = leafWide_data, aes(x = MaternalLine, y = num_values))+
   geom_boxplot(aes(group = paste(Date, MaternalLine), fill = MaternalLine), position = position_dodge())+
   stat_anova_test(label.x.npc = 0.2, label = "{method}, F({DFn},{DFd}) = {F}, ,p = {p.format}")+
-  labs(title = "County & Leaf Width (05/15/24)")+
+  labs(title = "Accession & Leaf Width (05/15/24)")+
   scale_x_discrete("Accession (Site)")+
   scale_y_continuous("Leaf Width")+
   theme(legend.position = "none", axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
 p
-ggsave("./figures/county_leafwide_anova.png", width = 10, height = 7)
+ggsave("./figures/accession_leafwide_anova.png", width = 10, height = 7, dpi = 600)
 
 ##MaternalLine plots#######
 ###########################
-p <- ggplot(data = filter(Boltonia_data, num_traits == "stemLength", Date == as.Date("2024-06-19")), aes(x = MaternalLine, y = values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "stemLength", Date == as.Date("2024-07-03")), aes(x = MaternalLine, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("Maternal Line & Stem Length (06/19/24)")+
+  geom_point()+
+  ggtitle("Maternal Line & Stem Length (07/03/24)")+
   ylab("Stem Length (cm)")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/MaternalLine_stemlength.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numStem", Date == as.Date("2024-06-19")), aes(x = MaternalLine, y = values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numStem", Date == as.Date("2024-07-03")), aes(x = MaternalLine, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("Maternal Line & Number of Stems (06/19/24)")+
+  geom_point()+
+  ggtitle("Maternal Line & Number of Stems (07/03/24)")+
   ylab("numStem")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/MaternalLine_numStem.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numRos", Date == as.Date("2024-06-19")), aes(x = MaternalLine, y = values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numRos", Date == as.Date("2024-07-03")), aes(x = MaternalLine, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("Maternal Line & Number of Rosettes (06/19/24)")+
+  geom_point()+
+  ggtitle("Maternal Line & Number of Rosettes (07/03/24)")+
   ylab("numRos")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/MaternalLine_numRos.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numRayF", Date == as.Date("2024-06-19")), aes(x = MaternalLine, y = values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numRayF", Date == as.Date("2024-07-03")), aes(x = MaternalLine, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("Maternal Line & Number of Ray flowers (06/19/24)")+
+  geom_point()+
+  ggtitle("Maternal Line & Number of Ray flowers (07/03/24)")+
   ylab("numRayF")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/MaternalLine_numRayF.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numFlwrB", Date == as.Date("2024-06-19")), aes(x = MaternalLine, y = values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numFlwrB", Date == as.Date("2024-07-03")), aes(x = MaternalLine, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("Maternal Line & Number of Flowerbuds (06/19/24)")+
+  geom_point()+
+  ggtitle("Maternal Line & Number of Flowerbuds (07/03/24)")+
   ylab("numFlwrB")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/MaternalLine_numFlwrB.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numDiscF", Date == as.Date("2024-06-19")), aes(x = MaternalLine, y = values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numDiscF", Date == as.Date("2024-07-03")), aes(x = MaternalLine, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("Maternal Line & Number of Disc Flowers (06/19/24)")+
+  geom_point()+
+  ggtitle("Maternal Line & Number of Disc Flowers (07/03/24)")+
   ylab("numDiscF")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/MaternalLine_numDiscF.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "leafWide", Date == as.Date("2024-05-15")), aes(x = MaternalLine, y = values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "leafWide", Date == as.Date("2024-05-15")), aes(x = MaternalLine, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
+  geom_point()+
   ggtitle("Maternal Line & Leaf Width (05/15/24)")+
   ylab("leafWidth")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/MaternalLine_leafWide.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "leafLong", Date == as.Date("2024-05-15")), aes(x = MaternalLine, y = values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "leafLong", Date == as.Date("2024-05-15")), aes(x = MaternalLine, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
+  geom_point()+
   ggtitle("Maternal Line & Leaf Length (05/15/24)")+
   ylab("leafLength")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/MaternalLine_leafLong.png", width = 10, height = 7, dpi = 600)
   
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numLSt", Date == as.Date("2024-06-19")), aes(x = MaternalLine, y = values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numLSt", Date == as.Date("2024-07-03")), aes(x = MaternalLine, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("Maternal Line & Number of Lateral Stems (06/19/24)")+
+  geom_point()+
+  ggtitle("Maternal Line & Number of Lateral Stems (07/03/24)")+
   ylab("numLSt")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/MaternalLine_numLSt.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numLvs", Date == as.Date("2024-05-15")), aes(x = MaternalLine, y = values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numLvs", Date == as.Date("2024-05-15")), aes(x = MaternalLine, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
+  geom_point()+
   ggtitle("Maternal Line & Number of Leaves (05/15/24)")+
   ylab("numLvs")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
@@ -442,47 +605,49 @@ p
 ggsave("./figures/MaternalLine_numLvs.png", width = 10, height = 7, dpi = 600)
 
 
-unique(Boltonia_data$num_traits)
-
 ##County plots##########
 #######################
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "stemLength", Date == as.Date("2024-06-19")), aes(x = County, y = num_values))+
-  geom_violin(aes(fill = County), color = NA, alpha = 0.7)+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "stemLength", Date == as.Date("2024-07-03")), aes(x = County, y = num_values))+
+  geom_boxplot(color = "blue", fill = "skyblue")+
   geom_point()+
-  ggtitle("County & Stem Length (06/19/24)")+
+  ggtitle("County & Stem Length (07/03/24)")+
   ylab("Stem Length (cm)")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/County_stemlength.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numStem", Date == as.Date("2024-06-19")), aes(x = County, y = num_values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numStem", Date == as.Date("2024-07-03")), aes(x = County, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("County & Number of Stems (06/19/24)")+
-  ylab("Leaf Width")+
+  geom_point()+
+  ggtitle("County & Number of Stems (07/03/24)")+
+  ylab("Number of Stems")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/County_numStem.png", width = 10, height = 7, dpi = 600)
 
-p <-ggplot(data = filter(Boltonia_data, num_traits == "numFlwrB", Date == as.Date("2024-06-19")), aes(x = County, y = num_values))+
+p <-ggplot(data = filter(Boltonia_data, num_traits == "numFlwrB", Date == as.Date("2024-07-03")), aes(x = County, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("County & Number of Flower Buds (06/19/24)")+
+  geom_point()+
+  ggtitle("County & Number of Flower Buds (07/03/24)")+
   ylab("numFlwrB")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/County_numFlwrB.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numLSt", Date == as.Date("2024-06-19")), aes(x = County, y = num_values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numLSt", Date == as.Date("2024-07-03")), aes(x = County, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("County & Number of Lateral Stems (06/19/24)")+
+  geom_point()+
+  ggtitle("County & Number of Lateral Stems (07/03/24)")+
   ylab("numLSt")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
 ggsave("./figures/County_numLSt.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numRos", Date == as.Date("2024-06-19")), aes(x = County, y = num_values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numRos", Date == as.Date("2024-07-03")), aes(x = County, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("County & Number of Rosettes (06/19/24)")+
+  geom_point()+
+  ggtitle("County & Number of Rosettes (07/03/24)")+
   ylab("numRos")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
@@ -490,14 +655,16 @@ ggsave("./figures/County_numRos.png", width = 10, height = 7, dpi = 600)
 
 p <- ggplot(data = filter(Boltonia_data, num_traits == "leafLong", Date == as.Date("2024-05-15")), aes(x = County, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
+  geom_point()+
   ggtitle("County & Leaf Length (05/15/24)")+
   ylab("Leaf Length")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
-ggsave("./figures/County_leaflong.png", width = 10, height = 10, dpi = 600)
+ggsave("./figures/County_leaflong.png", width = 10, height = 7, dpi = 600)
 
 p <- ggplot(data = filter(Boltonia_data, num_traits == "leafWide", Date == as.Date("2024-05-15")), aes(x = County, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
+  geom_point()+
   ggtitle("County & Leaf Width (05/15/24)")+
   ylab("Leaf Width")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
@@ -506,26 +673,29 @@ ggsave("./figures/County_leafwide.png", width = 10, height = 7, dpi = 600)
 
 p <- ggplot(data = filter(Boltonia_data, num_traits == "numLvs", Date == as.Date("2024-05-15")), aes(x = County, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
+  geom_point()+
   ggtitle("County & Number of Leaves (05/15/24)")+
   ylab("numLvs")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
-ggsave("./figures/County_numLvs.png", width = 10, height = 7)
+ggsave("./figures/County_numLvs.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numRayF", Date == as.Date("2024-06-19")), aes(x = County, y = num_values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numRayF", Date == as.Date("2024-07-03")), aes(x = County, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("County & Number of Ray Flowers (06/19/24)")+
+  geom_point()+
+  ggtitle("County & Number of Ray Flowers (07/03/24)")+
   ylab("numRayF")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
-ggsave("./figures/County_numrayF.png", width = 10, height = 7)
+ggsave("./figures/County_numrayF.png", width = 10, height = 7, dpi = 600)
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "numDiscF", Date == as.Date("2024-06-19")), aes(x = County, y = num_values))+
+p <- ggplot(data = filter(Boltonia_data, num_traits == "numDiscF", Date == as.Date("2024-07-03")), aes(x = County, y = num_values))+
   geom_boxplot(color = "blue", fill = "skyblue")+
-  ggtitle("County & Number of Disc Flowers (06/19/24)")+
+  geom_point()+
+  ggtitle("County & Number of Disc Flowers (07/03/24)")+
   ylab("numDiscF")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 p
-ggsave("./figures/County_numdiscF.png", width = 10, height = 7)
+ggsave("./figures/County_numdiscF.png", width = 10, height = 7, dpi = 600)
 
 
