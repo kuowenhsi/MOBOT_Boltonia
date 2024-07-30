@@ -7,6 +7,7 @@ library(rnaturalearthdata)
 # library(scatterpie)    # For creating scatter pie plots
 # library(raster)        # For raster data manipulation
 library(ggspatial)     # For spatial data visualization
+library(ggrepel)
 
 # Set working directory
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
@@ -27,21 +28,36 @@ mexico_state <- ne_states(country = "mexico", returnclass = "sf") %>%
   st_crop(xmin = -135, ymin = -55, xmax = -65, ymax = 60) %>%
   st_geometry()
 
+rivers_sf <- ne_download(scale = "large", type = "rivers_lake_centerlines", category = "physical", returnclass = "sf")
+
+Boltonia_data_label <- Boltonia_data %>%
+  group_by(County) %>%
+  summarise(Longitude = mean(Google_longitude), Latitude = mean(Google_latitude))%>%
+  ungroup()%>%
+  st_as_sf(coords = c("Longitude", "Latitude"), agr = "constant", crs = 4326)%>%
+  st_transform(crs = 3857)
+
+Boltonia_data_label_3857 <- cbind(st_drop_geometry(Boltonia_data_label), st_coordinates(Boltonia_data_label))
+
 
 # Create PCA plot with scatter pies
 p <- ggplot(data = st_as_sf(Boltonia_data, coords = c("Google_longitude", "Google_latitude"), agr = "constant", crs = 4326)) +
   geom_sf(data = usa_state, fill = NA, color = "gray75") +
   geom_sf(data = canada_state, fill = NA, color = "gray75") +
   geom_sf(data = mexico_state, fill = NA, color = "gray75") +
+  geom_sf(data = rivers_sf, color = "lightblue") +
   geom_sf()+
+  geom_text_repel(data = Boltonia_data_label_3857, aes(x = X, y = Y, label = County), force_pull = 0.01, force = 30, max.overlaps = 25, size = 5, inherit.aes = FALSE,min.segment.length = 0.1, color = "gray20")+
   xlab("") +
   ylab("") +
   theme_bw() +
   theme(legend.position = "bottom", legend.box = "vertical", panel.grid = element_blank()) +
-  coord_sf(ylim = c(2e6, 7e6), expand = FALSE, crs = 3857) +
+  coord_sf(xlim = c(-11e6, -8.8e6), ylim = c(3.9e6, 5.9e6), expand = FALSE, crs = 3857) +
   annotation_scale(location = "br", width_hint = 0.25)
 
 p
+
+ggsave("./figures/Boltonia_map_20240729.png", width = 6, height = 6, dpi = 600)
 
 # Extract legend from the PCA plot
 p_legend <- get_legend(p + guides(color = "none", shape = "none") + theme(legend.background = element_blank()))

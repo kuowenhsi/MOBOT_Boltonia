@@ -2,6 +2,7 @@ library(tidyverse)
 library(ggpubr)
 library(lmerTest)
 library(car)
+library(cowplot)
 
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
@@ -43,8 +44,16 @@ Boltonia_data_FlowerRatio <- Boltonia_data %>%
 Boltonia_data_county_coordinations <- Boltonia_data %>%
   group_by(County)%>%
   summarize(mean_Google_latitude = mean(Google_latitude), mean_Google_longitude = mean(Google_longitude))%>%
+  ungroup()%>%
   arrange(mean_Google_latitude)%>%
   mutate(labels = paste0(County, "\n", "(", round(mean_Google_latitude, 2), ", ", round(mean_Google_longitude, 2), ")"))
+
+Boltonia_data_site_coordinations <- Boltonia_data %>%
+  group_by(MaternalLine, County)%>%
+  summarize(mean_Google_latitude = mean(Google_latitude), mean_Google_longitude = mean(Google_longitude))%>%
+  ungroup()%>%
+  arrange(mean_Google_latitude)%>%
+  mutate(labels = paste0(MaternalLine, "\n",County, "\n", "(", round(mean_Google_latitude, 2), ", ", round(mean_Google_longitude, 2), ")"))
 
 
 Boltonia_data_FlowerRatio_county <- Boltonia_data %>%
@@ -114,7 +123,20 @@ p <- ggplot(data = Boltonia_data_FlowerRatio_county, aes(x = reorder(labels, mea
   theme_bw()+
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid.minor = element_blank(), legend.position = "bottom", legend.key.width = unit(1, "in") )
 
+
 # ggsave("./figures/Boltonia_total_flower_ratio_by_county.png", width = 10, height = 6)
+
+
+p1 <- ggplot(data = filter(Boltonia_data_FlowerRatio_county, num_traits == "numDiscF"), aes(x = reorder(labels, mean_Google_latitude), y = flowerRatio))+
+  geom_col(aes(group = Date, fill = Date), position = position_dodge())+
+  scale_x_discrete(name = "")+
+  scale_y_continuous("Flower ratio")+
+  scale_fill_date(low = "yellow", high = "red")+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid.minor = element_blank(), legend.position = c(0.7, 0.86), legend.key.width = unit(0.6, "in"), legend.key.height = unit(0.08, "in"),legend.direction = "horizontal", legend.title = element_blank(), legend.background = element_rect(fill = NA))
+
+p
+ggsave("./figures/Boltonia_disk_flower_ratio_by_county.png", width = 10, height = 2.5)
 
 
 # buds
@@ -176,19 +198,19 @@ as_tibble(VarCorr(DaysToFlower_bud_lmm))%>%select(grp, vcov)%>%pivot_wider(names
 as_tibble_row(fixef(DaysToFlower_bud_lmm))%>%rename(slope = Google_latitude, intercept = `(Intercept)`)
 
 DaysToFlower_bud_lmm_anova <- as_tibble(anova(DaysToFlower_bud_lmm, type = "II"))%>%
-  mutate(num_traits = "numFlwrB", label_text = paste0("Days ~ Latitude + (1|Latitude/MaternalLine)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
+  mutate(num_traits = "numFlwrB", label_text = paste0("Days ~ Latitude + (1|Site/MaternalLine)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
   bind_cols(as_tibble_row(fixef(DaysToFlower_bud_lmm))%>%rename(slope = Google_latitude, intercept = `(Intercept)`), as_tibble(VarCorr(DaysToFlower_bud_lmm))%>%select(grp, vcov)%>%pivot_wider(names_from = "grp", values_from = "vcov"))
 
 DaysToFlower_ray_lmm <- lmer(as.integer(DaysToFlower) ~ Google_latitude + (1|Google_latitude/FlowerHead), data = filter(Boltonia_data_DaysToFlower, num_traits == "numRayF", as.integer(DaysToFlower) < 150))
 VarCorr(DaysToFlower_ray_lmm)
 DaysToFlower_ray_lmm_anova <- as_tibble(anova(DaysToFlower_ray_lmm, type = "II"))%>%
-  mutate(num_traits = "numRayF", label_text = paste0("Days ~ Latitude + (1|Latitude/MaternalLine)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
+  mutate(num_traits = "numRayF", label_text = paste0("Days ~ Latitude + (1|Site/MaternalLine)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
   bind_cols(as_tibble_row(fixef(DaysToFlower_ray_lmm))%>%rename(slope = Google_latitude, intercept = `(Intercept)`), as_tibble(VarCorr(DaysToFlower_ray_lmm))%>%select(grp, vcov)%>%pivot_wider(names_from = "grp", values_from = "vcov"))
 
 DaysToFlower_disk_lmm <- lmer(as.integer(DaysToFlower) ~ Google_latitude + (1|Google_latitude/FlowerHead), data = filter(Boltonia_data_DaysToFlower, num_traits == "numDiscF", as.integer(DaysToFlower) < 150))
 VarCorr(DaysToFlower_disk_lmm)
 DaysToFlower_disk_lmm_anova <- as_tibble(anova(DaysToFlower_disk_lmm, type = "II"))%>%
-  mutate(num_traits = "numDiscF", label_text = paste0("Days ~ Latitude + (1|Latitude/MaternalLine)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
+  mutate(num_traits = "numDiscF", label_text = paste0("Days ~ Latitude + (1|Site/MaternalLine)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
   bind_cols(as_tibble_row(fixef(DaysToFlower_disk_lmm))%>%rename(slope = Google_latitude, intercept = `(Intercept)`), as_tibble(VarCorr(DaysToFlower_disk_lmm))%>%select(grp, vcov)%>%pivot_wider(names_from = "grp", values_from = "vcov"))
 
 DaysToFlower_lmm_anova <- bind_rows(DaysToFlower_bud_lmm_anova, DaysToFlower_ray_lmm_anova, DaysToFlower_disk_lmm_anova)%>%
@@ -234,6 +256,67 @@ DaysToFlower_lmm_anova_H
 ### plot for latitude
 
 
+#### Stem Length
+
+Boltonia_stemLength_data <- Boltonia_data %>%
+  filter(Date == as.Date("2024-07-11"), num_traits %in% c("stemLength", "numDeadF", "numDiscF", "numFlwrB", "numRayF"))%>%
+  pivot_wider(names_from = "num_traits", values_from = "num_values")%>%
+  rowwise()%>%
+  mutate(total_flowers = sum(numDeadF, numDiscF, numFlwrB, numRayF))%>%
+  ungroup()%>%
+  filter(total_flowers > 0)
+
+## only Site (MaternalLine is included because otherwise the model cannot be fitted)
+
+Boltonia_stemLength_lmm <- lmer(stemLength ~ Google_latitude + (1|MaternalLine), data = Boltonia_stemLength_data)
+VarCorr(Boltonia_stemLength_lmm)
+Boltonia_stemLength_lmm_anova <- as_tibble(anova(Boltonia_stemLength_lmm, type = "II"))%>%
+  mutate(label_text = paste0("Days ~ Latitude + (1|Site)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
+  bind_cols(as_tibble_row(fixef(Boltonia_stemLength_lmm))%>%rename(slope = Google_latitude, intercept = `(Intercept)`), as_tibble(VarCorr(Boltonia_stemLength_lmm))%>%select(grp, vcov)%>%pivot_wider(names_from = "grp", values_from = "vcov"))
+
+Boltonia_stemLength_lmm_anova
+colnames(Boltonia_stemLength_lmm)
+
+
+##################################
+## Association plots for posters##
+##################################
+
+
+p1 <- ggplot(data = Boltonia_stemLength_data, aes(x = Google_latitude, y = stemLength))+
+  geom_point()+
+  geom_abline(data = Boltonia_stemLength_lmm_anova, aes(intercept = intercept, slope = slope), color = "blue")+
+  geom_text(x = 38.6, y = 140, hjust = 0, mapping = aes(label = label_text), data = Boltonia_stemLength_lmm_anova)+
+  geom_text(x = 38.6, y = 15, hjust = 0, mapping = aes(label = paste0("y = ", round(intercept, 2), round(slope, 2), "x")), data = Boltonia_stemLength_lmm_anova, color = "blue")+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Stem Length (cm)", limits = c(10, 150))+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom")
+p1
+
+
+
+p2 <- ggplot(data = filter(Boltonia_data_DaysToFlower, num_traits == "numDiscF"), aes(x = Google_latitude, y = as.integer(DaysToFlower)))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_data_DaysToFlower, num_traits == "numDiscF", as.integer(DaysToFlower) == 150), color = "red")+
+  geom_abline(data = filter(DaysToFlower_disk_lmm_anova, num_traits == "numDiscF"), aes(intercept = intercept, slope = slope), color = "blue")+
+  geom_text(x = 38.6, y = 160, hjust = 0, mapping = aes(label = label_text), data = DaysToFlower_disk_lmm_anova)+
+  geom_text(x = 38.6, y = 60, hjust = 0, mapping = aes(label = paste0("y = ", round(intercept, 2), round(slope, 2), "x")), data = filter(DaysToFlower_disk_lmm_anova, num_traits == "numDiscF"), color = "blue")+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Days since planting", limits = c(60, 165))+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom")
+
+p2
+
+p <- plot_grid(p1, p2, align = "hv")
+p
+
+ggsave("./figures/Boltonia_poster_regression.png", width = 12, height = 6, dpi = 600)
+
+##############
+
+
 strip_labels = c(numFlwrB = "First flower bud", numRayF = "First open ray flowers", numDiscF = "First open disk flowers")
 
 p <- ggplot(data = Boltonia_data_DaysToFlower, aes(x = Google_latitude, y = as.integer(DaysToFlower)))+
@@ -252,7 +335,7 @@ p <- ggplot(data = Boltonia_data_DaysToFlower, aes(x = Google_latitude, y = as.i
   theme(panel.grid.minor = element_blank(), legend.position = "bottom")
   
 
-ggsave("./figures/Boltonia_days_to_flower_by_latitude.png", width = 13, height = 5)
+# ggsave("./figures/Boltonia_days_to_flower_by_latitude.png", width = 13, height = 5)
 
 ### plot for longitude
 
@@ -302,35 +385,72 @@ p <- ggplot(data = Boltonia_data_DaysToFlower, aes(x = Google_longitude, y = as.
   theme(panel.grid.minor = element_blank(), legend.position = "bottom")
 
 
+# ggsave("./figures/Boltonia_days_to_flower_by_longitude.png", width = 13, height = 5)
 
-ggsave("./figures/Boltonia_days_to_flower_by_longitude.png", width = 13, height = 5)
+###########################################
+
+unique(Boltonia_data$num_traits)
 
 
-# Date first
-p <- ggplot(data = Boltonia_data_FlowerRatio_county, aes(x = as.character(Date), y = flowerRatio))+
-  geom_col(aes(group = County, fill = County), position = position_dodge())
+# by County
+Boltonia_RosStem_data <- Boltonia_data %>%
+  filter(num_traits %in% c("numRos", "numStem"))%>%
+  group_by(County, num_traits, Date)%>%
+  summarise(average = mean(num_values, na.rm = TRUE), SE = sd(num_values, na.rm = TRUE)/sqrt(n()), sample_size = n())%>%
+  ungroup()%>%
+  mutate(average = case_when(num_traits == "numStem" ~ -average, TRUE ~ average),
+         SE = case_when(num_traits == "numStem" ~ -SE, TRUE ~ SE))%>%
+  left_join(Boltonia_data_county_coordinations, by = "County")
+
+
+p <- ggplot(data = Boltonia_RosStem_data, aes(x = Date, y = average))+
+  geom_col(aes(fill = num_traits))+
+  geom_errorbar(aes(ymin = average, ymax = average + SE, color = num_traits), width = 0.2)+
+  scale_y_continuous(name = "", breaks = c(-1, 0, 1), labels = c("1 stem", "0", "1 rosette"))+
+  scale_x_date(name = "")+
+  facet_wrap(.~reorder(labels, mean_Google_latitude), nrow = 3)+
+  theme_bw()+
+  theme(legend.position = "none")
 p
 
-p <- ggplot(data = Boltonia_data_FlowerRatio_county, aes(x = County, y = flowerRatio))+
-  geom_col()+
-  facet_wrap(.~Date)+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
+ggsave("./figures/Boltonia_RosStem_by_County.png", height = 10, width = 12)
+
+
+p2 <- ggplot(data = filter(Boltonia_RosStem_data, Date == as.Date("2024-07-11")), aes(x = reorder(labels, mean_Google_latitude), y = average))+
+  geom_col(aes(fill = num_traits))+
+  geom_errorbar(aes(ymin = average, ymax = average + SE, color = num_traits), width = 0.2)+
+  scale_y_continuous(name = "", breaks = c(-1, 0, 1), labels = c("1 stem", "0", "1 rosette"))+
+  scale_x_discrete("")+
+  theme_bw()+
+  theme(legend.position = "none", axis.text.x = element_blank())
+
 p
 
+ggsave("./figures/Boltonia_RosStem_by_County_20240711.png", width = 10, height = 1.75)
 
-# by latitude
 
-p <- ggplot(data = Boltonia_data_FlowerRatio_county, mapping = aes(x = mean_Google_latitude, y = flowerRatio))+
-  geom_point()+
-  stat_smooth(method = "lm", color = "blue")+
-  stat_cor(method = "pearson", label.x.npc = 0, label.y.npc = 0.80)+
-  stat_regline_equation(label.x.npc = 0, label.y.npc = 0.95)+
-  facet_wrap(.~Date)+
-  theme_bw()
+# by Site
+Boltonia_RosStem_data <- Boltonia_data %>%
+  filter(num_traits %in% c("numRos", "numStem"))%>%
+  group_by(MaternalLine, num_traits, Date)%>%
+  summarise(average = mean(num_values, na.rm = TRUE), SE = sd(num_values, na.rm = TRUE)/sqrt(n()), sample_size = n())%>%
+  ungroup()%>%
+  mutate(average = case_when(num_traits == "numStem" ~ -average, TRUE ~ average),
+         SE = case_when(num_traits == "numStem" ~ -SE, TRUE ~ SE))%>%
+  left_join(Boltonia_data_site_coordinations, by = "MaternalLine")
+
+
+p <- ggplot(data = Boltonia_RosStem_data, aes(x = Date, y = average))+
+  geom_col(aes(fill = num_traits))+
+  geom_errorbar(aes(ymin = average, ymax = average + SE, color = num_traits), width = 0.2)+
+  scale_y_continuous(name = "", breaks = c(-1, 0, 1), labels = c("1 stem", "0", "1 rosette"))+
+  scale_x_date(name = "")+
+  facet_wrap(.~reorder(labels, mean_Google_latitude), nrow = 3)+
+  theme_bw()+
+  theme(legend.position = "none")
 p
 
-aov_text <- aov(flowerRatio ~ mean_Google_latitude, data = filter(Boltonia_data_FlowerRatio_county, Date == as.Date("2024-07-03")))
-summary(aov_text)
+ggsave("./figures/Boltonia_RosStem_by_Site.png", height = 10, width = 16)
 
 # by longitude
 
@@ -340,22 +460,62 @@ mutate(num_values = case_when(is.na(num_values) ~ 0, num_values == 0 ~ 0, num_va
 
 ##########################
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "leafLong", Date == as.Date("2024-05-01")), aes(x = County, y = num_values))+
-  geom_violin(aes(fill = County), color = NA, alpha = 0.7)+
-  geom_point()
+p3 <- ggplot(data = filter(Boltonia_data, num_traits == "leafLong", Date == as.Date("2024-05-15")), aes(x = reorder(County, Google_latitude), y = num_values))+
+  geom_point(aes(color = County), alpha = 0.7, position = position_jitter(width = 0.1, height = 0))+
+  geom_boxplot(aes(color = County), outlier.shape = NA, fill = NA)+
+  stat_anova_test(label.y.npc = 0.1)+
+  scale_x_discrete(name = "")+
+  scale_y_continuous("Leaf length (mm)")+
+  theme_bw()+
+  theme(legend.position = "none", axis.text.x = element_blank())
 
 p
-ggsave("./figures/county_figure.png", width = 10, height = 10, dpi = 600)
+ggsave("./figures/Boltonia_leafLong_20240515.png", width = 10, height = 1.75, dpi = 600)
+
+Boltonia_stemLength_data <- Boltonia_data %>%
+  filter(Date == as.Date("2024-07-11"), num_traits %in% c("stemLength", "numDeadF", "numDiscF", "numFlwrB", "numRayF"))%>%
+  pivot_wider(names_from = "num_traits", values_from = "num_values")%>%
+  rowwise()%>%
+  mutate(total_flowers = sum(numDeadF, numDiscF, numFlwrB, numRayF))%>%
+  ungroup()%>%
+  filter(total_flowers > 0)
 
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "stemLength", Date == as.Date("2024-06-19")), aes(x = Google_Latitude, y = num_values))+
-  geom_point()
+p4 <- ggplot(data = Boltonia_stemLength_data, aes(x = reorder(County, Google_latitude), y = stemLength))+
+  geom_point(aes(color = County), alpha = 0.7, position = position_jitter(width = 0.1, height = 0))+
+  geom_boxplot(aes(color = County), outlier.shape = NA, fill = NA)+
+  stat_anova_test(label.y.npc = 0.9, label.x.npc = 0.35)+
+  scale_x_discrete(name = "")+
+  scale_y_continuous("Stem length (cm)")+
+  theme_bw()+
+  theme(legend.position = "none", axis.text.x = element_blank())
+
+p4
+ggsave("./figures/Boltonia_stemLength_20240711.png", width = 10, height = 1.75, dpi = 600)
+
+
+Boltonia_total_flowers_data <- Boltonia_data %>%
+  filter(num_traits %in% c("numDeadF", "numDiscF", "numFlwrB", "numRayF"), Date == as.Date("2024-07-15"))%>%
+  group_by(index, MaternalLine, County)%>%
+  summarise(mean_Google_latitude = mean(Google_latitude), mean_Google_longitude = mean(Google_longitude), total_flower = sum(num_values, na.rm = TRUE))
+
+p5 <- ggplot(data = Boltonia_total_flowers_data, aes(x = reorder(County, mean_Google_latitude), y = total_flower))+
+  geom_point(aes(color = County), alpha = 0.7, position = position_jitter(width = 0.1, height = 0))+
+  geom_boxplot(aes(color = County), outlier.shape = NA, fill = NA)+
+  stat_anova_test(label.y.npc = 0.9, label.x.npc = 0)+
+  scale_x_discrete(name = "")+
+  scale_y_continuous("Total flowers")+
+  theme_bw()+
+  theme(legend.position = "none", axis.text.x = element_blank())
+
 p
+ggsave("./figures/Boltonia_totalFlower_20240715.png", width = 10, height = 1.75, dpi = 600)
 
 
-p <- ggplot(data = filter(Boltonia_data, num_traits == "stemLength", Date == as.Date("2024-06-19")), aes(x = Google_Longitude, y = num_values))+
-  geom_point()
-p
+library(cowplot)
+
+p<- plot_grid(p2, p3, p4, p5, p1, ncol = 1, align = "v", rel_heights = c(1.75, 1.75, 1.75, 1.75, 2.5))
+ggsave("./figures/combined_plot_for_poster.png", width = 10, height = 9.5, dpi = 600)
 
 
 ##State plots##########
