@@ -2,7 +2,7 @@ library(tidyverse)
 
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
-boltonia_data <- read_csv("./data/Boltonia_merged_data_20240717.csv")
+boltonia_data <- read_csv("./data/Boltonia_merged_data_20240925.csv")
 
 boltonia_data
 str(boltonia_data)
@@ -52,9 +52,10 @@ boltonia_data_corrected%>%select(starts_with("numFlwrB"))%>%
 boltonia_data_corrected%>%
   str()
 
+colnames(boltonia_data)
 colnames(boltonia_data_corrected)
 
-traits <- colnames(boltonia_data_corrected)[18:178]
+traits <- colnames(boltonia_data_corrected)[18:236]
 unique_traits <- unique(str_split_i(traits, "_", 1))
 unique_traits
 num_uniq_traits <- unique_traits[!(unique_traits %in% c("notes", "Surv"))]
@@ -84,4 +85,4 @@ boltonia_data_1 <- boltonia_data_1_num %>%
 unique(boltonia_data_1$label)
 unique(boltonia_data_1$Date)
 
-write_csv(boltonia_data_1, "./data/Boltonia_merged_data_tidy_20240717.csv")
+write_csv(boltonia_data_1, "./data/Boltonia_merged_data_tidy_20240925.csv")

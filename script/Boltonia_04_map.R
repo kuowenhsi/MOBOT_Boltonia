@@ -42,22 +42,22 @@ Boltonia_data_label_3857 <- cbind(st_drop_geometry(Boltonia_data_label), st_coor
 
 # Create PCA plot with scatter pies
 p <- ggplot(data = st_as_sf(Boltonia_data, coords = c("Google_longitude", "Google_latitude"), agr = "constant", crs = 4326)) +
-  geom_sf(data = usa_state, fill = NA, color = "gray75") +
+  geom_sf(data = rivers_sf, color = "lightblue", linewidth = 1) +
+  geom_sf(data = usa_state, fill = NA, color = "red3") +
   geom_sf(data = canada_state, fill = NA, color = "gray75") +
   geom_sf(data = mexico_state, fill = NA, color = "gray75") +
-  geom_sf(data = rivers_sf, color = "lightblue") +
   geom_sf()+
   geom_text_repel(data = Boltonia_data_label_3857, aes(x = X, y = Y, label = County), force_pull = 0.01, force = 30, max.overlaps = 25, size = 5, inherit.aes = FALSE,min.segment.length = 0.1, color = "gray20")+
   xlab("") +
   ylab("") +
   theme_bw() +
   theme(legend.position = "bottom", legend.box = "vertical", panel.grid = element_blank()) +
-  coord_sf(xlim = c(-11e6, -8.8e6), ylim = c(3.9e6, 5.9e6), expand = FALSE, crs = 3857) +
+  coord_sf(xlim = c(-10.8e6, -9e6), ylim = c(4.1e6, 5.7e6), expand = FALSE, crs = 3857) +
   annotation_scale(location = "br", width_hint = 0.25)
 
 p
 
-ggsave("./figures/Boltonia_map_20240729.png", width = 6, height = 6, dpi = 600)
+ggsave("./figures/Boltonia_map_20240802.png", width = 6, height = 6, dpi = 600)
 
 # Extract legend from the PCA plot
 p_legend <- get_legend(p + guides(color = "none", shape = "none") + theme(legend.background = element_blank()))
