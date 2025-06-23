@@ -3,18 +3,110 @@ library(ggpubr)
 library(lmerTest)
 library(car)
 library(cowplot)
+library(ggraph)
+library(igraph)
+library(openxlsx)
 
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
-Boltonia_data <- read_csv("./data/Boltonia_merged_data_tidy_20240717.csv")
+Boltonia_dilution <- readxl::read_xlsx("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/DNA_stock/DNA_stock_Boltonia_dilution.xlsx")%>%
+  select(index, Plate, Position)%>% mutate(Used_in_library = "Yes")
 
+Boltonia_data <- read_csv("./data/Boltonia_merged_data_tidy_20240925.csv")%>%
+  left_join(Boltonia_dilution, by = "index")%>%
+  mutate(Used_in_library = case_when(Used_in_library == "Yes" ~ "Yes", TRUE ~ "No"))
+
+
+unique(Boltonia_data$num_traits)
 # MaternalLine is actually the site (Accession).
 # FlowerHead is actually the individual (real maternal genotype).
 Boltonia_data_rep <- Boltonia_data %>%
-  group_by(MaternalLine, County, FlowerHead, index)%>%
-  summarize()%>%
-  group_by(MaternalLine, County, FlowerHead)%>%
-  summarise(rep = n())
+  group_by(County, MaternalLine, FlowerHead, index, Plate, Position, Used_in_library)%>%
+  summarise()%>%
+  ungroup()%>%
+  mutate(species = "Boltonia")
+
+# Create a workbook
+wb <- createWorkbook()
+
+# Add a worksheet
+addWorksheet(wb, "Sheet1")
+
+# Write data to the worksheet
+writeData(wb, sheet = "Sheet1", x = Boltonia_data_rep)
+
+
+# Unique colors for alternating groups
+group_colors <- c("#F1C40F", "#E74C3C")  # Two alternating colors
+current_color_index <- 1
+
+group_colors2 <- c("#D9EAD3", "#FCE5CD")  # Two alternating colors
+current_color_index2 <- 1
+
+# Initialize variables for tracking groups
+prev_county <- ""
+prev_MaternalLine <- ""
+
+# Apply row styling based on the "County" column
+for (i in 1:nrow(Boltonia_data_rep)) {
+
+  # Check if the County value has changed
+  if (Boltonia_data_rep$County[i] != prev_county) {
+    # Switch to the next color
+    current_color_index <- ifelse(current_color_index == 1, 2, 1)
+    prev_county <- Boltonia_data_rep$County[i]
+  }
+  
+  if (Boltonia_data_rep$MaternalLine[i] != prev_MaternalLine) {
+    # Switch to the next color
+    current_color_index2 <- ifelse(current_color_index2 == 1, 2, 1)
+    prev_MaternalLine <- Boltonia_data_rep$MaternalLine[i]
+  }
+  
+  # Apply the current color style
+  addStyle(
+    wb,
+    sheet = "Sheet1",
+    style = createStyle(fgFill = group_colors[current_color_index]),  # Corrected argument
+    rows = i + 1,  # Adjust for header row
+    cols = 1,
+    gridExpand = TRUE
+  )
+  
+  addStyle(
+    wb,
+    sheet = "Sheet1",
+    style = createStyle(fgFill = group_colors2[current_color_index2]),  # Corrected argument
+    rows = i + 1,  # Adjust for header row
+    cols = 2,
+    gridExpand = TRUE
+  )
+}
+
+
+# Save the workbook
+saveWorkbook(wb, "Boltonia_accession_used_in_library.xlsx", overwrite = TRUE)
+
+# transform it to a edge list!
+edges_level1_2 <- Boltonia_data_rep %>% select(level1 = species, level2 = County) %>% unique %>% rename(from=level1, to=level2)
+edges_level2_3 <- Boltonia_data_rep %>% select(level2 = County, level3 = MaternalLine) %>% unique %>% rename(from=level2, to=level3)
+edges_level3_4 <- Boltonia_data_rep %>% mutate(FlowerHead = paste0(FlowerHead, " (", rep, ")")) %>% select(level3 = MaternalLine, level4 = FlowerHead)  %>% rename(from=level3, to=level4)
+
+edge_list=rbind(edges_level1_2, edges_level2_3, edges_level3_4)
+
+# Now we can plot that
+mygraph <- graph_from_data_frame( edge_list )
+ggraph(mygraph, layout = 'dendrogram', circular = F, ) + 
+  geom_edge_diagonal2(color = "gray80") +
+  geom_node_point() +
+  scale_y_reverse()+
+  geom_node_label(aes(label=name, filter = !leaf), angle=0 , hjust=0.5, size = 4) +
+  geom_node_text(aes(label=name, filter = leaf), angle=0 , hjust=0, size = 2, nudge_y = 0.05) +
+  theme_void()+
+  theme(plot.background = element_rect(fill = "white"))+
+  coord_flip()
+
+ggsave("test_out.png", width = 10, height = 25)
 
 unique(Boltonia_data$MaternalLine)
 unique(Boltonia_data$Google_latitude)
@@ -84,11 +176,19 @@ Boltonia_data_DaysToFlower <- Boltonia_data %>%
   select(index, PlantingDate, FirstLeafDate, num_traits, Date)%>%
   mutate(DaysToFlower = Date -PlantingDate)%>%
   ungroup()%>%
-  select(index, num_traits, DaysToFlower)%>%
+  select(index, num_traits, DaysToFlower, Date_of_first_flower = Date)%>%
   complete(index, num_traits)%>%
-  mutate(DaysToFlower = case_when(is.na(DaysToFlower) ~ as.difftime(150, "%d", "days"), TRUE ~ DaysToFlower))%>%
+  mutate(DaysToFlower = case_when(is.na(DaysToFlower) ~ as.difftime(360, "%d", "days"), TRUE ~ DaysToFlower))%>%
   mutate(index = as.integer(index), num_traits = factor(num_traits, levels = c("numFlwrB", "numRayF", "numDiscF"))) %>%
   left_join(read_csv("./data/Boltonia_merged_data_20240627.csv") %>% select(1:12), by = "index")
+
+Boltonia_data_DaysToFlower_Disk <- Boltonia_data_DaysToFlower %>%
+  filter(num_traits == "numDiscF")%>%
+  mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, pad = "0"), sep = "_"), DaysToFlower = as.numeric(DaysToFlower))%>%
+  select(Sample_Name, DaysToFlower)
+
+write_csv(Boltonia_data_DaysToFlower_Disk, "./data/Boltonia_data_DaysToFlower_Disk_20250505.csv")
+
 
 Boltonia_data_CountyLabels <- Boltonia_data %>%
   left_join(Boltonia_data_county_coordinations, by = "County")
@@ -135,8 +235,8 @@ p1 <- ggplot(data = filter(Boltonia_data_FlowerRatio_county, num_traits == "numD
   theme_bw()+
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid.minor = element_blank(), legend.position = c(0.7, 0.86), legend.key.width = unit(0.6, "in"), legend.key.height = unit(0.08, "in"),legend.direction = "horizontal", legend.title = element_blank(), legend.background = element_rect(fill = NA))
 
-p
-ggsave("./figures/Boltonia_disk_flower_ratio_by_county.png", width = 10, height = 2.5)
+# p
+# ggsave("./figures/Boltonia_disk_flower_ratio_by_county.png", width = 10, height = 2.5)
 
 
 # buds
@@ -207,10 +307,10 @@ DaysToFlower_ray_lmm_anova <- as_tibble(anova(DaysToFlower_ray_lmm, type = "II")
   mutate(num_traits = "numRayF", label_text = paste0("Days ~ Latitude + (1|Site/MaternalLine)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
   bind_cols(as_tibble_row(fixef(DaysToFlower_ray_lmm))%>%rename(slope = Google_latitude, intercept = `(Intercept)`), as_tibble(VarCorr(DaysToFlower_ray_lmm))%>%select(grp, vcov)%>%pivot_wider(names_from = "grp", values_from = "vcov"))
 
-DaysToFlower_disk_lmm <- lmer(as.integer(DaysToFlower) ~ Google_latitude + (1|Google_latitude/FlowerHead), data = filter(Boltonia_data_DaysToFlower, num_traits == "numDiscF", as.integer(DaysToFlower) < 150))
+DaysToFlower_disk_lmm <- lmer(as.integer(DaysToFlower) ~ Google_latitude + (1|MaternalLine), data = filter(Boltonia_data_DaysToFlower, num_traits == "numDiscF", as.integer(DaysToFlower) < 150))
 VarCorr(DaysToFlower_disk_lmm)
 DaysToFlower_disk_lmm_anova <- as_tibble(anova(DaysToFlower_disk_lmm, type = "II"))%>%
-  mutate(num_traits = "numDiscF", label_text = paste0("Days ~ Latitude + (1|Site/MaternalLine)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
+  mutate(num_traits = "numDiscF", label_text = paste0("Days ~ Latitude + (1|Site)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
   bind_cols(as_tibble_row(fixef(DaysToFlower_disk_lmm))%>%rename(slope = Google_latitude, intercept = `(Intercept)`), as_tibble(VarCorr(DaysToFlower_disk_lmm))%>%select(grp, vcov)%>%pivot_wider(names_from = "grp", values_from = "vcov"))
 
 DaysToFlower_lmm_anova <- bind_rows(DaysToFlower_bud_lmm_anova, DaysToFlower_ray_lmm_anova, DaysToFlower_disk_lmm_anova)%>%
@@ -220,39 +320,95 @@ colnames(DaysToFlower_lmm_anova)
 
 
 ### Heritability
-DaysToFlower_bud_H <- lmer(as.integer(DaysToFlower) ~ (1|MaternalLine/FlowerHead), data = filter(Boltonia_data_DaysToFlower, num_traits == "numFlwrB", as.integer(DaysToFlower) < 150))%>%
+DaysToFlower_bud_H <- lmer(as.integer(DaysToFlower) ~ (1|MaternalLine), data = filter(Boltonia_data_DaysToFlower, num_traits == "numFlwrB", as.integer(DaysToFlower) < 150))%>%
   VarCorr() %>%
   as_tibble()%>%
   select(grp, vcov)%>%
   pivot_wider(names_from = "grp", values_from = "vcov") %>%
-  mutate(num_traits = "numFlwrB", H_model = "Days ~ (1|Site/MaternalLine)")
+  mutate(num_traits = "numFlwrB", H_model = "Days ~ (1|Site)")
 
-DaysToFlower_ray_H <- lmer(as.integer(DaysToFlower) ~ (1|MaternalLine/FlowerHead), data = filter(Boltonia_data_DaysToFlower, num_traits == "numRayF", as.integer(DaysToFlower) < 150))%>%
+DaysToFlower_ray_H <- lmer(as.integer(DaysToFlower) ~ (1|MaternalLine), data = filter(Boltonia_data_DaysToFlower, num_traits == "numRayF", as.integer(DaysToFlower) < 150))%>%
   VarCorr() %>%
   as_tibble()%>%
   select(grp, vcov)%>%
   pivot_wider(names_from = "grp", values_from = "vcov") %>%
-  mutate(num_traits = "numRayF", H_model = "Days ~ (1|Site/MaternalLine)")
+  mutate(num_traits = "numRayF", H_model = "Days ~ (1|Site)")
 
-DaysToFlower_disc_H <- lmer(as.integer(DaysToFlower) ~ (1|MaternalLine/FlowerHead), data = filter(Boltonia_data_DaysToFlower, num_traits == "numDiscF", as.integer(DaysToFlower) < 150))%>%
+DaysToFlower_disc_H <- lmer(as.integer(DaysToFlower) ~ (1|MaternalLine), data = filter(Boltonia_data_DaysToFlower, num_traits == "numDiscF", as.integer(DaysToFlower) < 150))%>%
   VarCorr() %>%
   as_tibble()%>%
   select(grp, vcov)%>%
   pivot_wider(names_from = "grp", values_from = "vcov") %>%
-  mutate(num_traits = "numDiscF", H_model = "Days ~ (1|Site/MaternalLine)")
+  mutate(num_traits = "numDiscF", H_model = "Days ~ (1|Site)")
 
 DaysToFlower_H<- bind_rows(DaysToFlower_bud_H, DaysToFlower_ray_H, DaysToFlower_disc_H)%>%
   mutate(num_traits = factor(num_traits, levels = c("numFlwrB", "numRayF", "numDiscF")))%>%
-  mutate(heritability = `FlowerHead:MaternalLine`/(`FlowerHead:MaternalLine` + MaternalLine + Residual))%>%
+  mutate(heritability = MaternalLine/(MaternalLine + Residual))%>%
   select(num_traits, H_model, heritability)
 
 DaysToFlower_H
 
-DaysToFlower_lmm_anova_H <- DaysToFlower_lmm_anova %>%
+### Start permutation test
+
+DaysToFlower_H_permutation <-list()
+
+for (i in 1:1000){
+  Boltonia_data_DaysToFlower_p <- Boltonia_data_DaysToFlower %>%
+    mutate(DaysToFlower = as.integer(DaysToFlower))%>%
+    filter(DaysToFlower < 150)%>%
+    group_by(num_traits)%>%
+    mutate(DaysToFlower = sample(DaysToFlower))%>%
+    ungroup()
+  Boltonia_data_DaysToFlower_p
+  
+  DaysToFlower_bud_H_p <- lmer(DaysToFlower ~ (1|MaternalLine), data = filter(Boltonia_data_DaysToFlower_p, num_traits == "numFlwrB"))%>%
+    VarCorr() %>%
+    as_tibble()%>%
+    select(grp, vcov)%>%
+    pivot_wider(names_from = "grp", values_from = "vcov") %>%
+    mutate(num_traits = "numFlwrB", H_model = "Days ~ (1|Site)")
+  
+  DaysToFlower_ray_H_p <- lmer(DaysToFlower ~ (1|MaternalLine), data = filter(Boltonia_data_DaysToFlower_p, num_traits == "numRayF"))%>%
+    VarCorr() %>%
+    as_tibble()%>%
+    select(grp, vcov)%>%
+    pivot_wider(names_from = "grp", values_from = "vcov") %>%
+    mutate(num_traits = "numRayF", H_model = "Days ~ (1|Site)")
+  
+  DaysToFlower_disc_H_p <- lmer(DaysToFlower ~ (1|MaternalLine), data = filter(Boltonia_data_DaysToFlower_p, num_traits == "numDiscF"))%>%
+    VarCorr() %>%
+    as_tibble()%>%
+    select(grp, vcov)%>%
+    pivot_wider(names_from = "grp", values_from = "vcov") %>%
+    mutate(num_traits = "numDiscF", H_model = "Days ~ (1|Site)")
+  
+  DaysToFlower_H_p<- bind_rows(DaysToFlower_bud_H_p, DaysToFlower_ray_H_p, DaysToFlower_disc_H_p)%>%
+    mutate(num_traits = factor(num_traits, levels = c("numFlwrB", "numRayF", "numDiscF")))%>%
+    mutate(heritability = MaternalLine/(MaternalLine + Residual))%>%
+    select(num_traits, permutated_heritability = heritability)
+  
+  DaysToFlower_H_permutation[[i]] <- DaysToFlower_H_p
+  
+}
+
+DaysToFlower_H_permutation <- bind_rows(DaysToFlower_H_permutation)%>%
   left_join(DaysToFlower_H, by = "num_traits")
 
-DaysToFlower_lmm_anova_H
+DaysToFlower_H_permutation_test <- DaysToFlower_H_permutation %>%
+  group_by(num_traits)%>%
+  summarise(p_value = sum(permutated_heritability >= heritability)/n())
 
+#################
+
+p <- ggplot(data = DaysToFlower_H_permutation, aes(x = heritability))+
+  geom_histogram()+
+  geom_linerange(data = DaysToFlower_H, aes(x = heritability), ymin = 0, ymax = 400)+
+  facet_wrap(.~num_traits, ncol = 1)
+
+p
+
+
+#################
 ### plot for latitude
 
 
@@ -266,6 +422,48 @@ Boltonia_stemLength_data <- Boltonia_data %>%
   ungroup()%>%
   filter(total_flowers > 0)
 
+Boltonia_stemLength_data <- Boltonia_data %>%
+  filter(num_traits %in% c("stemLength", "numDiscF"))%>%
+  pivot_wider(names_from = "num_traits", values_from = "num_values")%>%
+  rowwise()%>%
+  mutate(total_flowers = sum(numDiscF))%>%
+  ungroup()%>%
+  arrange(index, Date)%>%
+  filter(!is.na(stemLength))
+
+
+for (i in unique(Boltonia_stemLength_data$index)){
+  Boltonia_stemLength_data_i <- Boltonia_stemLength_data %>%
+    filter(index == i)
+  
+  Boltonia_data_DaysToFlower_i <- Boltonia_data_DaysToFlower %>%
+    filter(index == i)
+  
+  p <- ggplot(data = Boltonia_stemLength_data_i, aes(x = Date, y = stemLength))+
+    geom_line()+
+    geom_point(size = 2)+
+    geom_vline(data = Boltonia_data_DaysToFlower_i, aes(xintercept = Date_of_first_flower, color = num_traits))+
+    theme_bw()+
+    ggtitle(paste("Boltonia stem length changes throught Date: ", i))
+  
+  ggsave(paste0("./figures/Boltonia_stemLength/Boltonia_", i, ".png"), height = 5, width = 6)
+}
+
+
+Boltonia_stemLength_data <- Boltonia_data %>%
+  filter(num_traits %in% c("stemLength", "numDiscF"))%>%
+  pivot_wider(names_from = "num_traits", values_from = "num_values")%>%
+  filter(!is.na(stemLength), numDiscF >= 1)%>%
+  group_by(index)%>%
+  summarise(mean_stemLength = mean(stemLength), c_stemLength = str_c(as.character(stemLength), collapse = ", "), SD_stemLength = sd(stemLength), sample_size = n())%>%
+  ungroup()%>%
+  mutate(index = factor(index, levels = 1:468))%>%
+  complete(index)%>%
+  filter(sample_size > 1)%>%
+  complete(index)
+
+write_csv(Boltonia_stemLength_data, "./data/Boltonia_stemLength_data_20240925.csv")
+
 ## only Site (MaternalLine is included because otherwise the model cannot be fitted)
 
 Boltonia_stemLength_lmm <- lmer(stemLength ~ Google_latitude + (1|MaternalLine), data = Boltonia_stemLength_data)
@@ -277,6 +475,33 @@ Boltonia_stemLength_lmm_anova <- as_tibble(anova(Boltonia_stemLength_lmm, type =
 Boltonia_stemLength_lmm_anova
 colnames(Boltonia_stemLength_lmm)
 
+unique(Boltonia_data$num_traits)
+
+Boltonia_total_flowers_data <- Boltonia_data %>%
+  filter(num_traits %in% c("numDeadF", "numDiscF", "numFlwrB", "numRayF"), Date == as.Date("2024-07-15"))%>%
+  group_by(index, MaternalLine, County)%>%
+  summarise(mean_Google_latitude = mean(Google_latitude), mean_Google_longitude = mean(Google_longitude), total_flower = sum(num_values, na.rm = TRUE))
+
+Boltonia_total_flowers_lmm <- lmer(total_flower ~ mean_Google_latitude + (1|MaternalLine), data = filter(Boltonia_total_flowers_data, total_flower > 0))
+VarCorr(Boltonia_total_flowers_lmm)
+Boltonia_total_flowers_lmm_anova <- as_tibble(anova(Boltonia_total_flowers_lmm, type = "II"))%>%
+  mutate(label_text = paste0("Days ~ Latitude + (1|Site)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
+  bind_cols(as_tibble_row(fixef(Boltonia_total_flowers_lmm))%>%rename(slope = mean_Google_latitude, intercept = `(Intercept)`), as_tibble(VarCorr(Boltonia_total_flowers_lmm))%>%select(grp, vcov)%>%pivot_wider(names_from = "grp", values_from = "vcov"))
+
+Boltonia_total_flowers_lmm_anova
+colnames(Boltonia_total_flowers_lmm_anova)
+
+Boltonia_leafLong_data <- filter(Boltonia_data, num_traits == "leafLong", Date == as.Date("2024-05-15"))
+
+
+Boltonia_leafLong_lmm <- lmer(num_values~ Google_latitude + (1|MaternalLine), data = Boltonia_leafLong_data)
+VarCorr(Boltonia_total_flowers_lmm)
+Boltonia_leafLong_lmm_anova <- as_tibble(anova(Boltonia_leafLong_lmm, type = "II"))%>%
+  mutate(label_text = paste0("Days ~ Latitude + (1|Site)", "\n", "Type II ANOVA, ", "F", "(", NumDF, ", ", round(DenDF, 0), ") = ", round(`F value`, 2), ", p = ", round(`Pr(>F)`, 2)))%>%
+  bind_cols(as_tibble_row(fixef(Boltonia_leafLong_lmm))%>%rename(slope = Google_latitude, intercept = `(Intercept)`), as_tibble(VarCorr(Boltonia_leafLong_lmm))%>%select(grp, vcov)%>%pivot_wider(names_from = "grp", values_from = "vcov"))
+
+Boltonia_leafLong_lmm_anova
+colnames(Boltonia_total_flowers_lmm_anova)
 
 ##################################
 ## Association plots for posters##
@@ -288,7 +513,7 @@ p1 <- ggplot(data = Boltonia_stemLength_data, aes(x = Google_latitude, y = stemL
   geom_abline(data = Boltonia_stemLength_lmm_anova, aes(intercept = intercept, slope = slope), color = "blue")+
   geom_text(x = 38.6, y = 140, hjust = 0, mapping = aes(label = label_text), data = Boltonia_stemLength_lmm_anova)+
   geom_text(x = 38.6, y = 15, hjust = 0, mapping = aes(label = paste0("y = ", round(intercept, 2), round(slope, 2), "x")), data = Boltonia_stemLength_lmm_anova, color = "blue")+
-  scale_x_continuous(name = "Latitude")+
+  scale_x_continuous(name = "")+
   scale_y_continuous(name = "Stem Length (cm)", limits = c(10, 150))+
   theme_bw()+
   theme(panel.grid.minor = element_blank(), legend.position = "bottom")
@@ -302,17 +527,47 @@ p2 <- ggplot(data = filter(Boltonia_data_DaysToFlower, num_traits == "numDiscF")
   geom_abline(data = filter(DaysToFlower_disk_lmm_anova, num_traits == "numDiscF"), aes(intercept = intercept, slope = slope), color = "blue")+
   geom_text(x = 38.6, y = 160, hjust = 0, mapping = aes(label = label_text), data = DaysToFlower_disk_lmm_anova)+
   geom_text(x = 38.6, y = 60, hjust = 0, mapping = aes(label = paste0("y = ", round(intercept, 2), round(slope, 2), "x")), data = filter(DaysToFlower_disk_lmm_anova, num_traits == "numDiscF"), color = "blue")+
-  scale_x_continuous(name = "Latitude")+
-  scale_y_continuous(name = "Days since planting", limits = c(60, 165))+
+  scale_x_continuous(name = "")+
+  scale_y_continuous(name = "Days to the first flower", limits = c(60, 165))+
   theme_bw()+
   theme(panel.grid.minor = element_blank(), legend.position = "bottom")
 
 p2
 
-p <- plot_grid(p1, p2, align = "hv")
+
+p3 <- ggplot(data = Boltonia_total_flowers_data, aes(x = mean_Google_latitude, y = total_flower))+
+  geom_point()+
+  geom_point(data = filter(Boltonia_total_flowers_data, total_flower == 0), color = "red")+
+  # geom_abline(data = Boltonia_total_flowers_lmm_anova, aes(intercept = intercept, slope = slope), color = "blue")+
+  geom_text(x = 38.6, y = 95, hjust = 0, mapping = aes(label = label_text), data = Boltonia_total_flowers_lmm_anova)+
+  # geom_text(x = 38.6, y = 10, hjust = 0, mapping = aes(label = paste0("y = ", round(intercept, 2), round(slope, 2), "x")), data = Boltonia_total_flowers_lmm_anova, color = "blue")+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Total flowers", limits = c(0, 100))+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom")
+
+p3
+
+
+p4 <- ggplot(data = Boltonia_leafLong_data, aes(x = Google_latitude, y = num_values))+
+  geom_point()+
+  # geom_abline(data = Boltonia_total_flowers_lmm_anova, aes(intercept = intercept, slope = slope), color = "blue")+
+  geom_text(x = 38.6, y = 38, hjust = 0, mapping = aes(label = label_text), data = Boltonia_leafLong_lmm_anova)+
+  # geom_text(x = 38.6, y = 10, hjust = 0, mapping = aes(label = paste0("y = ", round(intercept, 2), round(slope, 2), "x")), data = Boltonia_total_flowers_lmm_anova, color = "blue")+
+  scale_x_continuous(name = "Latitude")+
+  scale_y_continuous(name = "Leaf length (cm)", limits = c(0, 42))+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(), legend.position = "bottom")
+
+p4
+
+p <- plot_grid(p1, p2, p3, p4, align = "hv", nrow = 2, rel_heights = c(0.95, 1))
 p
 
-ggsave("./figures/Boltonia_poster_regression.png", width = 12, height = 6, dpi = 600)
+ggsave("./figures/Boltonia_poster_regression.png", width = 9, height = 7, dpi = 600)
+
+
+
 
 ##############
 
