@@ -2,7 +2,7 @@ library(tidyverse)
 
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
-boltonia_data <- read_csv("./data/Boltonia_merged_data_20240925.csv")
+boltonia_data <- read_csv("./data/Boltonia_merged_data_20250626.csv")
 
 boltonia_data
 str(boltonia_data)
