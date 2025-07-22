@@ -1,0 +1,31 @@
+PLINK v1.90b5 64-bit (14 Nov 2017)
+Options in effect:
+  --allow-extra-chr
+  --bfile ./Data/PLINK_files/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.pruned
+  --out ./Data/PCA/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.pruned
+  --pca
+
+Hostname: b3a7532ec850
+Working directory: /REUProject_2_Outgroups
+Start time: Wed Jul 16 18:39:41 2025
+
+Random number seed: 1752691181
+3587 MB RAM detected; reserving 1793 MB for main workspace.
+14629 variants loaded from .bim file.
+469 people (0 males, 0 females, 469 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+./Data/PCA/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.pruned.nosex
+.
+Using up to 11 threads (change this with --threads).
+Before main variant filters, 469 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+14629 variants and 469 people pass filters and QC.
+Note: No phenotypes present.
+Relationship matrix calculation complete.
+--pca: Results saved to
+./Data/PCA/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.pruned.eigenval
+and
+./Data/PCA/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.pruned.eigenvec
+.
+
+End time: Wed Jul 16 18:39:41 2025

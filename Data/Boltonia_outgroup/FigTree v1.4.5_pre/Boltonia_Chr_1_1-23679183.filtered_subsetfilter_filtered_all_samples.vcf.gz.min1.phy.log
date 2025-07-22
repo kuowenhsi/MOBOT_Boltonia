@@ -1,0 +1,1859 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    0e8d23a2e836 (AVX512, FMA3, 29 GB RAM)
+Command: /usr/local/bin/iqtree3_intel -s ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy -m GTR+G -B 1000 -t ./first_run/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.treefile -nt 24
+Seed:    820153 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Jul 16 19:44:28 2025
+Kernel:  AVX+FMA - 24 threads (24 CPU cores detected)
+
+Reading alignment file ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy ... Phylip format detected
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.185594 secs using 123.3% CPU
+Alignment has 469 sequences with 37479 columns, 37475 distinct patterns
+11826 parsimony-informative, 8453 singleton sites, 17200 constant sites
+              Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.00969831 secs using 1965% CPU
+   1  Boltonia_001    7.90%    passed     70.24%
+   2  Boltonia_002    8.53%    passed     87.66%
+   3  Boltonia_004   11.08%    passed     67.60%
+   4  Boltonia_005   10.28%    passed     76.50%
+   5  Boltonia_006    8.57%    passed     79.60%
+   6  Boltonia_007    9.09%    passed     68.81%
+   7  Boltonia_008    9.34%    passed     89.18%
+   8  Boltonia_009    4.80%    passed     85.27%
+   9  Boltonia_010   13.11%    passed     72.57%
+  10  Boltonia_012    7.96%    passed     76.30%
+  11  Boltonia_013    7.48%    passed     90.81%
+  12  Boltonia_014    5.61%    passed     69.98%
+  13  Boltonia_015    4.72%    passed     83.64%
+  14  Boltonia_016    8.10%    passed     84.56%
+  15  Boltonia_017    5.40%    passed     75.70%
+  16  Boltonia_018   13.18%    passed     66.15%
+  17  Boltonia_019    6.09%    passed     88.22%
+  18  Boltonia_020    7.16%    passed     88.35%
+  19  Boltonia_021    6.75%    passed     93.52%
+  20  Boltonia_022    2.96%    passed     97.69%
+  21  Boltonia_023    7.60%    passed     78.07%
+  22  Boltonia_024    7.35%    passed     88.22%
+  23  Boltonia_025    7.75%    passed     92.83%
+  24  Boltonia_026    7.37%    passed     72.10%
+  25  Boltonia_027    5.70%    passed     97.90%
+  26  Boltonia_028    6.76%    passed     89.53%
+  27  Boltonia_029    7.00%    passed     86.20%
+  28  Boltonia_030    9.01%    passed     93.90%
+  29  Boltonia_031    9.70%    passed     88.70%
+  30  Boltonia_032    7.51%    passed     92.35%
+  31  Boltonia_033    9.15%    passed     76.45%
+  32  Boltonia_034    7.28%    passed     96.93%
+  33  Boltonia_035    8.48%    passed     80.13%
+  34  Boltonia_036    7.22%    passed     98.63%
+  35  Boltonia_037    9.52%    passed     75.50%
+  36  Boltonia_038   10.15%    passed     63.62%
+  37  Boltonia_039   12.02%    passed     44.67%
+  38  Boltonia_040    7.44%    passed     85.25%
+  39  Boltonia_041   22.53%    passed     70.94%
+  40  Boltonia_042    7.64%    passed     84.48%
+  41  Boltonia_043    6.99%    passed     80.34%
+  42  Boltonia_044    5.48%    passed     96.82%
+  43  Boltonia_045    7.65%    passed     80.49%
+  44  Boltonia_046    8.27%    passed     96.03%
+  45  Boltonia_047   11.08%    passed     88.18%
+  46  Boltonia_048    8.19%    passed     76.12%
+  47  Boltonia_050    7.11%    passed     86.91%
+  48  Boltonia_051    7.86%    passed     73.00%
+  49  Boltonia_052    7.62%    passed     62.51%
+  50  Boltonia_053    5.99%    passed     94.94%
+  51  Boltonia_054    9.66%    passed     99.19%
+  52  Boltonia_055    9.66%    passed     73.15%
+  53  Boltonia_056   10.72%    passed     64.61%
+  54  Boltonia_057   10.40%    passed     61.48%
+  55  Boltonia_058   10.12%    passed     55.95%
+  56  Boltonia_059    6.79%    passed     80.95%
+  57  Boltonia_060    7.29%    passed     75.42%
+  58  Boltonia_061    5.61%    passed     95.97%
+  59  Boltonia_062    3.65%    passed     84.87%
+  60  Boltonia_063   11.01%    passed     89.33%
+  61  Boltonia_064    9.25%    passed     86.58%
+  62  Boltonia_065   11.33%    passed     79.19%
+  63  Boltonia_066    8.30%    passed     85.27%
+  64  Boltonia_067    4.33%    passed     97.51%
+  65  Boltonia_068   12.58%    passed     51.50%
+  66  Boltonia_069   12.83%    passed     73.82%
+  67  Boltonia_070    7.90%    passed     80.67%
+  68  Boltonia_071    9.59%    passed     72.86%
+  69  Boltonia_072   10.10%    passed     73.38%
+  70  Boltonia_073    9.33%    passed     49.52%
+  71  Boltonia_074    9.79%    passed     83.80%
+  72  Boltonia_075    8.65%    passed     84.66%
+  73  Boltonia_076    7.59%    passed     91.71%
+  74  Boltonia_077    6.90%    passed     87.78%
+  75  Boltonia_078    6.26%    passed     92.90%
+  76  Boltonia_079    7.92%    passed     77.65%
+  77  Boltonia_080   10.79%    passed     79.53%
+  78  Boltonia_081    6.83%    passed     75.97%
+  79  Boltonia_082   14.54%    passed     61.69%
+  80  Boltonia_083    6.31%    passed     97.40%
+  81  Boltonia_084    2.97%    passed     93.31%
+  82  Boltonia_085    7.84%    passed     85.40%
+  83  Boltonia_086    8.45%    passed     86.89%
+  84  Boltonia_087    7.00%    passed     99.52%
+  85  Boltonia_088    8.62%    passed     79.92%
+  86  Boltonia_089    8.14%    passed     86.21%
+  87  Boltonia_090    6.92%    passed     86.55%
+  88  Boltonia_091    5.68%    passed     89.80%
+  89  Boltonia_092    5.37%    passed     90.66%
+  90  Boltonia_093    7.42%    passed     95.47%
+  91  Boltonia_094    7.36%    passed     82.03%
+  92  Boltonia_095    8.80%    passed     97.31%
+  93  Boltonia_096    6.87%    passed     91.77%
+  94  Boltonia_097    5.23%    passed     96.66%
+  95  Boltonia_098    8.82%    passed     94.38%
+  96  Boltonia_099    7.55%    passed     84.93%
+  97  Boltonia_100    5.68%    passed     82.11%
+  98  Boltonia_101    7.36%    passed     85.71%
+  99  Boltonia_102    7.45%    passed     91.22%
+ 100  Boltonia_103    6.75%    passed     90.51%
+ 101  Boltonia_104   13.64%    passed     77.99%
+ 102  Boltonia_105    8.48%    passed     73.49%
+ 103  Boltonia_106    7.99%    passed     96.12%
+ 104  Boltonia_107   10.22%    passed     67.39%
+ 105  Boltonia_108   10.98%    passed     80.58%
+ 106  Boltonia_109    9.15%    passed     82.98%
+ 107  Boltonia_110    8.24%    passed     68.61%
+ 108  Boltonia_111    7.76%    passed     86.09%
+ 109  Boltonia_112    7.71%    passed     97.91%
+ 110  Boltonia_113    6.80%    passed     65.70%
+ 111  Boltonia_114    7.94%    passed     46.49%
+ 112  Boltonia_115    7.40%    passed     89.30%
+ 113  Boltonia_116    8.28%    passed     90.29%
+ 114  Boltonia_117    6.13%    passed     90.85%
+ 115  Boltonia_118    7.48%    passed     85.42%
+ 116  Boltonia_119    6.41%    passed     80.32%
+ 117  Boltonia_120    8.23%    passed     66.68%
+ 118  Boltonia_121    7.86%    passed     82.77%
+ 119  Boltonia_123    7.56%    passed     89.30%
+ 120  Boltonia_124    7.07%    passed     90.55%
+ 121  Boltonia_125    8.12%    passed     82.59%
+ 122  Boltonia_126    6.84%    passed     94.94%
+ 123  Boltonia_127    7.50%    passed     95.47%
+ 124  Boltonia_128    7.80%    passed     80.80%
+ 125  Boltonia_129    8.16%    passed     86.20%
+ 126  Boltonia_130    8.10%    passed     59.90%
+ 127  Boltonia_131    6.92%    passed     82.28%
+ 128  Boltonia_132    7.84%    passed     85.78%
+ 129  Boltonia_133    7.03%    passed     81.05%
+ 130  Boltonia_134    7.51%    passed     83.23%
+ 131  Boltonia_135    7.34%    passed     74.49%
+ 132  Boltonia_136    8.03%    passed     68.62%
+ 133  Boltonia_137    8.04%    passed     69.36%
+ 134  Boltonia_138    8.79%    passed     90.65%
+ 135  Boltonia_139    6.91%    passed     81.65%
+ 136  Boltonia_140    7.75%    passed     89.85%
+ 137  Boltonia_141   13.70%    passed     99.88%
+ 138  Boltonia_142    7.55%    passed     89.09%
+ 139  Boltonia_143    4.39%    passed     91.44%
+ 140  Boltonia_144    6.04%    passed     79.13%
+ 141  Boltonia_145    7.41%    passed     79.33%
+ 142  Boltonia_146    8.07%    passed     88.97%
+ 143  Boltonia_147    7.01%    passed     94.42%
+ 144  Boltonia_148   10.65%    passed     98.33%
+ 145  Boltonia_149   26.37%    passed     42.61%
+ 146  Boltonia_150    7.61%    passed     79.72%
+ 147  Boltonia_151    7.19%    passed     93.77%
+ 148  Boltonia_152    8.38%    passed     83.53%
+ 149  Boltonia_153    8.81%    passed     96.28%
+ 150  Boltonia_154    7.52%    passed     69.76%
+ 151  Boltonia_155    9.66%    passed     85.01%
+ 152  Boltonia_157    6.38%    passed     93.74%
+ 153  Boltonia_158    7.00%    passed     84.44%
+ 154  Boltonia_159    8.56%    passed     89.32%
+ 155  Boltonia_160    8.95%    passed     84.83%
+ 156  Boltonia_161    7.27%    passed     91.60%
+ 157  Boltonia_162    4.18%    passed     96.63%
+ 158  Boltonia_163    7.39%    passed     95.77%
+ 159  Boltonia_164    7.73%    passed     72.34%
+ 160  Boltonia_165    8.32%    passed     60.46%
+ 161  Boltonia_166   14.97%    passed     78.72%
+ 162  Boltonia_167    6.95%    passed     96.87%
+ 163  Boltonia_168    7.20%    passed     78.07%
+ 164  Boltonia_169    8.54%    passed     65.86%
+ 165  Boltonia_170    7.44%    passed     97.97%
+ 166  Boltonia_171    5.61%    passed     96.45%
+ 167  Boltonia_172    6.99%    passed     91.41%
+ 168  Boltonia_173    7.60%    passed     80.51%
+ 169  Boltonia_174    7.23%    passed     70.63%
+ 170  Boltonia_175    7.69%    passed     87.61%
+ 171  Boltonia_176    8.78%    passed     92.05%
+ 172  Boltonia_177    8.10%    passed     81.41%
+ 173  Boltonia_178    7.44%    passed     72.65%
+ 174  Boltonia_179    7.91%    passed     86.46%
+ 175  Boltonia_180    7.06%    passed     68.17%
+ 176  Boltonia_181    8.40%    passed     94.11%
+ 177  Boltonia_182    6.87%    passed     62.89%
+ 178  Boltonia_183    8.16%    passed     97.36%
+ 179  Boltonia_184    6.04%    passed     94.85%
+ 180  Boltonia_185    6.74%    passed     91.87%
+ 181  Boltonia_186    8.29%    passed     68.89%
+ 182  Boltonia_187    3.78%    passed     98.00%
+ 183  Boltonia_188    7.52%    passed     84.35%
+ 184  Boltonia_189    8.71%    passed     96.61%
+ 185  Boltonia_190    6.14%    passed     73.40%
+ 186  Boltonia_191    7.20%    passed     80.90%
+ 187  Boltonia_192    8.08%    passed     96.19%
+ 188  Boltonia_193    7.13%    passed     74.56%
+ 189  Boltonia_194    7.40%    passed     86.16%
+ 190  Boltonia_195    7.14%    passed     76.69%
+ 191  Boltonia_196    7.05%    passed     97.41%
+ 192  Boltonia_197    7.65%    passed     99.68%
+ 193  Boltonia_198    8.26%    passed     75.40%
+ 194  Boltonia_199   14.89%    passed     80.26%
+ 195  Boltonia_200    6.31%    passed     92.25%
+ 196  Boltonia_201   11.19%    passed     60.22%
+ 197  Boltonia_202    6.91%    passed     92.89%
+ 198  Boltonia_203    7.08%    passed     83.61%
+ 199  Boltonia_204   11.16%    passed     91.24%
+ 200  Boltonia_205    7.03%    passed     85.75%
+ 201  Boltonia_206   13.72%    passed     77.32%
+ 202  Boltonia_207    8.29%    passed     60.94%
+ 203  Boltonia_208    7.35%    passed     86.70%
+ 204  Boltonia_209   11.33%    passed     94.91%
+ 205  Boltonia_210    7.18%    passed     78.46%
+ 206  Boltonia_211    7.75%    passed     79.19%
+ 207  Boltonia_212   10.80%    passed     65.12%
+ 208  Boltonia_213   10.85%    passed     86.14%
+ 209  Boltonia_214    7.10%    passed     92.74%
+ 210  Boltonia_215    9.64%    passed     79.32%
+ 211  Boltonia_216   13.34%    passed     92.16%
+ 212  Boltonia_217    6.57%    passed     88.10%
+ 213  Boltonia_218    7.17%    passed     80.58%
+ 214  Boltonia_219   12.66%    passed     74.34%
+ 215  Boltonia_220    6.22%    passed     73.88%
+ 216  Boltonia_221    7.10%    passed     79.89%
+ 217  Boltonia_222    9.11%    passed     76.13%
+ 218  Boltonia_223   17.16%    passed     86.35%
+ 219  Boltonia_224    6.99%    passed     83.75%
+ 220  Boltonia_225    7.59%    passed     86.82%
+ 221  Boltonia_226    7.67%    passed     80.30%
+ 222  Boltonia_227    7.55%    passed     77.34%
+ 223  Boltonia_228    7.72%    passed     80.90%
+ 224  Boltonia_229    7.38%    passed     85.60%
+ 225  Boltonia_230    4.31%    passed     89.10%
+ 226  Boltonia_231    7.23%    passed     98.23%
+ 227  Boltonia_232    7.83%    passed     89.23%
+ 228  Boltonia_233    6.97%    passed     73.62%
+ 229  Boltonia_234    7.20%    passed     78.27%
+ 230  Boltonia_235    6.68%    passed     82.07%
+ 231  Boltonia_236    7.05%    passed     85.57%
+ 232  Boltonia_237    7.20%    passed     72.14%
+ 233  Boltonia_238    7.11%    passed     92.75%
+ 234  Boltonia_239    8.34%    passed     89.64%
+ 235  Boltonia_240    7.11%    passed     81.29%
+ 236  Boltonia_241    8.21%    passed     97.02%
+ 237  Boltonia_242    7.46%    passed     95.69%
+ 238  Boltonia_243    6.93%    passed     72.89%
+ 239  Boltonia_244    8.49%    passed     88.57%
+ 240  Boltonia_245    7.60%    passed     80.46%
+ 241  Boltonia_246    4.73%    passed     95.89%
+ 242  Boltonia_247    7.82%    passed     95.09%
+ 243  Boltonia_248    6.72%    passed     92.01%
+ 244  Boltonia_249    8.30%    passed     94.81%
+ 245  Boltonia_250    7.87%    passed     75.03%
+ 246  Boltonia_251    6.36%    passed     80.58%
+ 247  Boltonia_252   13.66%    passed     33.42%
+ 248  Boltonia_253    7.61%    passed     85.72%
+ 249  Boltonia_254    6.23%    passed     93.07%
+ 250  Boltonia_255    7.52%    passed     66.44%
+ 251  Boltonia_256    7.47%    passed     97.62%
+ 252  Boltonia_257    8.08%    passed     76.81%
+ 253  Boltonia_258    7.48%    passed     75.11%
+ 254  Boltonia_259    4.44%    passed     95.24%
+ 255  Boltonia_260    7.82%    passed     59.84%
+ 256  Boltonia_261    7.51%    passed     83.23%
+ 257  Boltonia_262   12.60%    passed     62.77%
+ 258  Boltonia_263    9.79%    passed     80.85%
+ 259  Boltonia_264    7.19%    passed     84.02%
+ 260  Boltonia_265    6.02%    passed     71.80%
+ 261  Boltonia_267    6.29%    passed     93.49%
+ 262  Boltonia_268    7.37%    passed     74.12%
+ 263  Boltonia_269    7.26%    passed     93.61%
+ 264  Boltonia_270    7.58%    passed     74.33%
+ 265  Boltonia_271   11.43%    passed     55.44%
+ 266  Boltonia_272    7.76%    passed     94.84%
+ 267  Boltonia_273    7.54%    passed     98.71%
+ 268  Boltonia_274    2.42%    passed     97.49%
+ 269  Boltonia_275    8.08%    passed     78.28%
+ 270  Boltonia_276    7.75%    passed     97.92%
+ 271  Boltonia_277    8.49%    passed     90.11%
+ 272  Boltonia_278   11.45%    passed     72.59%
+ 273  Boltonia_279    8.94%    passed     91.07%
+ 274  Boltonia_280    8.31%    passed     80.71%
+ 275  Boltonia_281    6.72%    passed     79.47%
+ 276  Boltonia_282    7.45%    passed     96.75%
+ 277  Boltonia_283    9.13%    passed     96.27%
+ 278  Boltonia_284    8.22%    passed     91.69%
+ 279  Boltonia_285    7.56%    passed     82.12%
+ 280  Boltonia_286    9.69%    passed     64.04%
+ 281  Boltonia_287    6.93%    passed     91.20%
+ 282  Boltonia_288    5.30%    passed     97.20%
+ 283  Boltonia_289    6.69%    passed     84.15%
+ 284  Boltonia_290    6.74%    passed     75.12%
+ 285  Boltonia_291    6.48%    passed     73.92%
+ 286  Boltonia_292   14.78%    passed     83.27%
+ 287  Boltonia_293    7.32%    passed     92.38%
+ 288  Boltonia_294    5.70%    passed     80.95%
+ 289  Boltonia_295    6.92%    passed     82.25%
+ 290  Boltonia_296    6.92%    passed     68.82%
+ 291  Boltonia_298    8.26%    passed     59.44%
+ 292  Boltonia_299    8.28%    passed     49.54%
+ 293  Boltonia_301    7.04%    passed     97.01%
+ 294  Boltonia_302    3.79%    passed     83.92%
+ 295  Boltonia_303    8.54%    passed     78.29%
+ 296  Boltonia_304    6.79%    passed     92.55%
+ 297  Boltonia_305    7.09%    passed     96.25%
+ 298  Boltonia_306    4.71%    passed     84.43%
+ 299  Boltonia_307    7.10%    passed     81.30%
+ 300  Boltonia_308    6.98%    passed     73.27%
+ 301  Boltonia_309    6.60%    passed     84.52%
+ 302  Boltonia_310    3.07%    passed     95.71%
+ 303  Boltonia_311    7.98%    passed     72.18%
+ 304  Boltonia_312    5.63%    passed     73.05%
+ 305  Boltonia_313    7.08%    passed     96.07%
+ 306  Boltonia_314   12.51%    passed     79.05%
+ 307  Boltonia_315    6.63%    passed     79.19%
+ 308  Boltonia_316    6.61%    passed     94.30%
+ 309  Boltonia_317    8.86%    passed     60.84%
+ 310  Boltonia_318    7.28%    passed     90.25%
+ 311  Boltonia_319   12.40%    passed     90.66%
+ 312  Boltonia_320    4.96%    passed     91.61%
+ 313  Boltonia_321    6.99%    passed     81.02%
+ 314  Boltonia_322    7.66%    passed     87.42%
+ 315  Boltonia_323    6.68%    passed     71.19%
+ 316  Boltonia_324    5.80%    passed     92.54%
+ 317  Boltonia_325    6.26%    passed     80.15%
+ 318  Boltonia_326    6.32%    passed     92.17%
+ 319  Boltonia_327    7.21%    passed     94.10%
+ 320  Boltonia_328   13.04%    passed     66.54%
+ 321  Boltonia_329    6.80%    passed     80.74%
+ 322  Boltonia_330    7.18%    passed     93.59%
+ 323  Boltonia_331    6.70%    passed     66.87%
+ 324  Boltonia_332    4.20%    passed     80.75%
+ 325  Boltonia_334    6.95%    passed     85.54%
+ 326  Boltonia_335    5.77%    passed     95.83%
+ 327  Boltonia_336    7.24%    passed     81.47%
+ 328  Boltonia_337    6.64%    passed     74.71%
+ 329  Boltonia_338    7.50%    passed     66.54%
+ 330  Boltonia_339    1.79%    passed     97.18%
+ 331  Boltonia_340   13.08%    passed     77.97%
+ 332  Boltonia_341    7.19%    passed     71.23%
+ 333  Boltonia_342    6.68%    passed     85.73%
+ 334  Boltonia_343    6.50%    passed     71.77%
+ 335  Boltonia_344    6.64%    passed     76.63%
+ 336  Boltonia_345    6.54%    passed     75.25%
+ 337  Boltonia_347   12.96%    passed     77.25%
+ 338  Boltonia_349    5.92%    passed     88.51%
+ 339  Boltonia_350    9.58%    passed     76.83%
+ 340  Boltonia_351    7.08%    passed     80.22%
+ 341  Boltonia_352    6.75%    passed     68.09%
+ 342  Boltonia_353    5.92%    passed     79.13%
+ 343  Boltonia_354    7.31%    passed     74.27%
+ 344  Boltonia_355    7.10%    passed     75.09%
+ 345  Boltonia_356    6.46%    passed     83.64%
+ 346  Boltonia_357   13.30%    passed     79.19%
+ 347  Boltonia_358    6.37%    passed     92.84%
+ 348  Boltonia_359    7.01%    passed     63.13%
+ 349  Boltonia_360    4.50%    passed     79.74%
+ 350  Boltonia_361    6.56%    passed     88.00%
+ 351  Boltonia_362    6.72%    passed     75.98%
+ 352  Boltonia_363    6.72%    passed     89.98%
+ 353  Boltonia_364    8.09%    passed     56.45%
+ 354  Boltonia_365    6.01%    passed     78.51%
+ 355  Boltonia_366    6.92%    passed     75.82%
+ 356  Boltonia_367    6.10%    passed     87.99%
+ 357  Boltonia_368    6.82%    passed     85.85%
+ 358  Boltonia_370    7.09%    passed     83.21%
+ 359  Boltonia_371    9.83%    passed     61.36%
+ 360  Boltonia_372    6.24%    passed     91.10%
+ 361  Boltonia_373    7.58%    passed     88.89%
+ 362  Boltonia_374    6.85%    passed     73.06%
+ 363  Boltonia_375    9.46%    passed     75.91%
+ 364  Boltonia_376    7.29%    passed     95.60%
+ 365  Boltonia_377    4.86%    passed     91.02%
+ 366  Boltonia_378    7.55%    passed     88.23%
+ 367  Boltonia_379    7.87%    passed     63.26%
+ 368  Boltonia_380    7.14%    passed     94.72%
+ 369  Boltonia_381    8.57%    passed     93.47%
+ 370  Boltonia_382    8.55%    passed     88.93%
+ 371  Boltonia_383    5.84%    passed     98.13%
+ 372  Boltonia_384    6.62%    passed     83.98%
+ 373  Boltonia_385    7.47%    passed     81.54%
+ 374  Boltonia_386    6.73%    passed     59.70%
+ 375  Boltonia_387    6.50%    passed     78.23%
+ 376  Boltonia_388    6.03%    passed     80.09%
+ 377  Boltonia_389    4.20%    passed     85.72%
+ 378  Boltonia_390    8.33%    passed     80.02%
+ 379  Boltonia_392    6.98%    passed     67.93%
+ 380  Boltonia_393    5.49%    passed     85.30%
+ 381  Boltonia_394    8.47%    passed     73.69%
+ 382  Boltonia_395    5.38%    passed     88.59%
+ 383  Boltonia_396    7.82%    passed     87.65%
+ 384  Boltonia_397    7.56%    passed     78.93%
+ 385  Boltonia_398    9.81%    passed     93.13%
+ 386  Boltonia_399    7.61%    passed     83.27%
+ 387  Boltonia_400   10.66%    passed     88.23%
+ 388  Boltonia_401    7.00%    passed     92.31%
+ 389  Boltonia_402    6.54%    passed     92.99%
+ 390  Boltonia_403    6.56%    passed     88.75%
+ 391  Boltonia_404    7.55%    passed     78.49%
+ 392  Boltonia_405    7.85%    passed     65.86%
+ 393  Boltonia_406   13.60%    passed     85.37%
+ 394  Boltonia_408    7.97%    passed     89.87%
+ 395  Boltonia_409    6.80%    passed     73.71%
+ 396  Boltonia_411    6.64%    passed     88.94%
+ 397  Boltonia_412    6.50%    passed     92.66%
+ 398  Boltonia_413    7.77%    passed     80.01%
+ 399  Boltonia_415    8.98%    passed     92.04%
+ 400  Boltonia_417    8.87%    passed     82.05%
+ 401  Boltonia_418    7.06%    passed     73.49%
+ 402  Boltonia_419   13.13%    passed     96.50%
+ 403  Boltonia_420    6.85%    passed     85.52%
+ 404  Boltonia_421    6.69%    passed     95.74%
+ 405  Boltonia_422    7.35%    passed     56.21%
+ 406  Boltonia_423    8.28%    passed     68.64%
+ 407  Boltonia_424    8.43%    passed     87.53%
+ 408  Boltonia_425    7.31%    passed     70.08%
+ 409  Boltonia_426    7.94%    passed     88.52%
+ 410  Boltonia_427    4.75%    passed     88.22%
+ 411  Boltonia_428    6.53%    passed     97.76%
+ 412  Boltonia_429   10.49%    passed     57.25%
+ 413  Boltonia_430    5.31%    passed     96.23%
+ 414  Boltonia_431    6.36%    passed     85.76%
+ 415  Boltonia_432   10.66%    passed     76.05%
+ 416  Boltonia_433   10.45%    passed     85.49%
+ 417  Boltonia_434    3.71%    passed     84.61%
+ 418  Boltonia_435    6.34%    passed     99.65%
+ 419  Boltonia_436    8.73%    passed     61.79%
+ 420  Boltonia_437    6.32%    passed     88.73%
+ 421  Boltonia_438    7.65%    passed     67.59%
+ 422  Boltonia_439   12.58%    passed     91.55%
+ 423  Boltonia_441    7.35%    passed     79.40%
+ 424  Boltonia_442    7.26%    passed     93.94%
+ 425  Boltonia_443    5.73%    passed     92.90%
+ 426  Boltonia_444    7.04%    passed     81.72%
+ 427  Boltonia_445    9.53%    passed     83.81%
+ 428  Boltonia_446    6.95%    passed     92.25%
+ 429  Boltonia_448    3.17%    passed     93.92%
+ 430  Boltonia_449    8.34%    passed     73.72%
+ 431  Boltonia_451   12.43%    passed     64.01%
+ 432  Boltonia_452   12.01%    passed     69.92%
+ 433  Boltonia_453    8.98%    passed     93.92%
+ 434  Boltonia_454   12.50%    passed     57.46%
+ 435  Boltonia_455    5.86%    passed     95.04%
+ 436  Boltonia_456    6.73%    passed     93.11%
+ 437  Boltonia_457    6.73%    passed     67.54%
+ 438  Boltonia_458    2.57%    passed     93.45%
+ 439  Boltonia_459    8.23%    passed     76.36%
+ 440  Boltonia_460    7.11%    passed     84.58%
+ 441  Boltonia_461    6.73%    passed     74.26%
+ 442  Boltonia_462   10.60%    passed     50.78%
+ 443  Boltonia_463    8.04%    passed     72.71%
+ 444  Boltonia_464   13.80%    passed     76.28%
+ 445  Boltonia_465    7.40%    passed     79.00%
+ 446  Boltonia_466    6.72%    passed     89.69%
+ 447  Boltonia_467    7.08%    passed     67.93%
+ 448  Boltonia_468    7.45%    passed     81.06%
+ 449  Boltonia_469    6.25%    passed     90.73%
+ 450  Boltonia_470    6.04%    passed     81.11%
+ 451  Boltonia_471   11.96%    passed     77.00%
+ 452  Boltonia_472    7.32%    passed     62.70%
+ 453  Boltonia_473   14.17%    failed      3.59%
+ 454  Boltonia_474   12.21%    passed     54.74%
+ 455  Boltonia_475   10.30%    passed     66.04%
+ 456  Boltonia_476   11.20%    passed     86.50%
+ 457  Boltonia_477    9.05%    passed     93.58%
+ 458  Boltonia_478   11.28%    passed     90.18%
+ 459  Boltonia_479    9.89%    passed     98.28%
+ 460  Boltonia_481   13.28%    passed     95.60%
+ 461  Boltonia_482   11.87%    passed     94.38%
+ 462  Boltonia_483   12.94%    passed     63.76%
+ 463  Boltonia_484    8.39%    passed     89.07%
+ 464  Boltonia_485    5.89%    passed     91.88%
+ 465  Boltonia_486    7.22%    passed     58.80%
+ 466  Boltonia_489   11.73%    passed     32.24%
+ 467  Boltonia_490   57.35%    failed      4.59%
+ 468  Boltonia_491   13.37%    passed     36.61%
+ 469  Boltonia_492    4.78%    passed     74.22%
+WARNING: 1 sequences contain more than 50% gaps/ambiguity
+****  TOTAL           8.08%  2 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 0.0154504 secs using 1267% CPU
+Reading input tree file ./first_run/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.treefile ...
+Generating 1000 samples for ultrafast bootstrap (seed: 820153)...
+
+NOTE: 2422 MB RAM (2 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -759045.318
+2. Current log-likelihood: -675061.843
+3. Current log-likelihood: -669556.001
+4. Current log-likelihood: -669480.043
+5. Current log-likelihood: -669474.019
+6. Current log-likelihood: -669473.396
+Optimal log-likelihood: -669473.305
+Rate parameters:  A-C: 0.85999  A-G: 5.20914  A-T: 1.54782  C-G: 0.61169  C-T: 5.35561  G-T: 1.00000
+Base frequencies:  A: 0.260  C: 0.239  G: 0.241  T: 0.260
+Gamma shape alpha: 0.229
+Parameters optimization took 6 rounds (36.139 sec)
+Wrote distance file to... 
+
+Do NNI search on 1 best initial trees
+Optimizing NNI: done in 7.54004 secs using 2410% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -669472.914
+Finish initializing candidate tree set (2)
+Current best tree score: -669472.914 / CPU time: 10.755
+Number of iterations: 1
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 16.1386 secs using 2379% CPU
+Optimizing NNI: done in 17.4501 secs using 2397% CPU
+Optimizing NNI: done in 13.5696 secs using 2378% CPU
+Optimizing NNI: done in 16.3933 secs using 2398% CPU
+Optimizing NNI: done in 17.763 secs using 2387% CPU
+Optimizing NNI: done in 13.9567 secs using 2391% CPU
+Optimizing NNI: done in 13.4829 secs using 2381% CPU
+Optimizing NNI: done in 13.2692 secs using 2400% CPU
+Optimizing NNI: done in 21.2064 secs using 2388% CPU
+Iteration 10 / LogL: -669771.417 / Time: 0h:3m:11s
+Optimizing NNI: done in 25.7232 secs using 2385% CPU
+Optimizing NNI: done in 14.5298 secs using 2396% CPU
+Optimizing NNI: done in 14.5231 secs using 2377% CPU
+Optimizing NNI: done in 25.1893 secs using 2400% CPU
+Optimizing NNI: done in 27.924 secs using 2392% CPU
+Optimizing NNI: done in 27.9163 secs using 2390% CPU
+Optimizing NNI: done in 13.7285 secs using 2394% CPU
+Optimizing NNI: done in 14.2248 secs using 2386% CPU
+Optimizing NNI: done in 15.9098 secs using 2391% CPU
+Optimizing NNI: done in 14.224 secs using 2386% CPU
+Iteration 20 / LogL: -669644.777 / Time: 0h:6m:27s
+Optimizing NNI: done in 14.1944 secs using 2391% CPU
+Optimizing NNI: done in 13.5904 secs using 2389% CPU
+Optimizing NNI: done in 13.7 secs using 2386% CPU
+Optimizing NNI: done in 15.7635 secs using 2392% CPU
+Optimizing NNI: done in 14.3868 secs using 2388% CPU
+Optimizing NNI: done in 12.2815 secs using 2391% CPU
+Optimizing NNI: done in 12.044 secs using 2377% CPU
+Optimizing NNI: done in 14.4847 secs using 2401% CPU
+Optimizing NNI: done in 13.4528 secs using 2378% CPU
+Optimizing NNI: done in 12.6087 secs using 2374% CPU
+Iteration 30 / LogL: -669701.990 / Time: 0h:8m:45s (0h:21m:26s left)
+Optimizing NNI: done in 12.3862 secs using 2415% CPU
+Optimizing NNI: done in 14.0508 secs using 2408% CPU
+Optimizing NNI: done in 13.9749 secs using 2387% CPU
+Optimizing NNI: done in 11.7947 secs using 2385% CPU
+Optimizing NNI: done in 17.2 secs using 2392% CPU
+Optimizing NNI: done in 14.3617 secs using 2390% CPU
+Optimizing NNI: done in 15.2427 secs using 2389% CPU
+Optimizing NNI: done in 12.5313 secs using 2384% CPU
+Optimizing NNI: done in 14.1891 secs using 2396% CPU
+Optimizing NNI: done in 14.1047 secs using 2379% CPU
+Iteration 40 / LogL: -669746.088 / Time: 0h:11m:7s (0h:17m:23s left)
+Optimizing NNI: done in 14.7933 secs using 2400% CPU
+Optimizing NNI: done in 15.115 secs using 2379% CPU
+Optimizing NNI: done in 14.972 secs using 2399% CPU
+Optimizing NNI: done in 14.6397 secs using 2377% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 44: -669471.864
+Optimizing NNI: done in 15.9459 secs using 2408% CPU
+Optimizing NNI: done in 12.0776 secs using 2407% CPU
+Optimizing NNI: done in 14.926 secs using 2389% CPU
+Optimizing NNI: done in 12.8862 secs using 2389% CPU
+Optimizing NNI: done in 13.9949 secs using 2394% CPU
+Optimizing NNI: done in 14.7434 secs using 2385% CPU
+Iteration 50 / LogL: -669593.256 / Time: 0h:13m:38s (0h:26m:9s left)
+Log-likelihood cutoff on original alignment: -669575.979
+Optimizing NNI: done in 13.795 secs using 2393% CPU
+Optimizing NNI: done in 12.2349 secs using 2377% CPU
+Optimizing NNI: done in 12.6202 secs using 2404% CPU
+Optimizing NNI: done in 15.3548 secs using 2380% CPU
+Optimizing NNI: done in 12.5445 secs using 2402% CPU
+Optimizing NNI: done in 14.3007 secs using 2381% CPU
+Optimizing NNI: done in 13.715 secs using 2399% CPU
+Optimizing NNI: done in 13.8987 secs using 2384% CPU
+Optimizing NNI: done in 15.6243 secs using 2376% CPU
+Optimizing NNI: done in 15.0051 secs using 2414% CPU
+Iteration 60 / LogL: -669719.642 / Time: 0h:15m:59s (0h:22m:46s left)
+Optimizing NNI: done in 13.4137 secs using 2407% CPU
+Optimizing NNI: done in 12.5063 secs using 2386% CPU
+Optimizing NNI: done in 13.5195 secs using 2388% CPU
+Optimizing NNI: done in 14.5349 secs using 2393% CPU
+Optimizing NNI: done in 13.7056 secs using 2378% CPU
+Optimizing NNI: done in 12.787 secs using 2377% CPU
+Optimizing NNI: done in 12.7614 secs using 2404% CPU
+Optimizing NNI: done in 14.2962 secs using 2411% CPU
+Optimizing NNI: done in 13.9135 secs using 2372% CPU
+Optimizing NNI: done in 13.1373 secs using 2402% CPU
+Iteration 70 / LogL: -669770.494 / Time: 0h:18m:15s (0h:19m:35s left)
+Optimizing NNI: done in 12.8436 secs using 2386% CPU
+Optimizing NNI: done in 15.4587 secs using 2398% CPU
+Optimizing NNI: done in 14.184 secs using 2385% CPU
+Optimizing NNI: done in 13.0227 secs using 2399% CPU
+Optimizing NNI: done in 12.2635 secs using 2387% CPU
+Optimizing NNI: done in 14.951 secs using 2390% CPU
+Optimizing NNI: done in 13.7656 secs using 2394% CPU
+Optimizing NNI: done in 11.6764 secs using 2374% CPU
+Optimizing NNI: done in 13.567 secs using 2405% CPU
+Optimizing NNI: done in 12.7523 secs using 2382% CPU
+Iteration 80 / LogL: -669560.327 / Time: 0h:20m:32s (0h:16m:38s left)
+Optimizing NNI: done in 12.7444 secs using 2402% CPU
+Optimizing NNI: done in 13.227 secs using 2385% CPU
+Optimizing NNI: done in 12.1033 secs using 2394% CPU
+Optimizing NNI: done in 12.7637 secs using 2393% CPU
+Optimizing NNI: done in 12.7364 secs using 2378% CPU
+Optimizing NNI: done in 12.8383 secs using 2405% CPU
+Optimizing NNI: done in 14.6342 secs using 2380% CPU
+Optimizing NNI: done in 12.6319 secs using 2404% CPU
+Optimizing NNI: done in 14.5753 secs using 2383% CPU
+Optimizing NNI: done in 13.172 secs using 2401% CPU
+Iteration 90 / LogL: -669964.696 / Time: 0h:22m:45s (0h:13m:48s left)
+Optimizing NNI: done in 14.0378 secs using 2385% CPU
+Optimizing NNI: done in 14.3811 secs using 2397% CPU
+Optimizing NNI: done in 13.234 secs using 2387% CPU
+Optimizing NNI: done in 12.5955 secs using 2390% CPU
+Optimizing NNI: done in 14.9468 secs using 2394% CPU
+Optimizing NNI: done in 12.3524 secs using 2381% CPU
+Optimizing NNI: done in 12.0802 secs using 2405% CPU
+Optimizing NNI: done in 14.2523 secs using 2380% CPU
+Optimizing NNI: done in 12.2516 secs using 2405% CPU
+Optimizing NNI: done in 14.642 secs using 2383% CPU
+Iteration 100 / LogL: -669686.515 / Time: 0h:25m:1s (0h:11m:7s left)
+Log-likelihood cutoff on original alignment: -669578.976
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Optimizing NNI: done in 12.9715 secs using 2401% CPU
+Optimizing NNI: done in 13.7469 secs using 2383% CPU
+Optimizing NNI: done in 13.4531 secs using 2397% CPU
+Optimizing NNI: done in 15.005 secs using 2387% CPU
+Optimizing NNI: done in 13.9527 secs using 2395% CPU
+Optimizing NNI: done in 12.5915 secs using 2390% CPU
+Optimizing NNI: done in 11.987 secs using 2381% CPU
+Optimizing NNI: done in 13.5604 secs using 2402% CPU
+Optimizing NNI: done in 15.1377 secs using 2380% CPU
+Optimizing NNI: done in 12.4659 secs using 2407% CPU
+Iteration 110 / LogL: -669596.142 / Time: 0h:27m:18s (0h:22m:32s left)
+Optimizing NNI: done in 13.1032 secs using 2381% CPU
+Optimizing NNI: done in 12.3186 secs using 2402% CPU
+Optimizing NNI: done in 14.9945 secs using 2385% CPU
+Optimizing NNI: done in 13.8333 secs using 2397% CPU
+Optimizing NNI: done in 12.9073 secs using 2388% CPU
+Optimizing NNI: done in 13.2872 secs using 2389% CPU
+Optimizing NNI: done in 14.8778 secs using 2392% CPU
+Optimizing NNI: done in 15.0114 secs using 2389% CPU
+Optimizing NNI: done in 12.7717 secs using 2395% CPU
+Optimizing NNI: done in 12.941 secs using 2379% CPU
+Iteration 120 / LogL: -669767.798 / Time: 0h:29m:36s (0h:19m:54s left)
+Optimizing NNI: done in 14.5704 secs using 2404% CPU
+Optimizing NNI: done in 14.8859 secs using 2379% CPU
+Optimizing NNI: done in 12.2048 secs using 2406% CPU
+Optimizing NNI: done in 13.1453 secs using 2381% CPU
+Optimizing NNI: done in 13.7361 secs using 2400% CPU
+Optimizing NNI: done in 12.9592 secs using 2384% CPU
+Optimizing NNI: done in 14.3893 secs using 2395% CPU
+Optimizing NNI: done in 13.7943 secs using 2388% CPU
+Optimizing NNI: done in 12.28 secs using 2392% CPU
+Optimizing NNI: done in 12.5943 secs using 2395% CPU
+Iteration 130 / LogL: -669707.946 / Time: 0h:31m:52s (0h:17m:17s left)
+Optimizing NNI: done in 14.6247 secs using 2382% CPU
+Optimizing NNI: done in 13.6816 secs using 2401% CPU
+Optimizing NNI: done in 12.0557 secs using 2379% CPU
+Optimizing NNI: done in 14.1462 secs using 2401% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 134: -669470.923
+Optimizing NNI: done in 13.1232 secs using 2379% CPU
+Optimizing NNI: done in 13.6932 secs using 2403% CPU
+Optimizing NNI: done in 12.6201 secs using 2382% CPU
+Optimizing NNI: done in 11.9702 secs using 2398% CPU
+Optimizing NNI: done in 11.8231 secs using 2389% CPU
+Optimizing NNI: done in 13.7324 secs using 2385% CPU
+Iteration 140 / LogL: -669968.860 / Time: 0h:34m:8s (0h:23m:5s left)
+Optimizing NNI: done in 14.8659 secs using 2397% CPU
+Optimizing NNI: done in 12.2185 secs using 2378% CPU
+Optimizing NNI: done in 11.7964 secs using 2407% CPU
+Optimizing NNI: done in 13.8596 secs using 2381% CPU
+Optimizing NNI: done in 13.1808 secs using 2401% CPU
+Optimizing NNI: done in 14.2908 secs using 2384% CPU
+Optimizing NNI: done in 11.5394 secs using 2396% CPU
+Optimizing NNI: done in 14.9852 secs using 2390% CPU
+Optimizing NNI: done in 12.3298 secs using 2386% CPU
+Optimizing NNI: done in 13.884 secs using 2397% CPU
+Iteration 150 / LogL: -670116.076 / Time: 0h:36m:23s (0h:20m:30s left)
+Log-likelihood cutoff on original alignment: -669579.879
+Optimizing NNI: done in 13.7242 secs using 2380% CPU
+Optimizing NNI: done in 13.9532 secs using 2402% CPU
+Optimizing NNI: done in 12.7245 secs using 2380% CPU
+Optimizing NNI: done in 13.5345 secs using 2403% CPU
+Optimizing NNI: done in 14.245 secs using 2381% CPU
+Optimizing NNI: done in 11.7735 secs using 2404% CPU
+Optimizing NNI: done in 13.5738 secs using 2385% CPU
+Optimizing NNI: done in 12.8823 secs using 2394% CPU
+Optimizing NNI: done in 13.3869 secs using 2390% CPU
+Optimizing NNI: done in 13.1596 secs using 2385% CPU
+Iteration 160 / LogL: -670051.904 / Time: 0h:38m:38s (0h:17m:58s left)
+Optimizing NNI: done in 13.2835 secs using 2398% CPU
+Optimizing NNI: done in 13.3495 secs using 2379% CPU
+Optimizing NNI: done in 13.2149 secs using 2404% CPU
+Optimizing NNI: done in 14.2061 secs using 2381% CPU
+Optimizing NNI: done in 12.0357 secs using 2403% CPU
+Optimizing NNI: done in 13.8531 secs using 2384% CPU
+Optimizing NNI: done in 16.0144 secs using 2397% CPU
+Optimizing NNI: done in 12.2038 secs using 2384% CPU
+Optimizing NNI: done in 14.7786 secs using 2394% CPU
+Optimizing NNI: done in 13.4212 secs using 2388% CPU
+Iteration 170 / LogL: -669505.247 / Time: 0h:40m:56s (0h:15m:30s left)
+
+******************************************************
+CHECKPOINT: Resuming analysis from ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.ckp.gz
+
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    749bda7a901e (AVX512, FMA3, 29 GB RAM)
+Command: /usr/local/bin/iqtree3_intel -s ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy -m GTR+G -B 1000 -t ./first_run/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.treefile -nt 24
+Seed:    489365 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Jul 16 21:11:59 2025
+Kernel:  AVX+FMA - 24 threads (24 CPU cores detected)
+
+Reading alignment file ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy ... Phylip format detected
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.188648 secs using 79.89% CPU
+Alignment has 469 sequences with 37479 columns, 37475 distinct patterns
+11826 parsimony-informative, 8453 singleton sites, 17200 constant sites
+              Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.0106448 secs using 1847% CPU
+   1  Boltonia_001    7.90%    passed     70.24%
+   2  Boltonia_002    8.53%    passed     87.66%
+   3  Boltonia_004   11.08%    passed     67.60%
+   4  Boltonia_005   10.28%    passed     76.50%
+   5  Boltonia_006    8.57%    passed     79.60%
+   6  Boltonia_007    9.09%    passed     68.81%
+   7  Boltonia_008    9.34%    passed     89.18%
+   8  Boltonia_009    4.80%    passed     85.27%
+   9  Boltonia_010   13.11%    passed     72.57%
+  10  Boltonia_012    7.96%    passed     76.30%
+  11  Boltonia_013    7.48%    passed     90.81%
+  12  Boltonia_014    5.61%    passed     69.98%
+  13  Boltonia_015    4.72%    passed     83.64%
+  14  Boltonia_016    8.10%    passed     84.56%
+  15  Boltonia_017    5.40%    passed     75.70%
+  16  Boltonia_018   13.18%    passed     66.15%
+  17  Boltonia_019    6.09%    passed     88.22%
+  18  Boltonia_020    7.16%    passed     88.35%
+  19  Boltonia_021    6.75%    passed     93.52%
+  20  Boltonia_022    2.96%    passed     97.69%
+  21  Boltonia_023    7.60%    passed     78.07%
+  22  Boltonia_024    7.35%    passed     88.22%
+  23  Boltonia_025    7.75%    passed     92.83%
+  24  Boltonia_026    7.37%    passed     72.10%
+  25  Boltonia_027    5.70%    passed     97.90%
+  26  Boltonia_028    6.76%    passed     89.53%
+  27  Boltonia_029    7.00%    passed     86.20%
+  28  Boltonia_030    9.01%    passed     93.90%
+  29  Boltonia_031    9.70%    passed     88.70%
+  30  Boltonia_032    7.51%    passed     92.35%
+  31  Boltonia_033    9.15%    passed     76.45%
+  32  Boltonia_034    7.28%    passed     96.93%
+  33  Boltonia_035    8.48%    passed     80.13%
+  34  Boltonia_036    7.22%    passed     98.63%
+  35  Boltonia_037    9.52%    passed     75.50%
+  36  Boltonia_038   10.15%    passed     63.62%
+  37  Boltonia_039   12.02%    passed     44.67%
+  38  Boltonia_040    7.44%    passed     85.25%
+  39  Boltonia_041   22.53%    passed     70.94%
+  40  Boltonia_042    7.64%    passed     84.48%
+  41  Boltonia_043    6.99%    passed     80.34%
+  42  Boltonia_044    5.48%    passed     96.82%
+  43  Boltonia_045    7.65%    passed     80.49%
+  44  Boltonia_046    8.27%    passed     96.03%
+  45  Boltonia_047   11.08%    passed     88.18%
+  46  Boltonia_048    8.19%    passed     76.12%
+  47  Boltonia_050    7.11%    passed     86.91%
+  48  Boltonia_051    7.86%    passed     73.00%
+  49  Boltonia_052    7.62%    passed     62.51%
+  50  Boltonia_053    5.99%    passed     94.94%
+  51  Boltonia_054    9.66%    passed     99.19%
+  52  Boltonia_055    9.66%    passed     73.15%
+  53  Boltonia_056   10.72%    passed     64.61%
+  54  Boltonia_057   10.40%    passed     61.48%
+  55  Boltonia_058   10.12%    passed     55.95%
+  56  Boltonia_059    6.79%    passed     80.95%
+  57  Boltonia_060    7.29%    passed     75.42%
+  58  Boltonia_061    5.61%    passed     95.97%
+  59  Boltonia_062    3.65%    passed     84.87%
+  60  Boltonia_063   11.01%    passed     89.33%
+  61  Boltonia_064    9.25%    passed     86.58%
+  62  Boltonia_065   11.33%    passed     79.19%
+  63  Boltonia_066    8.30%    passed     85.27%
+  64  Boltonia_067    4.33%    passed     97.51%
+  65  Boltonia_068   12.58%    passed     51.50%
+  66  Boltonia_069   12.83%    passed     73.82%
+  67  Boltonia_070    7.90%    passed     80.67%
+  68  Boltonia_071    9.59%    passed     72.86%
+  69  Boltonia_072   10.10%    passed     73.38%
+  70  Boltonia_073    9.33%    passed     49.52%
+  71  Boltonia_074    9.79%    passed     83.80%
+  72  Boltonia_075    8.65%    passed     84.66%
+  73  Boltonia_076    7.59%    passed     91.71%
+  74  Boltonia_077    6.90%    passed     87.78%
+  75  Boltonia_078    6.26%    passed     92.90%
+  76  Boltonia_079    7.92%    passed     77.65%
+  77  Boltonia_080   10.79%    passed     79.53%
+  78  Boltonia_081    6.83%    passed     75.97%
+  79  Boltonia_082   14.54%    passed     61.69%
+  80  Boltonia_083    6.31%    passed     97.40%
+  81  Boltonia_084    2.97%    passed     93.31%
+  82  Boltonia_085    7.84%    passed     85.40%
+  83  Boltonia_086    8.45%    passed     86.89%
+  84  Boltonia_087    7.00%    passed     99.52%
+  85  Boltonia_088    8.62%    passed     79.92%
+  86  Boltonia_089    8.14%    passed     86.21%
+  87  Boltonia_090    6.92%    passed     86.55%
+  88  Boltonia_091    5.68%    passed     89.80%
+  89  Boltonia_092    5.37%    passed     90.66%
+  90  Boltonia_093    7.42%    passed     95.47%
+  91  Boltonia_094    7.36%    passed     82.03%
+  92  Boltonia_095    8.80%    passed     97.31%
+  93  Boltonia_096    6.87%    passed     91.77%
+  94  Boltonia_097    5.23%    passed     96.66%
+  95  Boltonia_098    8.82%    passed     94.38%
+  96  Boltonia_099    7.55%    passed     84.93%
+  97  Boltonia_100    5.68%    passed     82.11%
+  98  Boltonia_101    7.36%    passed     85.71%
+  99  Boltonia_102    7.45%    passed     91.22%
+ 100  Boltonia_103    6.75%    passed     90.51%
+ 101  Boltonia_104   13.64%    passed     77.99%
+ 102  Boltonia_105    8.48%    passed     73.49%
+ 103  Boltonia_106    7.99%    passed     96.12%
+ 104  Boltonia_107   10.22%    passed     67.39%
+ 105  Boltonia_108   10.98%    passed     80.58%
+ 106  Boltonia_109    9.15%    passed     82.98%
+ 107  Boltonia_110    8.24%    passed     68.61%
+ 108  Boltonia_111    7.76%    passed     86.09%
+ 109  Boltonia_112    7.71%    passed     97.91%
+ 110  Boltonia_113    6.80%    passed     65.70%
+ 111  Boltonia_114    7.94%    passed     46.49%
+ 112  Boltonia_115    7.40%    passed     89.30%
+ 113  Boltonia_116    8.28%    passed     90.29%
+ 114  Boltonia_117    6.13%    passed     90.85%
+ 115  Boltonia_118    7.48%    passed     85.42%
+ 116  Boltonia_119    6.41%    passed     80.32%
+ 117  Boltonia_120    8.23%    passed     66.68%
+ 118  Boltonia_121    7.86%    passed     82.77%
+ 119  Boltonia_123    7.56%    passed     89.30%
+ 120  Boltonia_124    7.07%    passed     90.55%
+ 121  Boltonia_125    8.12%    passed     82.59%
+ 122  Boltonia_126    6.84%    passed     94.94%
+ 123  Boltonia_127    7.50%    passed     95.47%
+ 124  Boltonia_128    7.80%    passed     80.80%
+ 125  Boltonia_129    8.16%    passed     86.20%
+ 126  Boltonia_130    8.10%    passed     59.90%
+ 127  Boltonia_131    6.92%    passed     82.28%
+ 128  Boltonia_132    7.84%    passed     85.78%
+ 129  Boltonia_133    7.03%    passed     81.05%
+ 130  Boltonia_134    7.51%    passed     83.23%
+ 131  Boltonia_135    7.34%    passed     74.49%
+ 132  Boltonia_136    8.03%    passed     68.62%
+ 133  Boltonia_137    8.04%    passed     69.36%
+ 134  Boltonia_138    8.79%    passed     90.65%
+ 135  Boltonia_139    6.91%    passed     81.65%
+ 136  Boltonia_140    7.75%    passed     89.85%
+ 137  Boltonia_141   13.70%    passed     99.88%
+ 138  Boltonia_142    7.55%    passed     89.09%
+ 139  Boltonia_143    4.39%    passed     91.44%
+ 140  Boltonia_144    6.04%    passed     79.13%
+ 141  Boltonia_145    7.41%    passed     79.33%
+ 142  Boltonia_146    8.07%    passed     88.97%
+ 143  Boltonia_147    7.01%    passed     94.42%
+ 144  Boltonia_148   10.65%    passed     98.33%
+ 145  Boltonia_149   26.37%    passed     42.61%
+ 146  Boltonia_150    7.61%    passed     79.72%
+ 147  Boltonia_151    7.19%    passed     93.77%
+ 148  Boltonia_152    8.38%    passed     83.53%
+ 149  Boltonia_153    8.81%    passed     96.28%
+ 150  Boltonia_154    7.52%    passed     69.76%
+ 151  Boltonia_155    9.66%    passed     85.01%
+ 152  Boltonia_157    6.38%    passed     93.74%
+ 153  Boltonia_158    7.00%    passed     84.44%
+ 154  Boltonia_159    8.56%    passed     89.32%
+ 155  Boltonia_160    8.95%    passed     84.83%
+ 156  Boltonia_161    7.27%    passed     91.60%
+ 157  Boltonia_162    4.18%    passed     96.63%
+ 158  Boltonia_163    7.39%    passed     95.77%
+ 159  Boltonia_164    7.73%    passed     72.34%
+ 160  Boltonia_165    8.32%    passed     60.46%
+ 161  Boltonia_166   14.97%    passed     78.72%
+ 162  Boltonia_167    6.95%    passed     96.87%
+ 163  Boltonia_168    7.20%    passed     78.07%
+ 164  Boltonia_169    8.54%    passed     65.86%
+ 165  Boltonia_170    7.44%    passed     97.97%
+ 166  Boltonia_171    5.61%    passed     96.45%
+ 167  Boltonia_172    6.99%    passed     91.41%
+ 168  Boltonia_173    7.60%    passed     80.51%
+ 169  Boltonia_174    7.23%    passed     70.63%
+ 170  Boltonia_175    7.69%    passed     87.61%
+ 171  Boltonia_176    8.78%    passed     92.05%
+ 172  Boltonia_177    8.10%    passed     81.41%
+ 173  Boltonia_178    7.44%    passed     72.65%
+ 174  Boltonia_179    7.91%    passed     86.46%
+ 175  Boltonia_180    7.06%    passed     68.17%
+ 176  Boltonia_181    8.40%    passed     94.11%
+ 177  Boltonia_182    6.87%    passed     62.89%
+ 178  Boltonia_183    8.16%    passed     97.36%
+ 179  Boltonia_184    6.04%    passed     94.85%
+ 180  Boltonia_185    6.74%    passed     91.87%
+ 181  Boltonia_186    8.29%    passed     68.89%
+ 182  Boltonia_187    3.78%    passed     98.00%
+ 183  Boltonia_188    7.52%    passed     84.35%
+ 184  Boltonia_189    8.71%    passed     96.61%
+ 185  Boltonia_190    6.14%    passed     73.40%
+ 186  Boltonia_191    7.20%    passed     80.90%
+ 187  Boltonia_192    8.08%    passed     96.19%
+ 188  Boltonia_193    7.13%    passed     74.56%
+ 189  Boltonia_194    7.40%    passed     86.16%
+ 190  Boltonia_195    7.14%    passed     76.69%
+ 191  Boltonia_196    7.05%    passed     97.41%
+ 192  Boltonia_197    7.65%    passed     99.68%
+ 193  Boltonia_198    8.26%    passed     75.40%
+ 194  Boltonia_199   14.89%    passed     80.26%
+ 195  Boltonia_200    6.31%    passed     92.25%
+ 196  Boltonia_201   11.19%    passed     60.22%
+ 197  Boltonia_202    6.91%    passed     92.89%
+ 198  Boltonia_203    7.08%    passed     83.61%
+ 199  Boltonia_204   11.16%    passed     91.24%
+ 200  Boltonia_205    7.03%    passed     85.75%
+ 201  Boltonia_206   13.72%    passed     77.32%
+ 202  Boltonia_207    8.29%    passed     60.94%
+ 203  Boltonia_208    7.35%    passed     86.70%
+ 204  Boltonia_209   11.33%    passed     94.91%
+ 205  Boltonia_210    7.18%    passed     78.46%
+ 206  Boltonia_211    7.75%    passed     79.19%
+ 207  Boltonia_212   10.80%    passed     65.12%
+ 208  Boltonia_213   10.85%    passed     86.14%
+ 209  Boltonia_214    7.10%    passed     92.74%
+ 210  Boltonia_215    9.64%    passed     79.32%
+ 211  Boltonia_216   13.34%    passed     92.16%
+ 212  Boltonia_217    6.57%    passed     88.10%
+ 213  Boltonia_218    7.17%    passed     80.58%
+ 214  Boltonia_219   12.66%    passed     74.34%
+ 215  Boltonia_220    6.22%    passed     73.88%
+ 216  Boltonia_221    7.10%    passed     79.89%
+ 217  Boltonia_222    9.11%    passed     76.13%
+ 218  Boltonia_223   17.16%    passed     86.35%
+ 219  Boltonia_224    6.99%    passed     83.75%
+ 220  Boltonia_225    7.59%    passed     86.82%
+ 221  Boltonia_226    7.67%    passed     80.30%
+ 222  Boltonia_227    7.55%    passed     77.34%
+ 223  Boltonia_228    7.72%    passed     80.90%
+ 224  Boltonia_229    7.38%    passed     85.60%
+ 225  Boltonia_230    4.31%    passed     89.10%
+ 226  Boltonia_231    7.23%    passed     98.23%
+ 227  Boltonia_232    7.83%    passed     89.23%
+ 228  Boltonia_233    6.97%    passed     73.62%
+ 229  Boltonia_234    7.20%    passed     78.27%
+ 230  Boltonia_235    6.68%    passed     82.07%
+ 231  Boltonia_236    7.05%    passed     85.57%
+ 232  Boltonia_237    7.20%    passed     72.14%
+ 233  Boltonia_238    7.11%    passed     92.75%
+ 234  Boltonia_239    8.34%    passed     89.64%
+ 235  Boltonia_240    7.11%    passed     81.29%
+ 236  Boltonia_241    8.21%    passed     97.02%
+ 237  Boltonia_242    7.46%    passed     95.69%
+ 238  Boltonia_243    6.93%    passed     72.89%
+ 239  Boltonia_244    8.49%    passed     88.57%
+ 240  Boltonia_245    7.60%    passed     80.46%
+ 241  Boltonia_246    4.73%    passed     95.89%
+ 242  Boltonia_247    7.82%    passed     95.09%
+ 243  Boltonia_248    6.72%    passed     92.01%
+ 244  Boltonia_249    8.30%    passed     94.81%
+ 245  Boltonia_250    7.87%    passed     75.03%
+ 246  Boltonia_251    6.36%    passed     80.58%
+ 247  Boltonia_252   13.66%    passed     33.42%
+ 248  Boltonia_253    7.61%    passed     85.72%
+ 249  Boltonia_254    6.23%    passed     93.07%
+ 250  Boltonia_255    7.52%    passed     66.44%
+ 251  Boltonia_256    7.47%    passed     97.62%
+ 252  Boltonia_257    8.08%    passed     76.81%
+ 253  Boltonia_258    7.48%    passed     75.11%
+ 254  Boltonia_259    4.44%    passed     95.24%
+ 255  Boltonia_260    7.82%    passed     59.84%
+ 256  Boltonia_261    7.51%    passed     83.23%
+ 257  Boltonia_262   12.60%    passed     62.77%
+ 258  Boltonia_263    9.79%    passed     80.85%
+ 259  Boltonia_264    7.19%    passed     84.02%
+ 260  Boltonia_265    6.02%    passed     71.80%
+ 261  Boltonia_267    6.29%    passed     93.49%
+ 262  Boltonia_268    7.37%    passed     74.12%
+ 263  Boltonia_269    7.26%    passed     93.61%
+ 264  Boltonia_270    7.58%    passed     74.33%
+ 265  Boltonia_271   11.43%    passed     55.44%
+ 266  Boltonia_272    7.76%    passed     94.84%
+ 267  Boltonia_273    7.54%    passed     98.71%
+ 268  Boltonia_274    2.42%    passed     97.49%
+ 269  Boltonia_275    8.08%    passed     78.28%
+ 270  Boltonia_276    7.75%    passed     97.92%
+ 271  Boltonia_277    8.49%    passed     90.11%
+ 272  Boltonia_278   11.45%    passed     72.59%
+ 273  Boltonia_279    8.94%    passed     91.07%
+ 274  Boltonia_280    8.31%    passed     80.71%
+ 275  Boltonia_281    6.72%    passed     79.47%
+ 276  Boltonia_282    7.45%    passed     96.75%
+ 277  Boltonia_283    9.13%    passed     96.27%
+ 278  Boltonia_284    8.22%    passed     91.69%
+ 279  Boltonia_285    7.56%    passed     82.12%
+ 280  Boltonia_286    9.69%    passed     64.04%
+ 281  Boltonia_287    6.93%    passed     91.20%
+ 282  Boltonia_288    5.30%    passed     97.20%
+ 283  Boltonia_289    6.69%    passed     84.15%
+ 284  Boltonia_290    6.74%    passed     75.12%
+ 285  Boltonia_291    6.48%    passed     73.92%
+ 286  Boltonia_292   14.78%    passed     83.27%
+ 287  Boltonia_293    7.32%    passed     92.38%
+ 288  Boltonia_294    5.70%    passed     80.95%
+ 289  Boltonia_295    6.92%    passed     82.25%
+ 290  Boltonia_296    6.92%    passed     68.82%
+ 291  Boltonia_298    8.26%    passed     59.44%
+ 292  Boltonia_299    8.28%    passed     49.54%
+ 293  Boltonia_301    7.04%    passed     97.01%
+ 294  Boltonia_302    3.79%    passed     83.92%
+ 295  Boltonia_303    8.54%    passed     78.29%
+ 296  Boltonia_304    6.79%    passed     92.55%
+ 297  Boltonia_305    7.09%    passed     96.25%
+ 298  Boltonia_306    4.71%    passed     84.43%
+ 299  Boltonia_307    7.10%    passed     81.30%
+ 300  Boltonia_308    6.98%    passed     73.27%
+ 301  Boltonia_309    6.60%    passed     84.52%
+ 302  Boltonia_310    3.07%    passed     95.71%
+ 303  Boltonia_311    7.98%    passed     72.18%
+ 304  Boltonia_312    5.63%    passed     73.05%
+ 305  Boltonia_313    7.08%    passed     96.07%
+ 306  Boltonia_314   12.51%    passed     79.05%
+ 307  Boltonia_315    6.63%    passed     79.19%
+ 308  Boltonia_316    6.61%    passed     94.30%
+ 309  Boltonia_317    8.86%    passed     60.84%
+ 310  Boltonia_318    7.28%    passed     90.25%
+ 311  Boltonia_319   12.40%    passed     90.66%
+ 312  Boltonia_320    4.96%    passed     91.61%
+ 313  Boltonia_321    6.99%    passed     81.02%
+ 314  Boltonia_322    7.66%    passed     87.42%
+ 315  Boltonia_323    6.68%    passed     71.19%
+ 316  Boltonia_324    5.80%    passed     92.54%
+ 317  Boltonia_325    6.26%    passed     80.15%
+ 318  Boltonia_326    6.32%    passed     92.17%
+ 319  Boltonia_327    7.21%    passed     94.10%
+ 320  Boltonia_328   13.04%    passed     66.54%
+ 321  Boltonia_329    6.80%    passed     80.74%
+ 322  Boltonia_330    7.18%    passed     93.59%
+ 323  Boltonia_331    6.70%    passed     66.87%
+ 324  Boltonia_332    4.20%    passed     80.75%
+ 325  Boltonia_334    6.95%    passed     85.54%
+ 326  Boltonia_335    5.77%    passed     95.83%
+ 327  Boltonia_336    7.24%    passed     81.47%
+ 328  Boltonia_337    6.64%    passed     74.71%
+ 329  Boltonia_338    7.50%    passed     66.54%
+ 330  Boltonia_339    1.79%    passed     97.18%
+ 331  Boltonia_340   13.08%    passed     77.97%
+ 332  Boltonia_341    7.19%    passed     71.23%
+ 333  Boltonia_342    6.68%    passed     85.73%
+ 334  Boltonia_343    6.50%    passed     71.77%
+ 335  Boltonia_344    6.64%    passed     76.63%
+ 336  Boltonia_345    6.54%    passed     75.25%
+ 337  Boltonia_347   12.96%    passed     77.25%
+ 338  Boltonia_349    5.92%    passed     88.51%
+ 339  Boltonia_350    9.58%    passed     76.83%
+ 340  Boltonia_351    7.08%    passed     80.22%
+ 341  Boltonia_352    6.75%    passed     68.09%
+ 342  Boltonia_353    5.92%    passed     79.13%
+ 343  Boltonia_354    7.31%    passed     74.27%
+ 344  Boltonia_355    7.10%    passed     75.09%
+ 345  Boltonia_356    6.46%    passed     83.64%
+ 346  Boltonia_357   13.30%    passed     79.19%
+ 347  Boltonia_358    6.37%    passed     92.84%
+ 348  Boltonia_359    7.01%    passed     63.13%
+ 349  Boltonia_360    4.50%    passed     79.74%
+ 350  Boltonia_361    6.56%    passed     88.00%
+ 351  Boltonia_362    6.72%    passed     75.98%
+ 352  Boltonia_363    6.72%    passed     89.98%
+ 353  Boltonia_364    8.09%    passed     56.45%
+ 354  Boltonia_365    6.01%    passed     78.51%
+ 355  Boltonia_366    6.92%    passed     75.82%
+ 356  Boltonia_367    6.10%    passed     87.99%
+ 357  Boltonia_368    6.82%    passed     85.85%
+ 358  Boltonia_370    7.09%    passed     83.21%
+ 359  Boltonia_371    9.83%    passed     61.36%
+ 360  Boltonia_372    6.24%    passed     91.10%
+ 361  Boltonia_373    7.58%    passed     88.89%
+ 362  Boltonia_374    6.85%    passed     73.06%
+ 363  Boltonia_375    9.46%    passed     75.91%
+ 364  Boltonia_376    7.29%    passed     95.60%
+ 365  Boltonia_377    4.86%    passed     91.02%
+ 366  Boltonia_378    7.55%    passed     88.23%
+ 367  Boltonia_379    7.87%    passed     63.26%
+ 368  Boltonia_380    7.14%    passed     94.72%
+ 369  Boltonia_381    8.57%    passed     93.47%
+ 370  Boltonia_382    8.55%    passed     88.93%
+ 371  Boltonia_383    5.84%    passed     98.13%
+ 372  Boltonia_384    6.62%    passed     83.98%
+ 373  Boltonia_385    7.47%    passed     81.54%
+ 374  Boltonia_386    6.73%    passed     59.70%
+ 375  Boltonia_387    6.50%    passed     78.23%
+ 376  Boltonia_388    6.03%    passed     80.09%
+ 377  Boltonia_389    4.20%    passed     85.72%
+ 378  Boltonia_390    8.33%    passed     80.02%
+ 379  Boltonia_392    6.98%    passed     67.93%
+ 380  Boltonia_393    5.49%    passed     85.30%
+ 381  Boltonia_394    8.47%    passed     73.69%
+ 382  Boltonia_395    5.38%    passed     88.59%
+ 383  Boltonia_396    7.82%    passed     87.65%
+ 384  Boltonia_397    7.56%    passed     78.93%
+ 385  Boltonia_398    9.81%    passed     93.13%
+ 386  Boltonia_399    7.61%    passed     83.27%
+ 387  Boltonia_400   10.66%    passed     88.23%
+ 388  Boltonia_401    7.00%    passed     92.31%
+ 389  Boltonia_402    6.54%    passed     92.99%
+ 390  Boltonia_403    6.56%    passed     88.75%
+ 391  Boltonia_404    7.55%    passed     78.49%
+ 392  Boltonia_405    7.85%    passed     65.86%
+ 393  Boltonia_406   13.60%    passed     85.37%
+ 394  Boltonia_408    7.97%    passed     89.87%
+ 395  Boltonia_409    6.80%    passed     73.71%
+ 396  Boltonia_411    6.64%    passed     88.94%
+ 397  Boltonia_412    6.50%    passed     92.66%
+ 398  Boltonia_413    7.77%    passed     80.01%
+ 399  Boltonia_415    8.98%    passed     92.04%
+ 400  Boltonia_417    8.87%    passed     82.05%
+ 401  Boltonia_418    7.06%    passed     73.49%
+ 402  Boltonia_419   13.13%    passed     96.50%
+ 403  Boltonia_420    6.85%    passed     85.52%
+ 404  Boltonia_421    6.69%    passed     95.74%
+ 405  Boltonia_422    7.35%    passed     56.21%
+ 406  Boltonia_423    8.28%    passed     68.64%
+ 407  Boltonia_424    8.43%    passed     87.53%
+ 408  Boltonia_425    7.31%    passed     70.08%
+ 409  Boltonia_426    7.94%    passed     88.52%
+ 410  Boltonia_427    4.75%    passed     88.22%
+ 411  Boltonia_428    6.53%    passed     97.76%
+ 412  Boltonia_429   10.49%    passed     57.25%
+ 413  Boltonia_430    5.31%    passed     96.23%
+ 414  Boltonia_431    6.36%    passed     85.76%
+ 415  Boltonia_432   10.66%    passed     76.05%
+ 416  Boltonia_433   10.45%    passed     85.49%
+ 417  Boltonia_434    3.71%    passed     84.61%
+ 418  Boltonia_435    6.34%    passed     99.65%
+ 419  Boltonia_436    8.73%    passed     61.79%
+ 420  Boltonia_437    6.32%    passed     88.73%
+ 421  Boltonia_438    7.65%    passed     67.59%
+ 422  Boltonia_439   12.58%    passed     91.55%
+ 423  Boltonia_441    7.35%    passed     79.40%
+ 424  Boltonia_442    7.26%    passed     93.94%
+ 425  Boltonia_443    5.73%    passed     92.90%
+ 426  Boltonia_444    7.04%    passed     81.72%
+ 427  Boltonia_445    9.53%    passed     83.81%
+ 428  Boltonia_446    6.95%    passed     92.25%
+ 429  Boltonia_448    3.17%    passed     93.92%
+ 430  Boltonia_449    8.34%    passed     73.72%
+ 431  Boltonia_451   12.43%    passed     64.01%
+ 432  Boltonia_452   12.01%    passed     69.92%
+ 433  Boltonia_453    8.98%    passed     93.92%
+ 434  Boltonia_454   12.50%    passed     57.46%
+ 435  Boltonia_455    5.86%    passed     95.04%
+ 436  Boltonia_456    6.73%    passed     93.11%
+ 437  Boltonia_457    6.73%    passed     67.54%
+ 438  Boltonia_458    2.57%    passed     93.45%
+ 439  Boltonia_459    8.23%    passed     76.36%
+ 440  Boltonia_460    7.11%    passed     84.58%
+ 441  Boltonia_461    6.73%    passed     74.26%
+ 442  Boltonia_462   10.60%    passed     50.78%
+ 443  Boltonia_463    8.04%    passed     72.71%
+ 444  Boltonia_464   13.80%    passed     76.28%
+ 445  Boltonia_465    7.40%    passed     79.00%
+ 446  Boltonia_466    6.72%    passed     89.69%
+ 447  Boltonia_467    7.08%    passed     67.93%
+ 448  Boltonia_468    7.45%    passed     81.06%
+ 449  Boltonia_469    6.25%    passed     90.73%
+ 450  Boltonia_470    6.04%    passed     81.11%
+ 451  Boltonia_471   11.96%    passed     77.00%
+ 452  Boltonia_472    7.32%    passed     62.70%
+ 453  Boltonia_473   14.17%    failed      3.59%
+ 454  Boltonia_474   12.21%    passed     54.74%
+ 455  Boltonia_475   10.30%    passed     66.04%
+ 456  Boltonia_476   11.20%    passed     86.50%
+ 457  Boltonia_477    9.05%    passed     93.58%
+ 458  Boltonia_478   11.28%    passed     90.18%
+ 459  Boltonia_479    9.89%    passed     98.28%
+ 460  Boltonia_481   13.28%    passed     95.60%
+ 461  Boltonia_482   11.87%    passed     94.38%
+ 462  Boltonia_483   12.94%    passed     63.76%
+ 463  Boltonia_484    8.39%    passed     89.07%
+ 464  Boltonia_485    5.89%    passed     91.88%
+ 465  Boltonia_486    7.22%    passed     58.80%
+ 466  Boltonia_489   11.73%    passed     32.24%
+ 467  Boltonia_490   57.35%    failed      4.59%
+ 468  Boltonia_491   13.37%    passed     36.61%
+ 469  Boltonia_492    4.78%    passed     74.22%
+WARNING: 1 sequences contain more than 50% gaps/ambiguity
+****  TOTAL           8.08%  2 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 0.0137363 secs using 1317% CPU
+Reading input tree file ./first_run/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.treefile ...
+Generating 1000 samples for ultrafast bootstrap (seed: 489365)...
+CHECKPOINT: 1000 UFBoot trees and 3 UFBootSplits restored
+
+NOTE: 2422 MB RAM (2 GB) is required!
+CHECKPOINT: Model parameters restored, LogL: -669470.923
+Wrote distance file to... 
+CHECKPOINT: Candidate tree set restored, best LogL: -669470.923
+Finish initializing candidate tree set (1)
+Current best tree score: -669470.923 / CPU time: 0.000
+Number of iterations: 0
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 13.5307 secs using 2411% CPU
+Optimizing NNI: done in 12.6299 secs using 2384% CPU
+Optimizing NNI: done in 16.4434 secs using 2414% CPU
+Optimizing NNI: done in 15.4426 secs using 2388% CPU
+Optimizing NNI: done in 14.9074 secs using 2417% CPU
+Optimizing NNI: done in 14.0994 secs using 2386% CPU
+Optimizing NNI: done in 13.7975 secs using 2413% CPU
+Optimizing NNI: done in 14.2344 secs using 2388% CPU
+Optimizing NNI: done in 14.9755 secs using 2413% CPU
+Optimizing NNI: done in 18.3445 secs using 2393% CPU
+Iteration 10 / LogL: -669718.279 / Time: 0h:2m:30s
+Optimizing NNI: done in 13.9635 secs using 2417% CPU
+Optimizing NNI: done in 21.0822 secs using 2396% CPU
+Optimizing NNI: done in 19.0573 secs using 2399% CPU
+Optimizing NNI: done in 14.4773 secs using 2411% CPU
+Optimizing NNI: done in 15.3704 secs using 2392% CPU
+Optimizing NNI: done in 14.4378 secs using 2412% CPU
+Optimizing NNI: done in 13.1563 secs using 2391% CPU
+Optimizing NNI: done in 14.5808 secs using 2409% CPU
+Optimizing NNI: done in 13.643 secs using 2395% CPU
+Optimizing NNI: done in 17.5901 secs using 2408% CPU
+Iteration 20 / LogL: -669650.592 / Time: 0h:5m:10s
+Optimizing NNI: done in 17.2927 secs using 2389% CPU
+Optimizing NNI: done in 16.4582 secs using 2414% CPU
+Optimizing NNI: done in 16.8288 secs using 2393% CPU
+Optimizing NNI: done in 15.4302 secs using 2417% CPU
+Optimizing NNI: done in 15.5432 secs using 2389% CPU
+Optimizing NNI: done in 16.7401 secs using 2419% CPU
+Optimizing NNI: done in 20.3822 secs using 2417% CPU
+Optimizing NNI: done in 26.3504 secs using 2380% CPU
+Optimizing NNI: done in 18.044 secs using 2389% CPU
+Optimizing NNI: done in 15.3558 secs using 2408% CPU
+Iteration 30 / LogL: -670330.856 / Time: 0h:8m:10s (0h:19m:42s left)
+Optimizing NNI: done in 16.3154 secs using 2382% CPU
+Optimizing NNI: done in 12.9937 secs using 2419% CPU
+Optimizing NNI: done in 16.6935 secs using 2421% CPU
+Optimizing NNI: done in 14.9461 secs using 2364% CPU
+Optimizing NNI: done in 14.218 secs using 2391% CPU
+Optimizing NNI: done in 13.7471 secs using 2419% CPU
+Optimizing NNI: done in 15.4743 secs using 2385% CPU
+Optimizing NNI: done in 13.9631 secs using 2421% CPU
+Optimizing NNI: done in 14.5863 secs using 2385% CPU
+Optimizing NNI: done in 15.0824 secs using 2422% CPU
+Iteration 40 / LogL: -669895.886 / Time: 0h:10m:39s (0h:16m:24s left)
+Optimizing NNI: done in 13.9637 secs using 2393% CPU
+Optimizing NNI: done in 15.6603 secs using 2413% CPU
+Optimizing NNI: done in 16.5028 secs using 2395% CPU
+Optimizing NNI: done in 14.036 secs using 2415% CPU
+Optimizing NNI: done in 17.1412 secs using 2394% CPU
+Optimizing NNI: done in 14.514 secs using 2417% CPU
+Optimizing NNI: done in 17.4981 secs using 2395% CPU
+Optimizing NNI: done in 14.1225 secs using 2419% CPU
+Optimizing NNI: done in 13.3509 secs using 2389% CPU
+Optimizing NNI: done in 14.4568 secs using 2415% CPU
+Iteration 50 / LogL: -669475.513 / Time: 0h:13m:12s (0h:13m:29s left)
+Log-likelihood cutoff on original alignment: -669581.961
+Optimizing NNI: done in 15.142 secs using 2392% CPU
+Optimizing NNI: done in 14.4128 secs using 2415% CPU
+Optimizing NNI: done in 14.6807 secs using 2422% CPU
+Optimizing NNI: done in 16.0968 secs using 2373% CPU
+Optimizing NNI: done in 15.4014 secs using 2390% CPU
+Optimizing NNI: done in 13.0215 secs using 2417% CPU
+Optimizing NNI: done in 13.9617 secs using 2392% CPU
+Optimizing NNI: done in 14.419 secs using 2415% CPU
+Optimizing NNI: done in 14.536 secs using 2393% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 59: -669434.694
+Optimizing NNI: done in 14.4539 secs using 2412% CPU
+Iteration 60 / LogL: -670109.977 / Time: 0h:15m:47s (0h:26m:30s left)
+Optimizing NNI: done in 14.0112 secs using 2395% CPU
+Optimizing NNI: done in 14.404 secs using 2417% CPU
+Optimizing NNI: done in 13.463 secs using 2390% CPU
+Optimizing NNI: done in 13.0561 secs using 2418% CPU
+Optimizing NNI: done in 15.4592 secs using 2392% CPU
+Optimizing NNI: done in 14.7112 secs using 2416% CPU
+Optimizing NNI: done in 16.8469 secs using 2394% CPU
+Optimizing NNI: done in 15.04 secs using 2418% CPU
+Optimizing NNI: done in 15.7734 secs using 2392% CPU
+Optimizing NNI: done in 13.6464 secs using 2418% CPU
+Iteration 70 / LogL: -669581.176 / Time: 0h:18m:15s (0h:23m:33s left)
+Optimizing NNI: done in 13.8922 secs using 2421% CPU
+Optimizing NNI: done in 13.7983 secs using 2365% CPU
+Optimizing NNI: done in 13.1201 secs using 2387% CPU
+Optimizing NNI: done in 16.0259 secs using 2415% CPU
+Optimizing NNI: done in 14.4164 secs using 2391% CPU
+Optimizing NNI: done in 16.5294 secs using 2415% CPU
+Optimizing NNI: done in 13.5296 secs using 2390% CPU
+Optimizing NNI: done in 14.3543 secs using 2416% CPU
+Optimizing NNI: done in 15.3317 secs using 2393% CPU
+Optimizing NNI: done in 13.8651 secs using 2418% CPU
+Iteration 80 / LogL: -670383.617 / Time: 0h:20m:42s (0h:20m:42s left)
+Optimizing NNI: done in 14.1107 secs using 2392% CPU
+Optimizing NNI: done in 14.4701 secs using 2414% CPU
+Optimizing NNI: done in 13.2356 secs using 2394% CPU
+Optimizing NNI: done in 13.7742 secs using 2412% CPU
+Optimizing NNI: done in 14.1375 secs using 2397% CPU
+Optimizing NNI: done in 13.0174 secs using 2409% CPU
+Optimizing NNI: done in 13.4487 secs using 2404% CPU
+Optimizing NNI: done in 13.1122 secs using 2403% CPU
+Optimizing NNI: done in 14.8938 secs using 2413% CPU
+Optimizing NNI: done in 14.8926 secs using 2398% CPU
+Iteration 90 / LogL: -669956.127 / Time: 0h:23m:3s (0h:17m:52s left)
+Optimizing NNI: done in 13.0924 secs using 2418% CPU
+Optimizing NNI: done in 14.8198 secs using 2392% CPU
+Optimizing NNI: done in 14.7019 secs using 2418% CPU
+Optimizing NNI: done in 17.208 secs using 2394% CPU
+Optimizing NNI: done in 17.411 secs using 2404% CPU
+Optimizing NNI: done in 11.8754 secs using 2404% CPU
+Optimizing NNI: done in 13.6593 secs using 2415% CPU
+Optimizing NNI: done in 12.785 secs using 2392% CPU
+Optimizing NNI: done in 15.0121 secs using 2418% CPU
+Optimizing NNI: done in 14.711 secs using 2391% CPU
+Iteration 100 / LogL: -670239.362 / Time: 0h:25m:30s (0h:15m:12s left)
+Log-likelihood cutoff on original alignment: -669582.159
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.984
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Optimizing NNI: done in 14.4494 secs using 2418% CPU
+Optimizing NNI: done in 13.9266 secs using 2390% CPU
+Optimizing NNI: done in 15.265 secs using 2418% CPU
+Optimizing NNI: done in 15.1073 secs using 2392% CPU
+Optimizing NNI: done in 14.3716 secs using 2417% CPU
+Optimizing NNI: done in 14.9953 secs using 2394% CPU
+Optimizing NNI: done in 13.771 secs using 2419% CPU
+Optimizing NNI: done in 15.3578 secs using 2424% CPU
+Optimizing NNI: done in 14.809 secs using 2373% CPU
+Optimizing NNI: done in 15.8356 secs using 2395% CPU
+Iteration 110 / LogL: -669607.765 / Time: 0h:28m:0s (0h:23m:7s left)
+Optimizing NNI: done in 16.5057 secs using 2417% CPU
+Optimizing NNI: done in 13.6531 secs using 2396% CPU
+Optimizing NNI: done in 14.1786 secs using 2420% CPU
+Optimizing NNI: done in 14.9267 secs using 2394% CPU
+Optimizing NNI: done in 14.4397 secs using 2420% CPU
+Optimizing NNI: done in 14.3638 secs using 2394% CPU
+Optimizing NNI: done in 14.5395 secs using 2419% CPU
+Optimizing NNI: done in 13.4548 secs using 2393% CPU
+Optimizing NNI: done in 14.6263 secs using 2418% CPU
+Optimizing NNI: done in 14.849 secs using 2395% CPU
+Iteration 120 / LogL: -669583.494 / Time: 0h:30m:28s (0h:20m:29s left)
+Optimizing NNI: done in 13.0042 secs using 2419% CPU
+Optimizing NNI: done in 14.7251 secs using 2396% CPU
+Optimizing NNI: done in 15.0979 secs using 2416% CPU
+Optimizing NNI: done in 13.8173 secs using 2396% CPU
+Optimizing NNI: done in 13.0573 secs using 2416% CPU
+Optimizing NNI: done in 13.5414 secs using 2404% CPU
+Optimizing NNI: done in 13.1167 secs using 2409% CPU
+Optimizing NNI: done in 14.3361 secs using 2408% CPU
+Optimizing NNI: done in 14.6074 secs using 2405% CPU
+Optimizing NNI: done in 13.9122 secs using 2421% CPU
+Iteration 130 / LogL: -669584.736 / Time: 0h:32m:49s (0h:17m:48s left)
+Optimizing NNI: done in 15.3586 secs using 2423% CPU
+Optimizing NNI: done in 15.736 secs using 2406% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 132: -669427.386
+Optimizing NNI: done in 16.5397 secs using 2414% CPU
+Optimizing NNI: done in 14.7343 secs using 2398% CPU
+Optimizing NNI: done in 14.7425 secs using 2415% CPU
+Optimizing NNI: done in 15.5182 secs using 2399% CPU
+Optimizing NNI: done in 16.2568 secs using 2417% CPU
+Optimizing NNI: done in 14.8443 secs using 2394% CPU
+Optimizing NNI: done in 12.1313 secs using 2418% CPU
+Optimizing NNI: done in 15.2488 secs using 2420% CPU
+Iteration 140 / LogL: -669700.788 / Time: 0h:35m:25s (0h:23m:26s left)
+Optimizing NNI: done in 13.7433 secs using 2376% CPU
+Optimizing NNI: done in 14.7749 secs using 2392% CPU
+Optimizing NNI: done in 12.2807 secs using 2412% CPU
+Optimizing NNI: done in 14.2746 secs using 2403% CPU
+Optimizing NNI: done in 15.9973 secs using 2409% CPU
+Optimizing NNI: done in 17.3963 secs using 2401% CPU
+Optimizing NNI: done in 12.2664 secs using 2412% CPU
+Optimizing NNI: done in 14.1326 secs using 2403% CPU
+Optimizing NNI: done in 14.8522 secs using 2408% CPU
+Optimizing NNI: done in 13.7225 secs using 2404% CPU
+Iteration 150 / LogL: -669775.930 / Time: 0h:37m:50s (0h:20m:49s left)
+Log-likelihood cutoff on original alignment: -669581.663
+Optimizing NNI: done in 13.3544 secs using 2408% CPU
+Optimizing NNI: done in 15.9542 secs using 2407% CPU
+Optimizing NNI: done in 14.2105 secs using 2407% CPU
+Optimizing NNI: done in 13.3007 secs using 2408% CPU
+Optimizing NNI: done in 14.4521 secs using 2402% CPU
+Optimizing NNI: done in 13.2577 secs using 2415% CPU
+Optimizing NNI: done in 15.9013 secs using 2399% CPU
+Optimizing NNI: done in 14.2026 secs using 2413% CPU
+Optimizing NNI: done in 14.2853 secs using 2398% CPU
+Optimizing NNI: done in 15.204 secs using 2415% CPU
+Iteration 160 / LogL: -669481.887 / Time: 0h:40m:17s (0h:18m:14s left)
+Optimizing NNI: done in 17.1003 secs using 2401% CPU
+Optimizing NNI: done in 14.1545 secs using 2411% CPU
+Optimizing NNI: done in 14.593 secs using 2401% CPU
+Optimizing NNI: done in 16.6578 secs using 2407% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 164: -669403.698
+Optimizing NNI: done in 16.4807 secs using 2415% CPU
+Optimizing NNI: done in 15.1044 secs using 2395% CPU
+Optimizing NNI: done in 14.6557 secs using 2418% CPU
+Optimizing NNI: done in 14.8714 secs using 2395% CPU
+Optimizing NNI: done in 14.6282 secs using 2417% CPU
+Optimizing NNI: done in 14.8371 secs using 2395% CPU
+Iteration 170 / LogL: -669972.384 / Time: 0h:42m:58s (0h:23m:54s left)
+Optimizing NNI: done in 13.229 secs using 2416% CPU
+Optimizing NNI: done in 13.7799 secs using 2396% CPU
+Optimizing NNI: done in 15.0588 secs using 2415% CPU
+Optimizing NNI: done in 14.1977 secs using 2396% CPU
+Optimizing NNI: done in 15.9362 secs using 2416% CPU
+Optimizing NNI: done in 14.8097 secs using 2396% CPU
+Optimizing NNI: done in 15.8768 secs using 2416% CPU
+Optimizing NNI: done in 16.1649 secs using 2396% CPU
+Optimizing NNI: done in 13.2633 secs using 2417% CPU
+Optimizing NNI: done in 12.4421 secs using 2421% CPU
+Iteration 180 / LogL: -669679.087 / Time: 0h:45m:25s (0h:21m:18s left)
+Optimizing NNI: done in 14.424 secs using 2384% CPU
+Optimizing NNI: done in 14.3638 secs using 2389% CPU
+Optimizing NNI: done in 14.1252 secs using 2411% CPU
+Optimizing NNI: done in 15.6302 secs using 2402% CPU
+Optimizing NNI: done in 16.2718 secs using 2413% CPU
+Optimizing NNI: done in 15.4998 secs using 2398% CPU
+Optimizing NNI: done in 13.6785 secs using 2415% CPU
+Optimizing NNI: done in 15.9607 secs using 2399% CPU
+Optimizing NNI: done in 14.6881 secs using 2415% CPU
+Optimizing NNI: done in 16.0171 secs using 2397% CPU
+Iteration 190 / LogL: -669729.639 / Time: 0h:47m:57s (0h:18m:46s left)
+Optimizing NNI: done in 13.1933 secs using 2417% CPU
+Optimizing NNI: done in 14.486 secs using 2398% CPU
+Optimizing NNI: done in 14.2318 secs using 2414% CPU
+Optimizing NNI: done in 14.5982 secs using 2399% CPU
+Optimizing NNI: done in 13.5417 secs using 2413% CPU
+Optimizing NNI: done in 14.4884 secs using 2422% CPU
+Optimizing NNI: done in 13.6861 secs using 2421% CPU
+Optimizing NNI: done in 14.1575 secs using 2359% CPU
+Optimizing NNI: done in 15.7077 secs using 2420% CPU
+Optimizing NNI: done in 13.6747 secs using 2405% CPU
+Iteration 200 / LogL: -669744.028 / Time: 0h:50m:21s (0h:16m:11s left)
+Log-likelihood cutoff on original alignment: -669581.663
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.992
+Optimizing NNI: done in 16.3515 secs using 2409% CPU
+Optimizing NNI: done in 14.5305 secs using 2403% CPU
+Optimizing NNI: done in 14.5078 secs using 2409% CPU
+Optimizing NNI: done in 15.2106 secs using 2402% CPU
+Optimizing NNI: done in 13.7582 secs using 2411% CPU
+Optimizing NNI: done in 14.447 secs using 2402% CPU
+Optimizing NNI: done in 15.6915 secs using 2410% CPU
+Optimizing NNI: done in 14.8581 secs using 2404% CPU
+Optimizing NNI: done in 13.1516 secs using 2408% CPU
+Optimizing NNI: done in 16.0626 secs using 2404% CPU
+Iteration 210 / LogL: -669421.052 / Time: 0h:52m:52s (0h:22m:46s left)
+Optimizing NNI: done in 14.424 secs using 2408% CPU
+Optimizing NNI: done in 15.4834 secs using 2404% CPU
+Optimizing NNI: done in 15.2619 secs using 2411% CPU
+Optimizing NNI: done in 13.972 secs using 2420% CPU
+Optimizing NNI: done in 16.8171 secs using 2414% CPU
+Optimizing NNI: done in 12.9072 secs using 2391% CPU
+Optimizing NNI: done in 15.0013 secs using 2376% CPU
+Optimizing NNI: done in 14.9854 secs using 2394% CPU
+Optimizing NNI: done in 14.3384 secs using 2406% CPU
+Optimizing NNI: done in 12.7672 secs using 2398% CPU
+Iteration 220 / LogL: -669918.335 / Time: 0h:55m:20s (0h:20m:12s left)
+Optimizing NNI: done in 14.328 secs using 2402% CPU
+Optimizing NNI: done in 14.5246 secs using 2408% CPU
+Optimizing NNI: done in 13.1011 secs using 2398% CPU
+Optimizing NNI: done in 13.9231 secs using 2421% CPU
+Optimizing NNI: done in 15.2315 secs using 2390% CPU
+Optimizing NNI: done in 14.3932 secs using 2414% CPU
+Optimizing NNI: done in 15.6251 secs using 2395% CPU
+Optimizing NNI: done in 16.9319 secs using 2417% CPU
+Optimizing NNI: done in 14.7087 secs using 2414% CPU
+Optimizing NNI: done in 16.3361 secs using 2415% CPU
+Iteration 230 / LogL: -669658.996 / Time: 0h:57m:51s (0h:17m:41s left)
+Optimizing NNI: done in 15.3348 secs using 2392% CPU
+Optimizing NNI: done in 14.4516 secs using 2411% CPU
+Optimizing NNI: done in 13.7459 secs using 2402% CPU
+Optimizing NNI: done in 13.5241 secs using 2366% CPU
+Optimizing NNI: done in 14.6383 secs using 2397% CPU
+Optimizing NNI: done in 15.5383 secs using 2406% CPU
+Optimizing NNI: done in 15.1949 secs using 2404% CPU
+Optimizing NNI: done in 14.7339 secs using 2409% CPU
+Optimizing NNI: done in 16.3091 secs using 2404% CPU
+Optimizing NNI: done in 14.6412 secs using 2405% CPU
+Iteration 240 / LogL: -669804.674 / Time: 1h:0m:20s (0h:15m:9s left)
+Optimizing NNI: done in 12.6303 secs using 2403% CPU
+Optimizing NNI: done in 15.9894 secs using 2407% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 242: -669399.374
+Optimizing NNI: done in 11.7571 secs using 2414% CPU
+Optimizing NNI: done in 15.9751 secs using 2399% CPU
+Optimizing NNI: done in 15.5659 secs using 2415% CPU
+Optimizing NNI: done in 15.1695 secs using 2398% CPU
+Optimizing NNI: done in 16.752 secs using 2413% CPU
+Optimizing NNI: done in 13.8704 secs using 2420% CPU
+Optimizing NNI: done in 14.0813 secs using 2383% CPU
+Optimizing NNI: done in 14.0985 secs using 2389% CPU
+Iteration 250 / LogL: -669859.440 / Time: 1h:2m:54s (0h:23m:14s left)
+Log-likelihood cutoff on original alignment: -669581.663
+Optimizing NNI: done in 12.809 secs using 2411% CPU
+Optimizing NNI: done in 12.8883 secs using 2403% CPU
+Optimizing NNI: done in 16.2673 secs using 2408% CPU
+Optimizing NNI: done in 15.5114 secs using 2402% CPU
+Optimizing NNI: done in 14.0706 secs using 2409% CPU
+Optimizing NNI: done in 13.5532 secs using 2404% CPU
+Optimizing NNI: done in 15.6655 secs using 2408% CPU
+Optimizing NNI: done in 14.2706 secs using 2402% CPU
+Optimizing NNI: done in 13.4847 secs using 2406% CPU
+Optimizing NNI: done in 14.1097 secs using 2407% CPU
+Iteration 260 / LogL: -669933.033 / Time: 1h:5m:19s (0h:20m:41s left)
+Optimizing NNI: done in 13.5296 secs using 2403% CPU
+Optimizing NNI: done in 13.775 secs using 2414% CPU
+Optimizing NNI: done in 14.5637 secs using 2398% CPU
+Optimizing NNI: done in 13.3246 secs using 2417% CPU
+Optimizing NNI: done in 14.1661 secs using 2394% CPU
+Optimizing NNI: done in 14.3363 secs using 2416% CPU
+Optimizing NNI: done in 15.1034 secs using 2420% CPU
+Optimizing NNI: done in 14.8635 secs using 2416% CPU
+Optimizing NNI: done in 16.7651 secs using 2398% CPU
+Optimizing NNI: done in 14.3548 secs using 2417% CPU
+Iteration 270 / LogL: -669957.227 / Time: 1h:7m:46s (0h:18m:8s left)
+Optimizing NNI: done in 13.9868 secs using 2394% CPU
+Optimizing NNI: done in 14.0349 secs using 2416% CPU
+Optimizing NNI: done in 13.0214 secs using 2394% CPU
+Optimizing NNI: done in 14.0266 secs using 2414% CPU
+Optimizing NNI: done in 14.7963 secs using 2419% CPU
+Optimizing NNI: done in 15.9902 secs using 2377% CPU
+Optimizing NNI: done in 13.8211 secs using 2393% CPU
+Optimizing NNI: done in 13.5464 secs using 2415% CPU
+Optimizing NNI: done in 14.1545 secs using 2394% CPU
+Optimizing NNI: done in 15.0403 secs using 2412% CPU
+Iteration 280 / LogL: -669918.886 / Time: 1h:10m:10s (0h:15m:35s left)
+Optimizing NNI: done in 13.267 secs using 2397% CPU
+Optimizing NNI: done in 12.3853 secs using 2408% CPU
+Optimizing NNI: done in 15.3807 secs using 2402% CPU
+Optimizing NNI: done in 12.2694 secs using 2406% CPU
+Optimizing NNI: done in 13.3649 secs using 2411% CPU
+Optimizing NNI: done in 14.5387 secs using 2399% CPU
+Optimizing NNI: done in 14.9641 secs using 2412% CPU
+Optimizing NNI: done in 15.9444 secs using 2401% CPU
+Optimizing NNI: done in 13.9864 secs using 2409% CPU
+Optimizing NNI: done in 14.3065 secs using 2401% CPU
+Iteration 290 / LogL: -669548.137 / Time: 1h:12m:33s (0h:13m:3s left)
+Optimizing NNI: done in 15.3484 secs using 2417% CPU
+Optimizing NNI: done in 12.5115 secs using 2417% CPU
+Optimizing NNI: done in 15.536 secs using 2373% CPU
+Optimizing NNI: done in 14.0326 secs using 2397% CPU
+Optimizing NNI: done in 16.1333 secs using 2415% CPU
+Optimizing NNI: done in 14.5045 secs using 2395% CPU
+Optimizing NNI: done in 13.8139 secs using 2416% CPU
+Optimizing NNI: done in 13.7926 secs using 2393% CPU
+Optimizing NNI: done in 14.8351 secs using 2414% CPU
+Optimizing NNI: done in 14.891 secs using 2395% CPU
+Iteration 300 / LogL: -669573.384 / Time: 1h:15m:0s (0h:10m:32s left)
+Log-likelihood cutoff on original alignment: -669581.663
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.992
+Optimizing NNI: done in 13.5034 secs using 2416% CPU
+Optimizing NNI: done in 13.7183 secs using 2393% CPU
+Optimizing NNI: done in 13.9545 secs using 2414% CPU
+Optimizing NNI: done in 13.3453 secs using 2395% CPU
+Optimizing NNI: done in 17.5125 secs using 2413% CPU
+Optimizing NNI: done in 15.1021 secs using 2395% CPU
+Optimizing NNI: done in 13.5996 secs using 2413% CPU
+Optimizing NNI: done in 14.5777 secs using 2396% CPU
+Optimizing NNI: done in 16.203 secs using 2414% CPU
+Optimizing NNI: done in 13.3872 secs using 2418% CPU
+Iteration 310 / LogL: -669656.135 / Time: 1h:17m:27s (0h:22m:33s left)
+Optimizing NNI: done in 16.3542 secs using 2382% CPU
+Optimizing NNI: done in 14.464 secs using 2393% CPU
+Optimizing NNI: done in 15.7337 secs using 2415% CPU
+Optimizing NNI: done in 14.0092 secs using 2395% CPU
+Optimizing NNI: done in 14.8549 secs using 2414% CPU
+Optimizing NNI: done in 13.9799 secs using 2394% CPU
+Optimizing NNI: done in 16.4041 secs using 2415% CPU
+Optimizing NNI: done in 15.53 secs using 2395% CPU
+Optimizing NNI: done in 15.3439 secs using 2415% CPU
+Optimizing NNI: done in 14.4178 secs using 2393% CPU
+Iteration 320 / LogL: -669480.976 / Time: 1h:20m:0s (0h:20m:3s left)
+Optimizing NNI: done in 16.0881 secs using 2415% CPU
+Optimizing NNI: done in 14.4841 secs using 2418% CPU
+Optimizing NNI: done in 13.4679 secs using 2374% CPU
+Optimizing NNI: done in 13.8164 secs using 2392% CPU
+Optimizing NNI: done in 14.7487 secs using 2414% CPU
+Optimizing NNI: done in 13.9791 secs using 2396% CPU
+Optimizing NNI: done in 14.1364 secs using 2413% CPU
+Optimizing NNI: done in 15.2175 secs using 2397% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 328: -669391.301
+Optimizing NNI: done in 14.9282 secs using 2409% CPU
+Optimizing NNI: done in 13.8615 secs using 2401% CPU
+Iteration 330 / LogL: -669666.108 / Time: 1h:22m:33s (0h:24m:35s left)
+Optimizing NNI: done in 12.5005 secs using 2417% CPU
+Optimizing NNI: done in 15.1618 secs using 2395% CPU
+Optimizing NNI: done in 15.1534 secs using 2416% CPU
+Optimizing NNI: done in 13.4018 secs using 2394% CPU
+Optimizing NNI: done in 15.0221 secs using 2415% CPU
+Optimizing NNI: done in 14.6345 secs using 2394% CPU
+Optimizing NNI: done in 14.8754 secs using 2416% CPU
+Optimizing NNI: done in 14.1588 secs using 2395% CPU
+Optimizing NNI: done in 14.0785 secs using 2414% CPU
+Optimizing NNI: done in 13.2698 secs using 2394% CPU
+Iteration 340 / LogL: -669816.749 / Time: 1h:24m:57s (0h:22m:3s left)
+Optimizing NNI: done in 14.8718 secs using 2413% CPU
+Optimizing NNI: done in 14.6309 secs using 2398% CPU
+Optimizing NNI: done in 16.4598 secs using 2413% CPU
+Optimizing NNI: done in 13.4878 secs using 2395% CPU
+Optimizing NNI: done in 14.409 secs using 2412% CPU
+Optimizing NNI: done in 13.1292 secs using 2397% CPU
+Optimizing NNI: done in 16.0334 secs using 2411% CPU
+Optimizing NNI: done in 14.3116 secs using 2397% CPU
+Optimizing NNI: done in 13.693 secs using 2412% CPU
+Optimizing NNI: done in 16.0002 secs using 2400% CPU
+Iteration 350 / LogL: -669990.729 / Time: 1h:27m:26s (0h:19m:32s left)
+Log-likelihood cutoff on original alignment: -669581.663
+Optimizing NNI: done in 15.0136 secs using 2412% CPU
+Optimizing NNI: done in 13.5818 secs using 2419% CPU
+Optimizing NNI: done in 13.8432 secs using 2418% CPU
+Optimizing NNI: done in 14.278 secs using 2367% CPU
+Optimizing NNI: done in 13.5266 secs using 2421% CPU
+Optimizing NNI: done in 13.3544 secs using 2393% CPU
+Optimizing NNI: done in 13.3623 secs using 2412% CPU
+Optimizing NNI: done in 14.9314 secs using 2409% CPU
+Optimizing NNI: done in 14.7422 secs using 2405% CPU
+Optimizing NNI: done in 14.1522 secs using 2407% CPU
+Iteration 360 / LogL: -669520.849 / Time: 1h:29m:49s (0h:17m:0s left)
+Optimizing NNI: done in 12.7549 secs using 2402% CPU
+Optimizing NNI: done in 15.491 secs using 2410% CPU
+Optimizing NNI: done in 14.8 secs using 2402% CPU
+Optimizing NNI: done in 13.2477 secs using 2417% CPU
+Optimizing NNI: done in 14.6161 secs using 2393% CPU
+Optimizing NNI: done in 12.9508 secs using 2418% CPU
+Optimizing NNI: done in 14.2159 secs using 2396% CPU
+Optimizing NNI: done in 19.7278 secs using 2410% CPU
+Optimizing NNI: done in 13.7849 secs using 2401% CPU
+Optimizing NNI: done in 14.0241 secs using 2415% CPU
+Iteration 370 / LogL: -669419.853 / Time: 1h:32m:17s (0h:14m:30s left)
+Optimizing NNI: done in 15.7181 secs using 2398% CPU
+Optimizing NNI: done in 13.8855 secs using 2415% CPU
+Optimizing NNI: done in 15.4534 secs using 2397% CPU
+Optimizing NNI: done in 14.0052 secs using 2417% CPU
+Optimizing NNI: done in 14.6051 secs using 2417% CPU
+Optimizing NNI: done in 13.5621 secs using 2379% CPU
+Optimizing NNI: done in 15.9505 secs using 2396% CPU
+Optimizing NNI: done in 15.908 secs using 2412% CPU
+Optimizing NNI: done in 14.3977 secs using 2400% CPU
+Optimizing NNI: done in 12.3965 secs using 2416% CPU
+Iteration 380 / LogL: -670069.844 / Time: 1h:34m:45s (0h:12m:0s left)
+Optimizing NNI: done in 13.6751 secs using 2392% CPU
+Optimizing NNI: done in 14.0009 secs using 2415% CPU
+Optimizing NNI: done in 14.2341 secs using 2396% CPU
+Optimizing NNI: done in 14.7822 secs using 2413% CPU
+Optimizing NNI: done in 13.6117 secs using 2398% CPU
+Optimizing NNI: done in 14.5594 secs using 2412% CPU
+Optimizing NNI: done in 15.9304 secs using 2399% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 387: -669367.944
+Optimizing NNI: done in 14.0796 secs using 2416% CPU
+Optimizing NNI: done in 16.7147 secs using 2416% CPU
+Optimizing NNI: done in 14.0955 secs using 2409% CPU
+Iteration 390 / LogL: -669454.154 / Time: 1h:37m:18s (0h:24m:15s left)
+Optimizing NNI: done in 14.3342 secs using 2371% CPU
+Optimizing NNI: done in 13.1125 secs using 2414% CPU
+Optimizing NNI: done in 12.84 secs using 2392% CPU
+Optimizing NNI: done in 11.8203 secs using 2409% CPU
+Optimizing NNI: done in 13.5968 secs using 2389% CPU
+Optimizing NNI: done in 15.1713 secs using 2416% CPU
+Optimizing NNI: done in 12.4584 secs using 2410% CPU
+Optimizing NNI: done in 14.7132 secs using 2382% CPU
+Optimizing NNI: done in 14.8659 secs using 2394% CPU
+Optimizing NNI: done in 14.2771 secs using 2414% CPU
+Iteration 400 / LogL: -669556.870 / Time: 1h:39m:37s (0h:21m:43s left)
+Log-likelihood cutoff on original alignment: -669581.663
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.993
+Optimizing NNI: done in 13.5579 secs using 2390% CPU
+Optimizing NNI: done in 15.6235 secs using 2409% CPU
+Optimizing NNI: done in 13.7304 secs using 2395% CPU
+Optimizing NNI: done in 14.4777 secs using 2412% CPU
+Optimizing NNI: done in 14.9574 secs using 2397% CPU
+Optimizing NNI: done in 13.7162 secs using 2410% CPU
+Optimizing NNI: done in 13.4912 secs using 2407% CPU
+Optimizing NNI: done in 15.1851 secs using 2403% CPU
+Optimizing NNI: done in 13.7711 secs using 2415% CPU
+Optimizing NNI: done in 16.879 secs using 2403% CPU
+Iteration 410 / LogL: -669548.911 / Time: 1h:42m:5s (0h:22m:27s left)
+Optimizing NNI: done in 15.8546 secs using 2384% CPU
+Optimizing NNI: done in 15.0211 secs using 2408% CPU
+Optimizing NNI: done in 14.0126 secs using 2402% CPU
+Optimizing NNI: done in 14.1132 secs using 2405% CPU
+Optimizing NNI: done in 13.4903 secs using 2409% CPU
+Optimizing NNI: done in 13.6071 secs using 2400% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 416: -669358.908
+Optimizing NNI: done in 14.7299 secs using 2400% CPU
+Optimizing NNI: done in 15.5263 secs using 2406% CPU
+Optimizing NNI: done in 14.0238 secs using 2402% CPU
+Optimizing NNI: done in 13.95 secs using 2410% CPU
+Iteration 420 / LogL: -669428.685 / Time: 1h:44m:48s (0h:24m:0s left)
+Optimizing NNI: done in 13.1926 secs using 2398% CPU
+Optimizing NNI: done in 13.9301 secs using 2413% CPU
+Optimizing NNI: done in 14.9688 secs using 2395% CPU
+Optimizing NNI: done in 15.264 secs using 2414% CPU
+Optimizing NNI: done in 13.09 secs using 2393% CPU
+Optimizing NNI: done in 12.7244 secs using 2413% CPU
+Optimizing NNI: done in 12.9147 secs using 2395% CPU
+Optimizing NNI: done in 14.3493 secs using 2410% CPU
+Optimizing NNI: done in 13.6692 secs using 2399% CPU
+Optimizing NNI: done in 13.7513 secs using 2409% CPU
+Iteration 430 / LogL: -669575.821 / Time: 1h:47m:8s (0h:21m:28s left)
+Optimizing NNI: done in 14.1482 secs using 2401% CPU
+Optimizing NNI: done in 13.4768 secs using 2407% CPU
+Optimizing NNI: done in 15.7327 secs using 2403% CPU
+Optimizing NNI: done in 13.2468 secs using 2406% CPU
+Optimizing NNI: done in 15.2291 secs using 2404% CPU
+Optimizing NNI: done in 13.6222 secs using 2405% CPU
+Optimizing NNI: done in 13.8357 secs using 2409% CPU
+Optimizing NNI: done in 14.2572 secs using 2400% CPU
+Optimizing NNI: done in 14.7393 secs using 2411% CPU
+Optimizing NNI: done in 14.5956 secs using 2399% CPU
+Iteration 440 / LogL: -669560.139 / Time: 1h:49m:33s (0h:18m:57s left)
+Optimizing NNI: done in 17.3617 secs using 2406% CPU
+Optimizing NNI: done in 15.09 secs using 2404% CPU
+Optimizing NNI: done in 16.7802 secs using 2403% CPU
+Optimizing NNI: done in 13.2023 secs using 2406% CPU
+Optimizing NNI: done in 17.2165 secs using 2402% CPU
+Optimizing NNI: done in 14.8909 secs using 2409% CPU
+Optimizing NNI: done in 14.7768 secs using 2415% CPU
+Optimizing NNI: done in 15.8549 secs using 2390% CPU
+Optimizing NNI: done in 16.6635 secs using 2393% CPU
+Optimizing NNI: done in 14.5351 secs using 2411% CPU
+Iteration 450 / LogL: -669630.585 / Time: 1h:52m:11s (0h:16m:29s left)
+Log-likelihood cutoff on original alignment: -669581.663
+Optimizing NNI: done in 13.3947 secs using 2415% CPU
+Optimizing NNI: done in 17.7739 secs using 2388% CPU
+Optimizing NNI: done in 15.7167 secs using 2395% CPU
+Optimizing NNI: done in 14.6171 secs using 2413% CPU
+Optimizing NNI: done in 15.5488 secs using 2396% CPU
+Optimizing NNI: done in 15.4597 secs using 2414% CPU
+Optimizing NNI: done in 12.4913 secs using 2413% CPU
+Optimizing NNI: done in 16.245 secs using 2397% CPU
+Optimizing NNI: done in 14.6099 secs using 2387% CPU
+Optimizing NNI: done in 13.9389 secs using 2423% CPU
+Iteration 460 / LogL: -669435.265 / Time: 1h:54m:44s (0h:13m:59s left)
+Optimizing NNI: done in 15.0163 secs using 2397% CPU
+Optimizing NNI: done in 15.9156 secs using 2414% CPU
+Optimizing NNI: done in 14.4336 secs using 2396% CPU
+Optimizing NNI: done in 14.4899 secs using 2413% CPU
+Optimizing NNI: done in 15.3474 secs using 2397% CPU
+Optimizing NNI: done in 14.562 secs using 2413% CPU
+Optimizing NNI: done in 13.0637 secs using 2393% CPU
+Optimizing NNI: done in 14.1682 secs using 2412% CPU
+Optimizing NNI: done in 16.3044 secs using 2416% CPU
+Optimizing NNI: done in 15.1835 secs using 2416% CPU
+Iteration 470 / LogL: -669469.608 / Time: 1h:57m:14s (0h:11m:29s left)
+Optimizing NNI: done in 13.4518 secs using 2408% CPU
+Optimizing NNI: done in 14.0496 secs using 2358% CPU
+Optimizing NNI: done in 14.1217 secs using 2427% CPU
+Optimizing NNI: done in 13.3328 secs using 2389% CPU
+Optimizing NNI: done in 15.0888 secs using 2386% CPU
+Optimizing NNI: done in 13.2465 secs using 2419% CPU
+Optimizing NNI: done in 14.6755 secs using 2396% CPU
+Optimizing NNI: done in 15.6258 secs using 2410% CPU
+Optimizing NNI: done in 15.0234 secs using 2396% CPU
+Optimizing NNI: done in 13.6734 secs using 2411% CPU
+Iteration 480 / LogL: -670015.811 / Time: 1h:59m:38s (0h:8m:59s left)
+Optimizing NNI: done in 16.0177 secs using 2396% CPU
+Optimizing NNI: done in 13.613 secs using 2413% CPU
+Optimizing NNI: done in 13.6664 secs using 2395% CPU
+Optimizing NNI: done in 15.2211 secs using 2411% CPU
+Optimizing NNI: done in 12.858 secs using 2401% CPU
+Optimizing NNI: done in 14.3208 secs using 2404% CPU
+Optimizing NNI: done in 14.9169 secs using 2404% CPU
+Optimizing NNI: done in 13.9812 secs using 2403% CPU
+Optimizing NNI: done in 14.3825 secs using 2404% CPU
+Optimizing NNI: done in 15.1593 secs using 2402% CPU
+Iteration 490 / LogL: -669658.280 / Time: 2h:2m:5s (0h:6m:29s left)
+Optimizing NNI: done in 14.5652 secs using 2413% CPU
+Optimizing NNI: done in 16.8363 secs using 2410% CPU
+Optimizing NNI: done in 13.6753 secs using 2393% CPU
+Optimizing NNI: done in 16.2846 secs using 2384% CPU
+Optimizing NNI: done in 14.3143 secs using 2399% CPU
+Optimizing NNI: done in 14.2969 secs using 2401% CPU
+Optimizing NNI: done in 14.0891 secs using 2402% CPU
+Optimizing NNI: done in 13.3446 secs using 2399% CPU
+Optimizing NNI: done in 15.4747 secs using 2409% CPU
+Optimizing NNI: done in 15.6828 secs using 2399% CPU
+Iteration 500 / LogL: -669497.973 / Time: 2h:4m:35s (0h:3m:59s left)
+Log-likelihood cutoff on original alignment: -669581.663
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+Optimizing NNI: done in 14.5606 secs using 2403% CPU
+Optimizing NNI: done in 14.1934 secs using 2400% CPU
+Optimizing NNI: done in 14.0979 secs using 2412% CPU
+Optimizing NNI: done in 13.2613 secs using 2412% CPU
+Optimizing NNI: done in 14.4189 secs using 2407% CPU
+Optimizing NNI: done in 15.6908 secs using 2388% CPU
+Optimizing NNI: done in 14.7706 secs using 2411% CPU
+Optimizing NNI: done in 14.8097 secs using 2407% CPU
+Optimizing NNI: done in 14.626 secs using 2393% CPU
+Optimizing NNI: done in 14.4148 secs using 2397% CPU
+Iteration 510 / LogL: -669638.102 / Time: 2h:7m:3s (0h:22m:27s left)
+Optimizing NNI: done in 15.4262 secs using 2405% CPU
+Optimizing NNI: done in 13.2764 secs using 2394% CPU
+Optimizing NNI: done in 13.1637 secs using 2411% CPU
+Optimizing NNI: done in 13.705 secs using 2392% CPU
+Optimizing NNI: done in 15.5714 secs using 2411% CPU
+Optimizing NNI: done in 16.2165 secs using 2394% CPU
+Optimizing NNI: done in 15.4224 secs using 2405% CPU
+TREE SEARCH COMPLETED AFTER 517 ITERATIONS / Time: 2h:8m:47s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -669358.908
+Optimal log-likelihood: -669358.899
+Rate parameters:  A-C: 0.86447  A-G: 5.21749  A-T: 1.55171  C-G: 0.61298  C-T: 5.37995  G-T: 1.00000
+Base frequencies:  A: 0.260  C: 0.239  G: 0.241  T: 0.260
+Gamma shape alpha: 0.228
+Parameters optimization took 1 rounds (3.042 sec)
+BEST SCORE FOUND : -669358.899
+Creating bootstrap support values...
+Split supports printed to NEXUS file ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.splits.nex
+Total tree length: 20.935
+
+Total number of iterations: 517
+CPU time used for tree search: 184911.298 sec (51h:21m:51s)
+Wall-clock time used for tree search: 7726.572 sec (2h:8m:46s)
+Total CPU time used: 184985.861 sec (51h:23m:5s)
+Total wall-clock time used: 7731.218 sec (2h:8m:51s)
+
+Computing bootstrap consensus tree...
+Reading input file ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.splits.nex...
+469 taxa and 1610 splits.
+Consensus tree written to ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.contree
+Reading input trees file ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.contree
+Log-likelihood of consensus tree: -669393.752
+
+Analysis results written to: 
+  IQ-TREE report:                ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.iqtree
+  Maximum-likelihood tree:       ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.treefile
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.splits.nex
+  Consensus tree:                ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.contree
+  Screen log file:               ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.log
+
+Date and Time: Wed Jul 16 23:21:21 2025
