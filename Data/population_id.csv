@@ -1,100 +1,100 @@
 ﻿IID,Pop,Sample_Group
-001,saint clair,saint clair
-002,saint clair,saint clair
-004,frederick,frederick
-005,fulton,fulton1
-006,fulton,fulton2
-007,tazewell,tazewell
-008,alton,alton
-009,jersey,jersey
-010,cass,cass
-012,jersey,jersey
-013,marshal,marshal
-014,fulton,fulton1
-015,hennepin,hennepin
-016,alton,alton
-017,fulton,fulton2
-018,cass,cass
-019,schuyler,schuyler
-020,woodford,woodford
-021,fulton,fulton3
-022,cass,cass
-023,fulton,fulton2
-024,hennepin,hennepin
-025,schuyler,schuyler
-026,peoria,peoria
-027,jersey,jersey
-028,peoria,peoria
-029,woodford,woodford
-030,tazewell,tazewell
-031,morgan,morgan
-032,scott,scott
-033,marshal,marshal
-034,madison,madison
-035,saint clair,saint clair
-036,saint clair,saint clair
-037,tazewell,tazewell
-038,scott,scott
-039,morgan,morgan
-040,peoria,peoria
-041,cass,cass
-042,madison,madison
-043,fulton,fulton1
-044,cass,cass
-045,fulton,fulton2
-046,schuyler,schuyler
-047,scott,scott
-048,schuyler,schuyler
-050,morgan,morgan
-051,alton,alton
-052,alton,alton
-053,hennepin,hennepin
-054,peoria,peoria
-055,fulton,fulton2
-056,hennepin,hennepin
-057,hennepin,hennepin
-058,jersey,jersey
-059,morgan,morgan
-060,hennepin,hennepin
-061,fulton,fulton1
-062,fulton,fulton2
-063,woodford,woodford
-064,saint clair,saint clair
-065,hennepin,hennepin
-066,marshal,marshal
-067,jersey,jersey
-068,cass,cass
-069,cass,cass
-070,tazewell,tazewell
-071,morgan,morgan
-072,madison,madison
-073,marshal,marshal
-074,fulton,fulton3
-075,scott,scott
-076,morgan,morgan
-077,woodford,woodford
-078,frederick,frederick
-079,schuyler,schuyler
-080,woodford,woodford
-081,hennepin,hennepin
-082,cass,cass
-083,jersey,jersey
-084,schuyler,schuyler
-085,woodford,woodford
-086,scott,scott
-087,marshal,marshal
-088,fulton,fulton2
-089,marshal,marshal
-090,marshal,marshal
-091,jersey,jersey
-092,fulton,fulton1
-093,fulton,fulton3
-094,scott,scott
-095,fulton,fulton3
-096,morgan,morgan
-097,frederick,frederick
-098,peoria,peoria
-099,fulton,fulton3
+1,saint clair,saint_clair
+2,saint clair,saint_clair
+4,frederick,frederick
+5,fulton,fulton1
+6,fulton,fulton2
+7,tazewell,tazewell
+8,alton,alton
+9,jersey,jersey
+10,cass,cass
+12,jersey,jersey
+13,marshal,marshal
+14,fulton,fulton1
+15,hennepin,hennepin
+16,alton,alton
+17,fulton,fulton2
+18,cass,cass
+19,schuyler,schuyler
+20,woodford,woodford
+21,fulton,fulton3
+22,cass,cass
+23,fulton,fulton2
+24,hennepin,hennepin
+25,schuyler,schuyler
+26,peoria,peoria
+27,jersey,jersey
+28,peoria,peoria
+29,woodford,woodford
+30,tazewell,tazewell
+31,morgan,morgan
+32,scott,scott
+33,marshal,marshal
+34,madison,madison
+35,saint clair,saint_clair
+36,saint clair,saint_clair
+37,tazewell,tazewell
+38,scott,scott
+39,morgan,morgan
+40,peoria,peoria
+41,cass,cass
+42,madison,madison
+43,fulton,fulton1
+44,cass,cass
+45,fulton,fulton2
+46,schuyler,schuyler
+47,scott,scott
+48,schuyler,schuyler
+50,morgan,morgan
+51,alton,alton
+52,alton,alton
+53,hennepin,hennepin
+54,peoria,peoria
+55,fulton,fulton2
+56,hennepin,hennepin
+57,hennepin,hennepin
+58,jersey,jersey
+59,morgan,morgan
+60,hennepin,hennepin
+61,fulton,fulton1
+62,fulton,fulton2
+63,woodford,woodford
+64,saint clair,saint_clair
+65,hennepin,hennepin
+66,marshal,marshal
+67,jersey,jersey
+68,cass,cass
+69,cass,cass
+70,tazewell,tazewell
+71,morgan,morgan
+72,madison,madison
+73,marshal,marshal
+74,fulton,fulton3
+75,scott,scott
+76,morgan,morgan
+77,woodford,woodford
+78,frederick,frederick
+79,schuyler,schuyler
+80,woodford,woodford
+81,hennepin,hennepin
+82,cass,cass
+83,jersey,jersey
+84,schuyler,schuyler
+85,woodford,woodford
+86,scott,scott
+87,marshal,marshal
+88,fulton,fulton2
+89,marshal,marshal
+90,marshal,marshal
+91,jersey,jersey
+92,fulton,fulton1
+93,fulton,fulton3
+94,scott,scott
+95,fulton,fulton3
+96,morgan,morgan
+97,frederick,frederick
+98,peoria,peoria
+99,fulton,fulton3
 100,fulton,fulton1
 101,schuyler,schuyler
 102,jersey,jersey
@@ -109,7 +109,7 @@
 111,fulton,fulton3
 112,fulton,fulton3
 113,fulton,fulton2
-114,saint clair,saint clair
+114,saint clair,saint_clair
 115,frederick,frederick
 116,peoria,peoria
 117,fulton,fulton3
@@ -149,7 +149,7 @@
 152,schuyler,schuyler
 153,alton,alton
 154,hennepin,hennepin
-155,saint clair,saint clair
+155,saint clair,saint_clair
 157,frederick,frederick
 158,fulton,fulton1
 159,fulton,fulton3
@@ -162,16 +162,16 @@
 166,cass,cass
 167,schuyler,schuyler
 168,tazewell,tazewell
-169,saint clair,saint clair
+169,saint clair,saint_clair
 170,woodford,woodford
 171,jersey,jersey
 172,fulton,fulton1
 173,cass,cass
 174,schuyler,schuyler
 175,peoria,peoria
-176,saint clair,saint clair
+176,saint clair,saint_clair
 177,peoria,peoria
-178,saint clair,saint clair
+178,saint clair,saint_clair
 179,fulton,fulton1
 180,marshal,marshal
 181,peoria,peoria
@@ -189,7 +189,7 @@
 193,fulton,fulton2
 194,cass,cass
 195,marshal,marshal
-196,saint clair,saint clair
+196,saint clair,saint_clair
 197,frederick,frederick
 198,morgan,morgan
 199,cass,cass
@@ -219,7 +219,7 @@
 223,cass,cass
 224,scott,scott
 225,jersey,jersey
-226,saint clair,saint clair
+226,saint clair,saint_clair
 227,fulton,fulton1
 228,marshal,marshal
 229,peoria,peoria
@@ -248,14 +248,14 @@
 252,cass,cass
 253,schuyler,schuyler
 254,scott,scott
-255,saint clair,saint clair
+255,saint clair,saint_clair
 256,scott,scott
 257,woodford,woodford
 258,hennepin,hennepin
 259,jersey,jersey
 260,cass,cass
 261,alton,alton
-262,saint clair,saint clair
+262,saint clair,saint_clair
 263,peoria,peoria
 264,jersey,jersey
 265,schuyler,schuyler
@@ -275,7 +275,7 @@
 280,hennepin,hennepin
 281,alton,alton
 282,hennepin,hennepin
-283,saint clair,saint clair
+283,saint clair,saint_clair
 284,scott,scott
 285,schuyler,schuyler
 286,scott,scott
@@ -311,7 +311,7 @@
 318,fulton,fulton3
 319,cass,cass
 320,jersey,jersey
-321,saint clair,saint clair
+321,saint clair,saint_clair
 322,fulton,fulton3
 323,schuyler,schuyler
 324,madison,madison
@@ -355,7 +355,7 @@
 365,hennepin,hennepin
 366,tazewell,tazewell
 367,jersey,jersey
-368,saint clair,saint clair
+368,saint clair,saint_clair
 370,woodford,woodford
 371,frederick,frederick
 372,frederick,frederick
@@ -381,7 +381,7 @@
 393,woodford,woodford
 394,fulton,fulton2
 395,marshal,marshal
-396,saint clair,saint clair
+396,saint clair,saint_clair
 397,fulton,fulton2
 398,schuyler,schuyler
 399,marshal,marshal
@@ -439,36 +439,36 @@
 458,peoria,peoria
 459,tazewell,tazewell
 460,scott,scott
-461,saint clair,saint clair
+461,saint clair,saint_clair
 462,fulton,fulton2
 463,morgan,morgan
 464,cass,cass
 465,frederick,frederick
-466,saint clair,saint clair
+466,saint clair,saint_clair
 467,alton,alton
 468,jersey,jersey
-469,MO5556235,B. diffusa
-470,MO5651552,B. diffusa
-471,MO6335664,B. diffusa
-472,MO5657434,B. caroliniana
-473,MO5657436,B. caroliniana
-474,MO3296052,B. caroliniana
-475,MO6605549,B. asteroides var. recognita
-476,MO5550141,B. asteroides var. recognita
-477,MO6445537,B. asteroides var. recognita
-478,MO3296042,B. asteroides var. latisquama
-479,MO04630815,B. asteroides var. latisquama
-480,MO3278114,B. asteroides var. asteroides
-481,MO5555289,B. asteroides var. asteroides
-482,MO5670280,B. asteroides var. asteroides
-483,MO6669048,B. asteroides var. asteroides
-484,MO3228478,B. apalachicolensis
-485,MO3681612,B. apalachicolensis
-486,MO6182444,B. montana
-487,MO5543519,Chloracantha spinosa
-488,MO5548112,Chloracantha spinosa
-489,MO5655792,Chloracantha spinosa
-490,MO5655812,Chloracantha spinosa
-491,Meg_1185,B. asteroides
-492,Meg_1183_1,B. diffusa
-493,Meg_1183_2,B. diffusa
+469,MO5556235,B._diffusa
+470,MO5651552,B._diffusa
+471,MO6335664,B._diffusa
+472,MO5657434,B._caroliniana
+473,MO5657436,B._caroliniana
+474,MO3296052,B._caroliniana
+475,MO6605549,B._asteroides_var._recognita
+476,MO5550141,B._asteroides_var._recognita
+477,MO6445537,B._asteroides_var._recognita
+478,MO3296042,B._asteroides_var._latisquama
+479,MO04630815,B._asteroides_var._latisquama
+480,MO3278114,B._asteroides_var._asteroides
+481,MO5555289,B._asteroides_var._asteroides
+482,MO5670280,B._asteroides_var._asteroides
+483,MO6669048,B._asteroides_var._asteroides
+484,MO3228478,B._apalachicolensis
+485,MO3681612,B._apalachicolensis
+486,MO6182444,B._montana
+487,MO5543519,Chloracantha_spinosa
+488,MO5548112,Chloracantha_spinosa
+489,MO5655792,Chloracantha_spinosa
+490,MO5655812,Chloracantha_spinosa
+491,Meg_1185,B._asteroides
+492,Meg_1183_1,B._diffusa
+493,Meg_1183_2,B._diffusa

@@ -8,7 +8,7 @@ library(sf)
 
 
 ####set inputs and adjustments####
-setwd("/Users/User/Desktop/REUProject_2_Outgroups")
+setwd("/Users/User/Desktop/MOBOT_Boltonia")
 add_dams <- FALSE
 add_past_sites <- FALSE
 add_major_river <- TRUE
