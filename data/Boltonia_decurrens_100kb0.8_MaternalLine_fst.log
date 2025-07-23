@@ -1,0 +1,24 @@
+PLINK v2.00a5 M1 (16 May 2023)
+Options in effect:
+  --fst MaternalLine
+  --out Boltonia_decurrens_100kb0.8_MaternalLine_fst
+  --pfile Boltonia_decurrens_100kb0.8
+  --psam Boltonia_decurrens_100kb0.8_meta.psam
+
+Hostname: Wenhsis-MBP.attlocal.net
+Working directory: /Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/alloutgroup/VCF_decurrens
+Start time: Mon Jul 21 21:34:33 2025
+
+Random number seed: 1753151673
+16384 MiB RAM detected; reserving 8192 MiB for main workspace.
+Using up to 10 threads (change this with --threads).
+424 samples (0 females, 0 males, 424 ambiguous; 424 founders) loaded from
+Boltonia_decurrens_100kb0.8_meta.psam.
+1536138 variants loaded from Boltonia_decurrens_100kb0.8.pvar.
+44 phenotypes loaded (1 binary, 41 quantitative, 2 categorical).
+--fst: Analyzing 424 samples across 18 populations.
+Autosomal --fst: done.
+Autosomal --fst: Summary written to
+Boltonia_decurrens_100kb0.8_MaternalLine_fst.fst.summary .
+
+End time: Mon Jul 21 21:34:34 2025

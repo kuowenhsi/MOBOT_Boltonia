@@ -26,8 +26,8 @@ glm_input <- list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-Missouri
 length(glm_input)
 
 
-for (i in 1:15){
-  i = 1
+for (i in 2:15){
+  
   GLM_data <- fread(file = paste0(glm_path, glm_input[[i]]), col.names = c("chr", "POSITION", "ID", "pvalue", "climatic_varible", "K") )%>%
     left_join(chr_len_temp, by = "chr") %>%
     mutate(padded_pos = POSITION + pos_pad) %>%

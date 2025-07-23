@@ -21,12 +21,12 @@ chr_len_temp <- read_tsv("/Users/kuowenhsi/Library/CloudStorage/OneDrive-Missour
 
 # Download LFMM_output_20230606.txt from Dryad https://doi.org/10.5061/dryad.s7h44j1fd
 
-glm_path <- "/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/alloutgroup/VCF_decurrens/GLM_Boltonia_decurrens_100kb0.8/"
-glm_input <- list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/alloutgroup/VCF_decurrens/GLM_Boltonia_decurrens_100kb0.8")
+glm_path <- "/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/alloutgroup/VCF_decurrens/GLM_Boltonia_decurrens/"
+glm_input <- list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/alloutgroup/VCF_decurrens/GLM_Boltonia_decurrens")
 length(glm_input)
 
-
-for (i in 1:38){
+glm_input
+for (i in 1:2){
   
   GLM_data <- fread(file = paste0(glm_path, glm_input[[i]]))%>%
     rename(chr = `#CHROM`, POSITION = POS, pvalue = P)%>%
@@ -47,7 +47,7 @@ for (i in 1:38){
     guides(fill = "none")
   
   # Save the combined figure
-  ggsave(paste0("./figures/glm_output/", str_remove(glm_input[[i]], ".glm.linear_ADD.txt"), ".png"), width = 10, height = 3.5, dpi = 600)
+  ggsave(paste0("./figures/glm_output/", str_remove(glm_input[[i]], ".txt"), ".png"), width = 10, height = 3.5, dpi = 600)
 }
 
 
