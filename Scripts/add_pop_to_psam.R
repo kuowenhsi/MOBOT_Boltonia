@@ -44,6 +44,14 @@ pop_map <- pop_map |>
 # Merge to add Pop column
 psam_pop <- merge(psam, pop_map, by = "IID", all.x = TRUE)
 
+#Swap DNA  (sample_group) for Boltonia_126 & 127
+cols_to_swap <- (colnames(psam_pop) %in% "Sample_Group")
+row_126 <- which(psam_pop$FID == "Boltonia_126")
+row_127 <- which(psam_pop$FID == "Boltonia_127")
+tmp <- psam_pop[row_126, cols_to_swap]
+psam_pop[row_126, cols_to_swap] <- psam_pop[row_127, cols_to_swap]
+psam_pop[row_127, cols_to_swap] <- tmp
+
 # Fill missing Pop with "NA"
 psam_pop$Sample_Group[is.na(psam_pop$Sample_Group)] <- "NA"
 

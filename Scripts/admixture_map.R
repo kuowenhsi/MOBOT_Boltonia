@@ -9,13 +9,13 @@ library(sf)
 
 ####set inputs and adjustments####
 setwd("/Users/User/Desktop/MOBOT_Boltonia")
-add_dams <- FALSE
+add_dams <- TRUE
 add_past_sites <- FALSE
 add_major_river <- TRUE
 add_minor_rivers <- TRUE
 range_of_k <- 2:10
-file_prefix <- "./Data/Boltonia_Chr_1_pruned_data_filtered." #file prefix (used for .Q and .fam)
-file_out_prefix <- "./Figures/Boltonia_ancestry_map_filtered_K" #file output prefix and destination
+file_prefix <- "./Data/ADMIXTURE_decurrens/Boltonia_decurrens_100kb0.8." #file prefix (used for .Q and .fam)
+file_out_prefix <- "./Figures/Boltonia_ancestry_map_K" #file output prefix and destination
 metadata <- read_csv("./Data/Boltonia_merged_data_20240925_sample_group.csv") |>
   mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, "left","0"), sep = "_"))
 
@@ -28,11 +28,11 @@ adj_coords <- tribble(
   "jersey",        8000,        25000,
   "cass",         30000,        -5000,
   "morgan",       30000,       -30000,
-  "tazewell",     25000,         8000,
+  "tazewell",     25000,       -10000,
   "peoria",      -25000,        15000,
   "schuyler",    -50000,       -12000,
   "frederick",   -27000,        25000,
-  "woodford",     20000,        20000,
+  "woodford",     30000,        10000,
   "marshal",     -40000,        10000,
   "fulton1",     -20000,        30000,
   "fulton2",      40000,            0,
@@ -55,11 +55,11 @@ options(tigris_class = "sf")
 il_county <- counties(state = "IL", cb = TRUE) |> st_transform(3857)
 
 #adds rivers and dams
-major_river <- st_read("./Data/MapFiles/Major_River.shp")
+major_river <- st_read("./../REUProject_LargeFiles/Data/MapFiles/Rivers/Major_River.shp")
 major_river <- st_transform(major_river, crs = 3857)
 major_river$feature <- "Illinois River"
 
-minor_rivers <- st_read("./Data/MapFiles/Minor_Rivers.shp")
+minor_rivers <- st_read("./../REUProject_LargeFiles/Data/MapFiles/Rivers/Minor_Rivers.shp")
 minor_rivers <- st_transform(minor_rivers, crs = 3857)
 minor_rivers$feature <- "Tributaries" 
 
@@ -226,7 +226,8 @@ for (i in range_of_k) {
     geom_text(
       data = df_pie,
       aes(x = adj_X, y = adj_Y, label = Sample_Group),
-      size = 3,
+      size = 2.5, 
+      nudge_y = 20000, 
       fontface = "bold"
     ) +
     geom_text(
@@ -280,9 +281,7 @@ for (i in range_of_k) {
       plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
       axis.title = element_blank(),
       axis.text = element_text(size = 7),
-      panel.grid = element_blank(),
-      legend.key.height = unit(0.3, "cm"),
-      legend.key.width  = unit(0.3, "cm")
+      panel.grid = element_blank()
     ) +
     labs(
       title = "Ancestry Proportions by County",
@@ -292,8 +291,6 @@ for (i in range_of_k) {
   #small points on inset map
   county_points <- st_as_sf(df_wide, coords = c("Longitude", "Latitude"), crs = 4326) |>
     st_transform(crs = st_crs(illinois))
-  outgroup_points <- st_as_sf(outgroup_sites, coords = c("X", "Y"), crs = 3857) |>
-    st_transform(crs = st_crs(illinois))
   
   #creates the map inset
   inset_map <- ggplot() +
@@ -301,7 +298,6 @@ for (i in range_of_k) {
     geom_sf(data = illinois, fill = "red", color = "white", alpha = 0.5) +
     geom_sf(data = missouri, fill = "red", color = "white", alpha = 0.2) +
     geom_sf(data = county_points, color = "black", size = 0.5) +
-    geom_sf(data = outgroup_points, color = "blue", size = 0.5) +
     theme_void() 
   
   #builds the final map with the inset and main map

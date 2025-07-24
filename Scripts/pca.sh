@@ -1,8 +1,8 @@
 #! bin/bash
 
-cd /../REUProject_2_Outgroups
+cd ./../Data
 
-plink --bfile ./Data/PLINK_files/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.pruned \
+plink --bfile ./ADMIXTURE_hybrid/Boltonia_hybrid_ID_fillmissing_LD \
     --allow-extra-chr \
     --pca \
-    --out ./Data/PCA/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.pruned
+    --out ./ADMIXTURE_hybrid/Boltonia_hybrid_ID_fillmissing_LD

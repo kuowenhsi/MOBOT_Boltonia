@@ -35,7 +35,7 @@ print(fst_matrix)
 fst <- melt(fst_matrix, varnames = c("POP1", "POP2"), value.name = "FST")
 
 #makes the order by latitude (did it manually)
-custom_order <- c("saint_clair", "madison", "alton", "jersey", "scott", "morgan", "cass", "schuyler", "frederick", "fulton2", "fulton1", "fulton3", "peoria", "tazewell", "woodford", "marshal", "hennepin")  # example
+custom_order <- c("hennepin", "marshal", "woodford", "peoria", "tazewell", "fulton3", "fulton1", "fulton2", "frederick", "schuyler", "cass", "morgan", "scott", "jersey", "alton", "madison", "saint_clair")  # example
 fst$POP1 <- factor(fst$POP1, levels = custom_order)
 fst$POP2 <- factor(fst$POP2, levels = rev(custom_order))
 

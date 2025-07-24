@@ -7,10 +7,10 @@ library(RColorBrewer)
 #code work with any files
 
 setwd("/Users/User/Desktop/MOBOT_Boltonia")
-file_prefix <- "./Data/ADMIXTURE_hybrid/Boltonia_hybrid_ID_fillmissing_LD." #file prefix (used for .Q and .fam)
-file_out_prefix <- "./Figures/Admixture_hybrids/Boltonia_hybrid_ADMIXTURE_K" #file output prefix and destination
+file_prefix <- "./Data/ADMIXTURE_decurrens/Boltonia_decurrens_100kb0.8." #file prefix (used for .Q and .fam)
+file_out_prefix <- "./Figures/Boltonia_decurrens_ADMIXTURE_K" #file output prefix and destination
 metadata <- read_csv("./Data/DNA_stock_Boltonia.csv") |>
-  mutate(Sample_Name = str_pad(index, 3, "left","0"))
+  mutate(Sample_Name = paste0("Boltonia_", str_pad(index, 3, "left","0")))
 
 #change range of K values in following line "(i in #:#)"
 for (i in 2:12) {
@@ -23,8 +23,8 @@ for (i in 2:12) {
     left_join(metadata |> select("FlowerHead", "Sample_Group", "Sample_Name", "Google_Latitude"), by = "Sample_Name")
   #Swap DNA results for Boltonia_126 & 127
   cols_to_swap <- paste0("X", 1:i)
-  row_126 <- which(qmat$Sample_Name == "126")
-  row_127 <- which(qmat$Sample_Name == "127")
+  row_126 <- which(qmat$Sample_Name == "Boltonia_126")
+  row_127 <- which(qmat$Sample_Name == "Boltonia_127")
   tmp <- qmat[row_126, cols_to_swap]
   qmat[row_126, cols_to_swap] <- qmat[row_127, cols_to_swap]
   qmat[row_127, cols_to_swap] <- tmp
@@ -34,7 +34,7 @@ for (i in 2:12) {
       names_to = "Ancestry",
       values_to = "Proportion"
     )
-
+  
   #rearranges by Flowerhead
   qmat <- qmat |> 
     mutate(Sample_Label = paste0(Sample_Name, "_(", FlowerHead, ")"))
@@ -84,7 +84,7 @@ for (i in 2:12) {
     ) +
     theme(
       axis.text.x = element_blank(),
-      axis.ticks.x.top = element_blank(),
+      axis.ticks = element_blank(),
       panel.grid = element_blank(),
       panel.spacing = unit(0.1, "lines"),
       plot.background = element_rect(fill = "white"),
