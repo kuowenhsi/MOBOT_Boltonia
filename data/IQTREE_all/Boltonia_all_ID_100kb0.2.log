@@ -1,0 +1,27 @@
+PLINK v2.00a2.3LM 64-bit Intel (24 Jan 2020)
+Options in effect:
+  --indep-pairwise 100kb 0.2
+  --out Boltonia_all_ID_100kb0.2
+  --vcf Boltonia_all_ID.vcf
+
+Hostname: compute1-exec-120.ris.wustl.edu
+Working directory: /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia
+Start time: Sun Jul 20 04:19:58 2025
+
+Random number seed: 1752985198
+385047 MiB RAM detected; reserving 192523 MiB for main workspace.
+Using up to 64 threads (change this with --threads).
+--vcf: 1661728 variants scanned.
+--vcf: Boltonia_all_ID_100kb0.2-temporary.pgen +
+Boltonia_all_ID_100kb0.2-temporary.pvar +
+Boltonia_all_ID_100kb0.2-temporary.psam written.
+467 samples (0 females, 0 males, 467 ambiguous; 467 founders) loaded from
+Boltonia_all_ID_100kb0.2-temporary.psam.
+1661728 variants loaded from Boltonia_all_ID_100kb0.2-temporary.pvar.
+Note: No phenotype data present.
+Calculating allele frequencies... done.
+--indep-pairwise (11 compute threads): 1468248/1661728 variants removed.
+Variant lists written to Boltonia_all_ID_100kb0.2.prune.in and
+Boltonia_all_ID_100kb0.2.prune.out .
+
+End time: Sun Jul 20 04:20:15 2025

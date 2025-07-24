@@ -1,0 +1,24 @@
+PLINK v2.00a5 M1 (16 May 2023)
+Options in effect:
+  --bfile Boltonia_hybrid_ID_fillmissing_LD
+  --out Boltonia_hybrid_ID_fillmissing_LD
+  --pca 460
+
+Hostname: Wenhsis-MacBook-Pro.local
+Working directory: /Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/alloutgroup/VCF_hybrid_advancefilter
+Start time: Wed Jul 23 14:52:11 2025
+
+Random number seed: 1753300331
+16384 MiB RAM detected; reserving 8192 MiB for main workspace.
+Using up to 10 threads (change this with --threads).
+460 samples (0 females, 0 males, 460 ambiguous; 460 founders) loaded from
+Boltonia_hybrid_ID_fillmissing_LD.fam.
+226161 variants loaded from Boltonia_hybrid_ID_fillmissing_LD.bim.
+Note: No phenotype data present.
+Calculating allele frequencies... done.
+Constructing GRM: done.
+Extracting eigenvalues and eigenvectors... done.
+--pca: Eigenvectors written to Boltonia_hybrid_ID_fillmissing_LD.eigenvec , and
+eigenvalues written to Boltonia_hybrid_ID_fillmissing_LD.eigenval .
+
+End time: Wed Jul 23 14:52:11 2025
