@@ -14,7 +14,9 @@ Boltonia_dilution <- readxl::read_xlsx("/Users/kuowenhsi/Library/CloudStorage/On
 
 Boltonia_data <- read_csv("./data/Boltonia_merged_data_tidy_20240925.csv")%>%
   left_join(Boltonia_dilution, by = "index")%>%
-  mutate(Used_in_library = case_when(Used_in_library == "Yes" ~ "Yes", TRUE ~ "No"))
+  mutate(Used_in_library = case_when(Used_in_library == "Yes" ~ "Yes", TRUE ~ "No"))%>%
+  mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, pad = "0"), sep = "_"))%>%
+  filter(!(Sample_Name %in% (read_table("./data/Boltonia_asteroides_cass.csv", col_names = FALSE)%>%pull(X1))))
 
 
 unique(Boltonia_data$num_traits)
@@ -187,7 +189,7 @@ Boltonia_data_DaysToFlower_Disk <- Boltonia_data_DaysToFlower %>%
   mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, pad = "0"), sep = "_"), DaysToFlower = as.numeric(DaysToFlower))%>%
   select(Sample_Name, DaysToFlower)
 
-write_csv(Boltonia_data_DaysToFlower_Disk, "./data/Boltonia_data_DaysToFlower_Disk_20250505.csv")
+write_csv(Boltonia_data_DaysToFlower_Disk, "./data/Boltonia_data_DaysToFlower_Disk_20250725.csv")
 
 
 Boltonia_data_CountyLabels <- Boltonia_data %>%
@@ -206,6 +208,7 @@ p <- ggplot(data = Boltonia_data_FlowerRatio, mapping = aes(x = Date, y = flower
   theme_bw()+
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid.minor = element_blank(), legend.position = "none")
 
+p
 # ggsave("./figures/Boltonia_total_flower_ratio.png", width = 8, height = 12)
 
 
@@ -223,7 +226,7 @@ p <- ggplot(data = Boltonia_data_FlowerRatio_county, aes(x = reorder(labels, mea
   theme_bw()+
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid.minor = element_blank(), legend.position = "bottom", legend.key.width = unit(1, "in") )
 
-
+p
 # ggsave("./figures/Boltonia_total_flower_ratio_by_county.png", width = 10, height = 6)
 
 
@@ -235,8 +238,8 @@ p1 <- ggplot(data = filter(Boltonia_data_FlowerRatio_county, num_traits == "numD
   theme_bw()+
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5), panel.grid.minor = element_blank(), legend.position = c(0.7, 0.86), legend.key.width = unit(0.6, "in"), legend.key.height = unit(0.08, "in"),legend.direction = "horizontal", legend.title = element_blank(), legend.background = element_rect(fill = NA))
 
-# p
-# ggsave("./figures/Boltonia_disk_flower_ratio_by_county.png", width = 10, height = 2.5)
+p1
+ggsave("./figures/Boltonia_disk_flower_ratio_by_county.png", width = 10, height = 3)
 
 
 # buds
@@ -736,17 +739,17 @@ Boltonia_stemLength_data <- Boltonia_data %>%
   filter(total_flowers > 0)
 
 
-p4 <- ggplot(data = Boltonia_stemLength_data, aes(x = reorder(County, Google_latitude), y = stemLength))+
-  geom_point(aes(color = County), alpha = 0.7, position = position_jitter(width = 0.1, height = 0))+
-  geom_boxplot(aes(color = County), outlier.shape = NA, fill = NA)+
-  stat_anova_test(label.y.npc = 0.9, label.x.npc = 0.35)+
+p4 <- ggplot(data = Boltonia_stemLength_data, aes(x = MaternalLine, y = stemLength))+
+  geom_point(alpha = 0.7, position = position_jitter(width = 0.1, height = 0))+
+  geom_boxplot(outlier.shape = NA, fill = NA)+
   scale_x_discrete(name = "")+
   scale_y_continuous("Stem length (cm)")+
   theme_bw()+
-  theme(legend.position = "none", axis.text.x = element_blank())
+  theme(legend.position = "none", axis.text.x = element_blank(), panel.spacing.x = unit(0, "in"))+
+  ggh4x::facet_nested(.~reorder(County, Google_latitude), scales = "free_x", space = "free_x")
 
 p4
-ggsave("./figures/Boltonia_stemLength_20240711.png", width = 10, height = 1.75, dpi = 600)
+ggsave("./figures/Boltonia_stemLength_20250711.png", width = 8, height = 2, dpi = 600)
 
 
 Boltonia_total_flowers_data <- Boltonia_data %>%

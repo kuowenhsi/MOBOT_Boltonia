@@ -136,5 +136,15 @@ facet_labeller(p2, c(Tree = "phylogeny", bar = "HELLO"))+theme(strip.background 
 
 ggsave("Boltonia_all_tree_admix.png", height = 70, width = 16, limitsize = FALSE)
 
+
+p2 <- p_label + geom_facet(panel = 'bar', data = qmat, geom = geom_bar, 
+                     mapping = aes(x = Proportion*20, fill = Ancestry), 
+                     orientation = 'y', width = 1, stat='identity')+scale_fill_brewer(palette = "Set3")
+
+
+facet_labeller(p2, c(Tree = "phylogeny", bar = "HELLO"))+theme(strip.background = element_blank(), strip.text.x.top = element_blank(), legend.position = "none", panel.spacing.x = unit(0, "in"))
+
+ggsave("Boltonia_all_tree_admix_label.png", height = 70, width = 16, limitsize = FALSE)
+
 tree_file
 class(tree_file)
