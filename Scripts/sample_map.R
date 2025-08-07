@@ -6,15 +6,17 @@ library(cowplot)
 library(rnaturalearth)
 library(sf)
 library(shadowtext)
+library(tidyterra)
+library(terra)
 
 ####set inputs and adjustments####
-setwd("/Users/User/Desktop/REUProject_2_Outgroups")
-file_out <- "./Figures/Boltonia_Precipitation_Coldest_Quarter_BIO19_Map.png"
+setwd("/Users/User/Desktop/MOBOT_Boltonia")
+file_out <- "./Figures/Sample_Map.png"
 sample_data <- read_csv("./Data/Boltonia_merged_data_20240925_sample_group.csv") |>
   mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, "left","0"), sep = "_"))
 
 #loads in climate layer
-climate.layer <- rast("./Data/MapFiles/wc2.1_30s_bio_19.tif")
+climate.layer <- rast("./../REUProject_LargeFiles/Data/MapFiles/wc2.1_30s_bio_7.tif")
 climate.layer <- project(climate.layer, "EPSG:3857")
 map_extent <- terra::ext(-10197842, -9851705, 4629999, 5107951)
 climate.layer <- terra::crop(climate.layer, map_extent)
@@ -56,26 +58,27 @@ options(tigris_class = "sf")
 il_county <- counties(state = "IL", cb = TRUE) |> st_transform(3857)
 
 #adds rivers
-major_river <- st_read("./Data/MapFiles/Rivers/Major_River.shp")
+major_river <- st_read("./../REUProject_LargeFiles/Data/MapFiles/Rivers/major_rivers_large.shp")
 major_river <- st_transform(major_river, crs = 3857)
 
-minor_rivers <- st_read("./Data/MapFiles/Rivers/Minor_Rivers.shp")
+minor_rivers <- st_read("./../REUProject_LargeFiles/Data/MapFiles/Rivers/Minor_Rivers.shp")
 minor_rivers <- st_transform(minor_rivers, crs = 3857)
 
 #Herbarium Outgroup Sites
 outgroup_sites <- tribble(
   ~ID, ~Lat, ~Long,
-  "469",	31.153,	-89.115,  # Southern MS
-  "470",	31.636,	-86.609,  # Southern AL
-  "471",	38.475,	-90.8139, # Central  MO
-  "475",  36.9789, -90.1319,# Southern MO
-  "476",	39.246,	-94.232,  # Western  MO
-  "477",	37.501,	-89.676,  # Southern MO (near river)
-  "479",	38.406,	-96.314,  # Eastern  KS
-  "481",	33.83,	-88.521,  # Northern MS
-  "482",	33.512,	-92.69,   # Southern AK
-  "483",	38.737,	-90.71287 # Central  MO
+  "      B. diffusa (469)",	31.153,	-89.115,  # Southern MS
+  "      B. diffusa (470)",	31.636,	-86.609,  # Southern AL
+  "      B. diffusa (471)",	38.475,	-90.8139, # Central  MO
+  "B. asteroides r. (475)",  36.9789, -90.1319,# Southern MO
+  "B. asteroides r. (476)",	39.246,	-94.232,  # Western  MO
+  "B. asteroides r. (477)",	37.501,	-89.676,  # Southern MO (near river)
+  "B. asteroides l. (479)",	38.406,	-96.314,  # Eastern  KS
+  "B. asteroides a. (481)",	33.83,	-88.521,  # Northern MS
+  "B. asteroides a. (482)",	33.512,	-92.69,   # Southern AK
+  "B. asteroides a. (483)",	38.737,	-90.71287 # Central  MO
 )
+
 outgroup_sites <- outgroup_sites %>%
   st_as_sf(coords = c("Long", "Lat"), crs = 4326)
 outgroup_sites <- st_transform(outgroup_sites, crs = 3857)
@@ -87,7 +90,25 @@ outgroup_sites <- outgroup_sites |>
 outgroup_sites <- outgroup_sites |> 
   st_drop_geometry()
 outgroup_sites$feature <- "Outgroup Sites"
-  
+
+dams <- tribble(
+  ~dam, ~Long, ~Lat,
+  "La Grange", -90.534302,39.9403990000001,
+  "Peoria", -89.624496, 40.631699,
+  "Melvin Price", -90.154877, 38.866913
+)
+dams <- dams %>%
+  st_as_sf(coords = c("Long", "Lat"), crs = 4326)
+dams <- st_transform(dams, crs = 3857)
+dams <- dams |>
+  mutate(
+    X = st_coordinates(geometry)[,1],
+    Y = st_coordinates(geometry)[,2]
+  )
+dams <- dams |> 
+  st_drop_geometry()
+dams$feature <- "Dams"
+
 sample_data$true_lat <- ifelse(!is.na(sample_data$Latitude), 
                                sample_data$Latitude, 
                                sample_data$Google_latitude)
@@ -128,24 +149,20 @@ sample_data <- sample_data |>
 # MAIN MAP
 main_map <- ggplot() +
   geom_sf(data = usa_states, fill = "gray60", color = "white") +
-  geom_segment(data = outgroup_sites,
-               aes(x = X, y = Y, xend = X - 120000, yend = Y),
-               linetype = "solid", color = "black") +
+  geom_sf(data = major_river, color = "blue", linewidth = 0.6, alpha = 1) +
   geom_point(data = sample_data, aes(x = X, y = Y), color = "black", size = 1.5) +
-  geom_point(data = outgroup_sites, aes(x = X, y = Y), color = "blue", size = 1.5) +
-  geom_shadowtext(data = outgroup_sites, aes(x = X - 150000, y = Y, label = ID),
-                  size = 1.8, color = "white", bg.color = "black") +
-  coord_sf(xlim = c(-10721625 - 400000, -9641270 + 1200000),
+  geom_point(data = outgroup_sites, aes(x = X, y = Y), color = "red", size = 1.5) +
+  coord_sf(xlim = c(-10721625 - 500000, -9641270 + 1200000),
            ylim = c(3652635 - 300000, 5063236 + 300000),
            expand = FALSE) +
-  annotate("rect",
-           xmin = -10197842,
-           ymin = 4629999,
-           xmax = -9851705,
-           ymax = 5107951,
-           fill = NA,
-           color = "black",
-           linewidth = 0.5) +
+ # annotate("rect",
+ #          xmin = -10197842,
+ #          ymin = 4629999,
+ #          xmax = -9851705,
+ #          ymax = 5107951,
+ #          fill = NA,
+ #          color = "black",
+  #         linewidth = 0.5) +
     annotation_north_arrow(location = "br", which_north = "true",
                          pad_x = unit(0.3, "cm"), pad_y = unit(0.3, "cm"),
                          style = north_arrow_fancy_orienteering) +
@@ -153,58 +170,73 @@ main_map <- ggplot() +
                    pad_x = unit(0.3, "cm"), pad_y = unit(0.3, "cm")) +
     theme_minimal(base_size = 12) +
   theme(
-    panel.grid.major = element_line(color = "gray80", linetype = "dashed"),
+    panel.grid.major = element_blank(),
     panel.grid.minor = element_blank(),
     panel.border = element_rect(color = "black", fill = NA, size = 1),
     legend.position = c(0.85, 0.3),
     legend.background = element_rect(fill = alpha("white", 0.7), color = NA),
     axis.title = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_rect(fill = "lightblue")
   ) +
   guides(color = guide_legend(override.aes = list(size = 4)))
 
-# INSET MAP
+main_map
+
+#### INSET MAP ####
 inset_map <- ggplot() +
   geom_spatraster(data = climate.layer) +
-  scale_fill_viridis_c(option = "plasma", name = "Prec. Coldest Quarter (mm)") +
+  scale_fill_viridis_c(option = "plasma", name = "Annual Temp Range (℃)") +
   geom_sf(data = il_county, fill = NA, color = "gray") +
   geom_sf(data = illinois, fill = NA, color = "black") +
-  geom_sf(data = major_river, color = "blue", size = 0.4, alpha = 1) +
-  geom_sf(data = minor_rivers, color = "blue", size = 0.2, alpha = 0.5) +
+  geom_sf(data = major_river, color = "blue", linewidth = 1, alpha = 1) +
+  geom_sf(data = minor_rivers, color = "blue", linewidth = 0.6, alpha = 0.6) +
   geom_segment(data = sample_data,
                aes(x = X, y = Y, xend = adj_X, yend = adj_Y),
                linetype = "solid", color = "black") +
-  geom_point(data = sample_data, aes(x = X, y = Y), size = 1, color = "black") +
-  geom_point(data = outgroup_sites, aes(x = X, y = Y), size = 1, color = "blue") +
-  geom_shadowtext(data = outgroup_sites, aes(x = X - 20000, y = Y, label = ID),
-                  size = 2, fontface = "bold", color = "white", bg.color = "black") +
+  geom_point(data = sample_data, aes(x = X, y = Y), size = 2.5, color = "black") +
+  geom_point(data = dams, aes(x = X, y = Y, color = feature), size = 3, shape = 7, show.legend = TRUE) +
   geom_shadowtext(data = sample_data, aes(x = adj_X, y = adj_Y, label = Sample_Group),
-                  size = 2, fontface = "bold", color = "white", bg.color = "black") +
+                  size = 3.5, fontface = "bold", color = "white", bg.color = "black") +
   coord_sf(xlim = c(-10197842, -9851705),
            ylim = c(4629999, 5107951),
            expand = FALSE) +
-  guides(fill = guide_colorbar(title.position = "top", title.hjust = 0.5),
-         color = "none") +
+  guides(
+    fill = guide_colorbar(title.position = "top", title.hjust = 0.5),
+    color = guide_legend(override.aes = list(shape = 7))
+  ) +
   theme_minimal(base_size = 10) +
   theme(
-    legend.position = c(1.47, 0.5),
     legend.title = element_text(size = 8),
     panel.border = element_rect(color = "black", fill = NA, size = 0.8),
     axis.title = element_blank(),
     axis.text = element_blank(),
     axis.ticks = element_blank()
+  ) +
+  scale_color_manual(
+    name = NULL,
+    values = c("Dams" = "gray"),
+    drop = TRUE
   )
+
+ggsave(filename = file_out,
+       plot = inset_map,
+       width = 6, height = 5,
+       dpi = 300, units = "in",
+       bg = "white")
+
 
 # Combine inset and main map with cowplot
 full_map <- ggdraw() +
   draw_plot(main_map, x = -0.12) +
   draw_plot(inset_map, x = 0.114, y = 0.145, scale = 0.7)
 
-# Save with high resolution and white bg
-ggsave(filename = file_out,
-       plot = full_map,
-       width = 7, height = 4,
-       dpi = 300, units = "in",
-       bg = "white")
+# # Save with high resolution and white bg
+# ggsave(filename = file_out,
+#        plot = full_map,
+#        width = 7, height = 4,
+#        dpi = 300, units = "in",
+#        bg = "white")
 
 
 

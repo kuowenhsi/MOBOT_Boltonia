@@ -1,0 +1,573 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=469;
+	taxlabels
+	Boltonia_001
+	Boltonia_002
+	Boltonia_004
+	Boltonia_005
+	Boltonia_006
+	Boltonia_007
+	Boltonia_008
+	Boltonia_009
+	Boltonia_010
+	Boltonia_012
+	Boltonia_013
+	Boltonia_014
+	Boltonia_015
+	Boltonia_016
+	Boltonia_017
+	Boltonia_018
+	Boltonia_019
+	Boltonia_020
+	Boltonia_021
+	Boltonia_022
+	Boltonia_023
+	Boltonia_024
+	Boltonia_025
+	Boltonia_026
+	Boltonia_027
+	Boltonia_028
+	Boltonia_029
+	Boltonia_030
+	Boltonia_031
+	Boltonia_032
+	Boltonia_033
+	Boltonia_034
+	Boltonia_035
+	Boltonia_036
+	Boltonia_037
+	Boltonia_038
+	Boltonia_039
+	Boltonia_040
+	Boltonia_041
+	Boltonia_042
+	Boltonia_043
+	Boltonia_044
+	Boltonia_045
+	Boltonia_046
+	Boltonia_047
+	Boltonia_048
+	Boltonia_050
+	Boltonia_051
+	Boltonia_052
+	Boltonia_053
+	Boltonia_054
+	Boltonia_055
+	Boltonia_056
+	Boltonia_057
+	Boltonia_058
+	Boltonia_059
+	Boltonia_060
+	Boltonia_061
+	Boltonia_062
+	Boltonia_063
+	Boltonia_064
+	Boltonia_065
+	Boltonia_066
+	Boltonia_067
+	Boltonia_068
+	Boltonia_069
+	Boltonia_070
+	Boltonia_071
+	Boltonia_072
+	Boltonia_073
+	Boltonia_074
+	Boltonia_075
+	Boltonia_076
+	Boltonia_077
+	Boltonia_078
+	Boltonia_079
+	Boltonia_080
+	Boltonia_081
+	Boltonia_082
+	Boltonia_083
+	Boltonia_084
+	Boltonia_085
+	Boltonia_086
+	Boltonia_087
+	Boltonia_088
+	Boltonia_089
+	Boltonia_090
+	Boltonia_091
+	Boltonia_092
+	Boltonia_093
+	Boltonia_094
+	Boltonia_095
+	Boltonia_096
+	Boltonia_097
+	Boltonia_098
+	Boltonia_099
+	Boltonia_100
+	Boltonia_101
+	Boltonia_102
+	Boltonia_103
+	Boltonia_104
+	Boltonia_105
+	Boltonia_106
+	Boltonia_107
+	Boltonia_108
+	Boltonia_109
+	Boltonia_110
+	Boltonia_111
+	Boltonia_112
+	Boltonia_113
+	Boltonia_114
+	Boltonia_115
+	Boltonia_116
+	Boltonia_117
+	Boltonia_118
+	Boltonia_119
+	Boltonia_120
+	Boltonia_121
+	Boltonia_123
+	Boltonia_124
+	Boltonia_125
+	Boltonia_126
+	Boltonia_127
+	Boltonia_128
+	Boltonia_129
+	Boltonia_130
+	Boltonia_131
+	Boltonia_132
+	Boltonia_133
+	Boltonia_134
+	Boltonia_135
+	Boltonia_136
+	Boltonia_137
+	Boltonia_138
+	Boltonia_139
+	Boltonia_140
+	Boltonia_141
+	Boltonia_142
+	Boltonia_143
+	Boltonia_144
+	Boltonia_145
+	Boltonia_146
+	Boltonia_147
+	Boltonia_148
+	Boltonia_149
+	Boltonia_150
+	Boltonia_151
+	Boltonia_152
+	Boltonia_153
+	Boltonia_154
+	Boltonia_155
+	Boltonia_157
+	Boltonia_158
+	Boltonia_159
+	Boltonia_160
+	Boltonia_161
+	Boltonia_162
+	Boltonia_163
+	Boltonia_164
+	Boltonia_165
+	Boltonia_166
+	Boltonia_167
+	Boltonia_168
+	Boltonia_169
+	Boltonia_170
+	Boltonia_171
+	Boltonia_172
+	Boltonia_173
+	Boltonia_174
+	Boltonia_175
+	Boltonia_176
+	Boltonia_177
+	Boltonia_178
+	Boltonia_179
+	Boltonia_180
+	Boltonia_181
+	Boltonia_182
+	Boltonia_183
+	Boltonia_184
+	Boltonia_185
+	Boltonia_186
+	Boltonia_187
+	Boltonia_188
+	Boltonia_189
+	Boltonia_190
+	Boltonia_191
+	Boltonia_192
+	Boltonia_193
+	Boltonia_194
+	Boltonia_195
+	Boltonia_196
+	Boltonia_197
+	Boltonia_198
+	Boltonia_199
+	Boltonia_200
+	Boltonia_201
+	Boltonia_202
+	Boltonia_203
+	Boltonia_204
+	Boltonia_205
+	Boltonia_206
+	Boltonia_207
+	Boltonia_208
+	Boltonia_209
+	Boltonia_210
+	Boltonia_211
+	Boltonia_212
+	Boltonia_213
+	Boltonia_214
+	Boltonia_215
+	Boltonia_216
+	Boltonia_217
+	Boltonia_218
+	Boltonia_219
+	Boltonia_220
+	Boltonia_221
+	Boltonia_222
+	Boltonia_223
+	Boltonia_224
+	Boltonia_225
+	Boltonia_226
+	Boltonia_227
+	Boltonia_228
+	Boltonia_229
+	Boltonia_230
+	Boltonia_231
+	Boltonia_232
+	Boltonia_233
+	Boltonia_234
+	Boltonia_235
+	Boltonia_236
+	Boltonia_237
+	Boltonia_238
+	Boltonia_239
+	Boltonia_240
+	Boltonia_241
+	Boltonia_242
+	Boltonia_243
+	Boltonia_244
+	Boltonia_245
+	Boltonia_246
+	Boltonia_247
+	Boltonia_248
+	Boltonia_249
+	Boltonia_250
+	Boltonia_251
+	Boltonia_252
+	Boltonia_253
+	Boltonia_254
+	Boltonia_255
+	Boltonia_256
+	Boltonia_257
+	Boltonia_258
+	Boltonia_259
+	Boltonia_260
+	Boltonia_261
+	Boltonia_262
+	Boltonia_263
+	Boltonia_264
+	Boltonia_265
+	Boltonia_267
+	Boltonia_268
+	Boltonia_269
+	Boltonia_270
+	Boltonia_271
+	Boltonia_272
+	Boltonia_273
+	Boltonia_274
+	Boltonia_275
+	Boltonia_276
+	Boltonia_277
+	Boltonia_278
+	Boltonia_279
+	Boltonia_280
+	Boltonia_281
+	Boltonia_282
+	Boltonia_283
+	Boltonia_284
+	Boltonia_285
+	Boltonia_286
+	Boltonia_287
+	Boltonia_288
+	Boltonia_289
+	Boltonia_290
+	Boltonia_291
+	Boltonia_292
+	Boltonia_293
+	Boltonia_294
+	Boltonia_295
+	Boltonia_296
+	Boltonia_298
+	Boltonia_299
+	Boltonia_301
+	Boltonia_302
+	Boltonia_303
+	Boltonia_304
+	Boltonia_305
+	Boltonia_306
+	Boltonia_307
+	Boltonia_308
+	Boltonia_309
+	Boltonia_310
+	Boltonia_311
+	Boltonia_312
+	Boltonia_313
+	Boltonia_314
+	Boltonia_315
+	Boltonia_316
+	Boltonia_317
+	Boltonia_318
+	Boltonia_319
+	Boltonia_320
+	Boltonia_321
+	Boltonia_322
+	Boltonia_323
+	Boltonia_324
+	Boltonia_325
+	Boltonia_326
+	Boltonia_327
+	Boltonia_328
+	Boltonia_329
+	Boltonia_330
+	Boltonia_331
+	Boltonia_332
+	Boltonia_334
+	Boltonia_335
+	Boltonia_336
+	Boltonia_337
+	Boltonia_338
+	Boltonia_339
+	Boltonia_340
+	Boltonia_341
+	Boltonia_342
+	Boltonia_343
+	Boltonia_344
+	Boltonia_345
+	Boltonia_347
+	Boltonia_349
+	Boltonia_350
+	Boltonia_351
+	Boltonia_352
+	Boltonia_353
+	Boltonia_354
+	Boltonia_355
+	Boltonia_356
+	Boltonia_357
+	Boltonia_358
+	Boltonia_359
+	Boltonia_360
+	Boltonia_361
+	Boltonia_362
+	Boltonia_363
+	Boltonia_364
+	Boltonia_365
+	Boltonia_366
+	Boltonia_367
+	Boltonia_368
+	Boltonia_370
+	Boltonia_371
+	Boltonia_372
+	Boltonia_373
+	Boltonia_374
+	Boltonia_375
+	Boltonia_376
+	Boltonia_377
+	Boltonia_378
+	Boltonia_379
+	Boltonia_380
+	Boltonia_381
+	Boltonia_382
+	Boltonia_383
+	Boltonia_384
+	Boltonia_385
+	Boltonia_386
+	Boltonia_387
+	Boltonia_388
+	Boltonia_389
+	Boltonia_390
+	Boltonia_392
+	Boltonia_393
+	Boltonia_394
+	Boltonia_395
+	Boltonia_396
+	Boltonia_397
+	Boltonia_398
+	Boltonia_399
+	Boltonia_400
+	Boltonia_401
+	Boltonia_402
+	Boltonia_403
+	Boltonia_404
+	Boltonia_405
+	Boltonia_406
+	Boltonia_408
+	Boltonia_409
+	Boltonia_411
+	Boltonia_412
+	Boltonia_413
+	Boltonia_415
+	Boltonia_417
+	Boltonia_418
+	Boltonia_419
+	Boltonia_420
+	Boltonia_421
+	Boltonia_422
+	Boltonia_423
+	Boltonia_424
+	Boltonia_425
+	Boltonia_426
+	Boltonia_427
+	Boltonia_428
+	Boltonia_429
+	Boltonia_430
+	Boltonia_431
+	Boltonia_432
+	Boltonia_433
+	Boltonia_434
+	Boltonia_435
+	Boltonia_436
+	Boltonia_437
+	Boltonia_438
+	Boltonia_439
+	Boltonia_441
+	Boltonia_442
+	Boltonia_443
+	Boltonia_444
+	Boltonia_445
+	Boltonia_446
+	Boltonia_448
+	Boltonia_449
+	Boltonia_451
+	Boltonia_452
+	Boltonia_453
+	Boltonia_454
+	Boltonia_455
+	Boltonia_456
+	Boltonia_457
+	Boltonia_458
+	Boltonia_459
+	Boltonia_460
+	Boltonia_461
+	Boltonia_462
+	Boltonia_463
+	Boltonia_464
+	Boltonia_465
+	Boltonia_466
+	Boltonia_467
+	Boltonia_468
+	Boltonia_469
+	Boltonia_470
+	Boltonia_471
+	Boltonia_472
+	Boltonia_473
+	Boltonia_474
+	Boltonia_475
+	Boltonia_476
+	Boltonia_477
+	Boltonia_478
+	Boltonia_479
+	Boltonia_481
+	Boltonia_482
+	Boltonia_483
+	Boltonia_484
+	Boltonia_485
+	Boltonia_486
+	Boltonia_489
+	Boltonia_490
+	Boltonia_491
+	Boltonia_492
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (Boltonia_001[&!color=#009933]:0.00999318,Boltonia_002[&!color=#009933]:0.00664245,(((((((((((((((((((((Boltonia_004[&!color=#ff00cc]:0.00663857,(Boltonia_307[&!color=#ff00cc]:0.000667273,Boltonia_387[&!color=#ff00cc]:2.68830e-06)[&bs=100,!color=#ff00cc]:0.00977511)[&bs=100,!color=#ff00cc]:0.0129732,(Boltonia_234[&!color=#ff00cc]:0.00112748,Boltonia_403[&!color=#ff00cc]:0.000159193)[&bs=100,!color=#ff00cc]:0.0207391)[&bs=100,!color=#ff00cc]:0.0393810,(((Boltonia_115[&!color=#ff00cc]:0.00118864,Boltonia_242[&!color=#ff00cc]:0.0225464)[&bs=74,!color=#ff00cc]:0.00296714,Boltonia_157[&!color=#ff00cc]:0.00722746)[&bs=100,!color=#ff00cc]:0.0214760,(Boltonia_197[&!color=#ff00cc]:0.00218863,Boltonia_238[&!color=#ff00cc]:0.000604327)[&bs=100,!color=#ff00cc]:0.0255531)[&bs=100,!color=#ff00cc]:0.0164799)[&bs=75,!color=#ff00cc]:0.00677783,(((((((((((((((Boltonia_005[&!color=#ff00cc]:0.00174867,Boltonia_193[&!color=#ff00cc]:0.000498871)[&bs=100,!color=#ff00cc]:0.00124070,(Boltonia_121[&!color=#ff00cc]:2.28020e-06,Boltonia_390[&!color=#ff00cc]:0.00101138)[&bs=100,!color=#ff00cc]:0.000889301)[&bs=100,!color=#ff00cc]:0.00524242,Boltonia_017[&!color=#ff00cc]:0.000298439)[&bs=100,!color=#ff00cc]:0.0199742,Boltonia_088[&!color=#ff00cc]:0.000738731)[&bs=100,!color=#ff00cc]:0.00500838,Boltonia_045[&!color=#ff00cc]:0.000657901)[&bs=100,!color=#ff00cc]:0.00865250,Boltonia_120[&!color=#ff00cc]:0.00453105)[&bs=100,!color=#ff00cc]:0.0123428,Boltonia_172[&!color=#ff00cc]:0.00184882)[&bs=100,!color=#ff00cc]:0.0296646,Boltonia_215[&!color=#ff00cc]:0.00300385)[&bs=40,!color=#ff00cc]:0.00221985,(((((Boltonia_100[&!color=#ff00cc]:0.000283219,Boltonia_274[&!color=#ff00cc]:2.56710e-06)[&bs=100,!color=#ff00cc]:0.0180052,(Boltonia_337[&!color=#ff00cc]:9.16850e-05,Boltonia_339[&!color=#ff00cc]:2.03510e-06)[&bs=88,!color=#ff00cc]:0.0209120)[&bs=100,!color=#ff00cc]:0.00873349,Boltonia_427[&!color=#ff00cc]:0.000846490)[&bs=100,!color=#ff00cc]:0.0155863,Boltonia_179[&!color=#ff00cc]:0.00688180)[&bs=99,!color=#ff00cc]:0.0161228,Boltonia_408[&!color=#ff00cc]:0.000929871)[&bs=80,!color=#ff00cc]:0.00225178)[&bs=97,!color=#ff00cc]:0.0240736,((Boltonia_023[&!color=#ff00cc]:0.00583575,Boltonia_350[&!color=#ff00cc]:0.00219156)[&bs=99,!color=#ff00cc]:0.0115919,Boltonia_092[&!color=#ff00cc]:0.00273476)[&bs=60,!color=#ff00cc]:0.00415713)[&bs=87,!color=#ff00cc]:0.0170275,(((((((((Boltonia_006[&!color=#ff00cc]:0.00109559,Boltonia_394[&!color=#ff00cc]:0.000644726)[&bs=98,!color=#ff00cc]:0.000809498,Boltonia_158[&!color=#ff00cc]:0.000916822)[&bs=93,!color=#ff00cc]:0.000113243,(Boltonia_062[&!color=#ff00cc]:2.21530e-06,Boltonia_434[&!color=#ff00cc]:1.00000e-06)[&bs=99,!color=#ff00cc]:0.000114614)[&bs=93,!color=#ff00cc]:0.000650383,Boltonia_144[&!color=#ff00cc]:0.00149099)[&bs=99,!color=#ff00cc]:0.000892339,Boltonia_149[&!color=#ff00cc]:0.00460602)[&bs=99,!color=#ff00cc]:0.00210185,(Boltonia_311[&!color=#ff00cc]:0.000686068,Boltonia_397[&!color=#ff00cc]:0.000756716)[&bs=8,!color=#ff00cc]:0.000622313)[&bs=10,!color=#ff00cc]:0.0118498,Boltonia_306[&!color=#ff00cc]:0.00127960)[&bs=10,!color=#ff00cc]:0.00140362,Boltonia_110[&!color=#ff00cc]:0.000577711)[&bs=7,!color=#ff00cc]:0.00178468,(Boltonia_055[&!color=#ff00cc]:2.39720e-06,Boltonia_462[&!color=#ff00cc]:0.00140350)[&bs=20,!color=#ff00cc]:0.00398303)[&bs=100,!color=#ff00cc]:0.0356091)[&bs=62,!color=#ff00cc]:0.0126535,((Boltonia_312[&!color=#ff00cc]:0.00180235,(Boltonia_341[&!color=#ff00cc]:0.000198835,Boltonia_366[&!color=#ff00cc]:0.00137510)[&bs=100,!color=#ff00cc]:0.00508024)[&bs=97,!color=#ff00cc]:0.0130909,Boltonia_388[&!color=#ff00cc]:0.00834274)[&bs=100,!color=#ff00cc]:0.0190508)[&bs=99,!color=#ff00cc]:0.0105197,(((((((Boltonia_014[&!color=#ff00cc]:0.00300184,Boltonia_106[&!color=#ff00cc]:0.00246105)[&bs=100,!color=#ff00cc]:0.0481685,Boltonia_227[&!color=#ff00cc]:0.000197695)[&bs=100,!color=#ff00cc]:0.00154700,Boltonia_113[&!color=#ff00cc]:0.00135899)[&bs=99,!color=#ff00cc]:0.00193748,Boltonia_355[&!color=#ff00cc]:0.00140087)[&bs=65,!color=#ff00cc]:0.00173136,Boltonia_431[&!color=#ff00cc]:0.000804675)[&bs=64,!color=#ff00cc]:0.00839592,Boltonia_246[&!color=#ff00cc]:0.0178444)[&bs=98,!color=#ff00cc]:0.0192663,(Boltonia_400[&!color=#ff00cc]:0.00207806,Boltonia_432[&!color=#ff00cc]:0.00137549)[&bs=99,!color=#ff00cc]:0.00557832)[&bs=100,!color=#ff00cc]:0.0202723)[&bs=100,!color=#ff00cc]:0.0126331,(((Boltonia_043[&!color=#ff00cc]:2.46430e-06,Boltonia_271[&!color=#ff00cc]:0.000892498)[&bs=100,!color=#ff00cc]:0.00697332,Boltonia_289[&!color=#ff00cc]:0.00286547)[&bs=100,!color=#ff00cc]:0.0123411,Boltonia_374[&!color=#ff00cc]:0.00727357)[&bs=100,!color=#ff00cc]:0.0232479)[&bs=100,!color=#ff00cc]:0.0134950,Boltonia_296[&!color=#ff00cc]:0.0235056)[&bs=77,!color=#ff00cc]:0.00723658)[&bs=97,!color=#ff00cc]:0.00738298,((((Boltonia_021[&!color=#ff00cc]:0.0196021,((Boltonia_093[&!color=#ff00cc]:0.00195819,Boltonia_202[&!color=#ff00cc]:0.000712983)[&bs=100,!color=#ff00cc]:0.0134877,Boltonia_243[&!color=#ff00cc]:0.0157204)[&bs=100,!color=#ff00cc]:0.0196792)[&bs=43,!color=#ff00cc]:0.00512768,(Boltonia_111[&!color=#ff00cc]:0.00109550,Boltonia_270[&!color=#ff00cc]:0.00167557)[&bs=100,!color=#ff00cc]:0.0343082)[&bs=44,!color=#ff00cc]:0.0100303,(((Boltonia_117[&!color=#ff00cc]:0.0237008,Boltonia_147[&!color=#ff00cc]:0.0131089)[&bs=100,!color=#ff00cc]:0.0104721,Boltonia_334[&!color=#ff00cc]:0.0170355)[&bs=100,!color=#ff00cc]:0.0106510,(((Boltonia_231[&!color=#ff00cc]:0.00109580,Boltonia_313[&!color=#ff00cc]:0.00452682)[&bs=100,!color=#ff00cc]:0.0170773,Boltonia_402[&!color=#ff00cc]:0.00837049)[&bs=100,!color=#ff00cc]:0.0239880,Boltonia_305[&!color=#ff00cc]:0.0116961)[&bs=98,!color=#ff00cc]:0.00723300)[&bs=98,!color=#ff00cc]:0.00894239)[&bs=44,!color=#ff00cc]:0.00578240,((((Boltonia_074[&!color=#ff00cc]:0.00354644,Boltonia_322[&!color=#ff00cc]:0.00389059)[&bs=100,!color=#ff00cc]:0.0319652,(Boltonia_189[&!color=#ff00cc]:0.00691546,Boltonia_379[&!color=#ff00cc]:0.00319158)[&bs=100,!color=#ff00cc]:0.0210289)[&bs=97,!color=#ff00cc]:0.0123004,((Boltonia_099[&!color=#ff00cc]:0.00522365,(Boltonia_159[&!color=#ff00cc]:0.00396892,Boltonia_207[&!color=#ff00cc]:0.00166872)[&bs=100,!color=#ff00cc]:0.00909217)[&bs=100,!color=#ff00cc]:0.0274800,Boltonia_411[&!color=#ff00cc]:0.0331282)[&bs=96,!color=#ff00cc]:0.0113726)[&bs=61,!color=#ff00cc]:0.00555513,((Boltonia_095[&!color=#ff00cc]:0.0204076,(Boltonia_241[&!color=#ff00cc]:0.0126672,Boltonia_318[&!color=#ff00cc]:0.0104691)[&bs=45,!color=#ff00cc]:0.0116513)[&bs=45,!color=#ff00cc]:0.0161643,Boltonia_112[&!color=#ff00cc]:0.0171465)[&bs=40,!color=#ff00cc]:0.00931855)[&bs=43,!color=#ff00cc]:0.00678304)[&bs=98,!color=#ff00cc]:0.00619353)[&bs=59,!color=#ff00cc]:0.00389926,(((((Boltonia_019[&!color=#ff00cc]:0.0144372,((((((Boltonia_084[&!color=#ff00cc]:2.04670e-06,Boltonia_174[&!color=#ff00cc]:0.00102370)[&bs=63,!color=#ff00cc]:0.000553145,Boltonia_377[&!color=#ff00cc]:0.000172299)[&bs=100,!color=#ff00cc]:0.0244381,Boltonia_188[&!color=#ff00cc]:0.00963337)[&bs=60,!color=#ff00cc]:0.0136852,Boltonia_101[&!color=#ff00cc]:0.00262188)[&bs=58,!color=#ff00cc]:0.00750821,Boltonia_133[&!color=#ff00cc]:0.0124254)[&bs=96,!color=#ff00cc]:0.00912116,Boltonia_138[&!color=#ff00cc]:0.0153633)[&bs=100,!color=#ff00cc]:0.0104216)[&bs=95,!color=#ff00cc]:0.00771688,(Boltonia_079[&!color=#ff00cc]:0.0100369,(Boltonia_140[&!color=#ff00cc]:0.0162445,Boltonia_420[&!color=#ff00cc]:0.00856355)[&bs=100,!color=#ff00cc]:0.0308960)[&bs=100,!color=#ff00cc]:0.0235434)[&bs=97,!color=#ff00cc]:0.0128266,Boltonia_078[&!color=#ff00cc]:0.0137066)[&bs=100,!color=#ff00cc]:0.0135326,(((((Boltonia_097[&!color=#ff00cc]:2.78380e-06,((Boltonia_162[&!color=#ff00cc]:0.000439408,Boltonia_239[&!color=#ff00cc]:0.00139126)[&bs=100,!color=#ff00cc]:0.00405877,Boltonia_371[&!color=#ff00cc]:0.000826005)[&bs=100,!color=#ff00cc]:0.0371414)[&bs=32,!color=#ff00cc]:0.0103411,(Boltonia_237[&!color=#ff00cc]:0.00131313,Boltonia_302[&!color=#ff00cc]:0.000845849)[&bs=100,!color=#ff00cc]:0.0184699)[&bs=100,!color=#ff00cc]:0.0336532,((Boltonia_412[&!color=#ff00cc]:1.00000e-06,Boltonia_465[&!color=#ff00cc]:2.20430e-06)[&bs=100,!color=#ff00cc]:0.000983635,Boltonia_428[&!color=#ff00cc]:0.000211771)[&bs=100,!color=#ff00cc]:0.0136647)[&bs=100,!color=#ff00cc]:0.0211763,Boltonia_372[&!color=#ff00cc]:0.0227159)[&bs=92,!color=#ff00cc]:0.0112664,((Boltonia_118[&!color=#ff00cc]:0.00217377,Boltonia_287[&!color=#ff00cc]:0.00323287)[&bs=100,!color=#ff00cc]:0.0285678,(Boltonia_129[&!color=#ff00cc]:0.00240674,Boltonia_438[&!color=#ff00cc]:0.000951773)[&bs=100,!color=#ff00cc]:0.0356849)[&bs=89,!color=#ff00cc]:0.00717183)[&bs=100,!color=#ff00cc]:0.0113462)[&bs=99,!color=#ff00cc]:0.00831980,((((Boltonia_046[&!color=#ff00cc]:0.00588114,Boltonia_167[&!color=#ff00cc]:0.00578524)[&bs=100,!color=#ff00cc]:0.0139015,(((((Boltonia_048[&!color=#ff00cc]:0.00295113,Boltonia_285[&!color=#ff00cc]:0.00159161)[&bs=100,!color=#ff00cc]:0.00346103,((Boltonia_187[&!color=#ff00cc]:2.22910e-06,Boltonia_421[&!color=#ff00cc]:0.000374313)[&bs=100,!color=#ff00cc]:0.000732845,Boltonia_398[&!color=#ff00cc]:0.00311928)[&bs=100,!color=#ff00cc]:0.0144053)[&bs=97,!color=#ff00cc]:0.0117021,(Boltonia_119[&!color=#ff00cc]:0.00300705,Boltonia_235[&!color=#ff00cc]:0.000223790)[&bs=97,!color=#ff00cc]:0.00942552)[&bs=100,!color=#ff00cc]:0.00992537,Boltonia_272[&!color=#ff00cc]:0.0116160)[&bs=100,!color=#ff00cc]:0.0226344,Boltonia_152[&!color=#ff00cc]:0.0120238)[&bs=100,!color=#ff00cc]:0.0184823)[&bs=100,!color=#ff00cc]:0.0165097,((Boltonia_148[&!color=#ff00cc]:0.00452566,Boltonia_212[&!color=#ff00cc]:0.00489239)[&bs=100,!color=#ff00cc]:0.0334684,Boltonia_164[&!color=#ff00cc]:0.0125827)[&bs=100,!color=#ff00cc]:0.00952870)[&bs=100,!color=#ff00cc]:0.00934979,((Boltonia_220[&!color=#ff00cc]:0.000249155,Boltonia_265[&!color=#ff00cc]:0.000739324)[&bs=100,!color=#ff00cc]:0.0315545,Boltonia_323[&!color=#ff00cc]:0.0147675)[&bs=100,!color=#ff00cc]:0.0240858)[&bs=100,!color=#ff00cc]:0.00863749)[&bs=22,!color=#ff00cc]:0.00446234)[&bs=17,!color=#ff00cc]:0.00371325,(((((((((((((Boltonia_009[&!color=#cc66ff]:0.000571119,Boltonia_424[&!color=#cc66ff]:0.00115107)[&bs=100,!color=#cc66ff]:0.0154055,(((((Boltonia_012[&!color=#cc66ff]:0.000462753,Boltonia_360[&!color=#cc66ff]:0.000301434)[&bs=99,!color=#cc66ff]:0.00113470,Boltonia_091[&!color=#cc66ff]:7.56207e-05)[&bs=100,!color=#cc66ff]:0.00862591,Boltonia_448[&!color=#cc66ff]:2.06110e-06)[&bs=96,!color=#cc66ff]:2.53680e-06,Boltonia_102[&!color=#cc66ff]:0.000247924)[&bs=90,!color=#cc66ff]:2.72090e-06,Boltonia_067[&!color=#cc66ff]:2.07120e-06)[&bs=94,!color=#cc66ff]:0.00368611)[&bs=94,!color=#cc66ff]:0.00800780,Boltonia_456[&!color=#cc66ff]:0.000978412)[&bs=100,!color=#cc66ff]:0.0178967,Boltonia_384[&!color=#cc66ff]:0.000684273)[&bs=100,!color=#cc66ff]:0.0192141,Boltonia_288[&!color=#cc66ff]:0.0216168)[&bs=100,!color=#cc66ff]:0.0151695,Boltonia_259[&!color=#cc66ff]:0.0196636)[&bs=100,!color=#cc66ff]:0.00173932,(Boltonia_171[&!color=#cc66ff]:0.0167483,Boltonia_320[&!color=#cc66ff]:0.00961670)[&bs=100,!color=#cc66ff]:0.0233954)[&bs=72,!color=#cc66ff]:0.0226662,(Boltonia_218[&!color=#cc66ff]:0.00155095,(Boltonia_267[&!color=#cc66ff]:0.0113143,Boltonia_367[&!color=#cc66ff]:0.00407295)[&bs=100,!color=#cc66ff]:0.0114455)[&bs=100,!color=#cc66ff]:0.0284527)[&bs=18,!color=#cc66ff]:0.00863689,(((Boltonia_027[&!color=#cc66ff]:0.000555875,Boltonia_430[&!color=#cc66ff]:0.000451478)[&bs=100,!color=#cc66ff]:0.0509895,Boltonia_361[&!color=#cc66ff]:0.00210417)[&bs=62,!color=#cc66ff]:0.0157262,(((Boltonia_058[&!color=#cc66ff]:0.00152198,Boltonia_441[&!color=#cc66ff]:0.000516946)[&bs=100,!color=#cc66ff]:0.000493281,Boltonia_468[&!color=#cc66ff]:0.00151240)[&bs=100,!color=#cc66ff]:0.0290144,(Boltonia_103[&!color=#cc66ff]:0.0307105,((Boltonia_190[&!color=#cc66ff]:0.00903200,Boltonia_442[&!color=#cc66ff]:0.00291965)[&bs=100,!color=#cc66ff]:0.0263562,(Boltonia_335[&!color=#cc66ff]:2.93300e-06,Boltonia_435[&!color=#cc66ff]:0.000224924)[&bs=100,!color=#cc66ff]:0.0154320)[&bs=100,!color=#cc66ff]:0.00568079)[&bs=82,!color=#cc66ff]:0.0116642)[&bs=100,!color=#cc66ff]:0.0140570)[&bs=16,!color=#cc66ff]:0.00813968)[&bs=98,!color=#cc66ff]:0.00798917,Boltonia_453[&!color=#cc66ff]:0.0191920)[&bs=97,!color=#cc66ff]:0.00775740,((Boltonia_225[&!color=#cc66ff]:0.00142196,Boltonia_250[&!color=#cc66ff]:0.000158256)[&bs=100,!color=#cc66ff]:0.0173033,Boltonia_264[&!color=#cc66ff]:0.00543486)[&bs=100,!color=#cc66ff]:0.0117604)[&bs=100,!color=#cc66ff]:0.0203920,(Boltonia_173[&!color=#cc66ff]:2.32680e-06,Boltonia_260[&!color=#cc66ff]:2.49890e-06)[&bs=100,!color=#cc66ff]:0.0304531)[&bs=96,!color=#cc66ff]:0.00895207,(((Boltonia_044[&!color=#cc66ff]:0.00103784,Boltonia_378[&!color=#cc66ff]:0.000684307)[&bs=100,!color=#cc66ff]:0.0336973,(Boltonia_083[&!color=#cc66ff]:0.00165142,Boltonia_279[&!color=#cc66ff]:0.000729788)[&bs=100,!color=#cc66ff]:0.0506262)[&bs=96,!color=#cc66ff]:0.0123245,((Boltonia_183[&!color=#cc66ff]:0.0158406,Boltonia_417[&!color=#cc66ff]:0.00694859)[&bs=82,!color=#cc66ff]:0.00699640,Boltonia_349[&!color=#cc66ff]:0.0218144)[&bs=98,!color=#cc66ff]:0.0253942)[&bs=96,!color=#cc66ff]:0.00898778)[&bs=98,!color=#cc66ff]:0.00941588)[&bs=96,!color=#009933]:0.00523112,((((((((((Boltonia_007[&!color=#009933]:0.0157114,Boltonia_222[&!color=#009933]:0.0152961)[&bs=100,!color=#009933]:0.0158644,(Boltonia_030[&!color=#009933]:0.0255172,((Boltonia_292[&!color=#009933]:0.00839171,Boltonia_426[&!color=#009933]:0.000954643)[&bs=100,!color=#009933]:0.00652298,Boltonia_315[&!color=#009933]:0.0106386)[&bs=100,!color=#009933]:0.0162241)[&bs=100,!color=#009933]:0.0142900)[&bs=40,!color=#009933]:0.00903615,((Boltonia_022[&!color=#009933]:0.101671,(Boltonia_161[&!color=#009933]:0.0119297,Boltonia_229[&!color=#009933]:0.0103835)[&bs=100,!color=#009933]:0.0130206)[&bs=41,!color=#009933]:0.00602408,(Boltonia_024[&!color=#009933]:0.00122591,Boltonia_057[&!color=#009933]:0.00204948)[&bs=100,!color=#009933]:0.0400654)[&bs=40,!color=#009933]:0.00629589)[&bs=100,!color=#009933]:0.00964886,(((Boltonia_151[&!color=#009933]:0.000605910,Boltonia_327[&!color=#009933]:0.000439245)[&bs=100,!color=#009933]:0.0400817,((Boltonia_194[&!color=#009933]:0.00121150,Boltonia_338[&!color=#009933]:2.29480e-06)[&bs=100,!color=#009933]:0.0240342,(Boltonia_201[&!color=#009933]:0.00273226,(Boltonia_290[&!color=#009933]:2.18310e-06,Boltonia_370[&!color=#009933]:2.42600e-06)[&bs=100,!color=#009933]:0.00259944)[&bs=74,!color=#009933]:0.0137559)[&bs=74,!color=#009933]:0.0266591)[&bs=73,!color=#009933]:0.00671673,Boltonia_342[&!color=#009933]:0.0235686)[&bs=97,!color=#009933]:0.00677986)[&bs=98,!color=#009933]:0.00841540,((Boltonia_073[&!color=#009933]:0.00274235,Boltonia_208[&!color=#009933]:0.00166834)[&bs=100,!color=#009933]:0.0401419,((Boltonia_135[&!color=#009933]:0.000558830,Boltonia_299[&!color=#009933]:2.03170e-06)[&bs=100,!color=#009933]:0.00578688,Boltonia_294[&!color=#009933]:0.00511202)[&bs=100,!color=#009933]:0.0367631)[&bs=100,!color=#009933]:0.0156790)[&bs=99,!color=#009933]:0.00533251,(((Boltonia_033[&!color=#009933]:0.0207476,(Boltonia_087[&!color=#009933]:0.00244361,Boltonia_137[&!color=#009933]:0.00125533)[&bs=100,!color=#009933]:0.0302726)[&bs=99,!color=#009933]:0.0132110,((Boltonia_089[&!color=#009933]:0.00226114,Boltonia_090[&!color=#009933]:0.00897855)[&bs=99,!color=#009933]:0.0161938,Boltonia_180[&!color=#009933]:0.0159434)[&bs=100,!color=#009933]:0.0194894)[&bs=99,!color=#009933]:0.00621758,(Boltonia_316[&!color=#009933]:0.0568936,Boltonia_399[&!color=#009933]:0.0172338)[&bs=100,!color=#009933]:0.0229058)[&bs=98,!color=#009933]:0.00542611)[&bs=99,!color=#009933]:0.00680330,(((((((Boltonia_015[&!color=#009933]:0.000826689,Boltonia_081[&!color=#009933]:0.000420569)[&bs=100,!color=#009933]:0.0397533,((Boltonia_131[&!color=#009933]:0.000231044,Boltonia_233[&!color=#009933]:0.000135539)[&bs=100,!color=#009933]:0.00281604,(Boltonia_280[&!color=#009933]:2.01100e-06,Boltonia_332[&!color=#009933]:2.93120e-06)[&bs=100,!color=#009933]:0.000513179)[&bs=100,!color=#009933]:0.0414586)[&bs=98,!color=#009933]:0.0175038,((Boltonia_056[&!color=#009933]:0.00262310,Boltonia_205[&!color=#009933]:0.000539858)[&bs=100,!color=#009933]:0.0146320,Boltonia_065[&!color=#009933]:0.00642323)[&bs=98,!color=#009933]:0.0216179)[&bs=100,!color=#009933]:0.00769280,((Boltonia_182[&!color=#009933]:0.000566997,Boltonia_209[&!color=#009933]:0.00246364)[&bs=14,!color=#009933]:0.00137710,Boltonia_445[&!color=#009933]:0.00223394)[&bs=100,!color=#009933]:0.0383444)[&bs=100,!color=#009933]:0.0105376,(((Boltonia_060[&!color=#009933]:0.000992803,Boltonia_353[&!color=#009933]:0.000448482)[&bs=100,!color=#009933]:0.00403309,Boltonia_345[&!color=#009933]:0.00180871)[&bs=100,!color=#009933]:0.0421971,(((Boltonia_134[&!color=#009933]:0.00193546,Boltonia_386[&!color=#009933]:0.000768284)[&bs=100,!color=#009933]:0.0298271,(Boltonia_143[&!color=#009933]:0.0157104,(Boltonia_154[&!color=#009933]:0.000835419,Boltonia_365[&!color=#009933]:2.61960e-06)[&bs=100,!color=#009933]:0.00769912)[&bs=100,!color=#009933]:0.0569985)[&bs=99,!color=#009933]:0.00850091,Boltonia_282[&!color=#009933]:0.0187273)[&bs=97,!color=#009933]:0.00852661)[&bs=100,!color=#009933]:0.00924208)[&bs=98,!color=#009933]:0.00865004,(Boltonia_080[&!color=#009933]:0.0320966,Boltonia_415[&!color=#009933]:0.0170350)[&bs=97,!color=#009933]:0.00769612)[&bs=95,!color=#009933]:0.00583526,(Boltonia_228[&!color=#009933]:0.0107239,Boltonia_413[&!color=#009933]:0.0114726)[&bs=100,!color=#009933]:0.0233219)[&bs=96,!color=#009933]:0.00537146)[&bs=100,!color=#009933]:0.00815667,(((Boltonia_013[&!color=#009933]:0.0160746,((Boltonia_130[&!color=#009933]:0.0121562,(Boltonia_163[&!color=#009933]:0.00513387,Boltonia_191[&!color=#009933]:0.00519267)[&bs=100,!color=#009933]:0.0159376)[&bs=83,!color=#009933]:0.00773411,(((Boltonia_195[&!color=#009933]:2.19590e-06,Boltonia_362[&!color=#009933]:2.53600e-06)[&bs=100,!color=#009933]:0.000388718,(Boltonia_268[&!color=#009933]:0.000520241,Boltonia_291[&!color=#009933]:2.29080e-06)[&bs=100,!color=#009933]:0.00594368)[&bs=100,!color=#009933]:0.0130455,Boltonia_395[&!color=#009933]:0.0269752)[&bs=100,!color=#009933]:0.0243685)[&bs=100,!color=#009933]:0.00812423)[&bs=69,!color=#009933]:0.00421216,(Boltonia_132[&!color=#009933]:0.0161064,((Boltonia_329[&!color=#009933]:0.00438040,Boltonia_344[&!color=#009933]:0.00715413)[&bs=100,!color=#009933]:0.0138317,Boltonia_375[&!color=#009933]:0.00767959)[&bs=100,!color=#009933]:0.0112641)[&bs=100,!color=#009933]:0.0114540)[&bs=100,!color=#009933]:0.0139478,(((((Boltonia_029[&!color=#009933]:0.00126634,Boltonia_325[&!color=#009933]:0.00131381)[&bs=100,!color=#009933]:0.0233364,(Boltonia_170[&!color=#009933]:0.00103591,Boltonia_269[&!color=#009933]:0.0108163)[&bs=100,!color=#009933]:0.0194211)[&bs=100,!color=#009933]:0.00803710,Boltonia_232[&!color=#009933]:0.0132196)[&bs=81,!color=#009933]:0.00459847,(Boltonia_053[&!color=#009933]:0.000486501,Boltonia_258[&!color=#009933]:0.00118530)[&bs=100,!color=#009933]:0.0321927)[&bs=95,!color=#009933]:0.0132794,((((((Boltonia_063[&!color=#009933]:0.00101571,Boltonia_185[&!color=#009933]:0.000134227)[&bs=100,!color=#009933]:0.00119715,Boltonia_393[&!color=#009933]:0.00161222)[&bs=100,!color=#009933]:0.00616101,Boltonia_330[&!color=#009933]:0.00302058)[&bs=100,!color=#009933]:0.0219007,Boltonia_142[&!color=#009933]:0.00295118)[&bs=100,!color=#009933]:0.0382215,Boltonia_123[&!color=#009933]:0.0123230)[&bs=89,!color=#009933]:0.0106543,((Boltonia_066[&!color=#009933]:0.0135752,Boltonia_124[&!color=#009933]:0.00361515)[&bs=100,!color=#009933]:0.0158329,Boltonia_221[&!color=#009933]:0.00733411)[&bs=100,!color=#009933]:0.0159879)[&bs=89,!color=#009933]:0.00733964)[&bs=99,!color=#009933]:0.00598677)[&bs=98,!color=#009933]:0.00490202)[&bs=99,!color=#009933]:0.00694113,((((Boltonia_070[&!color=#009933]:0.00858679,(Boltonia_128[&!color=#009933]:0.000844015,Boltonia_437[&!color=#009933]:0.000435638)[&bs=100,!color=#009933]:0.0240709)[&bs=90,!color=#009933]:0.00675970,Boltonia_276[&!color=#009933]:0.0150479)[&bs=100,!color=#009933]:0.0160103,(Boltonia_219[&!color=#009933]:0.00268233,Boltonia_331[&!color=#009933]:0.00154389)[&bs=98,!color=#009933]:0.0272357)[&bs=94,!color=#009933]:0.0148900,(((Boltonia_127[&!color=#009933]:0.000139482,Boltonia_249[&!color=#009933]:2.28610e-06)[&bs=100,!color=#009933]:0.000174522,Boltonia_301[&!color=#009933]:1.72436e-05)[&bs=100,!color=#009933]:0.0215708,((Boltonia_240[&!color=#009933]:0.000791803,Boltonia_309[&!color=#009933]:0.000113563)[&bs=100,!color=#009933]:0.0326200,Boltonia_459[&!color=#009933]:0.0174184)[&bs=100,!color=#009933]:0.0120271)[&bs=92,!color=#009933]:0.00500249)[&bs=82,!color=#009933]:0.00400057)[&bs=73,!color=#009933]:0.00497060,((((Boltonia_020[&!color=#009933]:4.30242e-05,Boltonia_150[&!color=#009933]:0.00359721)[&bs=86,!color=#009933]:0.00895218,Boltonia_077[&!color=#009933]:0.00390138)[&bs=100,!color=#009933]:0.0279975,((Boltonia_085[&!color=#009933]:0.000683425,Boltonia_257[&!color=#009933]:0.00208578)[&bs=100,!color=#009933]:0.0195005,Boltonia_275[&!color=#009933]:0.00965855)[&bs=100,!color=#009933]:0.0122539)[&bs=100,!color=#009933]:0.0146075,(Boltonia_107[&!color=#009933]:0.0187328,(Boltonia_217[&!color=#009933]:0.00558069,Boltonia_304[&!color=#009933]:0.00197878)[&bs=100,!color=#009933]:0.0332696)[&bs=93,!color=#009933]:0.00646928)[&bs=92,!color=#009933]:0.00966464)[&bs=96,!color=#009933]:0.00685091)[&bs=97,!color=#009933]:0.00575998,((((Boltonia_026[&!color=#009933]:0.00517261,((((((((Boltonia_028[&!color=#009933]:0.000811445,Boltonia_040[&!color=#009933]:0.0126261)[&bs=97,!color=#009933]:0.0120792,((Boltonia_168[&!color=#009933]:0.00241786,Boltonia_310[&!color=#009933]:0.000304483)[&bs=100,!color=#009933]:0.00517926,Boltonia_230[&!color=#009933]:0.00522085)[&bs=100,!color=#009933]:0.0212168)[&bs=70,!color=#009933]:0.00639910,(Boltonia_263[&!color=#009933]:0.00217236,Boltonia_354[&!color=#009933]:0.00126649)[&bs=60,!color=#009933]:0.00268085)[&bs=100,!color=#009933]:0.00700789,(((Boltonia_098[&!color=#009933]:0.000251972,Boltonia_401[&!color=#009933]:0.00136643)[&bs=93,!color=#009933]:0.00308962,Boltonia_458[&!color=#009933]:0.000976767)[&bs=60,!color=#009933]:0.00235879,Boltonia_454[&!color=#009933]:0.00273050)[&bs=62,!color=#009933]:0.00881819)[&bs=99,!color=#009933]:0.0209803,Boltonia_449[&!color=#009933]:0.00971003)[&bs=99,!color=#009933]:0.0126677,Boltonia_389[&!color=#009933]:0.0243572)[&bs=99,!color=#009933]:0.00438336,Boltonia_175[&!color=#009933]:0.0104270)[&bs=100,!color=#009933]:0.0136255,Boltonia_352[&!color=#009933]:0.00805425)[&bs=100,!color=#009933]:0.0161485)[&bs=100,!color=#009933]:0.0239827,((Boltonia_116[&!color=#009933]:0.00865724,Boltonia_383[&!color=#009933]:0.0180489)[&bs=100,!color=#009933]:0.0235836,Boltonia_177[&!color=#009933]:0.0177537)[&bs=100,!color=#009933]:0.0130366)[&bs=66,!color=#009933]:0.00699317,((((Boltonia_054[&!color=#009933]:0.0101763,Boltonia_105[&!color=#009933]:0.00330299)[&bs=100,!color=#009933]:0.0116967,Boltonia_108[&!color=#009933]:0.0117103)[&bs=94,!color=#009933]:0.00886481,Boltonia_181[&!color=#009933]:0.0148691)[&bs=99,!color=#009933]:0.00668747,Boltonia_317[&!color=#009933]:0.0304598)[&bs=99,!color=#009933]:0.00909812)[&bs=100,!color=#009933]:0.0118987,((Boltonia_037[&!color=#009933]:0.0169191,Boltonia_404[&!color=#009933]:0.0215792)[&bs=100,!color=#009933]:0.00793119,((Boltonia_125[&!color=#009933]:0.00995581,Boltonia_409[&!color=#009933]:0.00374325)[&bs=100,!color=#009933]:0.00582082,Boltonia_186[&!color=#009933]:0.00376455)[&bs=100,!color=#009933]:0.0389738)[&bs=100,!color=#009933]:0.0122894)[&bs=100,!color=#009933]:0.00888269)[&bs=99,!color=#009933]:0.00638751,((((((Boltonia_032[&!color=#009933]:0.00130898,Boltonia_436[&!color=#009933]:0.000650891)[&bs=100,!color=#009933]:0.00185659,(Boltonia_277[&!color=#009933]:0.000128574,(Boltonia_278[&!color=#009933]:0.000981382,Boltonia_405[&!color=#009933]:2.77520e-06)[&bs=100,!color=#009933]:0.00230341)[&bs=40,!color=#009933]:0.00129579)[&bs=69,!color=#009933]:0.00492428,((Boltonia_094[&!color=#009933]:0.000366260,Boltonia_343[&!color=#009933]:0.000118446)[&bs=100,!color=#009933]:0.000837149,(Boltonia_160[&!color=#009933]:0.00140921,Boltonia_351[&!color=#009933]:0.000355882)[&bs=100,!color=#009933]:0.00222564)[&bs=100,!color=#009933]:0.0170895)[&bs=100,!color=#009933]:0.0368278,Boltonia_224[&!color=#009933]:0.0143657)[&bs=100,!color=#009933]:0.0180972,((Boltonia_047[&!color=#009933]:0.0157397,Boltonia_376[&!color=#009933]:0.00609962)[&bs=100,!color=#009933]:0.0143955,(((((Boltonia_061[&!color=#009933]:0.00218389,(Boltonia_136[&!color=#009933]:0.000969417,Boltonia_293[&!color=#009933]:0.00197069)[&bs=89,!color=#009933]:2.40860e-06)[&bs=100,!color=#009933]:0.0171965,(((Boltonia_146[&!color=#009933]:0.00119723,Boltonia_256[&!color=#009933]:0.000263310)[&bs=99,!color=#009933]:0.00238005,Boltonia_251[&!color=#009933]:0.00625148)[&bs=100,!color=#009933]:0.0153482,Boltonia_460[&!color=#009933]:0.00175652)[&bs=100,!color=#009933]:0.00952121)[&bs=100,!color=#009933]:0.0127385,(Boltonia_236[&!color=#009933]:0.00110511,Boltonia_385[&!color=#009933]:0.000590978)[&bs=100,!color=#009933]:0.0141379)[&bs=100,!color=#009933]:0.0226307,(Boltonia_373[&!color=#009933]:0.00142914,Boltonia_382[&!color=#009933]:0.00156143)[&bs=100,!color=#009933]:0.0201667)[&bs=100,!color=#009933]:0.0159144,(((Boltonia_075[&!color=#009933]:0.000942263,(Boltonia_254[&!color=#009933]:0.00175543,Boltonia_284[&!color=#009933]:0.000669810)[&bs=99,!color=#009933]:0.00199617)[&bs=100,!color=#009933]:0.0454178,Boltonia_086[&!color=#009933]:0.00102358)[&bs=100,!color=#009933]:0.0203963,Boltonia_192[&!color=#009933]:0.0128348)[&bs=98,!color=#009933]:0.00837348)[&bs=98,!color=#009933]:0.0157783)[&bs=100,!color=#009933]:0.0128397)[&bs=93,!color=#009933]:0.00772636,Boltonia_392[&!color=#009933]:0.0238075)[&bs=94,!color=#009933]:0.00633412)[&bs=93,!color=#009933]:0.00544837,((Boltonia_198[&!color=#009933]:0.0325750,Boltonia_286[&!color=#009933]:0.0244290)[&bs=99,!color=#009933]:0.00933785,(Boltonia_210[&!color=#009933]:0.0100595,Boltonia_363[&!color=#009933]:0.0237732)[&bs=100,!color=#009933]:0.0159315)[&bs=90,!color=#009933]:0.00854396)[&bs=26,!color=#009933]:0.00345679,((((Boltonia_031[&!color=#009933]:0.0159404,(Boltonia_039[&!color=#009933]:0.00126894,Boltonia_200[&!color=#009933]:0.00361864)[&bs=100,!color=#009933]:0.0490409)[&bs=100,!color=#009933]:0.0132601,Boltonia_463[&!color=#009933]:0.0150983)[&bs=99,!color=#009933]:0.00896030,((Boltonia_038[&!color=#009933]:0.0222968,(Boltonia_295[&!color=#009933]:0.00883952,Boltonia_336[&!color=#009933]:0.0106652)[&bs=100,!color=#009933]:0.00806384)[&bs=100,!color=#009933]:0.0151474,(Boltonia_364[&!color=#009933]:0.0146927,Boltonia_455[&!color=#009933]:0.0310577)[&bs=100,!color=#009933]:0.0209618)[&bs=97,!color=#009933]:0.00833472)[&bs=89,!color=#009933]:0.00817964,(((Boltonia_050[&!color=#009933]:0.00567890,Boltonia_076[&!color=#009933]:0.0100215)[&bs=100,!color=#009933]:0.0203202,(((Boltonia_071[&!color=#009933]:0.0120624,Boltonia_096[&!color=#009933]:0.00431559)[&bs=100,!color=#009933]:0.0143425,(Boltonia_204[&!color=#009933]:0.0191754,Boltonia_429[&!color=#009933]:0.0122331)[&bs=99,!color=#009933]:0.00834000)[&bs=100,!color=#009933]:0.0155566,Boltonia_273[&!color=#009933]:0.0251068)[&bs=100,!color=#009933]:0.0133402)[&bs=82,!color=#009933]:0.00978030,((((Boltonia_059[&!color=#009933]:0.000285382,Boltonia_380[&!color=#009933]:0.00123543)[&bs=100,!color=#009933]:0.0321772,Boltonia_444[&!color=#009933]:0.00998221)[&bs=98,!color=#009933]:0.0107990,(Boltonia_245[&!color=#009933]:0.00740939,Boltonia_356[&!color=#009933]:0.0133079)[&bs=98,!color=#009933]:0.0154612)[&bs=100,!color=#009933]:0.0104800,(((Boltonia_109[&!color=#009933]:0.00269267,Boltonia_358[&!color=#009933]:0.00113485)[&bs=100,!color=#009933]:0.00648935,Boltonia_244[&!color=#009933]:0.00350586)[&bs=100,!color=#009933]:0.0295411,(Boltonia_425[&!color=#009933]:0.0123021,Boltonia_433[&!color=#009933]:0.0107194)[&bs=57,!color=#009933]:0.00821547)[&bs=100,!color=#009933]:0.0263609)[&bs=99,!color=#009933]:0.00888640)[&bs=74,!color=#009933]:0.00607932)[&bs=91,!color=#009933]:0.00660700)[&bs=30,!color=#009933]:0.00476543,Boltonia_381[&!color=#009933]:0.0283033)[&bs=100,!color=#009933]:0.00999062,((((((Boltonia_008[&!color=#99cc00]:0.00127556,Boltonia_247[&!color=#99cc00]:0.000531149)[&bs=100,!color=#99cc00]:0.00154201,Boltonia_423[&!color=#99cc00]:0.000960108)[&bs=100,!color=#99cc00]:0.0153595,Boltonia_461[&!color=#99cc00]:0.00892087)[&bs=100,!color=#99cc00]:0.0382807,(((((((Boltonia_016[&!color=#99cc00]:0.00418776,Boltonia_281[&!color=#99cc00]:0.00160580)[&bs=100,!color=#99cc00]:0.0124836,Boltonia_443[&!color=#99cc00]:0.00495181)[&bs=100,!color=#99cc00]:0.0144223,(Boltonia_126[&!color=#99cc00]:0.00661794,(Boltonia_446[&!color=#99cc00]:0.0170071,Boltonia_457[&!color=#99cc00]:0.00615541)[&bs=100,!color=#99cc00]:0.0110826)[&bs=98,!color=#99cc00]:0.00963858)[&bs=99,!color=#99cc00]:0.0109614,(Boltonia_051[&!color=#99cc00]:0.0222149,Boltonia_298[&!color=#99cc00]:0.0168514)[&bs=85,!color=#99cc00]:0.00246180)[&bs=98,!color=#99cc00]:0.0107839,(((Boltonia_052[&!color=#99cc00]:0.00578049,Boltonia_467[&!color=#99cc00]:0.0297813)[&bs=60,!color=#99cc00]:0.00525728,Boltonia_248[&!color=#99cc00]:0.0123408)[&bs=60,!color=#99cc00]:0.0108082,Boltonia_145[&!color=#99cc00]:0.0133591)[&bs=60,!color=#99cc00]:0.0124760)[&bs=59,!color=#99cc00]:0.00732415,(Boltonia_308[&!color=#99cc00]:2.39170e-06,Boltonia_359[&!color=#99cc00]:9.36635e-05)[&bs=100,!color=#99cc00]:0.0144478)[&bs=60,!color=#99cc00]:0.00684275,(Boltonia_261[&!color=#99cc00]:0.000438760,Boltonia_422[&!color=#99cc00]:0.00124714)[&bs=100,!color=#99cc00]:0.0251450)[&bs=60,!color=#99cc00]:0.0142513)[&bs=100,!color=#99cc00]:0.0125801,((Boltonia_153[&!color=#99cc00]:0.0104299,Boltonia_213[&!color=#99cc00]:0.0149303)[&bs=100,!color=#99cc00]:0.0233362,(Boltonia_211[&!color=#99cc00]:0.000926517,Boltonia_418[&!color=#99cc00]:0.00116293)[&bs=100,!color=#99cc00]:0.0341547)[&bs=97,!color=#99cc00]:0.00941718)[&bs=100,!color=#99cc00]:0.0113528,((((((((((Boltonia_010[&!color=#ff0000]:0.00198148,Boltonia_068[&!color=#ff0000]:0.000565713)[&bs=91,!color=#ff0000]:0.00111448,Boltonia_328[&!color=#ff0000]:0.00170061)[&bs=97,!color=#ff0000]:0.00296037,(Boltonia_041[&!color=#ff0000]:0.00533283,Boltonia_464[&!color=#ff0000]:0.00148143)[&bs=93,!color=#ff0000]:0.00458412)[&bs=91,!color=#ff0000]:0.00582073,((Boltonia_104[&!color=#ff0000]:0.00222126,Boltonia_451[&!color=#ff0000]:0.00106117)[&bs=95,!color=#ff0000]:0.00446842,(Boltonia_199[&!color=#ff0000]:0.00218342,Boltonia_439[&!color=#ff0000]:0.000138345)[&bs=95,!color=#ff0000]:0.00199704)[&bs=100,!color=#ff0000]:0.0128253)[&bs=93,!color=#ff0000]:0.00435006,(Boltonia_069[&!color=#ff0000]:0.00119613,Boltonia_252[&!color=#ff0000]:0.00169947)[&bs=93,!color=#ff0000]:0.00448687)[&bs=100,!color=#ff0000]:0.00579336,(((Boltonia_018[&!color=#ff0000]:0.000792320,Boltonia_478[&!color=#ff0000]:0.0139125)[&bs=53,!color=#ff0000]:0.00137480,Boltonia_314[&!color=#ff0000]:0.00399117)[&bs=59,!color=#ff0000]:0.00419544,(Boltonia_166[&!color=#ff0000]:0.00256925,Boltonia_223[&!color=#ff0000]:0.00282086)[&bs=95,!color=#ff0000]:0.00518963)[&bs=63,!color=#ff0000]:0.00524494)[&bs=61,!color=#ff0000]:0.00446133,(((Boltonia_082[&!color=#ff0000]:0.000516290,Boltonia_357[&!color=#ff0000]:0.000415543)[&bs=99,!color=#ff0000]:0.00223908,(Boltonia_216[&!color=#ff0000]:0.00151728,Boltonia_419[&!color=#ff0000]:0.000360809)[&bs=100,!color=#ff0000]:0.00220584)[&bs=100,!color=#ff0000]:0.0107749,(Boltonia_206[&!color=#ff0000]:0.00734496,(Boltonia_319[&!color=#ff0000]:0.00975432,(Boltonia_340[&!color=#ff0000]:0.000186355,(Boltonia_347[&!color=#ff0000]:0.000522682,Boltonia_406[&!color=#ff0000]:0.00724779)[&bs=22,!color=#ff0000]:0.00105158)[&bs=44,!color=#ff0000]:0.00373920)[&bs=24,!color=#ff0000]:0.00311691)[&bs=62,!color=#ff0000]:0.00358769)[&bs=60,!color=#ff0000]:0.00414795)[&bs=100,!color=#ff0000]:0.00660710,(Boltonia_471[&!color=#ff0000]:0.00409814,Boltonia_476[&!color=#ff0000]:0.00460243)[&bs=100,!color=#ff0000]:0.00450002)[&bs=96,!color=#ff0000]:0.00446846,((((Boltonia_469:0.0526100,Boltonia_470:0.0476191)[&bs=100]:0.0103139,(((((Boltonia_472[&!color=#ff0066]:0.00446436,Boltonia_473[&!color=#ff0066]:0.00406123)[&bs=100,!color=#ff0066]:0.0684944,Boltonia_474[&!color=#ff0066]:0.0346450)[&bs=100,!color=#ff0066]:0.0523622,(Boltonia_484[&!color=#ff0066]:0.0254749,Boltonia_485[&!color=#ff0066]:0.0341643)[&bs=100,!color=#ff0066]:0.0489642)[&bs=93,!color=#ff0066]:0.0107831,((Boltonia_489:0.000265550,Boltonia_490:0.00287741)[&bs=100]:2.64121,Boltonia_491:5.21608)[&bs=100]:3.34652)[&bs=55]:0.00305697,Boltonia_486:0.0983971)[&bs=100]:0.00806285)[&bs=99]:0.00643641,(Boltonia_481:0.0423732,Boltonia_482:0.0404270)[&bs=100]:0.0130453)[&bs=100]:0.00991116,Boltonia_475:0.0156067)[&bs=97,!color=#ff0000]:0.00660683)[&bs=100,!color=#ffcc00]:0.00853911,((Boltonia_477[&!color=#ffcc00]:0.00819792,Boltonia_483[&!color=#ffcc00]:0.0184924)[&bs=100,!color=#ffcc00]:0.0334302,(Boltonia_479[&!color=#ffcc00]:0.0445911,Boltonia_492[&!color=#ffcc00]:0.0613616)[&bs=100,!color=#ffcc00]:0.00932935)[&bs=100,!color=#ffcc00]:0.0107222)[&bs=100,!color=#99cc00]:0.0266370)[&bs=13,!color=#009933]:0.00576917)[&bs=80,!color=#009933]:0.00543176,Boltonia_196[&!color=#009933]:0.0386566)[&bs=10,!color=#009933]:0.00348613,((((((((Boltonia_034[&!color=#009933]:0.000691115,(Boltonia_042[&!color=#009933]:2.81750e-06,Boltonia_184[&!color=#009933]:0.00311201)[&bs=100,!color=#009933]:0.00456107)[&bs=100,!color=#009933]:0.0142415,Boltonia_324[&!color=#009933]:0.0201748)[&bs=100,!color=#009933]:0.00635923,(Boltonia_141[&!color=#009933]:0.00240711,Boltonia_303[&!color=#009933]:0.000229299)[&bs=100,!color=#009933]:0.00411312)[&bs=100,!color=#009933]:0.0167427,(Boltonia_203[&!color=#009933]:0.00156038,(Boltonia_214[&!color=#009933]:0.00132732,Boltonia_326[&!color=#009933]:0.00231482)[&bs=100,!color=#009933]:0.0108770)[&bs=79,!color=#009933]:0.0146621)[&bs=79,!color=#009933]:0.0186820,Boltonia_165[&!color=#009933]:0.0154059)[&bs=78,!color=#009933]:0.0224893,(Boltonia_072[&!color=#009933]:0.0280843,(Boltonia_139[&!color=#009933]:0.00917163,Boltonia_452[&!color=#009933]:0.0119546)[&bs=100,!color=#009933]:0.0246868)[&bs=67,!color=#009933]:0.00903680)[&bs=100,!color=#009933]:0.0189266,Boltonia_368[&!color=#009933]:0.0235274)[&bs=94,!color=#009933]:0.00688565,((Boltonia_035[&!color=#009933]:0.0115552,Boltonia_064[&!color=#009933]:0.0154744)[&bs=100,!color=#009933]:0.0128610,(Boltonia_114[&!color=#009933]:0.00257110,Boltonia_255[&!color=#009933]:0.000680265)[&bs=100,!color=#009933]:0.0400997)[&bs=100,!color=#009933]:0.0115088)[&bs=88,!color=#009933]:0.00605825)[&bs=17,!color=#009933]:0.00452173,Boltonia_169[&!color=#009933]:0.0246379)[&bs=96,!color=#009933]:0.00583437,(Boltonia_025[&!color=#009933]:0.0291000,(Boltonia_226[&!color=#009933]:0.0248108,(Boltonia_321[&!color=#009933]:2.82680e-06,Boltonia_466[&!color=#009933]:0.000208488)[&bs=100,!color=#009933]:0.0304066)[&bs=93,!color=#009933]:0.00346120)[&bs=97,!color=#009933]:0.0100832)[&bs=100,!color=#009933]:0.00666858,((Boltonia_176[&!color=#009933]:0.00704235,Boltonia_178[&!color=#009933]:0.0159787)[&bs=53,!color=#009933]:0.00409793,Boltonia_262[&!color=#009933]:0.0190078)[&bs=100,!color=#009933]:0.0209011)[&bs=59,!color=#009933]:0.00777897,((Boltonia_036[&!color=#009933]:0.00572696,Boltonia_283[&!color=#009933]:0.00587189)[&bs=100,!color=#009933]:0.0145560,Boltonia_253[&!color=#009933]:0.0231588)[&bs=100,!color=#009933]:0.0157696)[&bs=55,!color=#009933]:0.00755774,(Boltonia_155[&!color=#009933]:0.00350425,Boltonia_396[&!color=#009933]:0.000843555)[&bs=100,!color=#009933]:0.0309817)[&bs=100,!color=#009933]:0.0223747);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=301;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=390;
+	set legend.attribute="bs";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="bs";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=10;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=true;
+	set nodeLabels.significantDigits=5;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=0;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.boxSize=4;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=12;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set tipLabels.tipPath=true;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+

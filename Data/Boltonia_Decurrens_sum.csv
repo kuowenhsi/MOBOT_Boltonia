@@ -1,0 +1,23 @@
+﻿Maternal Line,Sample Group,Latitude,Longitude,Location,Location Details,Count,Flowerhead Count
+2011-2623-1,hennepin*,41.3441,-89.5585,"Hennepin, IL",Hennepin Bridge,25,14
+2011-2629-1,marshal,41.045,-89.4311,"Marshal, IL",Sparland,32,15
+2011-2650-1,woodford,40.8853,-89.4583,"Woodford, IL",Woodford County,27,15
+2011-2618-1,peoria,40.7222,-89.5519,"Peoria, IL",McClugage Bridge,24,14
+2011-2644-1,tazewell*‡,40.6997,-89.54,"Tazewell, IL",Cooper Park,1,1
+2011-2661-1,tazewell*‡,40.6958,-89.5439,"Tazewell, IL",Cooper Park South,25,16
+2011-2666-1,fulton3,40.4925,-89.9022,"Fulton, IL",Rice Lake,25,14
+2011-2613-1,fulton1,40.2047,-90.1994,"Fulton, IL",Anderson Lake,21,12
+2011-2664-1,fulton2,40.2047,-90.1994,"Fulton, IL",Anderson Lake,28,15
+2011-2659-1,frederick*,40.0712,-90.4296,"Frederick, IL",Frederick Landing,23,12
+2011-2675-1,schuyler,40.0672,-90.4275,"Schuyler, IL",Frederick Borrow Pit,32,16
+2011-2636-1,cass†,40.0106,-90.4458,"Cass, IL",Beardstown,8,6
+2011-2620-1,morgan,39.8672,-90.5533,"Morgan, IL",Meredosia Lake,25,15
+2011-2638-1,scott,39.7853,-90.5903,"Scott, IL",,36,19
+2011-2598-1,jersey*,38.9614,-90.5148,"Jersey, IL",Gilbert Lake,36,18
+2011-2635-1,alton*,38.865,-90.223,"St. Charles, MO",West Alton,23,14
+2011-2609-1,madison,38.6892,-90.0972,"Madison, IL",Horseshoe Lake,13,8
+2011-2599-1,saint_clair,38.6494,-90.1161,"Saint Clair, IL",Fairmont City,20,11
+,,,,,,,
+,*coordinates from google estimates based on location details,,,,,,
+,"‡34 individuals sampled, 26 were found to be misidentified",,,,,,
+,†tazewell population were combined for analysis,,,,,,

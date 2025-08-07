@@ -1,0 +1,28 @@
+PLINK v1.90b5 64-bit (14 Nov 2017)
+Options in effect:
+  --allow-extra-chr
+  --bfile ./ADMIXTURE_hybrid/Boltonia_hybrid_ID_fillmissing_LD
+  --out ./ADMIXTURE_hybrid/Boltonia_hybrid_ID_fillmissing_LD
+  --pca
+
+Hostname: fe9a9ffa1b89
+Working directory: /Desktop/MOBOT_Boltonia/Data
+Start time: Thu Jul 24 14:51:25 2025
+
+Random number seed: 1753368685
+3587 MB RAM detected; reserving 1793 MB for main workspace.
+226161 variants loaded from .bim file.
+460 people (0 males, 0 females, 460 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+./ADMIXTURE_hybrid/Boltonia_hybrid_ID_fillmissing_LD.nosex .
+Using up to 11 threads (change this with --threads).
+Before main variant filters, 460 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+226161 variants and 460 people pass filters and QC.
+Note: No phenotypes present.
+Relationship matrix calculation complete.
+--pca: Results saved to
+./ADMIXTURE_hybrid/Boltonia_hybrid_ID_fillmissing_LD.eigenval and
+./ADMIXTURE_hybrid/Boltonia_hybrid_ID_fillmissing_LD.eigenvec .
+
+End time: Thu Jul 24 14:51:32 2025

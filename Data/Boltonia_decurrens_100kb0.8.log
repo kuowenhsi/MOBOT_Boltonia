@@ -6,12 +6,12 @@ Options in effect:
   --pfile Boltonia_decurrens_100kb0.8
   --psam Boltonia_decurrens_100kb0.8.withpop.psam
 
-Hostname: 3d3f076db2b4
+Hostname: e06f141402a3
 Working directory: /Desktop/REUProject_LargeFiles/Data/PCadapt_output
-Start time: Tue Jul 22 22:40:05 2025
+Start time: Wed Jul 23 15:14:31 2025
 
-Random number seed: 1753224005
-3587 MiB RAM detected, ~3072 available; reserving 1793 MiB for main workspace.
+Random number seed: 1753283671
+3587 MiB RAM detected, ~3065 available; reserving 1793 MiB for main workspace.
 Using up to 12 threads (change this with --threads).
 424 samples (0 females, 0 males, 424 ambiguous; 0 founders) loaded from
 Boltonia_decurrens_100kb0.8.withpop.psam.
@@ -22,4 +22,4 @@ Autosomal --fst: done.
 Autosomal --fst: Summary written to
 ./../../../MOBOT_Boltonia/Data/Boltonia_decurrens_100kb0.8.fst.summary .
 
-End time: Tue Jul 22 22:40:07 2025
+End time: Wed Jul 23 15:14:34 2025

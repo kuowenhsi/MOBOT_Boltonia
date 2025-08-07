@@ -156,6 +156,7 @@ p <- ggplot() +
     legend.text = element_text(size = 9),
     legend.title = element_text(size = 10)
   ) + 
+  coord_fixed() +
   scale_y_reverse()
 
 p

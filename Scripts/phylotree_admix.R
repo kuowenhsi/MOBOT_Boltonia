@@ -1,11 +1,11 @@
 library(dplyr)
+library(ggplot2)
 library(readr)
 library(stringr)
 library(tidyr)
 library(ggtree)
 library(ape)
 library(ggstance)
-library(RColorBrewer)
 
 # ======= USER SETTINGS: CHANGE THESE AS NEEDED =======
 
@@ -93,10 +93,6 @@ admix_long <- admix_pop |>
   pivot_longer(cols = all_of(ancestry_cols), names_to = "Ancestry", values_to = "Proportion") |>
   left_join(label_df, by = "IID") |>
   mutate(IID = factor(new_label, levels = label_df$new_label))
-# Define fill colors for ancestries
-fill_colors <- brewer.pal(max(3, k), color_palette)[1:k]
-names(fill_colors) <- ancestry_cols
-
 #### Plotting ####
 
 # Base tree with new tip labels
@@ -113,8 +109,8 @@ tree_plot <- p +
     stat = "identity",
     width = 1
   ) +
-  scale_fill_manual(values = fill_colors) +
-  theme(legend.position = "none")
+  theme(legend.position = "none") +
+  scale_fill_brewer("Ancestry", palette = "Set3")
 
 tree_plot <- facet_widths(tree_plot, widths = c(2.5, 1))  # Tree : Admixture width ratio
 
@@ -128,5 +124,5 @@ ggsave(
   plot = tree_plot,
   width = 25,     # width in inches
   height = 49,    # height in inches
-  dpi = 300       # resolution
+  dpi = 600       # resolution
 )

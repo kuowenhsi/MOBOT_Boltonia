@@ -1,0 +1,2012 @@
+IQ-TREE 3.0.1 built May  5 2025
+
+Input file name: ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy
+User tree file name: ./first_run/Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.treefile
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 489365
+
+REFERENCES
+----------
+
+To cite IQ-TREE 3 please use:
+
+Thomas K.F. Wong, Nhan Ly-Trong, Huaiyan Ren, Hector Banos, Andrew J. Roger,
+Edward Susko, Chris Bielow, Nicola De Maio, Nick Goldman, Matthew W. Hahn,
+Gavin Huttley, Robert Lanfear, Bui Quang Minh (2025)
+IQ-TREE 3: Phylogenomic Inference Software using Complex Evolutionary Models.
+Submitted.
+
+Please also cite the following paper(s) for the feature(s) that you used:
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 469 sequences with 37479 nucleotide sites
+Number of constant sites: 17200 (= 45.8924% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 17200 (= 45.8924% of all sites)
+Number of parsimony informative sites: 11826
+Number of distinct site patterns: 37475
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+G4
+
+Rate parameter R:
+
+  A-C: 0.8645
+  A-G: 5.2175
+  A-T: 1.5517
+  C-G: 0.6130
+  C-T: 5.3799
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2597
+  pi(C) = 0.2389
+  pi(G) = 0.2413
+  pi(T) = 0.2601
+
+Rate matrix Q:
+
+  A    -1.018    0.1125    0.6858    0.2199
+  C    0.1223   -0.9653   0.08058    0.7624
+  G    0.7381   0.07978   -0.9596    0.1417
+  T    0.2195    0.7002    0.1314    -1.051
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.2284
+
+ Category  Relative_rate  Proportion
+  1         0.001254       0.25
+  2         0.05161        0.25
+  3         0.4537         0.25
+  4         3.493          0.25
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -669358.8990 (s.e. 6821.1403)
+Unconstrained log-likelihood (without tree): -394705.8946
+Number of free parameters (#branches + #model parameters): 944
+Akaike information criterion (AIC) score: 1340605.7980
+Corrected Akaike information criterion (AICc) score: 1340654.6336
+Bayesian information criterion (BIC) score: 1348659.5681
+
+Total tree length (sum of branch lengths): 20.9349
+Sum of internal branch lengths: 12.1511 (58.0421% of tree length)
+
+WARNING: 3 near-zero internal branches (<0.0000) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Boltonia_001' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Boltonia_001
+|
++--Boltonia_002
+|
+|                                                              +--Boltonia_004
+|                                                           +--| (100)
+|                                                           |  |  +--Boltonia_307
+|                                                           |  +--| (100)
+|                                                           |     +**Boltonia_387
+|                                                        +--| (100)
+|                                                        |  |  +--Boltonia_234
+|                                                        |  +--| (100)
+|                                                        |     +--Boltonia_403
+|                                                     +--| (75)
+|                                                     |  |        +--Boltonia_115
+|                                                     |  |     +--| (74)
+|                                                     |  |     |  +--Boltonia_242
+|                                                     |  |  +--| (100)
+|                                                     |  |  |  +--Boltonia_157
+|                                                     |  +--| (100)
+|                                                     |     |  +--Boltonia_197
+|                                                     |     +--| (100)
+|                                                     |        +--Boltonia_238
+|                                                  +--| (97)
+|                                                  |  |                                            +--Boltonia_005
+|                                                  |  |                                         +--| (100)
+|                                                  |  |                                         |  +--Boltonia_193
+|                                                  |  |                                      +--| (100)
+|                                                  |  |                                      |  |  +**Boltonia_121
+|                                                  |  |                                      |  +--| (100)
+|                                                  |  |                                      |     +--Boltonia_390
+|                                                  |  |                                   +--| (100)
+|                                                  |  |                                   |  +--Boltonia_017
+|                                                  |  |                                +--| (100)
+|                                                  |  |                                |  +--Boltonia_088
+|                                                  |  |                             +--| (100)
+|                                                  |  |                             |  +--Boltonia_045
+|                                                  |  |                          +--| (100)
+|                                                  |  |                          |  +--Boltonia_120
+|                                                  |  |                       +--| (100)
+|                                                  |  |                       |  +--Boltonia_172
+|                                                  |  |                    +--| (40)
+|                                                  |  |                    |  +--Boltonia_215
+|                                                  |  |                 +--| (97)
+|                                                  |  |                 |  |              +--Boltonia_100
+|                                                  |  |                 |  |           +--| (100)
+|                                                  |  |                 |  |           |  +**Boltonia_274
+|                                                  |  |                 |  |        +--| (100)
+|                                                  |  |                 |  |        |  |  +--Boltonia_337
+|                                                  |  |                 |  |        |  +--| (88)
+|                                                  |  |                 |  |        |     +**Boltonia_339
+|                                                  |  |                 |  |     +--| (100)
+|                                                  |  |                 |  |     |  +--Boltonia_427
+|                                                  |  |                 |  |  +--| (99)
+|                                                  |  |                 |  |  |  +--Boltonia_179
+|                                                  |  |                 |  +--| (80)
+|                                                  |  |                 |     +--Boltonia_408
+|                                                  |  |              +--| (87)
+|                                                  |  |              |  |     +--Boltonia_023
+|                                                  |  |              |  |  +--| (99)
+|                                                  |  |              |  |  |  +--Boltonia_350
+|                                                  |  |              |  +--| (60)
+|                                                  |  |              |     +--Boltonia_092
+|                                                  |  |           +--| (62)
+|                                                  |  |           |  |                          +--Boltonia_006
+|                                                  |  |           |  |                       +--| (98)
+|                                                  |  |           |  |                       |  +--Boltonia_394
+|                                                  |  |           |  |                    +--| (93)
+|                                                  |  |           |  |                    |  +--Boltonia_158
+|                                                  |  |           |  |                 +--| (93)
+|                                                  |  |           |  |                 |  |  +**Boltonia_062
+|                                                  |  |           |  |                 |  +--| (99)
+|                                                  |  |           |  |                 |     +**Boltonia_434
+|                                                  |  |           |  |              +--| (99)
+|                                                  |  |           |  |              |  +--Boltonia_144
+|                                                  |  |           |  |           +--| (99)
+|                                                  |  |           |  |           |  +--Boltonia_149
+|                                                  |  |           |  |        +--| (10)
+|                                                  |  |           |  |        |  |  +--Boltonia_311
+|                                                  |  |           |  |        |  +--| (8)
+|                                                  |  |           |  |        |     +--Boltonia_397
+|                                                  |  |           |  |     +--| (10)
+|                                                  |  |           |  |     |  +--Boltonia_306
+|                                                  |  |           |  |  +--| (7)
+|                                                  |  |           |  |  |  +--Boltonia_110
+|                                                  |  |           |  +--| (100)
+|                                                  |  |           |     |  +**Boltonia_055
+|                                                  |  |           |     +--| (20)
+|                                                  |  |           |        +--Boltonia_462
+|                                                  |  |        +--| (99)
+|                                                  |  |        |  |     +--Boltonia_312
+|                                                  |  |        |  |  +--| (97)
+|                                                  |  |        |  |  |  |  +--Boltonia_341
+|                                                  |  |        |  |  |  +--| (100)
+|                                                  |  |        |  |  |     +--Boltonia_366
+|                                                  |  |        |  +--| (100)
+|                                                  |  |        |     +--Boltonia_388
+|                                                  |  |     +--| (100)
+|                                                  |  |     |  |                    +--Boltonia_014
+|                                                  |  |     |  |                 +--| (100)
+|                                                  |  |     |  |                 |  +--Boltonia_106
+|                                                  |  |     |  |              +--| (100)
+|                                                  |  |     |  |              |  +--Boltonia_227
+|                                                  |  |     |  |           +--| (99)
+|                                                  |  |     |  |           |  +--Boltonia_113
+|                                                  |  |     |  |        +--| (65)
+|                                                  |  |     |  |        |  +--Boltonia_355
+|                                                  |  |     |  |     +--| (64)
+|                                                  |  |     |  |     |  +--Boltonia_431
+|                                                  |  |     |  |  +--| (98)
+|                                                  |  |     |  |  |  +--Boltonia_246
+|                                                  |  |     |  +--| (100)
+|                                                  |  |     |     |  +--Boltonia_400
+|                                                  |  |     |     +--| (99)
+|                                                  |  |     |        +--Boltonia_432
+|                                                  |  |  +--| (100)
+|                                                  |  |  |  |        +**Boltonia_043
+|                                                  |  |  |  |     +--| (100)
+|                                                  |  |  |  |     |  +--Boltonia_271
+|                                                  |  |  |  |  +--| (100)
+|                                                  |  |  |  |  |  +--Boltonia_289
+|                                                  |  |  |  +--| (100)
+|                                                  |  |  |     +--Boltonia_374
+|                                                  |  +--| (77)
+|                                                  |     +--Boltonia_296
+|                                               +--| (59)
+|                                               |  |           +--Boltonia_021
+|                                               |  |        +--| (43)
+|                                               |  |        |  |     +--Boltonia_093
+|                                               |  |        |  |  +--| (100)
+|                                               |  |        |  |  |  +--Boltonia_202
+|                                               |  |        |  +--| (100)
+|                                               |  |        |     +--Boltonia_243
+|                                               |  |     +--| (44)
+|                                               |  |     |  |  +--Boltonia_111
+|                                               |  |     |  +--| (100)
+|                                               |  |     |     +--Boltonia_270
+|                                               |  |  +--| (44)
+|                                               |  |  |  |        +--Boltonia_117
+|                                               |  |  |  |     +--| (100)
+|                                               |  |  |  |     |  +--Boltonia_147
+|                                               |  |  |  |  +--| (100)
+|                                               |  |  |  |  |  +--Boltonia_334
+|                                               |  |  |  +--| (98)
+|                                               |  |  |     |        +--Boltonia_231
+|                                               |  |  |     |     +--| (100)
+|                                               |  |  |     |     |  +--Boltonia_313
+|                                               |  |  |     |  +--| (100)
+|                                               |  |  |     |  |  +--Boltonia_402
+|                                               |  |  |     +--| (98)
+|                                               |  |  |        +--Boltonia_305
+|                                               |  +--| (98)
+|                                               |     |           +--Boltonia_074
+|                                               |     |        +--| (100)
+|                                               |     |        |  +--Boltonia_322
+|                                               |     |     +--| (97)
+|                                               |     |     |  |  +--Boltonia_189
+|                                               |     |     |  +--| (100)
+|                                               |     |     |     +--Boltonia_379
+|                                               |     |  +--| (61)
+|                                               |     |  |  |     +--Boltonia_099
+|                                               |     |  |  |  +--| (100)
+|                                               |     |  |  |  |  |  +--Boltonia_159
+|                                               |     |  |  |  |  +--| (100)
+|                                               |     |  |  |  |     +--Boltonia_207
+|                                               |     |  |  +--| (96)
+|                                               |     |  |     +--Boltonia_411
+|                                               |     +--| (43)
+|                                               |        |     +--Boltonia_095
+|                                               |        |  +--| (45)
+|                                               |        |  |  |  +--Boltonia_241
+|                                               |        |  |  +--| (45)
+|                                               |        |  |     +--Boltonia_318
+|                                               |        +--| (40)
+|                                               |           +--Boltonia_112
+|                                            +--| (17)
+|                                            |  |              +--Boltonia_019
+|                                            |  |           +--| (95)
+|                                            |  |           |  |                 +**Boltonia_084
+|                                            |  |           |  |              +--| (63)
+|                                            |  |           |  |              |  +--Boltonia_174
+|                                            |  |           |  |           +--| (100)
+|                                            |  |           |  |           |  +--Boltonia_377
+|                                            |  |           |  |        +--| (60)
+|                                            |  |           |  |        |  +--Boltonia_188
+|                                            |  |           |  |     +--| (58)
+|                                            |  |           |  |     |  +--Boltonia_101
+|                                            |  |           |  |  +--| (96)
+|                                            |  |           |  |  |  +--Boltonia_133
+|                                            |  |           |  +--| (100)
+|                                            |  |           |     +--Boltonia_138
+|                                            |  |        +--| (97)
+|                                            |  |        |  |  +--Boltonia_079
+|                                            |  |        |  +--| (100)
+|                                            |  |        |     |  +--Boltonia_140
+|                                            |  |        |     +--| (100)
+|                                            |  |        |        +--Boltonia_420
+|                                            |  |     +--| (100)
+|                                            |  |     |  +--Boltonia_078
+|                                            |  |  +--| (99)
+|                                            |  |  |  |              +**Boltonia_097
+|                                            |  |  |  |           +--| (32)
+|                                            |  |  |  |           |  |     +--Boltonia_162
+|                                            |  |  |  |           |  |  +--| (100)
+|                                            |  |  |  |           |  |  |  +--Boltonia_239
+|                                            |  |  |  |           |  +--| (100)
+|                                            |  |  |  |           |     +--Boltonia_371
+|                                            |  |  |  |        +--| (100)
+|                                            |  |  |  |        |  |  +--Boltonia_237
+|                                            |  |  |  |        |  +--| (100)
+|                                            |  |  |  |        |     +--Boltonia_302
+|                                            |  |  |  |     +--| (100)
+|                                            |  |  |  |     |  |     +**Boltonia_412
+|                                            |  |  |  |     |  |  +--| (100)
+|                                            |  |  |  |     |  |  |  +**Boltonia_465
+|                                            |  |  |  |     |  +--| (100)
+|                                            |  |  |  |     |     +--Boltonia_428
+|                                            |  |  |  |  +--| (92)
+|                                            |  |  |  |  |  +--Boltonia_372
+|                                            |  |  |  +--| (100)
+|                                            |  |  |     |     +--Boltonia_118
+|                                            |  |  |     |  +--| (100)
+|                                            |  |  |     |  |  +--Boltonia_287
+|                                            |  |  |     +--| (89)
+|                                            |  |  |        |  +--Boltonia_129
+|                                            |  |  |        +--| (100)
+|                                            |  |  |           +--Boltonia_438
+|                                            |  +--| (22)
+|                                            |     |           +--Boltonia_046
+|                                            |     |        +--| (100)
+|                                            |     |        |  +--Boltonia_167
+|                                            |     |     +--| (100)
+|                                            |     |     |  |              +--Boltonia_048
+|                                            |     |     |  |           +--| (100)
+|                                            |     |     |  |           |  +--Boltonia_285
+|                                            |     |     |  |        +--| (97)
+|                                            |     |     |  |        |  |     +**Boltonia_187
+|                                            |     |     |  |        |  |  +--| (100)
+|                                            |     |     |  |        |  |  |  +--Boltonia_421
+|                                            |     |     |  |        |  +--| (100)
+|                                            |     |     |  |        |     +--Boltonia_398
+|                                            |     |     |  |     +--| (100)
+|                                            |     |     |  |     |  |  +--Boltonia_119
+|                                            |     |     |  |     |  +--| (97)
+|                                            |     |     |  |     |     +--Boltonia_235
+|                                            |     |     |  |  +--| (100)
+|                                            |     |     |  |  |  +--Boltonia_272
+|                                            |     |     |  +--| (100)
+|                                            |     |     |     +--Boltonia_152
+|                                            |     |  +--| (100)
+|                                            |     |  |  |     +--Boltonia_148
+|                                            |     |  |  |  +--| (100)
+|                                            |     |  |  |  |  +--Boltonia_212
+|                                            |     |  |  +--| (100)
+|                                            |     |  |     +--Boltonia_164
+|                                            |     +--| (100)
+|                                            |        |     +--Boltonia_220
+|                                            |        |  +--| (100)
+|                                            |        |  |  +--Boltonia_265
+|                                            |        +--| (100)
+|                                            |           +--Boltonia_323
+|                                         +--| (96)
+|                                         |  |                                      +--Boltonia_009
+|                                         |  |                                   +--| (100)
+|                                         |  |                                   |  +--Boltonia_424
+|                                         |  |                                +--| (94)
+|                                         |  |                                |  |              +--Boltonia_012
+|                                         |  |                                |  |           +--| (99)
+|                                         |  |                                |  |           |  +--Boltonia_360
+|                                         |  |                                |  |        +--| (100)
+|                                         |  |                                |  |        |  +--Boltonia_091
+|                                         |  |                                |  |     +**| (96)
+|                                         |  |                                |  |     |  +**Boltonia_448
+|                                         |  |                                |  |  +**| (90)
+|                                         |  |                                |  |  |  +--Boltonia_102
+|                                         |  |                                |  +--| (94)
+|                                         |  |                                |     +**Boltonia_067
+|                                         |  |                             +--| (100)
+|                                         |  |                             |  +--Boltonia_456
+|                                         |  |                          +--| (100)
+|                                         |  |                          |  +--Boltonia_384
+|                                         |  |                       +--| (100)
+|                                         |  |                       |  +--Boltonia_288
+|                                         |  |                    +--| (100)
+|                                         |  |                    |  +--Boltonia_259
+|                                         |  |                 +--| (72)
+|                                         |  |                 |  |  +--Boltonia_171
+|                                         |  |                 |  +--| (100)
+|                                         |  |                 |     +--Boltonia_320
+|                                         |  |              +--| (18)
+|                                         |  |              |  |  +--Boltonia_218
+|                                         |  |              |  +--| (100)
+|                                         |  |              |     |  +--Boltonia_267
+|                                         |  |              |     +--| (100)
+|                                         |  |              |        +--Boltonia_367
+|                                         |  |           +--| (98)
+|                                         |  |           |  |        +--Boltonia_027
+|                                         |  |           |  |     +--| (100)
+|                                         |  |           |  |     |  +--Boltonia_430
+|                                         |  |           |  |  +--| (62)
+|                                         |  |           |  |  |  +--Boltonia_361
+|                                         |  |           |  +--| (16)
+|                                         |  |           |     |        +--Boltonia_058
+|                                         |  |           |     |     +--| (100)
+|                                         |  |           |     |     |  +--Boltonia_441
+|                                         |  |           |     |  +--| (100)
+|                                         |  |           |     |  |  +--Boltonia_468
+|                                         |  |           |     +--| (100)
+|                                         |  |           |        |  +--Boltonia_103
+|                                         |  |           |        +--| (82)
+|                                         |  |           |           |     +--Boltonia_190
+|                                         |  |           |           |  +--| (100)
+|                                         |  |           |           |  |  +--Boltonia_442
+|                                         |  |           |           +--| (100)
+|                                         |  |           |              |  +**Boltonia_335
+|                                         |  |           |              +--| (100)
+|                                         |  |           |                 +--Boltonia_435
+|                                         |  |        +--| (97)
+|                                         |  |        |  +--Boltonia_453
+|                                         |  |     +--| (100)
+|                                         |  |     |  |     +--Boltonia_225
+|                                         |  |     |  |  +--| (100)
+|                                         |  |     |  |  |  +--Boltonia_250
+|                                         |  |     |  +--| (100)
+|                                         |  |     |     +--Boltonia_264
+|                                         |  |  +--| (96)
+|                                         |  |  |  |  +**Boltonia_173
+|                                         |  |  |  +--| (100)
+|                                         |  |  |     +**Boltonia_260
+|                                         |  +--| (98)
+|                                         |     |        +--Boltonia_044
+|                                         |     |     +--| (100)
+|                                         |     |     |  +--Boltonia_378
+|                                         |     |  +--| (96)
+|                                         |     |  |  |  +--Boltonia_083
+|                                         |     |  |  +--| (100)
+|                                         |     |  |     +--Boltonia_279
+|                                         |     +--| (96)
+|                                         |        |     +--Boltonia_183
+|                                         |        |  +--| (82)
+|                                         |        |  |  +--Boltonia_417
+|                                         |        +--| (98)
+|                                         |           +--Boltonia_349
+|                                      +--| (97)
+|                                      |  |                             +--Boltonia_007
+|                                      |  |                          +--| (100)
+|                                      |  |                          |  +--Boltonia_222
+|                                      |  |                       +--| (40)
+|                                      |  |                       |  |  +--Boltonia_030
+|                                      |  |                       |  +--| (100)
+|                                      |  |                       |     |     +--Boltonia_292
+|                                      |  |                       |     |  +--| (100)
+|                                      |  |                       |     |  |  +--Boltonia_426
+|                                      |  |                       |     +--| (100)
+|                                      |  |                       |        +--Boltonia_315
+|                                      |  |                    +--| (100)
+|                                      |  |                    |  |     +--Boltonia_022
+|                                      |  |                    |  |  +--| (41)
+|                                      |  |                    |  |  |  |  +--Boltonia_161
+|                                      |  |                    |  |  |  +--| (100)
+|                                      |  |                    |  |  |     +--Boltonia_229
+|                                      |  |                    |  +--| (40)
+|                                      |  |                    |     |  +--Boltonia_024
+|                                      |  |                    |     +--| (100)
+|                                      |  |                    |        +--Boltonia_057
+|                                      |  |                 +--| (98)
+|                                      |  |                 |  |        +--Boltonia_151
+|                                      |  |                 |  |     +--| (100)
+|                                      |  |                 |  |     |  +--Boltonia_327
+|                                      |  |                 |  |  +--| (73)
+|                                      |  |                 |  |  |  |     +--Boltonia_194
+|                                      |  |                 |  |  |  |  +--| (100)
+|                                      |  |                 |  |  |  |  |  +**Boltonia_338
+|                                      |  |                 |  |  |  +--| (74)
+|                                      |  |                 |  |  |     |  +--Boltonia_201
+|                                      |  |                 |  |  |     +--| (74)
+|                                      |  |                 |  |  |        |  +**Boltonia_290
+|                                      |  |                 |  |  |        +--| (100)
+|                                      |  |                 |  |  |           +**Boltonia_370
+|                                      |  |                 |  +--| (97)
+|                                      |  |                 |     +--Boltonia_342
+|                                      |  |              +--| (99)
+|                                      |  |              |  |     +--Boltonia_073
+|                                      |  |              |  |  +--| (100)
+|                                      |  |              |  |  |  +--Boltonia_208
+|                                      |  |              |  +--| (100)
+|                                      |  |              |     |     +--Boltonia_135
+|                                      |  |              |     |  +--| (100)
+|                                      |  |              |     |  |  +**Boltonia_299
+|                                      |  |              |     +--| (100)
+|                                      |  |              |        +--Boltonia_294
+|                                      |  |           +--| (99)
+|                                      |  |           |  |        +--Boltonia_033
+|                                      |  |           |  |     +--| (99)
+|                                      |  |           |  |     |  |  +--Boltonia_087
+|                                      |  |           |  |     |  +--| (100)
+|                                      |  |           |  |     |     +--Boltonia_137
+|                                      |  |           |  |  +--| (99)
+|                                      |  |           |  |  |  |     +--Boltonia_089
+|                                      |  |           |  |  |  |  +--| (99)
+|                                      |  |           |  |  |  |  |  +--Boltonia_090
+|                                      |  |           |  |  |  +--| (100)
+|                                      |  |           |  |  |     +--Boltonia_180
+|                                      |  |           |  +--| (98)
+|                                      |  |           |     |  +--Boltonia_316
+|                                      |  |           |     +--| (100)
+|                                      |  |           |        +--Boltonia_399
+|                                      |  |        +--| (100)
+|                                      |  |        |  |                    +--Boltonia_015
+|                                      |  |        |  |                 +--| (100)
+|                                      |  |        |  |                 |  +--Boltonia_081
+|                                      |  |        |  |              +--| (98)
+|                                      |  |        |  |              |  |     +--Boltonia_131
+|                                      |  |        |  |              |  |  +--| (100)
+|                                      |  |        |  |              |  |  |  +--Boltonia_233
+|                                      |  |        |  |              |  +--| (100)
+|                                      |  |        |  |              |     |  +**Boltonia_280
+|                                      |  |        |  |              |     +--| (100)
+|                                      |  |        |  |              |        +**Boltonia_332
+|                                      |  |        |  |           +--| (100)
+|                                      |  |        |  |           |  |     +--Boltonia_056
+|                                      |  |        |  |           |  |  +--| (100)
+|                                      |  |        |  |           |  |  |  +--Boltonia_205
+|                                      |  |        |  |           |  +--| (98)
+|                                      |  |        |  |           |     +--Boltonia_065
+|                                      |  |        |  |        +--| (100)
+|                                      |  |        |  |        |  |     +--Boltonia_182
+|                                      |  |        |  |        |  |  +--| (14)
+|                                      |  |        |  |        |  |  |  +--Boltonia_209
+|                                      |  |        |  |        |  +--| (100)
+|                                      |  |        |  |        |     +--Boltonia_445
+|                                      |  |        |  |     +--| (98)
+|                                      |  |        |  |     |  |        +--Boltonia_060
+|                                      |  |        |  |     |  |     +--| (100)
+|                                      |  |        |  |     |  |     |  +--Boltonia_353
+|                                      |  |        |  |     |  |  +--| (100)
+|                                      |  |        |  |     |  |  |  +--Boltonia_345
+|                                      |  |        |  |     |  +--| (100)
+|                                      |  |        |  |     |     |        +--Boltonia_134
+|                                      |  |        |  |     |     |     +--| (100)
+|                                      |  |        |  |     |     |     |  +--Boltonia_386
+|                                      |  |        |  |     |     |  +--| (99)
+|                                      |  |        |  |     |     |  |  |  +--Boltonia_143
+|                                      |  |        |  |     |     |  |  +--| (100)
+|                                      |  |        |  |     |     |  |     |  +--Boltonia_154
+|                                      |  |        |  |     |     |  |     +--| (100)
+|                                      |  |        |  |     |     |  |        +**Boltonia_365
+|                                      |  |        |  |     |     +--| (97)
+|                                      |  |        |  |     |        +--Boltonia_282
+|                                      |  |        |  |  +--| (95)
+|                                      |  |        |  |  |  |  +--Boltonia_080
+|                                      |  |        |  |  |  +--| (97)
+|                                      |  |        |  |  |     +--Boltonia_415
+|                                      |  |        |  +--| (96)
+|                                      |  |        |     |  +--Boltonia_228
+|                                      |  |        |     +--| (100)
+|                                      |  |        |        +--Boltonia_413
+|                                      |  |     +--| (99)
+|                                      |  |     |  |        +--Boltonia_013
+|                                      |  |     |  |     +--| (69)
+|                                      |  |     |  |     |  |     +--Boltonia_130
+|                                      |  |     |  |     |  |  +--| (83)
+|                                      |  |     |  |     |  |  |  |  +--Boltonia_163
+|                                      |  |     |  |     |  |  |  +--| (100)
+|                                      |  |     |  |     |  |  |     +--Boltonia_191
+|                                      |  |     |  |     |  +--| (100)
+|                                      |  |     |  |     |     |        +**Boltonia_195
+|                                      |  |     |  |     |     |     +--| (100)
+|                                      |  |     |  |     |     |     |  +**Boltonia_362
+|                                      |  |     |  |     |     |  +--| (100)
+|                                      |  |     |  |     |     |  |  |  +--Boltonia_268
+|                                      |  |     |  |     |     |  |  +--| (100)
+|                                      |  |     |  |     |     |  |     +**Boltonia_291
+|                                      |  |     |  |     |     +--| (100)
+|                                      |  |     |  |     |        +--Boltonia_395
+|                                      |  |     |  |  +--| (100)
+|                                      |  |     |  |  |  |  +--Boltonia_132
+|                                      |  |     |  |  |  +--| (100)
+|                                      |  |     |  |  |     |     +--Boltonia_329
+|                                      |  |     |  |  |     |  +--| (100)
+|                                      |  |     |  |  |     |  |  +--Boltonia_344
+|                                      |  |     |  |  |     +--| (100)
+|                                      |  |     |  |  |        +--Boltonia_375
+|                                      |  |     |  +--| (98)
+|                                      |  |     |     |              +--Boltonia_029
+|                                      |  |     |     |           +--| (100)
+|                                      |  |     |     |           |  +--Boltonia_325
+|                                      |  |     |     |        +--| (100)
+|                                      |  |     |     |        |  |  +--Boltonia_170
+|                                      |  |     |     |        |  +--| (100)
+|                                      |  |     |     |        |     +--Boltonia_269
+|                                      |  |     |     |     +--| (81)
+|                                      |  |     |     |     |  +--Boltonia_232
+|                                      |  |     |     |  +--| (95)
+|                                      |  |     |     |  |  |  +--Boltonia_053
+|                                      |  |     |     |  |  +--| (100)
+|                                      |  |     |     |  |     +--Boltonia_258
+|                                      |  |     |     +--| (99)
+|                                      |  |     |        |                 +--Boltonia_063
+|                                      |  |     |        |              +--| (100)
+|                                      |  |     |        |              |  +--Boltonia_185
+|                                      |  |     |        |           +--| (100)
+|                                      |  |     |        |           |  +--Boltonia_393
+|                                      |  |     |        |        +--| (100)
+|                                      |  |     |        |        |  +--Boltonia_330
+|                                      |  |     |        |     +--| (100)
+|                                      |  |     |        |     |  +--Boltonia_142
+|                                      |  |     |        |  +--| (89)
+|                                      |  |     |        |  |  +--Boltonia_123
+|                                      |  |     |        +--| (89)
+|                                      |  |     |           |     +--Boltonia_066
+|                                      |  |     |           |  +--| (100)
+|                                      |  |     |           |  |  +--Boltonia_124
+|                                      |  |     |           +--| (100)
+|                                      |  |     |              +--Boltonia_221
+|                                      |  |  +--| (73)
+|                                      |  |  |  |           +--Boltonia_070
+|                                      |  |  |  |        +--| (90)
+|                                      |  |  |  |        |  |  +--Boltonia_128
+|                                      |  |  |  |        |  +--| (100)
+|                                      |  |  |  |        |     +--Boltonia_437
+|                                      |  |  |  |     +--| (100)
+|                                      |  |  |  |     |  +--Boltonia_276
+|                                      |  |  |  |  +--| (94)
+|                                      |  |  |  |  |  |  +--Boltonia_219
+|                                      |  |  |  |  |  +--| (98)
+|                                      |  |  |  |  |     +--Boltonia_331
+|                                      |  |  |  +--| (82)
+|                                      |  |  |     |        +--Boltonia_127
+|                                      |  |  |     |     +--| (100)
+|                                      |  |  |     |     |  +**Boltonia_249
+|                                      |  |  |     |  +--| (100)
+|                                      |  |  |     |  |  +**Boltonia_301
+|                                      |  |  |     +--| (92)
+|                                      |  |  |        |     +--Boltonia_240
+|                                      |  |  |        |  +--| (100)
+|                                      |  |  |        |  |  +--Boltonia_309
+|                                      |  |  |        +--| (100)
+|                                      |  |  |           +--Boltonia_459
+|                                      |  +--| (96)
+|                                      |     |           +--Boltonia_020
+|                                      |     |        +--| (86)
+|                                      |     |        |  +--Boltonia_150
+|                                      |     |     +--| (100)
+|                                      |     |     |  +--Boltonia_077
+|                                      |     |  +--| (100)
+|                                      |     |  |  |     +--Boltonia_085
+|                                      |     |  |  |  +--| (100)
+|                                      |     |  |  |  |  +--Boltonia_257
+|                                      |     |  |  +--| (100)
+|                                      |     |  |     +--Boltonia_275
+|                                      |     +--| (92)
+|                                      |        |  +--Boltonia_107
+|                                      |        +--| (93)
+|                                      |           |  +--Boltonia_217
+|                                      |           +--| (100)
+|                                      |              +--Boltonia_304
+|                                   +--| (99)
+|                                   |  |           +--Boltonia_026
+|                                   |  |        +--| (100)
+|                                   |  |        |  |                       +--Boltonia_028
+|                                   |  |        |  |                    +--| (97)
+|                                   |  |        |  |                    |  +--Boltonia_040
+|                                   |  |        |  |                 +--| (70)
+|                                   |  |        |  |                 |  |     +--Boltonia_168
+|                                   |  |        |  |                 |  |  +--| (100)
+|                                   |  |        |  |                 |  |  |  +--Boltonia_310
+|                                   |  |        |  |                 |  +--| (100)
+|                                   |  |        |  |                 |     +--Boltonia_230
+|                                   |  |        |  |              +--| (100)
+|                                   |  |        |  |              |  |  +--Boltonia_263
+|                                   |  |        |  |              |  +--| (60)
+|                                   |  |        |  |              |     +--Boltonia_354
+|                                   |  |        |  |           +--| (99)
+|                                   |  |        |  |           |  |        +--Boltonia_098
+|                                   |  |        |  |           |  |     +--| (93)
+|                                   |  |        |  |           |  |     |  +--Boltonia_401
+|                                   |  |        |  |           |  |  +--| (60)
+|                                   |  |        |  |           |  |  |  +--Boltonia_458
+|                                   |  |        |  |           |  +--| (62)
+|                                   |  |        |  |           |     +--Boltonia_454
+|                                   |  |        |  |        +--| (99)
+|                                   |  |        |  |        |  +--Boltonia_449
+|                                   |  |        |  |     +--| (99)
+|                                   |  |        |  |     |  +--Boltonia_389
+|                                   |  |        |  |  +--| (100)
+|                                   |  |        |  |  |  +--Boltonia_175
+|                                   |  |        |  +--| (100)
+|                                   |  |        |     +--Boltonia_352
+|                                   |  |     +--| (66)
+|                                   |  |     |  |     +--Boltonia_116
+|                                   |  |     |  |  +--| (100)
+|                                   |  |     |  |  |  +--Boltonia_383
+|                                   |  |     |  +--| (100)
+|                                   |  |     |     +--Boltonia_177
+|                                   |  |  +--| (100)
+|                                   |  |  |  |           +--Boltonia_054
+|                                   |  |  |  |        +--| (100)
+|                                   |  |  |  |        |  +--Boltonia_105
+|                                   |  |  |  |     +--| (94)
+|                                   |  |  |  |     |  +--Boltonia_108
+|                                   |  |  |  |  +--| (99)
+|                                   |  |  |  |  |  +--Boltonia_181
+|                                   |  |  |  +--| (99)
+|                                   |  |  |     +--Boltonia_317
+|                                   |  +--| (100)
+|                                   |     |     +--Boltonia_037
+|                                   |     |  +--| (100)
+|                                   |     |  |  +--Boltonia_404
+|                                   |     +--| (100)
+|                                   |        |     +--Boltonia_125
+|                                   |        |  +--| (100)
+|                                   |        |  |  +--Boltonia_409
+|                                   |        +--| (100)
+|                                   |           +--Boltonia_186
+|                                +--| (93)
+|                                |  |                 +--Boltonia_032
+|                                |  |              +--| (100)
+|                                |  |              |  +--Boltonia_436
+|                                |  |           +--| (69)
+|                                |  |           |  |  +--Boltonia_277
+|                                |  |           |  +--| (40)
+|                                |  |           |     |  +--Boltonia_278
+|                                |  |           |     +--| (100)
+|                                |  |           |        +**Boltonia_405
+|                                |  |        +--| (100)
+|                                |  |        |  |     +--Boltonia_094
+|                                |  |        |  |  +--| (100)
+|                                |  |        |  |  |  +--Boltonia_343
+|                                |  |        |  +--| (100)
+|                                |  |        |     |  +--Boltonia_160
+|                                |  |        |     +--| (100)
+|                                |  |        |        +--Boltonia_351
+|                                |  |     +--| (100)
+|                                |  |     |  +--Boltonia_224
+|                                |  |  +--| (93)
+|                                |  |  |  |     +--Boltonia_047
+|                                |  |  |  |  +--| (100)
+|                                |  |  |  |  |  +--Boltonia_376
+|                                |  |  |  +--| (100)
+|                                |  |  |     |              +--Boltonia_061
+|                                |  |  |     |           +--| (100)
+|                                |  |  |     |           |  |  +--Boltonia_136
+|                                |  |  |     |           |  +**| (89)
+|                                |  |  |     |           |     +--Boltonia_293
+|                                |  |  |     |        +--| (100)
+|                                |  |  |     |        |  |        +--Boltonia_146
+|                                |  |  |     |        |  |     +--| (99)
+|                                |  |  |     |        |  |     |  +--Boltonia_256
+|                                |  |  |     |        |  |  +--| (100)
+|                                |  |  |     |        |  |  |  +--Boltonia_251
+|                                |  |  |     |        |  +--| (100)
+|                                |  |  |     |        |     +--Boltonia_460
+|                                |  |  |     |     +--| (100)
+|                                |  |  |     |     |  |  +--Boltonia_236
+|                                |  |  |     |     |  +--| (100)
+|                                |  |  |     |     |     +--Boltonia_385
+|                                |  |  |     |  +--| (100)
+|                                |  |  |     |  |  |  +--Boltonia_373
+|                                |  |  |     |  |  +--| (100)
+|                                |  |  |     |  |     +--Boltonia_382
+|                                |  |  |     +--| (98)
+|                                |  |  |        |        +--Boltonia_075
+|                                |  |  |        |     +--| (100)
+|                                |  |  |        |     |  |  +--Boltonia_254
+|                                |  |  |        |     |  +--| (99)
+|                                |  |  |        |     |     +--Boltonia_284
+|                                |  |  |        |  +--| (100)
+|                                |  |  |        |  |  +--Boltonia_086
+|                                |  |  |        +--| (98)
+|                                |  |  |           +--Boltonia_192
+|                                |  +--| (94)
+|                                |     +--Boltonia_392
+|                             +--| (26)
+|                             |  |     +--Boltonia_198
+|                             |  |  +--| (99)
+|                             |  |  |  +--Boltonia_286
+|                             |  +--| (90)
+|                             |     |  +--Boltonia_210
+|                             |     +--| (100)
+|                             |        +--Boltonia_363
+|                          +--| (30)
+|                          |  |           +--Boltonia_031
+|                          |  |        +--| (100)
+|                          |  |        |  |  +--Boltonia_039
+|                          |  |        |  +--| (100)
+|                          |  |        |     +--Boltonia_200
+|                          |  |     +--| (99)
+|                          |  |     |  +--Boltonia_463
+|                          |  |  +--| (89)
+|                          |  |  |  |     +--Boltonia_038
+|                          |  |  |  |  +--| (100)
+|                          |  |  |  |  |  |  +--Boltonia_295
+|                          |  |  |  |  |  +--| (100)
+|                          |  |  |  |  |     +--Boltonia_336
+|                          |  |  |  +--| (97)
+|                          |  |  |     |  +--Boltonia_364
+|                          |  |  |     +--| (100)
+|                          |  |  |        +--Boltonia_455
+|                          |  +--| (91)
+|                          |     |        +--Boltonia_050
+|                          |     |     +--| (100)
+|                          |     |     |  +--Boltonia_076
+|                          |     |  +--| (82)
+|                          |     |  |  |        +--Boltonia_071
+|                          |     |  |  |     +--| (100)
+|                          |     |  |  |     |  +--Boltonia_096
+|                          |     |  |  |  +--| (100)
+|                          |     |  |  |  |  |  +--Boltonia_204
+|                          |     |  |  |  |  +--| (99)
+|                          |     |  |  |  |     +--Boltonia_429
+|                          |     |  |  +--| (100)
+|                          |     |  |     +--Boltonia_273
+|                          |     +--| (74)
+|                          |        |           +--Boltonia_059
+|                          |        |        +--| (100)
+|                          |        |        |  +--Boltonia_380
+|                          |        |     +--| (98)
+|                          |        |     |  +--Boltonia_444
+|                          |        |  +--| (100)
+|                          |        |  |  |  +--Boltonia_245
+|                          |        |  |  +--| (98)
+|                          |        |  |     +--Boltonia_356
+|                          |        +--| (99)
+|                          |           |        +--Boltonia_109
+|                          |           |     +--| (100)
+|                          |           |     |  +--Boltonia_358
+|                          |           |  +--| (100)
+|                          |           |  |  +--Boltonia_244
+|                          |           +--| (100)
+|                          |              |  +--Boltonia_425
+|                          |              +--| (57)
+|                          |                 +--Boltonia_433
+|                       +--| (100)
+|                       |  +--Boltonia_381
+|                    +--| (80)
+|                    |  |                 +--Boltonia_008
+|                    |  |              +--| (100)
+|                    |  |              |  +--Boltonia_247
+|                    |  |           +--| (100)
+|                    |  |           |  +--Boltonia_423
+|                    |  |        +--| (100)
+|                    |  |        |  +--Boltonia_461
+|                    |  |     +--| (100)
+|                    |  |     |  |                    +--Boltonia_016
+|                    |  |     |  |                 +--| (100)
+|                    |  |     |  |                 |  +--Boltonia_281
+|                    |  |     |  |              +--| (100)
+|                    |  |     |  |              |  +--Boltonia_443
+|                    |  |     |  |           +--| (99)
+|                    |  |     |  |           |  |  +--Boltonia_126
+|                    |  |     |  |           |  +--| (98)
+|                    |  |     |  |           |     |  +--Boltonia_446
+|                    |  |     |  |           |     +--| (100)
+|                    |  |     |  |           |        +--Boltonia_457
+|                    |  |     |  |        +--| (98)
+|                    |  |     |  |        |  |  +--Boltonia_051
+|                    |  |     |  |        |  +--| (85)
+|                    |  |     |  |        |     +--Boltonia_298
+|                    |  |     |  |     +--| (59)
+|                    |  |     |  |     |  |        +--Boltonia_052
+|                    |  |     |  |     |  |     +--| (60)
+|                    |  |     |  |     |  |     |  +--Boltonia_467
+|                    |  |     |  |     |  |  +--| (60)
+|                    |  |     |  |     |  |  |  +--Boltonia_248
+|                    |  |     |  |     |  +--| (60)
+|                    |  |     |  |     |     +--Boltonia_145
+|                    |  |     |  |  +--| (60)
+|                    |  |     |  |  |  |  +**Boltonia_308
+|                    |  |     |  |  |  +--| (100)
+|                    |  |     |  |  |     +--Boltonia_359
+|                    |  |     |  +--| (60)
+|                    |  |     |     |  +--Boltonia_261
+|                    |  |     |     +--| (100)
+|                    |  |     |        +--Boltonia_422
+|                    |  |  +--| (100)
+|                    |  |  |  |     +--Boltonia_153
+|                    |  |  |  |  +--| (100)
+|                    |  |  |  |  |  +--Boltonia_213
+|                    |  |  |  +--| (97)
+|                    |  |  |     |  +--Boltonia_211
+|                    |  |  |     +--| (100)
+|                    |  |  |        +--Boltonia_418
+|                    |  +--| (13)
+|                    |     |                             +--Boltonia_010
+|                    |     |                          +--| (91)
+|                    |     |                          |  +--Boltonia_068
+|                    |     |                       +--| (97)
+|                    |     |                       |  +--Boltonia_328
+|                    |     |                    +--| (91)
+|                    |     |                    |  |  +--Boltonia_041
+|                    |     |                    |  +--| (93)
+|                    |     |                    |     +--Boltonia_464
+|                    |     |                 +--| (93)
+|                    |     |                 |  |     +--Boltonia_104
+|                    |     |                 |  |  +--| (95)
+|                    |     |                 |  |  |  +--Boltonia_451
+|                    |     |                 |  +--| (100)
+|                    |     |                 |     |  +--Boltonia_199
+|                    |     |                 |     +--| (95)
+|                    |     |                 |        +--Boltonia_439
+|                    |     |              +--| (100)
+|                    |     |              |  |  +--Boltonia_069
+|                    |     |              |  +--| (93)
+|                    |     |              |     +--Boltonia_252
+|                    |     |           +--| (61)
+|                    |     |           |  |        +--Boltonia_018
+|                    |     |           |  |     +--| (53)
+|                    |     |           |  |     |  +--Boltonia_478
+|                    |     |           |  |  +--| (59)
+|                    |     |           |  |  |  +--Boltonia_314
+|                    |     |           |  +--| (63)
+|                    |     |           |     |  +--Boltonia_166
+|                    |     |           |     +--| (95)
+|                    |     |           |        +--Boltonia_223
+|                    |     |        +--| (100)
+|                    |     |        |  |        +--Boltonia_082
+|                    |     |        |  |     +--| (99)
+|                    |     |        |  |     |  +--Boltonia_357
+|                    |     |        |  |  +--| (100)
+|                    |     |        |  |  |  |  +--Boltonia_216
+|                    |     |        |  |  |  +--| (100)
+|                    |     |        |  |  |     +--Boltonia_419
+|                    |     |        |  +--| (60)
+|                    |     |        |     |  +--Boltonia_206
+|                    |     |        |     +--| (62)
+|                    |     |        |        |  +--Boltonia_319
+|                    |     |        |        +--| (24)
+|                    |     |        |           |  +--Boltonia_340
+|                    |     |        |           +--| (44)
+|                    |     |        |              |  +--Boltonia_347
+|                    |     |        |              +--| (22)
+|                    |     |        |                 +--Boltonia_406
+|                    |     |     +--| (96)
+|                    |     |     |  |  +--Boltonia_471
+|                    |     |     |  +--| (100)
+|                    |     |     |     +--Boltonia_476
+|                    |     |  +--| (100)
+|                    |     |  |  |           +--Boltonia_469
+|                    |     |  |  |        +--| (100)
+|                    |     |  |  |        |  +--Boltonia_470
+|                    |     |  |  |     +--| (99)
+|                    |     |  |  |     |  |              +--Boltonia_472
+|                    |     |  |  |     |  |           +--| (100)
+|                    |     |  |  |     |  |           |  +--Boltonia_473
+|                    |     |  |  |     |  |        +--| (100)
+|                    |     |  |  |     |  |        |  +--Boltonia_474
+|                    |     |  |  |     |  |     +--| (93)
+|                    |     |  |  |     |  |     |  |  +--Boltonia_484
+|                    |     |  |  |     |  |     |  +--| (100)
+|                    |     |  |  |     |  |     |     +--Boltonia_485
+|                    |     |  |  |     |  |  +--| (55)
+|                    |     |  |  |     |  |  |  |                                        +--Boltonia_489
+|                    |     |  |  |     |  |  |  |                      +-----------------| (100)
+|                    |     |  |  |     |  |  |  |                      |                 +--Boltonia_490
+|                    |     |  |  |     |  |  |  +----------------------| (100)
+|                    |     |  |  |     |  |  |                         +----------------------------------Boltonia_491
+|                    |     |  |  |     |  +--| (100)
+|                    |     |  |  |     |     +--Boltonia_486
+|                    |     |  |  |  +--| (100)
+|                    |     |  |  |  |  |  +--Boltonia_481
+|                    |     |  |  |  |  +--| (100)
+|                    |     |  |  |  |     +--Boltonia_482
+|                    |     |  |  +--| (97)
+|                    |     |  |     +--Boltonia_475
+|                    |     +--| (100)
+|                    |        |     +--Boltonia_477
+|                    |        |  +--| (100)
+|                    |        |  |  +--Boltonia_483
+|                    |        +--| (100)
+|                    |           |  +--Boltonia_479
+|                    |           +--| (100)
+|                    |              +--Boltonia_492
+|                 +--| (10)
+|                 |  +--Boltonia_196
+|              +--| (17)
+|              |  |                       +--Boltonia_034
+|              |  |                    +--| (100)
+|              |  |                    |  |  +**Boltonia_042
+|              |  |                    |  +--| (100)
+|              |  |                    |     +--Boltonia_184
+|              |  |                 +--| (100)
+|              |  |                 |  +--Boltonia_324
+|              |  |              +--| (100)
+|              |  |              |  |  +--Boltonia_141
+|              |  |              |  +--| (100)
+|              |  |              |     +--Boltonia_303
+|              |  |           +--| (79)
+|              |  |           |  |  +--Boltonia_203
+|              |  |           |  +--| (79)
+|              |  |           |     |  +--Boltonia_214
+|              |  |           |     +--| (100)
+|              |  |           |        +--Boltonia_326
+|              |  |        +--| (78)
+|              |  |        |  +--Boltonia_165
+|              |  |     +--| (100)
+|              |  |     |  |  +--Boltonia_072
+|              |  |     |  +--| (67)
+|              |  |     |     |  +--Boltonia_139
+|              |  |     |     +--| (100)
+|              |  |     |        +--Boltonia_452
+|              |  |  +--| (94)
+|              |  |  |  +--Boltonia_368
+|              |  +--| (88)
+|              |     |     +--Boltonia_035
+|              |     |  +--| (100)
+|              |     |  |  +--Boltonia_064
+|              |     +--| (100)
+|              |        |  +--Boltonia_114
+|              |        +--| (100)
+|              |           +--Boltonia_255
+|           +--| (96)
+|           |  +--Boltonia_169
+|        +--| (100)
+|        |  |  +--Boltonia_025
+|        |  +--| (97)
+|        |     |  +--Boltonia_226
+|        |     +--| (93)
+|        |        |  +**Boltonia_321
+|        |        +--| (100)
+|        |           +--Boltonia_466
+|     +--| (59)
+|     |  |     +--Boltonia_176
+|     |  |  +--| (53)
+|     |  |  |  +--Boltonia_178
+|     |  +--| (100)
+|     |     +--Boltonia_262
+|  +--| (55)
+|  |  |     +--Boltonia_036
+|  |  |  +--| (100)
+|  |  |  |  +--Boltonia_283
+|  |  +--| (100)
+|  |     +--Boltonia_253
++--| (100)
+   |  +--Boltonia_155
+   +--| (100)
+      +--Boltonia_396
+
+Tree in newick format:
+
+(Boltonia_001:0.0099931784,Boltonia_002:0.0066424496,(((((((((((((((((((((Boltonia_004:0.0066385744,(Boltonia_307:0.0006672726,Boltonia_387:0.0000026883)100:0.0097751072)100:0.0129731952,(Boltonia_234:0.0011274761,Boltonia_403:0.0001591927)100:0.0207391271)100:0.0393809763,(((Boltonia_115:0.0011886445,Boltonia_242:0.0225464274)74:0.0029671441,Boltonia_157:0.0072274591)100:0.0214759950,(Boltonia_197:0.0021886313,Boltonia_238:0.0006043270)100:0.0255530941)100:0.0164798696)75:0.0067778283,(((((((((((((((Boltonia_005:0.0017486719,Boltonia_193:0.0004988710)100:0.0012406997,(Boltonia_121:0.0000022802,Boltonia_390:0.0010113802)100:0.0008893012)100:0.0052424242,Boltonia_017:0.0002984389)100:0.0199741867,Boltonia_088:0.0007387313)100:0.0050083781,Boltonia_045:0.0006579010)100:0.0086525032,Boltonia_120:0.0045310509)100:0.0123428174,Boltonia_172:0.0018488225)100:0.0296646237,Boltonia_215:0.0030038542)40:0.0022198457,(((((Boltonia_100:0.0002832186,Boltonia_274:0.0000025671)100:0.0180051534,(Boltonia_337:0.0000916850,Boltonia_339:0.0000020351)88:0.0209119639)100:0.0087334888,Boltonia_427:0.0008464904)100:0.0155862583,Boltonia_179:0.0068818019)99:0.0161228476,Boltonia_408:0.0009298705)80:0.0022517770)97:0.0240735728,((Boltonia_023:0.0058357525,Boltonia_350:0.0021915609)99:0.0115919066,Boltonia_092:0.0027347629)60:0.0041571349)87:0.0170274960,(((((((((Boltonia_006:0.0010955920,Boltonia_394:0.0006447258)98:0.0008094978,Boltonia_158:0.0009168224)93:0.0001132433,(Boltonia_062:0.0000022153,Boltonia_434:0.0000010000)99:0.0001146141)93:0.0006503827,Boltonia_144:0.0014909932)99:0.0008923386,Boltonia_149:0.0046060225)99:0.0021018537,(Boltonia_311:0.0006860683,Boltonia_397:0.0007567161)8:0.0006223134)10:0.0118498211,Boltonia_306:0.0012796005)10:0.0014036247,Boltonia_110:0.0005777114)7:0.0017846826,(Boltonia_055:0.0000023972,Boltonia_462:0.0014035046)20:0.0039830255)100:0.0356090840)62:0.0126535426,((Boltonia_312:0.0018023463,(Boltonia_341:0.0001988345,Boltonia_366:0.0013751014)100:0.0050802392)97:0.0130908792,Boltonia_388:0.0083427438)100:0.0190508197)99:0.0105197380,(((((((Boltonia_014:0.0030018438,Boltonia_106:0.0024610483)100:0.0481685381,Boltonia_227:0.0001976945)100:0.0015470034,Boltonia_113:0.0013589859)99:0.0019374769,Boltonia_355:0.0014008691)65:0.0017313608,Boltonia_431:0.0008046746)64:0.0083959195,Boltonia_246:0.0178443685)98:0.0192662968,(Boltonia_400:0.0020780579,Boltonia_432:0.0013754906)99:0.0055783174)100:0.0202723119)100:0.0126330616,(((Boltonia_043:0.0000024643,Boltonia_271:0.0008924984)100:0.0069733182,Boltonia_289:0.0028654679)100:0.0123411110,Boltonia_374:0.0072735736)100:0.0232479403)100:0.0134950321,Boltonia_296:0.0235055779)77:0.0072365828)97:0.0073829832,((((Boltonia_021:0.0196021259,((Boltonia_093:0.0019581861,Boltonia_202:0.0007129829)100:0.0134876712,Boltonia_243:0.0157204494)100:0.0196791514)43:0.0051276780,(Boltonia_111:0.0010955000,Boltonia_270:0.0016755712)100:0.0343081594)44:0.0100302838,(((Boltonia_117:0.0237007833,Boltonia_147:0.0131089193)100:0.0104720623,Boltonia_334:0.0170355291)100:0.0106510067,(((Boltonia_231:0.0010958003,Boltonia_313:0.0045268241)100:0.0170773489,Boltonia_402:0.0083704925)100:0.0239879538,Boltonia_305:0.0116960920)98:0.0072329964)98:0.0089423907)44:0.0057824009,((((Boltonia_074:0.0035464397,Boltonia_322:0.0038905885)100:0.0319651832,(Boltonia_189:0.0069154649,Boltonia_379:0.0031915822)100:0.0210288986)97:0.0123003788,((Boltonia_099:0.0052236475,(Boltonia_159:0.0039689198,Boltonia_207:0.0016687192)100:0.0090921653)100:0.0274799571,Boltonia_411:0.0331282375)96:0.0113726459)61:0.0055551250,((Boltonia_095:0.0204076115,(Boltonia_241:0.0126672245,Boltonia_318:0.0104690668)45:0.0116512551)45:0.0161643307,Boltonia_112:0.0171464774)40:0.0093185484)43:0.0067830365)98:0.0061935315)59:0.0038992620,(((((Boltonia_019:0.0144371513,((((((Boltonia_084:0.0000020467,Boltonia_174:0.0010236951)63:0.0005531446,Boltonia_377:0.0001722989)100:0.0244381495,Boltonia_188:0.0096333744)60:0.0136852462,Boltonia_101:0.0026218829)58:0.0075082095,Boltonia_133:0.0124253775)96:0.0091211601,Boltonia_138:0.0153632874)100:0.0104216152)95:0.0077168845,(Boltonia_079:0.0100369059,(Boltonia_140:0.0162445033,Boltonia_420:0.0085635471)100:0.0308959964)100:0.0235433664)97:0.0128266498,Boltonia_078:0.0137066027)100:0.0135325962,(((((Boltonia_097:0.0000027838,((Boltonia_162:0.0004394078,Boltonia_239:0.0013912580)100:0.0040587723,Boltonia_371:0.0008260045)100:0.0371414428)32:0.0103411289,(Boltonia_237:0.0013131282,Boltonia_302:0.0008458488)100:0.0184698660)100:0.0336532354,((Boltonia_412:0.0000010000,Boltonia_465:0.0000022043)100:0.0009836350,Boltonia_428:0.0002117706)100:0.0136646820)100:0.0211763184,Boltonia_372:0.0227158752)92:0.0112663564,((Boltonia_118:0.0021737659,Boltonia_287:0.0032328718)100:0.0285677855,(Boltonia_129:0.0024067413,Boltonia_438:0.0009517728)100:0.0356848831)89:0.0071718264)100:0.0113462173)99:0.0083198023,((((Boltonia_046:0.0058811372,Boltonia_167:0.0057852354)100:0.0139015061,(((((Boltonia_048:0.0029511253,Boltonia_285:0.0015916078)100:0.0034610323,((Boltonia_187:0.0000022291,Boltonia_421:0.0003743133)100:0.0007328448,Boltonia_398:0.0031192821)100:0.0144053494)97:0.0117020638,(Boltonia_119:0.0030070492,Boltonia_235:0.0002237900)97:0.0094255194)100:0.0099253723,Boltonia_272:0.0116160217)100:0.0226344168,Boltonia_152:0.0120238351)100:0.0184823355)100:0.0165097265,((Boltonia_148:0.0045256551,Boltonia_212:0.0048923909)100:0.0334683657,Boltonia_164:0.0125827148)100:0.0095287004)100:0.0093497857,((Boltonia_220:0.0002491551,Boltonia_265:0.0007393238)100:0.0315545140,Boltonia_323:0.0147675337)100:0.0240858437)100:0.0086374917)22:0.0044623411)17:0.0037132538,(((((((((((((Boltonia_009:0.0005711193,Boltonia_424:0.0011510721)100:0.0154055033,(((((Boltonia_012:0.0004627532,Boltonia_360:0.0003014342)99:0.0011347010,Boltonia_091:0.0000756207)100:0.0086259054,Boltonia_448:0.0000020611)96:0.0000025368,Boltonia_102:0.0002479235)90:0.0000027209,Boltonia_067:0.0000020712)94:0.0036861114)94:0.0080077964,Boltonia_456:0.0009784123)100:0.0178967013,Boltonia_384:0.0006842734)100:0.0192140539,Boltonia_288:0.0216168344)100:0.0151694756,Boltonia_259:0.0196635518)100:0.0017393212,(Boltonia_171:0.0167483443,Boltonia_320:0.0096166998)100:0.0233953635)72:0.0226661761,(Boltonia_218:0.0015509460,(Boltonia_267:0.0113142890,Boltonia_367:0.0040729531)100:0.0114455004)100:0.0284526639)18:0.0086368856,(((Boltonia_027:0.0005558746,Boltonia_430:0.0004514783)100:0.0509895208,Boltonia_361:0.0021041684)62:0.0157262319,(((Boltonia_058:0.0015219799,Boltonia_441:0.0005169457)100:0.0004932813,Boltonia_468:0.0015123988)100:0.0290144076,(Boltonia_103:0.0307104607,((Boltonia_190:0.0090320030,Boltonia_442:0.0029196536)100:0.0263561926,(Boltonia_335:0.0000029330,Boltonia_435:0.0002249243)100:0.0154319743)100:0.0056807924)82:0.0116641819)100:0.0140570141)16:0.0081396784)98:0.0079891715,Boltonia_453:0.0191919509)97:0.0077573961,((Boltonia_225:0.0014219597,Boltonia_250:0.0001582563)100:0.0173033178,Boltonia_264:0.0054348556)100:0.0117603539)100:0.0203919686,(Boltonia_173:0.0000023268,Boltonia_260:0.0000024989)100:0.0304530601)96:0.0089520743,(((Boltonia_044:0.0010378437,Boltonia_378:0.0006843067)100:0.0336973450,(Boltonia_083:0.0016514160,Boltonia_279:0.0007297880)100:0.0506262135)96:0.0123245295,((Boltonia_183:0.0158405835,Boltonia_417:0.0069485925)82:0.0069964000,Boltonia_349:0.0218143641)98:0.0253942465)96:0.0089877789)98:0.0094158815)96:0.0052311159,((((((((((Boltonia_007:0.0157114173,Boltonia_222:0.0152961389)100:0.0158644412,(Boltonia_030:0.0255171533,((Boltonia_292:0.0083917085,Boltonia_426:0.0009546429)100:0.0065229832,Boltonia_315:0.0106385602)100:0.0162241071)100:0.0142900307)40:0.0090361528,((Boltonia_022:0.1016709919,(Boltonia_161:0.0119296947,Boltonia_229:0.0103834656)100:0.0130206289)41:0.0060240772,(Boltonia_024:0.0012259075,Boltonia_057:0.0020494849)100:0.0400654324)40:0.0062958886)100:0.0096488600,(((Boltonia_151:0.0006059096,Boltonia_327:0.0004392445)100:0.0400817026,((Boltonia_194:0.0012115005,Boltonia_338:0.0000022948)100:0.0240341588,(Boltonia_201:0.0027322624,(Boltonia_290:0.0000021831,Boltonia_370:0.0000024260)100:0.0025994377)74:0.0137558624)74:0.0266590761)73:0.0067167255,Boltonia_342:0.0235685933)97:0.0067798640)98:0.0084154023,((Boltonia_073:0.0027423546,Boltonia_208:0.0016683448)100:0.0401419312,((Boltonia_135:0.0005588297,Boltonia_299:0.0000020317)100:0.0057868771,Boltonia_294:0.0051120195)100:0.0367631037)100:0.0156789652)99:0.0053325149,(((Boltonia_033:0.0207475753,(Boltonia_087:0.0024436053,Boltonia_137:0.0012553338)100:0.0302725738)99:0.0132110253,((Boltonia_089:0.0022611354,Boltonia_090:0.0089785502)99:0.0161937643,Boltonia_180:0.0159434430)100:0.0194894292)99:0.0062175782,(Boltonia_316:0.0568935503,Boltonia_399:0.0172338031)100:0.0229058390)98:0.0054261125)99:0.0068032984,(((((((Boltonia_015:0.0008266893,Boltonia_081:0.0004205688)100:0.0397532801,((Boltonia_131:0.0002310442,Boltonia_233:0.0001355392)100:0.0028160449,(Boltonia_280:0.0000020110,Boltonia_332:0.0000029312)100:0.0005131788)100:0.0414585758)98:0.0175037953,((Boltonia_056:0.0026231005,Boltonia_205:0.0005398575)100:0.0146319976,Boltonia_065:0.0064232306)98:0.0216179161)100:0.0076927986,((Boltonia_182:0.0005669967,Boltonia_209:0.0024636372)14:0.0013770999,Boltonia_445:0.0022339396)100:0.0383443778)100:0.0105376036,(((Boltonia_060:0.0009928029,Boltonia_353:0.0004484818)100:0.0040330939,Boltonia_345:0.0018087102)100:0.0421970703,(((Boltonia_134:0.0019354625,Boltonia_386:0.0007682835)100:0.0298270602,(Boltonia_143:0.0157103755,(Boltonia_154:0.0008354186,Boltonia_365:0.0000026196)100:0.0076991231)100:0.0569984716)99:0.0085009065,Boltonia_282:0.0187273127)97:0.0085266052)100:0.0092420848)98:0.0086500361,(Boltonia_080:0.0320965801,Boltonia_415:0.0170349973)97:0.0076961177)95:0.0058352635,(Boltonia_228:0.0107238513,Boltonia_413:0.0114726178)100:0.0233219072)96:0.0053714648)100:0.0081566653,(((Boltonia_013:0.0160745576,((Boltonia_130:0.0121562403,(Boltonia_163:0.0051338687,Boltonia_191:0.0051926692)100:0.0159375797)83:0.0077341062,(((Boltonia_195:0.0000021959,Boltonia_362:0.0000025360)100:0.0003887184,(Boltonia_268:0.0005202407,Boltonia_291:0.0000022908)100:0.0059436750)100:0.0130454602,Boltonia_395:0.0269752415)100:0.0243685385)100:0.0081242325)69:0.0042121595,(Boltonia_132:0.0161063849,((Boltonia_329:0.0043804049,Boltonia_344:0.0071541258)100:0.0138317225,Boltonia_375:0.0076795899)100:0.0112640632)100:0.0114539920)100:0.0139477708,(((((Boltonia_029:0.0012663372,Boltonia_325:0.0013138082)100:0.0233363637,(Boltonia_170:0.0010359058,Boltonia_269:0.0108163224)100:0.0194210999)100:0.0080371014,Boltonia_232:0.0132195797)81:0.0045984740,(Boltonia_053:0.0004865010,Boltonia_258:0.0011853019)100:0.0321926989)95:0.0132793522,((((((Boltonia_063:0.0010157123,Boltonia_185:0.0001342271)100:0.0011971510,Boltonia_393:0.0016122163)100:0.0061610121,Boltonia_330:0.0030205756)100:0.0219006665,Boltonia_142:0.0029511790)100:0.0382214746,Boltonia_123:0.0123230340)89:0.0106543070,((Boltonia_066:0.0135751865,Boltonia_124:0.0036151511)100:0.0158329012,Boltonia_221:0.0073341114)100:0.0159879184)89:0.0073396394)99:0.0059867719)98:0.0049020169)99:0.0069411321,((((Boltonia_070:0.0085867912,(Boltonia_128:0.0008440149,Boltonia_437:0.0004356383)100:0.0240708912)90:0.0067596977,Boltonia_276:0.0150479280)100:0.0160103265,(Boltonia_219:0.0026823312,Boltonia_331:0.0015438851)98:0.0272357466)94:0.0148900354,(((Boltonia_127:0.0001394818,Boltonia_249:0.0000022861)100:0.0001745223,Boltonia_301:0.0000172436)100:0.0215707555,((Boltonia_240:0.0007918027,Boltonia_309:0.0001135633)100:0.0326200122,Boltonia_459:0.0174183675)100:0.0120270646)92:0.0050024887)82:0.0040005657)73:0.0049706016,((((Boltonia_020:0.0000430242,Boltonia_150:0.0035972119)86:0.0089521771,Boltonia_077:0.0039013821)100:0.0279974733,((Boltonia_085:0.0006834249,Boltonia_257:0.0020857779)100:0.0195004919,Boltonia_275:0.0096585457)100:0.0122539040)100:0.0146074573,(Boltonia_107:0.0187327902,(Boltonia_217:0.0055806878,Boltonia_304:0.0019787801)100:0.0332695945)93:0.0064692778)92:0.0096646424)96:0.0068509100)97:0.0057599759,((((Boltonia_026:0.0051726074,((((((((Boltonia_028:0.0008114450,Boltonia_040:0.0126260714)97:0.0120792303,((Boltonia_168:0.0024178576,Boltonia_310:0.0003044829)100:0.0051792554,Boltonia_230:0.0052208468)100:0.0212168047)70:0.0063990955,(Boltonia_263:0.0021723574,Boltonia_354:0.0012664876)60:0.0026808476)100:0.0070078942,(((Boltonia_098:0.0002519723,Boltonia_401:0.0013664286)93:0.0030896203,Boltonia_458:0.0009767667)60:0.0023587942,Boltonia_454:0.0027304974)62:0.0088181931)99:0.0209803492,Boltonia_449:0.0097100298)99:0.0126676727,Boltonia_389:0.0243571729)99:0.0043833622,Boltonia_175:0.0104269520)100:0.0136254813,Boltonia_352:0.0080542489)100:0.0161485470)100:0.0239827025,((Boltonia_116:0.0086572441,Boltonia_383:0.0180489098)100:0.0235836206,Boltonia_177:0.0177537457)100:0.0130365909)66:0.0069931718,((((Boltonia_054:0.0101762968,Boltonia_105:0.0033029879)100:0.0116967151,Boltonia_108:0.0117103314)94:0.0088648064,Boltonia_181:0.0148691105)99:0.0066874706,Boltonia_317:0.0304598269)99:0.0090981195)100:0.0118987025,((Boltonia_037:0.0169191056,Boltonia_404:0.0215792213)100:0.0079311928,((Boltonia_125:0.0099558095,Boltonia_409:0.0037432546)100:0.0058208209,Boltonia_186:0.0037645486)100:0.0389737726)100:0.0122894183)100:0.0088826934)99:0.0063875071,((((((Boltonia_032:0.0013089750,Boltonia_436:0.0006508905)100:0.0018565900,(Boltonia_277:0.0001285739,(Boltonia_278:0.0009813816,Boltonia_405:0.0000027752)100:0.0023034143)40:0.0012957896)69:0.0049242768,((Boltonia_094:0.0003662596,Boltonia_343:0.0001184459)100:0.0008371494,(Boltonia_160:0.0014092120,Boltonia_351:0.0003558821)100:0.0022256362)100:0.0170894926)100:0.0368278291,Boltonia_224:0.0143656543)100:0.0180971598,((Boltonia_047:0.0157396942,Boltonia_376:0.0060996192)100:0.0143954990,(((((Boltonia_061:0.0021838862,(Boltonia_136:0.0009694173,Boltonia_293:0.0019706944)89:0.0000024086)100:0.0171964787,(((Boltonia_146:0.0011972269,Boltonia_256:0.0002633097)99:0.0023800488,Boltonia_251:0.0062514764)100:0.0153481747,Boltonia_460:0.0017565160)100:0.0095212072)100:0.0127384715,(Boltonia_236:0.0011051061,Boltonia_385:0.0005909779)100:0.0141378528)100:0.0226307368,(Boltonia_373:0.0014291447,Boltonia_382:0.0015614316)100:0.0201666553)100:0.0159143529,(((Boltonia_075:0.0009422626,(Boltonia_254:0.0017554319,Boltonia_284:0.0006698097)99:0.0019961662)100:0.0454178197,Boltonia_086:0.0010235787)100:0.0203962601,Boltonia_192:0.0128347729)98:0.0083734812)98:0.0157782988)100:0.0128396851)93:0.0077263637,Boltonia_392:0.0238075059)94:0.0063341177)93:0.0054483729,((Boltonia_198:0.0325749846,Boltonia_286:0.0244290235)99:0.0093378544,(Boltonia_210:0.0100594502,Boltonia_363:0.0237731826)100:0.0159314796)90:0.0085439564)26:0.0034567892,((((Boltonia_031:0.0159403602,(Boltonia_039:0.0012689363,Boltonia_200:0.0036186431)100:0.0490409415)100:0.0132600731,Boltonia_463:0.0150982621)99:0.0089603003,((Boltonia_038:0.0222967785,(Boltonia_295:0.0088395178,Boltonia_336:0.0106651961)100:0.0080638386)100:0.0151473858,(Boltonia_364:0.0146926738,Boltonia_455:0.0310576931)100:0.0209617526)97:0.0083347212)89:0.0081796354,(((Boltonia_050:0.0056789025,Boltonia_076:0.0100215374)100:0.0203202332,(((Boltonia_071:0.0120623673,Boltonia_096:0.0043155891)100:0.0143425125,(Boltonia_204:0.0191753812,Boltonia_429:0.0122331491)99:0.0083399964)100:0.0155566229,Boltonia_273:0.0251067709)100:0.0133401517)82:0.0097802986,((((Boltonia_059:0.0002853821,Boltonia_380:0.0012354343)100:0.0321772370,Boltonia_444:0.0099822104)98:0.0107990156,(Boltonia_245:0.0074093905,Boltonia_356:0.0133078538)98:0.0154612000)100:0.0104799757,(((Boltonia_109:0.0026926713,Boltonia_358:0.0011348491)100:0.0064893495,Boltonia_244:0.0035058624)100:0.0295411102,(Boltonia_425:0.0123020804,Boltonia_433:0.0107193603)57:0.0082154729)100:0.0263609382)99:0.0088863986)74:0.0060793182)91:0.0066070039)30:0.0047654333,Boltonia_381:0.0283033270)100:0.0099906248,((((((Boltonia_008:0.0012755596,Boltonia_247:0.0005311487)100:0.0015420107,Boltonia_423:0.0009601076)100:0.0153594740,Boltonia_461:0.0089208713)100:0.0382807390,(((((((Boltonia_016:0.0041877631,Boltonia_281:0.0016057994)100:0.0124835651,Boltonia_443:0.0049518099)100:0.0144222685,(Boltonia_126:0.0066179379,(Boltonia_446:0.0170070868,Boltonia_457:0.0061554096)100:0.0110826171)98:0.0096385771)99:0.0109613569,(Boltonia_051:0.0222148756,Boltonia_298:0.0168514004)85:0.0024617976)98:0.0107839091,(((Boltonia_052:0.0057804916,Boltonia_467:0.0297812887)60:0.0052572794,Boltonia_248:0.0123407587)60:0.0108081667,Boltonia_145:0.0133590576)60:0.0124760237)59:0.0073241540,(Boltonia_308:0.0000023917,Boltonia_359:0.0000936635)100:0.0144477524)60:0.0068427470,(Boltonia_261:0.0004387599,Boltonia_422:0.0012471377)100:0.0251450134)60:0.0142513114)100:0.0125801151,((Boltonia_153:0.0104298872,Boltonia_213:0.0149302921)100:0.0233362328,(Boltonia_211:0.0009265166,Boltonia_418:0.0011629311)100:0.0341547263)97:0.0094171763)100:0.0113527837,((((((((((Boltonia_010:0.0019814753,Boltonia_068:0.0005657126)91:0.0011144788,Boltonia_328:0.0017006051)97:0.0029603683,(Boltonia_041:0.0053328294,Boltonia_464:0.0014814288)93:0.0045841192)91:0.0058207336,((Boltonia_104:0.0022212600,Boltonia_451:0.0010611666)95:0.0044684180,(Boltonia_199:0.0021834169,Boltonia_439:0.0001383446)95:0.0019970446)100:0.0128252953)93:0.0043500594,(Boltonia_069:0.0011961296,Boltonia_252:0.0016994684)93:0.0044868678)100:0.0057933569,(((Boltonia_018:0.0007923200,Boltonia_478:0.0139124564)53:0.0013748009,Boltonia_314:0.0039911744)59:0.0041954405,(Boltonia_166:0.0025692469,Boltonia_223:0.0028208571)95:0.0051896291)63:0.0052449383)61:0.0044613252,(((Boltonia_082:0.0005162902,Boltonia_357:0.0004155433)99:0.0022390760,(Boltonia_216:0.0015172807,Boltonia_419:0.0003608093)100:0.0022058443)100:0.0107749338,(Boltonia_206:0.0073449632,(Boltonia_319:0.0097543197,(Boltonia_340:0.0001863549,(Boltonia_347:0.0005226818,Boltonia_406:0.0072477904)22:0.0010515838)44:0.0037392038)24:0.0031169122)62:0.0035876900)60:0.0041479515)100:0.0066070958,(Boltonia_471:0.0040981376,Boltonia_476:0.0046024272)100:0.0045000172)96:0.0044684603,((((Boltonia_469:0.0526100345,Boltonia_470:0.0476190636)100:0.0103138595,(((((Boltonia_472:0.0044643628,Boltonia_473:0.0040612304)100:0.0684944330,Boltonia_474:0.0346450099)100:0.0523621570,(Boltonia_484:0.0254749063,Boltonia_485:0.0341642651)100:0.0489641718)93:0.0107831453,((Boltonia_489:0.0002655504,Boltonia_490:0.0028774069)100:2.6412078970,Boltonia_491:5.2160839877)100:3.3465180330)55:0.0030569668,Boltonia_486:0.0983971343)100:0.0080628466)99:0.0064364116,(Boltonia_481:0.0423732233,Boltonia_482:0.0404269659)100:0.0130452953)100:0.0099111639,Boltonia_475:0.0156066565)97:0.0066068252)100:0.0085391128,((Boltonia_477:0.0081979176,Boltonia_483:0.0184923835)100:0.0334302330,(Boltonia_479:0.0445910829,Boltonia_492:0.0613616399)100:0.0093293532)100:0.0107222026)100:0.0266369833)13:0.0057691675)80:0.0054317609,Boltonia_196:0.0386566263)10:0.0034861346,((((((((Boltonia_034:0.0006911146,(Boltonia_042:0.0000028175,Boltonia_184:0.0031120113)100:0.0045610661)100:0.0142415362,Boltonia_324:0.0201747516)100:0.0063592318,(Boltonia_141:0.0024071135,Boltonia_303:0.0002292992)100:0.0041131187)100:0.0167426951,(Boltonia_203:0.0015603762,(Boltonia_214:0.0013273158,Boltonia_326:0.0023148192)100:0.0108769662)79:0.0146620933)79:0.0186819613,Boltonia_165:0.0154059456)78:0.0224892911,(Boltonia_072:0.0280843461,(Boltonia_139:0.0091716334,Boltonia_452:0.0119545608)100:0.0246867846)67:0.0090367955)100:0.0189265611,Boltonia_368:0.0235274393)94:0.0068856547,((Boltonia_035:0.0115551932,Boltonia_064:0.0154744431)100:0.0128609857,(Boltonia_114:0.0025711002,Boltonia_255:0.0006802654)100:0.0400997379)100:0.0115087639)88:0.0060582450)17:0.0045217308,Boltonia_169:0.0246379088)96:0.0058343672,(Boltonia_025:0.0290999610,(Boltonia_226:0.0248108236,(Boltonia_321:0.0000028268,Boltonia_466:0.0002084876)100:0.0304065990)93:0.0034611996)97:0.0100832415)100:0.0066685763,((Boltonia_176:0.0070423503,Boltonia_178:0.0159787240)53:0.0040979287,Boltonia_262:0.0190078468)100:0.0209010936)59:0.0077789693,((Boltonia_036:0.0057269550,Boltonia_283:0.0058718892)100:0.0145559874,Boltonia_253:0.0231588374)100:0.0157696040)55:0.0075577407,(Boltonia_155:0.0035042531,Boltonia_396:0.0008435547)100:0.0309816952)100:0.0223746557);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -669393.752415
+Robinson-Foulds distance between ML tree and consensus tree: 58
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Boltonia_001
+|
++--Boltonia_002
+|
+|                                                     +--Boltonia_004
+|                                                  +--| (100)
+|                                                  |  |  +--Boltonia_307
+|                                                  |  +--| (100)
+|                                                  |     +--Boltonia_387
+|                                               +--| (100)
+|                                               |  |  +--Boltonia_234
+|                                               |  +--| (100)
+|                                               |     +--Boltonia_403
+|                                            +--| (75)
+|                                            |  |        +--Boltonia_115
+|                                            |  |     +--| (74)
+|                                            |  |     |  +--Boltonia_242
+|                                            |  |  +--| (100)
+|                                            |  |  |  +--Boltonia_157
+|                                            |  +--| (100)
+|                                            |     |  +--Boltonia_197
+|                                            |     +--| (100)
+|                                            |        +--Boltonia_238
+|                                         +--| (97)
+|                                         |  |                                         +--Boltonia_005
+|                                         |  |                                      +--| (100)
+|                                         |  |                                      |  +--Boltonia_193
+|                                         |  |                                   +--| (100)
+|                                         |  |                                   |  |  +--Boltonia_121
+|                                         |  |                                   |  +--| (100)
+|                                         |  |                                   |     +--Boltonia_390
+|                                         |  |                                +--| (100)
+|                                         |  |                                |  +--Boltonia_017
+|                                         |  |                             +--| (100)
+|                                         |  |                             |  +--Boltonia_088
+|                                         |  |                          +--| (100)
+|                                         |  |                          |  +--Boltonia_045
+|                                         |  |                       +--| (100)
+|                                         |  |                       |  +--Boltonia_120
+|                                         |  |                    +--| (100)
+|                                         |  |                    |  +--Boltonia_172
+|                                         |  |                 +--| (97)
+|                                         |  |                 |  |                 +--Boltonia_100
+|                                         |  |                 |  |              +--| (100)
+|                                         |  |                 |  |              |  +--Boltonia_274
+|                                         |  |                 |  |           +--| (100)
+|                                         |  |                 |  |           |  |  +--Boltonia_337
+|                                         |  |                 |  |           |  +--| (88)
+|                                         |  |                 |  |           |     +--Boltonia_339
+|                                         |  |                 |  |        +--| (100)
+|                                         |  |                 |  |        |  +--Boltonia_427
+|                                         |  |                 |  |     +--| (99)
+|                                         |  |                 |  |     |  +--Boltonia_179
+|                                         |  |                 |  |  +--| (80)
+|                                         |  |                 |  |  |  +--Boltonia_408
+|                                         |  |                 |  +--| (57)
+|                                         |  |                 |     +--Boltonia_215
+|                                         |  |              +--| (87)
+|                                         |  |              |  |     +--Boltonia_023
+|                                         |  |              |  |  +--| (99)
+|                                         |  |              |  |  |  +--Boltonia_350
+|                                         |  |              |  +--| (60)
+|                                         |  |              |     +--Boltonia_092
+|                                         |  |           +--| (62)
+|                                         |  |           |  |                          +--Boltonia_006
+|                                         |  |           |  |                       +--| (98)
+|                                         |  |           |  |                       |  +--Boltonia_394
+|                                         |  |           |  |                    +--| (93)
+|                                         |  |           |  |                    |  +--Boltonia_158
+|                                         |  |           |  |                 +--| (93)
+|                                         |  |           |  |                 |  |  +**Boltonia_062
+|                                         |  |           |  |                 |  +--| (99)
+|                                         |  |           |  |                 |     +--Boltonia_434
+|                                         |  |           |  |              +--| (99)
+|                                         |  |           |  |              |  +--Boltonia_144
+|                                         |  |           |  |           +--| (99)
+|                                         |  |           |  |           |  +--Boltonia_149
+|                                         |  |           |  |        +--| (80)
+|                                         |  |           |  |        |  +--Boltonia_397
+|                                         |  |           |  |     +--| (59)
+|                                         |  |           |  |     |  +--Boltonia_306
+|                                         |  |           |  |  +--| (79)
+|                                         |  |           |  |  |  +--Boltonia_110
+|                                         |  |           |  +--| (100)
+|                                         |  |           |     |     +--Boltonia_055
+|                                         |  |           |     |  +--| (80)
+|                                         |  |           |     |  |  +--Boltonia_311
+|                                         |  |           |     +--| (89)
+|                                         |  |           |        +--Boltonia_462
+|                                         |  |        +--| (99)
+|                                         |  |        |  |     +--Boltonia_312
+|                                         |  |        |  |  +--| (97)
+|                                         |  |        |  |  |  |  +--Boltonia_341
+|                                         |  |        |  |  |  +--| (100)
+|                                         |  |        |  |  |     +--Boltonia_366
+|                                         |  |        |  +--| (100)
+|                                         |  |        |     +--Boltonia_388
+|                                         |  |     +--| (100)
+|                                         |  |     |  |                    +--Boltonia_014
+|                                         |  |     |  |                 +--| (100)
+|                                         |  |     |  |                 |  +--Boltonia_106
+|                                         |  |     |  |              +--| (100)
+|                                         |  |     |  |              |  +--Boltonia_227
+|                                         |  |     |  |           +--| (99)
+|                                         |  |     |  |           |  +--Boltonia_113
+|                                         |  |     |  |        +--| (65)
+|                                         |  |     |  |        |  +--Boltonia_355
+|                                         |  |     |  |     +--| (64)
+|                                         |  |     |  |     |  +--Boltonia_431
+|                                         |  |     |  |  +--| (98)
+|                                         |  |     |  |  |  +--Boltonia_246
+|                                         |  |     |  +--| (100)
+|                                         |  |     |     |  +--Boltonia_400
+|                                         |  |     |     +--| (99)
+|                                         |  |     |        +--Boltonia_432
+|                                         |  |  +--| (100)
+|                                         |  |  |  |        +--Boltonia_043
+|                                         |  |  |  |     +--| (100)
+|                                         |  |  |  |     |  +--Boltonia_271
+|                                         |  |  |  |  +--| (100)
+|                                         |  |  |  |  |  +--Boltonia_289
+|                                         |  |  |  +--| (100)
+|                                         |  |  |     +--Boltonia_374
+|                                         |  +--| (77)
+|                                         |     +--Boltonia_296
+|                                      +--| (59)
+|                                      |  |              +--Boltonia_021
+|                                      |  |           +--| (55)
+|                                      |  |           |  +--Boltonia_241
+|                                      |  |        +--| (55)
+|                                      |  |        |  +--Boltonia_318
+|                                      |  |     +--| (55)
+|                                      |  |     |  +--Boltonia_095
+|                                      |  |  +--| (55)
+|                                      |  |  |  |           +--Boltonia_074
+|                                      |  |  |  |        +--| (100)
+|                                      |  |  |  |        |  +--Boltonia_322
+|                                      |  |  |  |     +--| (97)
+|                                      |  |  |  |     |  |  +--Boltonia_189
+|                                      |  |  |  |     |  +--| (100)
+|                                      |  |  |  |     |     +--Boltonia_379
+|                                      |  |  |  |  +--| (61)
+|                                      |  |  |  |  |  |     +--Boltonia_099
+|                                      |  |  |  |  |  |  +--| (100)
+|                                      |  |  |  |  |  |  |  |  +--Boltonia_159
+|                                      |  |  |  |  |  |  |  +--| (100)
+|                                      |  |  |  |  |  |  |     +--Boltonia_207
+|                                      |  |  |  |  |  +--| (96)
+|                                      |  |  |  |  |     +--Boltonia_411
+|                                      |  |  |  +--| (33)
+|                                      |  |  |     +--Boltonia_112
+|                                      |  +--| (98)
+|                                      |     |           +--Boltonia_093
+|                                      |     |        +--| (100)
+|                                      |     |        |  +--Boltonia_202
+|                                      |     |     +--| (100)
+|                                      |     |     |  +--Boltonia_243
+|                                      |     |  +--| (55)
+|                                      |     |  |  |  +--Boltonia_111
+|                                      |     |  |  +--| (100)
+|                                      |     |  |     +--Boltonia_270
+|                                      |     +--| (56)
+|                                      |        |        +--Boltonia_117
+|                                      |        |     +--| (100)
+|                                      |        |     |  +--Boltonia_147
+|                                      |        |  +--| (100)
+|                                      |        |  |  +--Boltonia_334
+|                                      |        +--| (98)
+|                                      |           |        +--Boltonia_231
+|                                      |           |     +--| (100)
+|                                      |           |     |  +--Boltonia_313
+|                                      |           |  +--| (100)
+|                                      |           |  |  +--Boltonia_402
+|                                      |           +--| (98)
+|                                      |              +--Boltonia_305
+|                                   +--| (96)
+|                                   |  |                                               +--Boltonia_009
+|                                   |  |                                            +--| (100)
+|                                   |  |                                            |  +--Boltonia_424
+|                                   |  |                                         +--| (94)
+|                                   |  |                                         |  |              +--Boltonia_012
+|                                   |  |                                         |  |           +--| (99)
+|                                   |  |                                         |  |           |  +--Boltonia_360
+|                                   |  |                                         |  |        +--| (100)
+|                                   |  |                                         |  |        |  +--Boltonia_091
+|                                   |  |                                         |  |     +--| (96)
+|                                   |  |                                         |  |     |  +--Boltonia_448
+|                                   |  |                                         |  |  +--| (90)
+|                                   |  |                                         |  |  |  +--Boltonia_102
+|                                   |  |                                         |  +--| (94)
+|                                   |  |                                         |     +--Boltonia_067
+|                                   |  |                                      +--| (100)
+|                                   |  |                                      |  +--Boltonia_456
+|                                   |  |                                   +--| (100)
+|                                   |  |                                   |  +--Boltonia_384
+|                                   |  |                                +--| (100)
+|                                   |  |                                |  +--Boltonia_288
+|                                   |  |                             +--| (100)
+|                                   |  |                             |  +--Boltonia_259
+|                                   |  |                          +--| (72)
+|                                   |  |                          |  |  +--Boltonia_171
+|                                   |  |                          |  +--| (100)
+|                                   |  |                          |     +--Boltonia_320
+|                                   |  |                       +--| (45)
+|                                   |  |                       |  |     +--Boltonia_027
+|                                   |  |                       |  |  +--| (100)
+|                                   |  |                       |  |  |  +--Boltonia_430
+|                                   |  |                       |  +--| (62)
+|                                   |  |                       |     +--Boltonia_361
+|                                   |  |                    +--| (73)
+|                                   |  |                    |  |  +--Boltonia_218
+|                                   |  |                    |  +--| (100)
+|                                   |  |                    |     |  +--Boltonia_267
+|                                   |  |                    |     +--| (100)
+|                                   |  |                    |        +--Boltonia_367
+|                                   |  |                 +--| (98)
+|                                   |  |                 |  |        +--Boltonia_058
+|                                   |  |                 |  |     +--| (100)
+|                                   |  |                 |  |     |  +--Boltonia_441
+|                                   |  |                 |  |  +--| (100)
+|                                   |  |                 |  |  |  +--Boltonia_468
+|                                   |  |                 |  +--| (100)
+|                                   |  |                 |     |  +--Boltonia_103
+|                                   |  |                 |     +--| (82)
+|                                   |  |                 |        |     +--Boltonia_190
+|                                   |  |                 |        |  +--| (100)
+|                                   |  |                 |        |  |  +--Boltonia_442
+|                                   |  |                 |        +--| (100)
+|                                   |  |                 |           |  +--Boltonia_335
+|                                   |  |                 |           +--| (100)
+|                                   |  |                 |              +--Boltonia_435
+|                                   |  |              +--| (97)
+|                                   |  |              |  +--Boltonia_453
+|                                   |  |           +--| (100)
+|                                   |  |           |  |     +--Boltonia_225
+|                                   |  |           |  |  +--| (100)
+|                                   |  |           |  |  |  +--Boltonia_250
+|                                   |  |           |  +--| (100)
+|                                   |  |           |     +--Boltonia_264
+|                                   |  |        +--| (96)
+|                                   |  |        |  |  +--Boltonia_173
+|                                   |  |        |  +--| (100)
+|                                   |  |        |     +--Boltonia_260
+|                                   |  |     +--| (98)
+|                                   |  |     |  |        +--Boltonia_044
+|                                   |  |     |  |     +--| (100)
+|                                   |  |     |  |     |  +--Boltonia_378
+|                                   |  |     |  |  +--| (96)
+|                                   |  |     |  |  |  |  +--Boltonia_083
+|                                   |  |     |  |  |  +--| (100)
+|                                   |  |     |  |  |     +--Boltonia_279
+|                                   |  |     |  +--| (96)
+|                                   |  |     |     |     +--Boltonia_183
+|                                   |  |     |     |  +--| (82)
+|                                   |  |     |     |  |  +--Boltonia_417
+|                                   |  |     |     +--| (98)
+|                                   |  |     |        +--Boltonia_349
+|                                   |  |  +--| (72)
+|                                   |  |  |  |           +--Boltonia_046
+|                                   |  |  |  |        +--| (100)
+|                                   |  |  |  |        |  +--Boltonia_167
+|                                   |  |  |  |     +--| (100)
+|                                   |  |  |  |     |  |              +--Boltonia_048
+|                                   |  |  |  |     |  |           +--| (100)
+|                                   |  |  |  |     |  |           |  +--Boltonia_285
+|                                   |  |  |  |     |  |        +--| (97)
+|                                   |  |  |  |     |  |        |  |     +--Boltonia_187
+|                                   |  |  |  |     |  |        |  |  +--| (100)
+|                                   |  |  |  |     |  |        |  |  |  +--Boltonia_421
+|                                   |  |  |  |     |  |        |  +--| (100)
+|                                   |  |  |  |     |  |        |     +--Boltonia_398
+|                                   |  |  |  |     |  |     +--| (100)
+|                                   |  |  |  |     |  |     |  |  +--Boltonia_119
+|                                   |  |  |  |     |  |     |  +--| (97)
+|                                   |  |  |  |     |  |     |     +--Boltonia_235
+|                                   |  |  |  |     |  |  +--| (100)
+|                                   |  |  |  |     |  |  |  +--Boltonia_272
+|                                   |  |  |  |     |  +--| (100)
+|                                   |  |  |  |     |     +--Boltonia_152
+|                                   |  |  |  |  +--| (100)
+|                                   |  |  |  |  |  |     +--Boltonia_148
+|                                   |  |  |  |  |  |  +--| (100)
+|                                   |  |  |  |  |  |  |  +--Boltonia_212
+|                                   |  |  |  |  |  +--| (100)
+|                                   |  |  |  |  |     +--Boltonia_164
+|                                   |  |  |  +--| (100)
+|                                   |  |  |     |     +--Boltonia_220
+|                                   |  |  |     |  +--| (100)
+|                                   |  |  |     |  |  +--Boltonia_265
+|                                   |  |  |     +--| (100)
+|                                   |  |  |        +--Boltonia_323
+|                                   |  +--| (76)
+|                                   |     |           +--Boltonia_019
+|                                   |     |        +--| (95)
+|                                   |     |        |  |                 +--Boltonia_084
+|                                   |     |        |  |              +--| (63)
+|                                   |     |        |  |              |  +--Boltonia_174
+|                                   |     |        |  |           +--| (100)
+|                                   |     |        |  |           |  +--Boltonia_377
+|                                   |     |        |  |        +--| (60)
+|                                   |     |        |  |        |  +--Boltonia_188
+|                                   |     |        |  |     +--| (58)
+|                                   |     |        |  |     |  +--Boltonia_101
+|                                   |     |        |  |  +--| (96)
+|                                   |     |        |  |  |  +--Boltonia_133
+|                                   |     |        |  +--| (100)
+|                                   |     |        |     +--Boltonia_138
+|                                   |     |     +--| (97)
+|                                   |     |     |  |  +--Boltonia_079
+|                                   |     |     |  +--| (100)
+|                                   |     |     |     |  +--Boltonia_140
+|                                   |     |     |     +--| (100)
+|                                   |     |     |        +--Boltonia_420
+|                                   |     |  +--| (100)
+|                                   |     |  |  +--Boltonia_078
+|                                   |     +--| (99)
+|                                   |        |              +--Boltonia_097
+|                                   |        |           +--| (68)
+|                                   |        |           |  |  +--Boltonia_237
+|                                   |        |           |  +--| (100)
+|                                   |        |           |     +--Boltonia_302
+|                                   |        |        +--| (100)
+|                                   |        |        |  |     +--Boltonia_162
+|                                   |        |        |  |  +--| (100)
+|                                   |        |        |  |  |  +--Boltonia_239
+|                                   |        |        |  +--| (100)
+|                                   |        |        |     +--Boltonia_371
+|                                   |        |     +--| (100)
+|                                   |        |     |  |     +--Boltonia_412
+|                                   |        |     |  |  +--| (100)
+|                                   |        |     |  |  |  +--Boltonia_465
+|                                   |        |     |  +--| (100)
+|                                   |        |     |     +--Boltonia_428
+|                                   |        |  +--| (92)
+|                                   |        |  |  +--Boltonia_372
+|                                   |        +--| (100)
+|                                   |           |     +--Boltonia_118
+|                                   |           |  +--| (100)
+|                                   |           |  |  +--Boltonia_287
+|                                   |           +--| (89)
+|                                   |              |  +--Boltonia_129
+|                                   |              +--| (100)
+|                                   |                 +--Boltonia_438
+|                                +--| (97)
+|                                |  |                          +--Boltonia_007
+|                                |  |                       +--| (100)
+|                                |  |                       |  +--Boltonia_222
+|                                |  |                    +--| (100)
+|                                |  |                    |  |        +--Boltonia_022
+|                                |  |                    |  |     +--| (59)
+|                                |  |                    |  |     |  |  +--Boltonia_030
+|                                |  |                    |  |     |  +--| (100)
+|                                |  |                    |  |     |     |     +--Boltonia_292
+|                                |  |                    |  |     |     |  +--| (100)
+|                                |  |                    |  |     |     |  |  +--Boltonia_426
+|                                |  |                    |  |     |     +--| (100)
+|                                |  |                    |  |     |        +--Boltonia_315
+|                                |  |                    |  |  +--| (46)
+|                                |  |                    |  |  |  |  +--Boltonia_161
+|                                |  |                    |  |  |  +--| (100)
+|                                |  |                    |  |  |     +--Boltonia_229
+|                                |  |                    |  +--| (47)
+|                                |  |                    |     |  +--Boltonia_024
+|                                |  |                    |     +--| (100)
+|                                |  |                    |        +--Boltonia_057
+|                                |  |                 +--| (98)
+|                                |  |                 |  |        +--Boltonia_151
+|                                |  |                 |  |     +--| (100)
+|                                |  |                 |  |     |  +--Boltonia_327
+|                                |  |                 |  |  +--| (73)
+|                                |  |                 |  |  |  |     +--Boltonia_194
+|                                |  |                 |  |  |  |  +--| (100)
+|                                |  |                 |  |  |  |  |  +--Boltonia_338
+|                                |  |                 |  |  |  +--| (74)
+|                                |  |                 |  |  |     |  +--Boltonia_201
+|                                |  |                 |  |  |     +--| (74)
+|                                |  |                 |  |  |        |  +--Boltonia_290
+|                                |  |                 |  |  |        +--| (100)
+|                                |  |                 |  |  |           +--Boltonia_370
+|                                |  |                 |  +--| (97)
+|                                |  |                 |     +--Boltonia_342
+|                                |  |              +--| (99)
+|                                |  |              |  |     +--Boltonia_073
+|                                |  |              |  |  +--| (100)
+|                                |  |              |  |  |  +--Boltonia_208
+|                                |  |              |  +--| (100)
+|                                |  |              |     |     +--Boltonia_135
+|                                |  |              |     |  +--| (100)
+|                                |  |              |     |  |  +--Boltonia_299
+|                                |  |              |     +--| (100)
+|                                |  |              |        +--Boltonia_294
+|                                |  |           +--| (99)
+|                                |  |           |  |        +--Boltonia_033
+|                                |  |           |  |     +--| (99)
+|                                |  |           |  |     |  |  +--Boltonia_087
+|                                |  |           |  |     |  +--| (100)
+|                                |  |           |  |     |     +--Boltonia_137
+|                                |  |           |  |  +--| (99)
+|                                |  |           |  |  |  |     +--Boltonia_089
+|                                |  |           |  |  |  |  +--| (99)
+|                                |  |           |  |  |  |  |  +--Boltonia_090
+|                                |  |           |  |  |  +--| (100)
+|                                |  |           |  |  |     +--Boltonia_180
+|                                |  |           |  +--| (98)
+|                                |  |           |     |  +--Boltonia_316
+|                                |  |           |     +--| (100)
+|                                |  |           |        +--Boltonia_399
+|                                |  |        +--| (100)
+|                                |  |        |  |                    +--Boltonia_015
+|                                |  |        |  |                 +--| (100)
+|                                |  |        |  |                 |  +--Boltonia_081
+|                                |  |        |  |              +--| (98)
+|                                |  |        |  |              |  |     +--Boltonia_131
+|                                |  |        |  |              |  |  +--| (100)
+|                                |  |        |  |              |  |  |  +--Boltonia_233
+|                                |  |        |  |              |  +--| (100)
+|                                |  |        |  |              |     |  +--Boltonia_280
+|                                |  |        |  |              |     +--| (100)
+|                                |  |        |  |              |        +--Boltonia_332
+|                                |  |        |  |           +--| (100)
+|                                |  |        |  |           |  |     +--Boltonia_056
+|                                |  |        |  |           |  |  +--| (100)
+|                                |  |        |  |           |  |  |  +--Boltonia_205
+|                                |  |        |  |           |  +--| (98)
+|                                |  |        |  |           |     +--Boltonia_065
+|                                |  |        |  |        +--| (100)
+|                                |  |        |  |        |  |     +--Boltonia_182
+|                                |  |        |  |        |  |  +--| (86)
+|                                |  |        |  |        |  |  |  +--Boltonia_445
+|                                |  |        |  |        |  +--| (100)
+|                                |  |        |  |        |     +--Boltonia_209
+|                                |  |        |  |     +--| (98)
+|                                |  |        |  |     |  |        +--Boltonia_060
+|                                |  |        |  |     |  |     +--| (100)
+|                                |  |        |  |     |  |     |  +--Boltonia_353
+|                                |  |        |  |     |  |  +--| (100)
+|                                |  |        |  |     |  |  |  +--Boltonia_345
+|                                |  |        |  |     |  +--| (100)
+|                                |  |        |  |     |     |        +--Boltonia_134
+|                                |  |        |  |     |     |     +--| (100)
+|                                |  |        |  |     |     |     |  +--Boltonia_386
+|                                |  |        |  |     |     |  +--| (99)
+|                                |  |        |  |     |     |  |  |  +--Boltonia_143
+|                                |  |        |  |     |     |  |  +--| (100)
+|                                |  |        |  |     |     |  |     |  +--Boltonia_154
+|                                |  |        |  |     |     |  |     +--| (100)
+|                                |  |        |  |     |     |  |        +--Boltonia_365
+|                                |  |        |  |     |     +--| (97)
+|                                |  |        |  |     |        +--Boltonia_282
+|                                |  |        |  |  +--| (95)
+|                                |  |        |  |  |  |  +--Boltonia_080
+|                                |  |        |  |  |  +--| (97)
+|                                |  |        |  |  |     +--Boltonia_415
+|                                |  |        |  +--| (96)
+|                                |  |        |     |  +--Boltonia_228
+|                                |  |        |     +--| (100)
+|                                |  |        |        +--Boltonia_413
+|                                |  |     +--| (99)
+|                                |  |     |  |        +--Boltonia_013
+|                                |  |     |  |     +--| (69)
+|                                |  |     |  |     |  |     +--Boltonia_130
+|                                |  |     |  |     |  |  +--| (83)
+|                                |  |     |  |     |  |  |  |  +--Boltonia_163
+|                                |  |     |  |     |  |  |  +--| (100)
+|                                |  |     |  |     |  |  |     +--Boltonia_191
+|                                |  |     |  |     |  +--| (100)
+|                                |  |     |  |     |     |        +--Boltonia_195
+|                                |  |     |  |     |     |     +--| (100)
+|                                |  |     |  |     |     |     |  +--Boltonia_362
+|                                |  |     |  |     |     |  +--| (100)
+|                                |  |     |  |     |     |  |  |  +--Boltonia_268
+|                                |  |     |  |     |     |  |  +--| (100)
+|                                |  |     |  |     |     |  |     +--Boltonia_291
+|                                |  |     |  |     |     +--| (100)
+|                                |  |     |  |     |        +--Boltonia_395
+|                                |  |     |  |  +--| (100)
+|                                |  |     |  |  |  |  +--Boltonia_132
+|                                |  |     |  |  |  +--| (100)
+|                                |  |     |  |  |     |     +--Boltonia_329
+|                                |  |     |  |  |     |  +--| (100)
+|                                |  |     |  |  |     |  |  +--Boltonia_344
+|                                |  |     |  |  |     +--| (100)
+|                                |  |     |  |  |        +--Boltonia_375
+|                                |  |     |  +--| (98)
+|                                |  |     |     |              +--Boltonia_029
+|                                |  |     |     |           +--| (100)
+|                                |  |     |     |           |  +--Boltonia_325
+|                                |  |     |     |        +--| (100)
+|                                |  |     |     |        |  |  +--Boltonia_170
+|                                |  |     |     |        |  +--| (100)
+|                                |  |     |     |        |     +--Boltonia_269
+|                                |  |     |     |     +--| (81)
+|                                |  |     |     |     |  +--Boltonia_232
+|                                |  |     |     |  +--| (95)
+|                                |  |     |     |  |  |  +--Boltonia_053
+|                                |  |     |     |  |  +--| (100)
+|                                |  |     |     |  |     +--Boltonia_258
+|                                |  |     |     +--| (99)
+|                                |  |     |        |                 +--Boltonia_063
+|                                |  |     |        |              +--| (100)
+|                                |  |     |        |              |  +--Boltonia_185
+|                                |  |     |        |           +--| (100)
+|                                |  |     |        |           |  +--Boltonia_393
+|                                |  |     |        |        +--| (100)
+|                                |  |     |        |        |  +--Boltonia_330
+|                                |  |     |        |     +--| (100)
+|                                |  |     |        |     |  +--Boltonia_142
+|                                |  |     |        |  +--| (89)
+|                                |  |     |        |  |  +--Boltonia_123
+|                                |  |     |        +--| (89)
+|                                |  |     |           |     +--Boltonia_066
+|                                |  |     |           |  +--| (100)
+|                                |  |     |           |  |  +--Boltonia_124
+|                                |  |     |           +--| (100)
+|                                |  |     |              +--Boltonia_221
+|                                |  |  +--| (73)
+|                                |  |  |  |           +--Boltonia_070
+|                                |  |  |  |        +--| (90)
+|                                |  |  |  |        |  |  +--Boltonia_128
+|                                |  |  |  |        |  +--| (100)
+|                                |  |  |  |        |     +--Boltonia_437
+|                                |  |  |  |     +--| (100)
+|                                |  |  |  |     |  +--Boltonia_276
+|                                |  |  |  |  +--| (94)
+|                                |  |  |  |  |  |  +--Boltonia_219
+|                                |  |  |  |  |  +--| (98)
+|                                |  |  |  |  |     +--Boltonia_331
+|                                |  |  |  +--| (82)
+|                                |  |  |     |        +--Boltonia_127
+|                                |  |  |     |     +--| (100)
+|                                |  |  |     |     |  +--Boltonia_249
+|                                |  |  |     |  +--| (100)
+|                                |  |  |     |  |  +--Boltonia_301
+|                                |  |  |     +--| (92)
+|                                |  |  |        |     +--Boltonia_240
+|                                |  |  |        |  +--| (100)
+|                                |  |  |        |  |  +--Boltonia_309
+|                                |  |  |        +--| (100)
+|                                |  |  |           +--Boltonia_459
+|                                |  +--| (96)
+|                                |     |           +--Boltonia_020
+|                                |     |        +--| (86)
+|                                |     |        |  +--Boltonia_150
+|                                |     |     +--| (100)
+|                                |     |     |  +--Boltonia_077
+|                                |     |  +--| (100)
+|                                |     |  |  |     +--Boltonia_085
+|                                |     |  |  |  +--| (100)
+|                                |     |  |  |  |  +--Boltonia_257
+|                                |     |  |  +--| (100)
+|                                |     |  |     +--Boltonia_275
+|                                |     +--| (92)
+|                                |        |  +--Boltonia_107
+|                                |        +--| (93)
+|                                |           |  +--Boltonia_217
+|                                |           +--| (100)
+|                                |              +--Boltonia_304
+|                             +--| (99)
+|                             |  |           +--Boltonia_026
+|                             |  |        +--| (100)
+|                             |  |        |  |                       +--Boltonia_028
+|                             |  |        |  |                    +--| (97)
+|                             |  |        |  |                    |  +--Boltonia_040
+|                             |  |        |  |                 +--| (70)
+|                             |  |        |  |                 |  |     +--Boltonia_168
+|                             |  |        |  |                 |  |  +--| (100)
+|                             |  |        |  |                 |  |  |  +--Boltonia_310
+|                             |  |        |  |                 |  +--| (100)
+|                             |  |        |  |                 |     +--Boltonia_230
+|                             |  |        |  |              +--| (100)
+|                             |  |        |  |              |  |  +--Boltonia_263
+|                             |  |        |  |              |  +--| (60)
+|                             |  |        |  |              |     +--Boltonia_354
+|                             |  |        |  |           +--| (99)
+|                             |  |        |  |           |  |        +--Boltonia_098
+|                             |  |        |  |           |  |     +--| (93)
+|                             |  |        |  |           |  |     |  +--Boltonia_401
+|                             |  |        |  |           |  |  +--| (60)
+|                             |  |        |  |           |  |  |  +--Boltonia_458
+|                             |  |        |  |           |  +--| (62)
+|                             |  |        |  |           |     +--Boltonia_454
+|                             |  |        |  |        +--| (99)
+|                             |  |        |  |        |  +--Boltonia_449
+|                             |  |        |  |     +--| (99)
+|                             |  |        |  |     |  +--Boltonia_389
+|                             |  |        |  |  +--| (100)
+|                             |  |        |  |  |  +--Boltonia_175
+|                             |  |        |  +--| (100)
+|                             |  |        |     +--Boltonia_352
+|                             |  |     +--| (66)
+|                             |  |     |  |     +--Boltonia_116
+|                             |  |     |  |  +--| (100)
+|                             |  |     |  |  |  +--Boltonia_383
+|                             |  |     |  +--| (100)
+|                             |  |     |     +--Boltonia_177
+|                             |  |  +--| (100)
+|                             |  |  |  |           +--Boltonia_054
+|                             |  |  |  |        +--| (100)
+|                             |  |  |  |        |  +--Boltonia_105
+|                             |  |  |  |     +--| (94)
+|                             |  |  |  |     |  +--Boltonia_108
+|                             |  |  |  |  +--| (99)
+|                             |  |  |  |  |  +--Boltonia_181
+|                             |  |  |  +--| (99)
+|                             |  |  |     +--Boltonia_317
+|                             |  +--| (100)
+|                             |     |     +--Boltonia_037
+|                             |     |  +--| (100)
+|                             |     |  |  +--Boltonia_404
+|                             |     +--| (100)
+|                             |        |     +--Boltonia_125
+|                             |        |  +--| (100)
+|                             |        |  |  +--Boltonia_409
+|                             |        +--| (100)
+|                             |           +--Boltonia_186
+|                          +--| (93)
+|                          |  |                 +--Boltonia_032
+|                          |  |              +--| (100)
+|                          |  |              |  +--Boltonia_436
+|                          |  |           +--| (69)
+|                          |  |           |  |  +--Boltonia_277
+|                          |  |           |  +--| (40)
+|                          |  |           |     |  +--Boltonia_278
+|                          |  |           |     +--| (100)
+|                          |  |           |        +--Boltonia_405
+|                          |  |        +--| (100)
+|                          |  |        |  |     +--Boltonia_094
+|                          |  |        |  |  +--| (100)
+|                          |  |        |  |  |  +--Boltonia_343
+|                          |  |        |  +--| (100)
+|                          |  |        |     |  +--Boltonia_160
+|                          |  |        |     +--| (100)
+|                          |  |        |        +--Boltonia_351
+|                          |  |     +--| (100)
+|                          |  |     |  +--Boltonia_224
+|                          |  |  +--| (93)
+|                          |  |  |  |     +--Boltonia_047
+|                          |  |  |  |  +--| (100)
+|                          |  |  |  |  |  +--Boltonia_376
+|                          |  |  |  +--| (100)
+|                          |  |  |     |              +--Boltonia_061
+|                          |  |  |     |           +--| (100)
+|                          |  |  |     |           |  |  +--Boltonia_136
+|                          |  |  |     |           |  +--| (89)
+|                          |  |  |     |           |     +--Boltonia_293
+|                          |  |  |     |        +--| (100)
+|                          |  |  |     |        |  |        +--Boltonia_146
+|                          |  |  |     |        |  |     +--| (99)
+|                          |  |  |     |        |  |     |  +--Boltonia_256
+|                          |  |  |     |        |  |  +--| (100)
+|                          |  |  |     |        |  |  |  +--Boltonia_251
+|                          |  |  |     |        |  +--| (100)
+|                          |  |  |     |        |     +--Boltonia_460
+|                          |  |  |     |     +--| (100)
+|                          |  |  |     |     |  |  +--Boltonia_236
+|                          |  |  |     |     |  +--| (100)
+|                          |  |  |     |     |     +--Boltonia_385
+|                          |  |  |     |  +--| (100)
+|                          |  |  |     |  |  |  +--Boltonia_373
+|                          |  |  |     |  |  +--| (100)
+|                          |  |  |     |  |     +--Boltonia_382
+|                          |  |  |     +--| (98)
+|                          |  |  |        |        +--Boltonia_075
+|                          |  |  |        |     +--| (100)
+|                          |  |  |        |     |  |  +--Boltonia_254
+|                          |  |  |        |     |  +--| (99)
+|                          |  |  |        |     |     +--Boltonia_284
+|                          |  |  |        |  +--| (100)
+|                          |  |  |        |  |  +--Boltonia_086
+|                          |  |  |        +--| (98)
+|                          |  |  |           +--Boltonia_192
+|                          |  +--| (94)
+|                          |     +--Boltonia_392
+|                       +--| (100)
+|                       |  |                 +--Boltonia_031
+|                       |  |              +--| (100)
+|                       |  |              |  |  +--Boltonia_039
+|                       |  |              |  +--| (100)
+|                       |  |              |     +--Boltonia_200
+|                       |  |           +--| (99)
+|                       |  |           |  +--Boltonia_463
+|                       |  |        +--| (89)
+|                       |  |        |  |     +--Boltonia_038
+|                       |  |        |  |  +--| (100)
+|                       |  |        |  |  |  |  +--Boltonia_295
+|                       |  |        |  |  |  +--| (100)
+|                       |  |        |  |  |     +--Boltonia_336
+|                       |  |        |  +--| (97)
+|                       |  |        |     |  +--Boltonia_364
+|                       |  |        |     +--| (100)
+|                       |  |        |        +--Boltonia_455
+|                       |  |     +--| (91)
+|                       |  |     |  |        +--Boltonia_050
+|                       |  |     |  |     +--| (100)
+|                       |  |     |  |     |  +--Boltonia_076
+|                       |  |     |  |  +--| (82)
+|                       |  |     |  |  |  |        +--Boltonia_071
+|                       |  |     |  |  |  |     +--| (100)
+|                       |  |     |  |  |  |     |  +--Boltonia_096
+|                       |  |     |  |  |  |  +--| (100)
+|                       |  |     |  |  |  |  |  |  +--Boltonia_204
+|                       |  |     |  |  |  |  |  +--| (99)
+|                       |  |     |  |  |  |  |     +--Boltonia_429
+|                       |  |     |  |  |  +--| (100)
+|                       |  |     |  |  |     +--Boltonia_273
+|                       |  |     |  +--| (74)
+|                       |  |     |     |           +--Boltonia_059
+|                       |  |     |     |        +--| (100)
+|                       |  |     |     |        |  +--Boltonia_380
+|                       |  |     |     |     +--| (98)
+|                       |  |     |     |     |  +--Boltonia_444
+|                       |  |     |     |  +--| (100)
+|                       |  |     |     |  |  |  +--Boltonia_245
+|                       |  |     |     |  |  +--| (98)
+|                       |  |     |     |  |     +--Boltonia_356
+|                       |  |     |     +--| (99)
+|                       |  |     |        |        +--Boltonia_109
+|                       |  |     |        |     +--| (100)
+|                       |  |     |        |     |  +--Boltonia_358
+|                       |  |     |        |  +--| (100)
+|                       |  |     |        |  |  +--Boltonia_244
+|                       |  |     |        +--| (100)
+|                       |  |     |           |  +--Boltonia_425
+|                       |  |     |           +--| (57)
+|                       |  |     |              +--Boltonia_433
+|                       |  |  +--| (43)
+|                       |  |  |  +--Boltonia_381
+|                       |  +--| (66)
+|                       |     |     +--Boltonia_198
+|                       |     |  +--| (99)
+|                       |     |  |  +--Boltonia_286
+|                       |     +--| (90)
+|                       |        |  +--Boltonia_210
+|                       |        +--| (100)
+|                       |           +--Boltonia_363
+|                    +--| (87)
+|                    |  |              +--Boltonia_008
+|                    |  |           +--| (100)
+|                    |  |           |  +--Boltonia_247
+|                    |  |        +--| (100)
+|                    |  |        |  +--Boltonia_423
+|                    |  |     +--| (100)
+|                    |  |     |  +--Boltonia_461
+|                    |  |  +--| (100)
+|                    |  |  |  |                    +--Boltonia_016
+|                    |  |  |  |                 +--| (100)
+|                    |  |  |  |                 |  +--Boltonia_281
+|                    |  |  |  |              +--| (100)
+|                    |  |  |  |              |  +--Boltonia_443
+|                    |  |  |  |           +--| (99)
+|                    |  |  |  |           |  |  +--Boltonia_126
+|                    |  |  |  |           |  +--| (98)
+|                    |  |  |  |           |     |  +--Boltonia_446
+|                    |  |  |  |           |     +--| (100)
+|                    |  |  |  |           |        +--Boltonia_457
+|                    |  |  |  |        +--| (98)
+|                    |  |  |  |        |  |  +--Boltonia_051
+|                    |  |  |  |        |  +--| (85)
+|                    |  |  |  |        |     +--Boltonia_298
+|                    |  |  |  |     +--| (59)
+|                    |  |  |  |     |  |        +--Boltonia_052
+|                    |  |  |  |     |  |     +--| (60)
+|                    |  |  |  |     |  |     |  +--Boltonia_467
+|                    |  |  |  |     |  |  +--| (60)
+|                    |  |  |  |     |  |  |  +--Boltonia_248
+|                    |  |  |  |     |  +--| (60)
+|                    |  |  |  |     |     +--Boltonia_145
+|                    |  |  |  |  +--| (60)
+|                    |  |  |  |  |  |  +--Boltonia_308
+|                    |  |  |  |  |  +--| (100)
+|                    |  |  |  |  |     +--Boltonia_359
+|                    |  |  |  +--| (60)
+|                    |  |  |     |  +--Boltonia_261
+|                    |  |  |     +--| (100)
+|                    |  |  |        +--Boltonia_422
+|                    |  +--| (100)
+|                    |     |     +--Boltonia_153
+|                    |     |  +--| (100)
+|                    |     |  |  +--Boltonia_213
+|                    |     +--| (97)
+|                    |        |  +--Boltonia_211
+|                    |        +--| (100)
+|                    |           +--Boltonia_418
+|                 +--| (80)
+|                 |  |                             +--Boltonia_010
+|                 |  |                          +--| (91)
+|                 |  |                          |  +--Boltonia_068
+|                 |  |                       +--| (97)
+|                 |  |                       |  +--Boltonia_328
+|                 |  |                    +--| (91)
+|                 |  |                    |  |  +--Boltonia_041
+|                 |  |                    |  +--| (93)
+|                 |  |                    |     +--Boltonia_464
+|                 |  |                 +--| (93)
+|                 |  |                 |  |     +--Boltonia_104
+|                 |  |                 |  |  +--| (95)
+|                 |  |                 |  |  |  +--Boltonia_451
+|                 |  |                 |  +--| (100)
+|                 |  |                 |     |  +--Boltonia_199
+|                 |  |                 |     +--| (95)
+|                 |  |                 |        +--Boltonia_439
+|                 |  |              +--| (100)
+|                 |  |              |  |  +--Boltonia_069
+|                 |  |              |  +--| (93)
+|                 |  |              |     +--Boltonia_252
+|                 |  |           +--| (61)
+|                 |  |           |  |        +--Boltonia_018
+|                 |  |           |  |     +--| (53)
+|                 |  |           |  |     |  +--Boltonia_478
+|                 |  |           |  |  +--| (59)
+|                 |  |           |  |  |  +--Boltonia_314
+|                 |  |           |  +--| (63)
+|                 |  |           |     |  +--Boltonia_166
+|                 |  |           |     +--| (95)
+|                 |  |           |        +--Boltonia_223
+|                 |  |        +--| (100)
+|                 |  |        |  |        +--Boltonia_082
+|                 |  |        |  |     +--| (99)
+|                 |  |        |  |     |  +--Boltonia_357
+|                 |  |        |  |  +--| (100)
+|                 |  |        |  |  |  |  +--Boltonia_216
+|                 |  |        |  |  |  +--| (100)
+|                 |  |        |  |  |     +--Boltonia_419
+|                 |  |        |  +--| (60)
+|                 |  |        |     |     +--Boltonia_206
+|                 |  |        |     |  +--| (25)
+|                 |  |        |     |  |  |     +--Boltonia_340
+|                 |  |        |     |  |  |  +--| (75)
+|                 |  |        |     |  |  |  |  +--Boltonia_347
+|                 |  |        |     |  |  +--| (44)
+|                 |  |        |     |  |     +--Boltonia_406
+|                 |  |        |     +--| (62)
+|                 |  |        |        +--Boltonia_319
+|                 |  |     +--| (96)
+|                 |  |     |  |  +--Boltonia_471
+|                 |  |     |  +--| (100)
+|                 |  |     |     +--Boltonia_476
+|                 |  |  +--| (100)
+|                 |  |  |  |           +--Boltonia_469
+|                 |  |  |  |        +--| (100)
+|                 |  |  |  |        |  +--Boltonia_470
+|                 |  |  |  |     +--| (99)
+|                 |  |  |  |     |  |              +--Boltonia_472
+|                 |  |  |  |     |  |           +--| (100)
+|                 |  |  |  |     |  |           |  +--Boltonia_473
+|                 |  |  |  |     |  |        +--| (100)
+|                 |  |  |  |     |  |        |  +--Boltonia_474
+|                 |  |  |  |     |  |     +--| (93)
+|                 |  |  |  |     |  |     |  |  +--Boltonia_484
+|                 |  |  |  |     |  |     |  +--| (100)
+|                 |  |  |  |     |  |     |     +--Boltonia_485
+|                 |  |  |  |     |  |  +--| (55)
+|                 |  |  |  |     |  |  |  |                                        +--Boltonia_489
+|                 |  |  |  |     |  |  |  |                      +-----------------| (100)
+|                 |  |  |  |     |  |  |  |                      |                 +--Boltonia_490
+|                 |  |  |  |     |  |  |  +----------------------| (100)
+|                 |  |  |  |     |  |  |                         +----------------------------------Boltonia_491
+|                 |  |  |  |     |  +--| (100)
+|                 |  |  |  |     |     +--Boltonia_486
+|                 |  |  |  |  +--| (100)
+|                 |  |  |  |  |  |  +--Boltonia_481
+|                 |  |  |  |  |  +--| (100)
+|                 |  |  |  |  |     +--Boltonia_482
+|                 |  |  |  +--| (97)
+|                 |  |  |     +--Boltonia_475
+|                 |  +--| (100)
+|                 |     |     +--Boltonia_477
+|                 |     |  +--| (100)
+|                 |     |  |  +--Boltonia_483
+|                 |     +--| (100)
+|                 |        |  +--Boltonia_479
+|                 |        +--| (100)
+|                 |           +--Boltonia_492
+|              +--| (46)
+|              |  |                       +--Boltonia_034
+|              |  |                    +--| (100)
+|              |  |                    |  |  +--Boltonia_042
+|              |  |                    |  +--| (100)
+|              |  |                    |     +--Boltonia_184
+|              |  |                 +--| (100)
+|              |  |                 |  +--Boltonia_324
+|              |  |              +--| (100)
+|              |  |              |  |  +--Boltonia_141
+|              |  |              |  +--| (100)
+|              |  |              |     +--Boltonia_303
+|              |  |           +--| (79)
+|              |  |           |  |  +--Boltonia_203
+|              |  |           |  +--| (79)
+|              |  |           |     |  +--Boltonia_214
+|              |  |           |     +--| (100)
+|              |  |           |        +--Boltonia_326
+|              |  |        +--| (78)
+|              |  |        |  +--Boltonia_165
+|              |  |     +--| (100)
+|              |  |     |  |  +--Boltonia_072
+|              |  |     |  +--| (67)
+|              |  |     |     |  +--Boltonia_139
+|              |  |     |     +--| (100)
+|              |  |     |        +--Boltonia_452
+|              |  |  +--| (94)
+|              |  |  |  +--Boltonia_368
+|              |  +--| (88)
+|              |     |     +--Boltonia_035
+|              |     |  +--| (100)
+|              |     |  |  +--Boltonia_064
+|              |     +--| (100)
+|              |        |  +--Boltonia_114
+|              |        +--| (100)
+|              |           +--Boltonia_255
+|           +--| (96)
+|           |  |  +--Boltonia_169
+|           |  +--| (72)
+|           |     +--Boltonia_196
+|        +--| (100)
+|        |  |  +--Boltonia_025
+|        |  +--| (97)
+|        |     |  +--Boltonia_226
+|        |     +--| (93)
+|        |        |  +--Boltonia_321
+|        |        +--| (100)
+|        |           +--Boltonia_466
+|     +--| (59)
+|     |  |     +--Boltonia_176
+|     |  |  +--| (53)
+|     |  |  |  +--Boltonia_178
+|     |  +--| (100)
+|     |     +--Boltonia_262
+|  +--| (55)
+|  |  |     +--Boltonia_036
+|  |  |  +--| (100)
+|  |  |  |  +--Boltonia_283
+|  |  +--| (100)
+|  |     +--Boltonia_253
++--| (100)
+   |  +--Boltonia_155
+   +--| (100)
+      +--Boltonia_396
+
+
+Consensus tree in newick format: 
+
+(Boltonia_001:0.0099158331,Boltonia_002:0.0066183155,((((((((((((((((((Boltonia_004:0.0066679335,(Boltonia_307:0.0006673443,Boltonia_387:0.0000024744)100:0.0097797590)100:0.0128046881,(Boltonia_234:0.0011257256,Boltonia_403:0.0001591204)100:0.0209897886)100:0.0393074184,(((Boltonia_115:0.0011170823,Boltonia_242:0.0225215999)74:0.0029551531,Boltonia_157:0.0072662366)100:0.0215271309,(Boltonia_197:0.0021864417,Boltonia_238:0.0006083752)100:0.0255153660)100:0.0165962065)75:0.0069123712,((((((((((((((Boltonia_005:0.0017498993,Boltonia_193:0.0004991520)100:0.0012409998,(Boltonia_121:0.0000022354,Boltonia_390:0.0010119129)100:0.0008895016)100:0.0052411091,Boltonia_017:0.0003013769)100:0.0200192193,Boltonia_088:0.0007386251)100:0.0049740836,Boltonia_045:0.0006711449)100:0.0087999354,Boltonia_120:0.0045113130)100:0.0126133535,Boltonia_172:0.0017826606)100:0.0307371686,((((((Boltonia_100:0.0002837316,Boltonia_274:0.0000024572)100:0.0180096659,(Boltonia_337:0.0000917367,Boltonia_339:0.0000022847)88:0.0209404341)100:0.0089547336,Boltonia_427:0.0008627941)100:0.0134241212,Boltonia_179:0.0082266366)99:0.0164564611,Boltonia_408:0.0011169391)80:0.0009378609,Boltonia_215:0.0022425984)57:0.0031052342)97:0.0244934388,((Boltonia_023:0.0057929549,Boltonia_350:0.0022587908)99:0.0113910993,Boltonia_092:0.0027177982)60:0.0044196735)87:0.0168632692,(((((((((Boltonia_006:0.0010946290,Boltonia_394:0.0006453429)98:0.0008053482,Boltonia_158:0.0009181941)93:0.0001262878,(Boltonia_062:0.0000017490,Boltonia_434:0.0000026367)99:0.0001144990)93:0.0006263787,Boltonia_144:0.0015161589)99:0.0008671211,Boltonia_149:0.0046184746)99:0.0016644575,Boltonia_397:0.0010329102)80:0.0116981720,Boltonia_306:0.0015630333)59:0.0013495569,Boltonia_110:0.0005777003)79:0.0015083080,((Boltonia_055:0.0001939377,Boltonia_311:0.0000028754)80:0.0006085068,Boltonia_462:0.0012913679)89:0.0048219007)100:0.0361854128)62:0.0123819020,((Boltonia_312:0.0018054238,(Boltonia_341:0.0002000216,Boltonia_366:0.0013712399)100:0.0051034577)97:0.0130627949,Boltonia_388:0.0083839925)100:0.0191741698)99:0.0105569473,(((((((Boltonia_014:0.0030042312,Boltonia_106:0.0024620150)100:0.0481991711,Boltonia_227:0.0001962746)100:0.0015489845,Boltonia_113:0.0013594985)99:0.0019352747,Boltonia_355:0.0014025822)65:0.0017310763,Boltonia_431:0.0008118918)64:0.0083952319,Boltonia_246:0.0178751486)98:0.0192499233,(Boltonia_400:0.0020946304,Boltonia_432:0.0013619959)99:0.0055787109)100:0.0201196609)100:0.0126449356,(((Boltonia_043:0.0000022482,Boltonia_271:0.0008935035)100:0.0069615968,Boltonia_289:0.0028768871)100:0.0123036784,Boltonia_374:0.0072966055)100:0.0233404239)100:0.0132632087,Boltonia_296:0.0236480430)77:0.0072019214)97:0.0074959338,(((((Boltonia_021:0.0185187645,Boltonia_241:0.0107063215)55:0.0043001297,Boltonia_318:0.0100501313)55:0.0167141780,Boltonia_095:0.0259372660)55:0.0152118600,((((Boltonia_074:0.0036884723,Boltonia_322:0.0037935228)100:0.0317379761,(Boltonia_189:0.0070569989,Boltonia_379:0.0031567976)100:0.0209544538)97:0.0120590631,((Boltonia_099:0.0050361213,(Boltonia_159:0.0039769484,Boltonia_207:0.0016721664)100:0.0094535338)100:0.0264703247,Boltonia_411:0.0337436872)96:0.0119660701)61:0.0039858650,Boltonia_112:0.0197769034)33:0.0047306236)55:0.0058192642,((((Boltonia_093:0.0020123309,Boltonia_202:0.0007320614)100:0.0141652451,Boltonia_243:0.0159625767)100:0.0199011655,(Boltonia_111:0.0011310128,Boltonia_270:0.0016703162)100:0.0325648344)55:0.0111233481,(((Boltonia_117:0.0236635499,Boltonia_147:0.0132643031)100:0.0107041380,Boltonia_334:0.0170732324)100:0.0100387405,(((Boltonia_231:0.0010796096,Boltonia_313:0.0045317730)100:0.0172411116,Boltonia_402:0.0084563663)100:0.0236306089,Boltonia_305:0.0119703652)98:0.0074896750)98:0.0085998791)56:0.0067747094)98:0.0064157330)59:0.0036054566,((((((((((((((((Boltonia_009:0.0005709917,Boltonia_424:0.0011508907)100:0.0154076272,(((((Boltonia_012:0.0004617426,Boltonia_360:0.0003011079)99:0.0011362589,Boltonia_091:0.0000749441)100:0.0086315690,Boltonia_448:0.0000026367)96:0.0000021027,Boltonia_102:0.0002475157)90:0.0000025543,Boltonia_067:0.0000026053)94:0.0036931541)94:0.0079658337,Boltonia_456:0.0009680083)100:0.0177582554,Boltonia_384:0.0006985309)100:0.0189639810,Boltonia_288:0.0218829610)100:0.0144878395,Boltonia_259:0.0195763140)100:0.0068117842,(Boltonia_171:0.0169537001,Boltonia_320:0.0098807773)100:0.0193609187)72:0.0191209568,((Boltonia_027:0.0005607481,Boltonia_430:0.0004828840)100:0.0472670271,Boltonia_361:0.0050695176)62:0.0134259818)45:0.0078387168,(Boltonia_218:0.0010074577,(Boltonia_267:0.0112868164,Boltonia_367:0.0043760740)100:0.0128130347)100:0.0291733176)73:0.0100402907,(((Boltonia_058:0.0015494671,Boltonia_441:0.0004774000)100:0.0005373581,Boltonia_468:0.0015450405)100:0.0271369420,(Boltonia_103:0.0301201810,((Boltonia_190:0.0094735047,Boltonia_442:0.0028399140)100:0.0256992088,(Boltonia_335:0.0000025277,Boltonia_435:0.0002152884)100:0.0165529297)100:0.0063745747)82:0.0113088409)100:0.0186190544)98:0.0073316001,Boltonia_453:0.0186934983)97:0.0077468110,((Boltonia_225:0.0014125111,Boltonia_250:0.0001620576)100:0.0166563824,Boltonia_264:0.0057671102)100:0.0117886363)100:0.0208882775,(Boltonia_173:0.0000022555,Boltonia_260:0.0000024397)100:0.0294887916)96:0.0092127689,(((Boltonia_044:0.0010594668,Boltonia_378:0.0006878143)100:0.0330548343,(Boltonia_083:0.0015912092,Boltonia_279:0.0007394402)100:0.0512869582)96:0.0124828361,((Boltonia_183:0.0164593762,Boltonia_417:0.0067314987)82:0.0066490241,Boltonia_349:0.0217142297)98:0.0254902200)96:0.0094450428)98:0.0074138672,((((Boltonia_046:0.0060549831,Boltonia_167:0.0057429872)100:0.0136525423,(((((Boltonia_048:0.0029484338,Boltonia_285:0.0015931491)100:0.0034609886,((Boltonia_187:0.0000027757,Boltonia_421:0.0003747436)100:0.0007313762,Boltonia_398:0.0031232784)100:0.0144087294)97:0.0116534182,(Boltonia_119:0.0030230180,Boltonia_235:0.0002170653)97:0.0094652903)100:0.0097978762,Boltonia_272:0.0116497932)100:0.0230342138,Boltonia_152:0.0119293782)100:0.0184694988)100:0.0162633354,((Boltonia_148:0.0045647445,Boltonia_212:0.0048872561)100:0.0334056939,Boltonia_164:0.0126454428)100:0.0102727413)100:0.0083553819,((Boltonia_220:0.0002575416,Boltonia_265:0.0007219246)100:0.0316408789,Boltonia_323:0.0149051564)100:0.0241848706)100:0.0088490785)72:0.0042408263,((((Boltonia_019:0.0145913208,((((((Boltonia_084:0.0000021456,Boltonia_174:0.0010240147)63:0.0005553154,Boltonia_377:0.0001711791)100:0.0244106762,Boltonia_188:0.0096640867)60:0.0138366780,Boltonia_101:0.0026205203)58:0.0075858522,Boltonia_133:0.0124179759)96:0.0089515892,Boltonia_138:0.0152429887)100:0.0106057321)95:0.0079392613,(Boltonia_079:0.0101847303,(Boltonia_140:0.0162210884,Boltonia_420:0.0085991771)100:0.0309328942)100:0.0229044148)97:0.0128490679,Boltonia_078:0.0136978824)100:0.0137555157,(((((Boltonia_097:0.0000021993,(Boltonia_237:0.0013316558,Boltonia_302:0.0007328546)100:0.0212265075)68:0.0037190768,((Boltonia_162:0.0005032153,Boltonia_239:0.0012032079)100:0.0039713465,Boltonia_371:0.0007462753)100:0.0422801471)100:0.0326371721,((Boltonia_412:0.0000020349,Boltonia_465:0.0000020393)100:0.0009939936,Boltonia_428:0.0002191346)100:0.0139127400)100:0.0194019556,Boltonia_372:0.0223326972)92:0.0118230417,((Boltonia_118:0.0023620986,Boltonia_287:0.0030485766)100:0.0288206385,(Boltonia_129:0.0024281729,Boltonia_438:0.0009651690)100:0.0356096505)89:0.0070719079)100:0.0120185286)99:0.0091551299)76:0.0034744689)96:0.0063362521,(((((((((Boltonia_007:0.0156975063,Boltonia_222:0.0148352949)100:0.0200393167,(((Boltonia_022:0.0995101912,(Boltonia_030:0.0266240009,((Boltonia_292:0.0085801575,Boltonia_426:0.0010656331)100:0.0061873514,Boltonia_315:0.0108433431)100:0.0153323239)100:0.0109527673)59:0.0073901881,(Boltonia_161:0.0115155340,Boltonia_229:0.0111535992)100:0.0167629648)46:0.0052428507,(Boltonia_024:0.0012333017,Boltonia_057:0.0020463900)100:0.0412553835)47:0.0057362404)100:0.0082732032,(((Boltonia_151:0.0006144329,Boltonia_327:0.0004347044)100:0.0402390985,((Boltonia_194:0.0012174227,Boltonia_338:0.0000020190)100:0.0241110876,(Boltonia_201:0.0027196803,(Boltonia_290:0.0000021993,Boltonia_370:0.0000024523)100:0.0026283891)74:0.0135865944)74:0.0266994058)73:0.0066757802,Boltonia_342:0.0235905934)97:0.0067986024)98:0.0087183541,((Boltonia_073:0.0027514012,Boltonia_208:0.0016612452)100:0.0401047962,((Boltonia_135:0.0005593456,Boltonia_299:0.0000022818)100:0.0057713608,Boltonia_294:0.0051636945)100:0.0365663605)100:0.0159835449)99:0.0053009098,(((Boltonia_033:0.0207936357,(Boltonia_087:0.0024430506,Boltonia_137:0.0012546888)100:0.0302089722)99:0.0131321957,((Boltonia_089:0.0022581964,Boltonia_090:0.0090348184)99:0.0160589138,Boltonia_180:0.0159006128)100:0.0198236213)99:0.0063781693,(Boltonia_316:0.0567746978,Boltonia_399:0.0172502077)100:0.0227837746)98:0.0054941397)99:0.0068670201,(((((((Boltonia_015:0.0008286064,Boltonia_081:0.0004199072)100:0.0397607634,((Boltonia_131:0.0002311024,Boltonia_233:0.0001348879)100:0.0028157316,(Boltonia_280:0.0000023527,Boltonia_332:0.0000022436)100:0.0005157038)100:0.0415058304)98:0.0173928186,((Boltonia_056:0.0026214551,Boltonia_205:0.0005395266)100:0.0146142299,Boltonia_065:0.0064908284)98:0.0216776322)100:0.0076973755,((Boltonia_182:0.0005740122,Boltonia_445:0.0024395330)86:0.0003926587,Boltonia_209:0.0026403244)100:0.0391046472)100:0.0104628585,(((Boltonia_060:0.0009932350,Boltonia_353:0.0004496054)100:0.0040300227,Boltonia_345:0.0018109553)100:0.0421585721,(((Boltonia_134:0.0019345242,Boltonia_386:0.0007686178)100:0.0298375999,(Boltonia_143:0.0157110539,(Boltonia_154:0.0008358945,Boltonia_365:0.0000021425)100:0.0077070841)100:0.0570748540)99:0.0085024578,Boltonia_282:0.0187289692)97:0.0085470895)100:0.0093119512)98:0.0088412248,(Boltonia_080:0.0320610049,Boltonia_415:0.0169762933)97:0.0076546687)95:0.0058983494,(Boltonia_228:0.0105979433,Boltonia_413:0.0116213691)100:0.0232977359)96:0.0055215893)100:0.0079730334,(((Boltonia_013:0.0160864821,((Boltonia_130:0.0121564325,(Boltonia_163:0.0051398657,Boltonia_191:0.0051969779)100:0.0159299892)83:0.0077345398,(((Boltonia_195:0.0000026526,Boltonia_362:0.0000026526)100:0.0003876636,(Boltonia_268:0.0005207762,Boltonia_291:0.0000024212)100:0.0059495805)100:0.0130459715,Boltonia_395:0.0269910152)100:0.0243924693)100:0.0080460430)69:0.0042562079,(Boltonia_132:0.0162118853,((Boltonia_329:0.0043987097,Boltonia_344:0.0071527604)100:0.0137890779,Boltonia_375:0.0077031111)100:0.0112076011)100:0.0114851139)100:0.0138615972,(((((Boltonia_029:0.0012626300,Boltonia_325:0.0013192075)100:0.0234289732,(Boltonia_170:0.0010313412,Boltonia_269:0.0108680290)100:0.0193188998)100:0.0080428546,Boltonia_232:0.0132665381)81:0.0045867781,(Boltonia_053:0.0004866710,Boltonia_258:0.0011837771)100:0.0322337407)95:0.0133438944,((((((Boltonia_063:0.0010161429,Boltonia_185:0.0001337220)100:0.0011984418,Boltonia_393:0.0016141963)100:0.0062127604,Boltonia_330:0.0029889281)100:0.0219273655,Boltonia_142:0.0029227890)100:0.0382072756,Boltonia_123:0.0123103964)89:0.0107098875,((Boltonia_066:0.0136117540,Boltonia_124:0.0036149652)100:0.0158118946,Boltonia_221:0.0073779564)100:0.0159874662)89:0.0072217366)99:0.0060738559)98:0.0048741194)99:0.0074076465,((((Boltonia_070:0.0086117376,(Boltonia_128:0.0008461574,Boltonia_437:0.0004341423)100:0.0241141981)90:0.0067723380,Boltonia_276:0.0150515472)100:0.0160811193,(Boltonia_219:0.0026874957,Boltonia_331:0.0015438273)98:0.0271397438)94:0.0149242390,(((Boltonia_127:0.0001186879,Boltonia_249:0.0000029956)100:0.0001398792,Boltonia_301:0.0000686574)100:0.0216292097,((Boltonia_240:0.0007948508,Boltonia_309:0.0001133641)100:0.0325074378,Boltonia_459:0.0175472696)100:0.0118301894)92:0.0049472445)82:0.0037021133)73:0.0045367138,((((Boltonia_020:0.0000603484,Boltonia_150:0.0035781103)86:0.0088564822,Boltonia_077:0.0039051444)100:0.0285459776,((Boltonia_085:0.0006884535,Boltonia_257:0.0020671212)100:0.0193725229,Boltonia_275:0.0097356328)100:0.0119461808)100:0.0148867294,(Boltonia_107:0.0188228255,(Boltonia_217:0.0055311986,Boltonia_304:0.0020160836)100:0.0332351726)93:0.0065688805)92:0.0098240369)96:0.0068368763)97:0.0063257666,((((Boltonia_026:0.0051997472,((((((((Boltonia_028:0.0008131789,Boltonia_040:0.0126349051)97:0.0120894751,((Boltonia_168:0.0024190706,Boltonia_310:0.0003051807)100:0.0051810237,Boltonia_230:0.0052237362)100:0.0212307243)70:0.0064052063,(Boltonia_263:0.0021739047,Boltonia_354:0.0012672120)60:0.0026835869)100:0.0070338634,(((Boltonia_098:0.0002510131,Boltonia_401:0.0013672633)93:0.0030945532,Boltonia_458:0.0009732168)60:0.0023694266,Boltonia_454:0.0027316823)62:0.0087965155)99:0.0210023823,Boltonia_449:0.0097229428)99:0.0126095765,Boltonia_389:0.0244140311)99:0.0044084646,Boltonia_175:0.0104289861)100:0.0135785985,Boltonia_352:0.0080593882)100:0.0161553886)100:0.0244575771,((Boltonia_116:0.0086630848,Boltonia_383:0.0180835315)100:0.0234463361,Boltonia_177:0.0178622943)100:0.0127824377)66:0.0069321482,((((Boltonia_054:0.0101334953,Boltonia_105:0.0033393285)100:0.0116793481,Boltonia_108:0.0117253776)94:0.0089014547,Boltonia_181:0.0149196544)99:0.0067743473,Boltonia_317:0.0303641745)99:0.0089227997)100:0.0123517780,((Boltonia_037:0.0168413841,Boltonia_404:0.0216915042)100:0.0079454015,((Boltonia_125:0.0098933508,Boltonia_409:0.0037936133)100:0.0057066209,Boltonia_186:0.0038341746)100:0.0389293626)100:0.0123919937)100:0.0085399088)99:0.0063958638,((((((Boltonia_032:0.0013028382,Boltonia_436:0.0006516647)100:0.0018403666,(Boltonia_277:0.0001286865,(Boltonia_278:0.0009859172,Boltonia_405:0.0000020423)100:0.0023131440)40:0.0012942206)69:0.0051003048,((Boltonia_094:0.0003655206,Boltonia_343:0.0001189837)100:0.0008287320,(Boltonia_160:0.0014074503,Boltonia_351:0.0003578828)100:0.0022465542)100:0.0169760481)100:0.0370127287,Boltonia_224:0.0144323746)100:0.0176956898,((Boltonia_047:0.0155373942,Boltonia_376:0.0062298514)100:0.0145197617,(((((Boltonia_061:0.0021549770,(Boltonia_136:0.0009698288,Boltonia_293:0.0019955892)89:0.0000024838)100:0.0172027654,(((Boltonia_146:0.0011983378,Boltonia_256:0.0002634892)99:0.0023859920,Boltonia_251:0.0062482210)100:0.0153389313,Boltonia_460:0.0017543828)100:0.0095482333)100:0.0128148099,(Boltonia_236:0.0011066313,Boltonia_385:0.0005934500)100:0.0140798604)100:0.0225419752,(Boltonia_373:0.0014224117,Boltonia_382:0.0015686520)100:0.0201878778)100:0.0158563575,(((Boltonia_075:0.0009436455,(Boltonia_254:0.0017534349,Boltonia_284:0.0006691070)99:0.0019846044)100:0.0455641251,Boltonia_086:0.0010199579)100:0.0204407408,Boltonia_192:0.0129615155)98:0.0084039172)98:0.0157697723)100:0.0130224961)93:0.0078905595,Boltonia_392:0.0240708737)94:0.0062917748)93:0.0058342304,((((((Boltonia_031:0.0158191259,(Boltonia_039:0.0012826724,Boltonia_200:0.0035849814)100:0.0494018104)100:0.0134849303,Boltonia_463:0.0148331758)99:0.0087396525,((Boltonia_038:0.0224828146,(Boltonia_295:0.0087330366,Boltonia_336:0.0107454519)100:0.0079931589)100:0.0155888512,(Boltonia_364:0.0151089718,Boltonia_455:0.0308585351)100:0.0203361197)97:0.0087040375)89:0.0083324741,(((Boltonia_050:0.0059006779,Boltonia_076:0.0098254005)100:0.0206493615,(((Boltonia_071:0.0121163701,Boltonia_096:0.0042533043)100:0.0145568225,(Boltonia_204:0.0191951741,Boltonia_429:0.0121777283)99:0.0082474124)100:0.0158351637,Boltonia_273:0.0251239780)100:0.0126714369)82:0.0094135883,((((Boltonia_059:0.0002872513,Boltonia_380:0.0012339161)100:0.0320073336,Boltonia_444:0.0100662797)98:0.0108714556,(Boltonia_245:0.0074886060,Boltonia_356:0.0132463733)98:0.0154842098)100:0.0108561799,(((Boltonia_109:0.0027000779,Boltonia_358:0.0011405190)100:0.0065076889,Boltonia_244:0.0035363637)100:0.0291034231,(Boltonia_425:0.0121423419,Boltonia_433:0.0109153563)57:0.0083836005)100:0.0263641667)99:0.0088747553)74:0.0056857781)91:0.0049457895,Boltonia_381:0.0285629356)43:0.0026455210,((Boltonia_198:0.0331258270,Boltonia_286:0.0243099114)99:0.0093791606,(Boltonia_210:0.0103030018,Boltonia_363:0.0234397100)100:0.0158178689)90:0.0085248088)66:0.0045077748)100:0.0111090917,(((((Boltonia_008:0.0012956206,Boltonia_247:0.0005291383)100:0.0016142115,Boltonia_423:0.0008649433)100:0.0154940224,Boltonia_461:0.0089037819)100:0.0387015671,(((((((Boltonia_016:0.0041880873,Boltonia_281:0.0016047908)100:0.0125069204,Boltonia_443:0.0049602601)100:0.0145325632,(Boltonia_126:0.0066531526,(Boltonia_446:0.0170529937,Boltonia_457:0.0061448053)100:0.0111317382)98:0.0094756660)99:0.0108023851,(Boltonia_051:0.0222415870,Boltonia_298:0.0169329707)85:0.0024798612)98:0.0108423559,(((Boltonia_052:0.0057703102,Boltonia_467:0.0297571924)60:0.0053834750,Boltonia_248:0.0122644907)60:0.0109197723,Boltonia_145:0.0133448424)60:0.0125097250)59:0.0074404552,(Boltonia_308:0.0000022354,Boltonia_359:0.0000933307)100:0.0144785900)60:0.0066743314,(Boltonia_261:0.0004351860,Boltonia_422:0.0012560706)100:0.0251368542)60:0.0141139018)100:0.0126647428,((Boltonia_153:0.0101675913,Boltonia_213:0.0152181444)100:0.0235979945,(Boltonia_211:0.0009196008,Boltonia_418:0.0011830181)100:0.0339205561)97:0.0086656574)100:0.0128564471)87:0.0059346484,((((((((((Boltonia_010:0.0019752606,Boltonia_068:0.0005694523)91:0.0011110112,Boltonia_328:0.0017047793)97:0.0029426485,(Boltonia_041:0.0053241699,Boltonia_464:0.0014863237)93:0.0046052944)91:0.0057989404,((Boltonia_104:0.0022216636,Boltonia_451:0.0010638703)95:0.0044673913,(Boltonia_199:0.0021732233,Boltonia_439:0.0001380980)95:0.0020107353)100:0.0128906805)93:0.0042447748,(Boltonia_069:0.0011665701,Boltonia_252:0.0017405511)93:0.0045612818)100:0.0056284080,(((Boltonia_018:0.0007949434,Boltonia_478:0.0138839390)53:0.0013557296,Boltonia_314:0.0039861394)59:0.0043018497,(Boltonia_166:0.0025604056,Boltonia_223:0.0028353575)95:0.0051803415)63:0.0053823424)61:0.0045449447,(((Boltonia_082:0.0004975239,Boltonia_357:0.0004186394)99:0.0022243102,(Boltonia_216:0.0015016269,Boltonia_419:0.0003796755)100:0.0022367807)100:0.0108631357,((Boltonia_206:0.0072779345,((Boltonia_340:0.0001852040,Boltonia_347:0.0005574015)75:0.0004994567,Boltonia_406:0.0077806485)44:0.0039704531)25:0.0018059393,Boltonia_319:0.0103023780)62:0.0045708926)60:0.0040815731)100:0.0066071659,(Boltonia_471:0.0040630047,Boltonia_476:0.0045743541)100:0.0045419701)96:0.0044721353,((((Boltonia_469:0.0526060299,Boltonia_470:0.0476332451)100:0.0103172265,(((((Boltonia_472:0.0044635811,Boltonia_473:0.0040682480)100:0.0684805403,Boltonia_474:0.0347186661)100:0.0524123147,(Boltonia_484:0.0254321766,Boltonia_485:0.0342074435)100:0.0490759704)93:0.0108018268,((Boltonia_489:0.0002658817,Boltonia_490:0.0028799739)100:2.6413389845,Boltonia_491:5.2172258731)100:3.3469026319)55:0.0030671556,Boltonia_486:0.0983618781)100:0.0080758619)99:0.0064591833,(Boltonia_481:0.0423628559,Boltonia_482:0.0404419269)100:0.0131190345)100:0.0098193806,Boltonia_475:0.0157385200)97:0.0068172524)100:0.0090670637,((Boltonia_477:0.0080417584,Boltonia_483:0.0188444152)100:0.0330661176,(Boltonia_479:0.0447988807,Boltonia_492:0.0610663231)100:0.0092789923)100:0.0106814023)100:0.0269435793)80:0.0052069644,((((((((Boltonia_034:0.0006942169,(Boltonia_042:0.0000024087,Boltonia_184:0.0031117702)100:0.0045574294)100:0.0142943115,Boltonia_324:0.0201820936)100:0.0064021724,(Boltonia_141:0.0024593863,Boltonia_303:0.0001966184)100:0.0040796802)100:0.0166653093,(Boltonia_203:0.0015619045,(Boltonia_214:0.0013234769,Boltonia_326:0.0023255317)100:0.0108868690)79:0.0147319454)79:0.0187996035,Boltonia_165:0.0153133554)78:0.0225448192,(Boltonia_072:0.0281584408,(Boltonia_139:0.0092197706,Boltonia_452:0.0119573026)100:0.0245914047)67:0.0089820852)100:0.0190944452,Boltonia_368:0.0233784383)94:0.0063126748,((Boltonia_035:0.0113125564,Boltonia_064:0.0155707573)100:0.0130837162,(Boltonia_114:0.0025368841,Boltonia_255:0.0007050057)100:0.0398893041)100:0.0115080369)88:0.0068683140)46:0.0043133597,(Boltonia_169:0.0214184540,Boltonia_196:0.0353786222)72:0.0058116918)96:0.0073595853,(Boltonia_025:0.0290678637,(Boltonia_226:0.0250459212,(Boltonia_321:0.0000023344,Boltonia_466:0.0002084285)100:0.0303068263)93:0.0034352032)97:0.0101466190)100:0.0067208673,((Boltonia_176:0.0072539891,Boltonia_178:0.0158016138)53:0.0041339789,Boltonia_262:0.0188157355)100:0.0216289837)59:0.0076090314,((Boltonia_036:0.0057395303,Boltonia_283:0.0058874839)100:0.0145628074,Boltonia_253:0.0229509678)100:0.0154214877)55:0.0075759512,(Boltonia_155:0.0035125728,Boltonia_396:0.0008406410)100:0.0309416843)100:0.0228605327);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy.treefile -m "GTR{0.864467,5.21749,1.55171,0.612977,5.37995}+F{0.259675,0.238899,0.241291,0.260135}+G4{0.228425}" --length 37479
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s ./Boltonia_Chr_1_1-23679183.filtered_subsetfilter_filtered_all_samples.vcf.gz.min1.phy --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Wed Jul 16 23:21:21 2025
+Total CPU time used: 184985.8607 seconds (51h:23m:5s)
+Total wall-clock time used: 7739.007712 seconds (2h:8m:59s)
+
