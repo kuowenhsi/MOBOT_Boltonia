@@ -24,7 +24,11 @@ tree_file <- read.iqtree("./data/IQTREE_all/Boltonia_all_ID_LD.min1.phy.treefile
   root(outgroup = "Boltonia_489", edgelabel = TRUE)
 
 
-tree_file@extraInfo
+Sample_info <- tree_file@extraInfo%>%
+  filter(!is.na(Sample_Name_2))%>%
+  select(-node)%>%
+  arrange(Sample_Name_2)
+
 is.rooted(tree_file)
 ggtree(tree_file)
   
