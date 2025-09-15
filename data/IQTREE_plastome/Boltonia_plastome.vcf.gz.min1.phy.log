@@ -1,0 +1,1134 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    compute1-exec-136.ris.wustl.edu (AVX512, FMA3, 376 GB RAM)
+Command: /usr/local/bin/iqtree3_intel -s /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy -m GTR+G -B 1000 -nt 16
+Seed:    540613 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 11 20:47:26 2025
+Kernel:  AVX+FMA - 16 threads (64 CPU cores detected)
+
+Reading alignment file /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy ... Phylip format detected
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00493348 secs using 1384% CPU
+Alignment has 472 sequences with 1534 columns, 453 distinct patterns
+909 parsimony-informative, 480 singleton sites, 145 constant sites
+              Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 7.97734e-05 secs using 4372% CPU
+   1  Boltonia_001    0.52%    passed     99.92%
+   2  Boltonia_002    0.52%    passed     99.92%
+   3  Boltonia_004    0.07%    passed     99.98%
+   4  Boltonia_005    0.13%    passed     99.96%
+   5  Boltonia_006    0.52%    passed     99.99%
+   6  Boltonia_007    0.46%    passed     99.98%
+   7  Boltonia_008    0.46%    passed     99.89%
+   8  Boltonia_009    0.33%    passed     99.99%
+   9  Boltonia_010    2.87%    passed     87.74%
+  10  Boltonia_012    0.13%    passed     99.96%
+  11  Boltonia_013    0.52%    passed     99.96%
+  12  Boltonia_014    1.50%    passed     99.52%
+  13  Boltonia_015    0.07%    passed     99.92%
+  14  Boltonia_016    0.98%    passed     99.73%
+  15  Boltonia_017    0.59%    passed     99.99%
+  16  Boltonia_018    2.54%    passed     91.00%
+  17  Boltonia_019    0.46%    passed     99.97%
+  18  Boltonia_020    1.24%    passed     99.89%
+  19  Boltonia_021    1.30%    passed     98.34%
+  20  Boltonia_022    0.00%    passed     99.78%
+  21  Boltonia_023    0.13%    passed     99.96%
+  22  Boltonia_024    0.13%    passed     99.99%
+  23  Boltonia_025    0.13%    passed     99.99%
+  24  Boltonia_026    0.46%    passed     99.83%
+  25  Boltonia_027    0.07%    passed     99.98%
+  26  Boltonia_028    0.33%    passed     99.93%
+  27  Boltonia_029    0.13%    passed     99.96%
+  28  Boltonia_030    0.13%    passed     99.96%
+  29  Boltonia_031    1.30%    passed     97.98%
+  30  Boltonia_032    0.07%    passed     99.98%
+  31  Boltonia_033    0.13%    passed     99.96%
+  32  Boltonia_034    0.46%    passed     99.97%
+  33  Boltonia_035    0.52%    passed     99.88%
+  34  Boltonia_036    0.59%    passed     99.96%
+  35  Boltonia_037    0.46%    passed     99.97%
+  36  Boltonia_038    0.52%    passed     99.99%
+  37  Boltonia_039    1.30%    passed     99.82%
+  38  Boltonia_040    0.52%    passed     99.96%
+  39  Boltonia_041    2.02%    passed     91.67%
+  40  Boltonia_042    0.46%    passed     99.97%
+  41  Boltonia_043    0.52%    passed     99.99%
+  42  Boltonia_044    0.46%    passed     99.94%
+  43  Boltonia_045    0.52%    passed     99.99%
+  44  Boltonia_046    0.46%    passed     99.97%
+  45  Boltonia_047    0.07%    passed     99.98%
+  46  Boltonia_048    0.13%    passed     99.91%
+  47  Boltonia_050    0.07%    passed     99.94%
+  48  Boltonia_051    0.98%    passed     99.76%
+  49  Boltonia_052    0.39%    passed     99.87%
+  50  Boltonia_053    0.52%    passed     99.96%
+  51  Boltonia_054    0.13%    passed     99.96%
+  52  Boltonia_055    0.33%    passed    100.00%
+  53  Boltonia_056    0.20%    passed    100.00%
+  54  Boltonia_057    0.13%    passed     99.99%
+  55  Boltonia_058    0.46%    passed     99.97%
+  56  Boltonia_059    0.85%    passed     99.92%
+  57  Boltonia_060    0.13%    passed     99.96%
+  58  Boltonia_061    0.07%    passed     99.98%
+  59  Boltonia_062    0.07%    passed     99.92%
+  60  Boltonia_063    0.13%    passed     99.96%
+  61  Boltonia_064    0.07%    passed     99.98%
+  62  Boltonia_065    0.52%    passed     99.96%
+  63  Boltonia_066    0.13%    passed     99.91%
+  64  Boltonia_067    0.46%    passed     99.97%
+  65  Boltonia_068    2.35%    passed     88.03%
+  66  Boltonia_069    2.02%    passed     91.70%
+  67  Boltonia_070    0.13%    passed     99.96%
+  68  Boltonia_071    0.46%    passed     99.70%
+  69  Boltonia_072    0.52%    passed     99.43%
+  70  Boltonia_073    0.13%    passed     99.96%
+  71  Boltonia_074    0.59%    passed     99.99%
+  72  Boltonia_075    0.13%    passed     99.96%
+  73  Boltonia_076    1.11%    passed     99.83%
+  74  Boltonia_077    0.59%    passed     99.95%
+  75  Boltonia_078    0.39%    passed     99.72%
+  76  Boltonia_079    0.46%    passed     99.74%
+  77  Boltonia_080    0.13%    passed     99.96%
+  78  Boltonia_081    0.13%    passed     99.96%
+  79  Boltonia_082    2.54%    passed     89.53%
+  80  Boltonia_083    0.46%    passed     99.97%
+  81  Boltonia_084    0.52%    passed     99.93%
+  82  Boltonia_085    0.52%    passed     99.99%
+  83  Boltonia_086    0.07%    passed     99.98%
+  84  Boltonia_087    0.33%    passed     99.98%
+  85  Boltonia_088    0.59%    passed     99.99%
+  86  Boltonia_089    0.52%    passed     99.92%
+  87  Boltonia_090    0.46%    passed     99.97%
+  88  Boltonia_091    0.52%    passed     99.96%
+  89  Boltonia_092    0.52%    passed     99.99%
+  90  Boltonia_093    0.59%    passed     99.99%
+  91  Boltonia_094    0.07%    passed     99.98%
+  92  Boltonia_095    1.04%    passed     98.92%
+  93  Boltonia_096    0.13%    passed     99.87%
+  94  Boltonia_097    0.46%    passed     99.74%
+  95  Boltonia_098    1.30%    passed     99.18%
+  96  Boltonia_099    0.13%    passed     99.96%
+  97  Boltonia_100    0.07%    passed     99.98%
+  98  Boltonia_101    0.07%    passed     99.92%
+  99  Boltonia_102    0.00%    passed     99.94%
+ 100  Boltonia_103    0.07%    passed     99.98%
+ 101  Boltonia_104    3.00%    passed     88.36%
+ 102  Boltonia_105    1.11%    passed     99.83%
+ 103  Boltonia_106    0.46%    passed     99.98%
+ 104  Boltonia_107    0.13%    passed     99.96%
+ 105  Boltonia_108    0.46%    passed     99.94%
+ 106  Boltonia_109    0.59%    passed     99.85%
+ 107  Boltonia_110    0.13%    passed     99.96%
+ 108  Boltonia_111    0.59%    passed     99.59%
+ 109  Boltonia_112    0.13%    passed     99.96%
+ 110  Boltonia_113    0.13%    passed     99.96%
+ 111  Boltonia_114    0.72%    passed     99.33%
+ 112  Boltonia_115    0.07%    passed     99.75%
+ 113  Boltonia_116    0.33%    passed     99.99%
+ 114  Boltonia_117    0.13%    passed     99.96%
+ 115  Boltonia_118    0.07%    passed     99.75%
+ 116  Boltonia_119    1.04%    passed     99.56%
+ 117  Boltonia_120    0.07%    passed     99.92%
+ 118  Boltonia_121    0.07%    passed     99.98%
+ 119  Boltonia_123    0.13%    passed     99.96%
+ 120  Boltonia_124    0.13%    passed     99.91%
+ 121  Boltonia_125    0.07%    passed     99.98%
+ 122  Boltonia_126    0.52%    passed     99.88%
+ 123  Boltonia_127    0.39%    passed     99.91%
+ 124  Boltonia_128    0.46%    passed     99.94%
+ 125  Boltonia_129    0.91%    passed     99.99%
+ 126  Boltonia_130    0.07%    passed     99.98%
+ 127  Boltonia_131    0.20%    passed     99.99%
+ 128  Boltonia_132    0.13%    passed     99.99%
+ 129  Boltonia_133    0.13%    passed     99.96%
+ 130  Boltonia_134    0.07%    passed     99.98%
+ 131  Boltonia_135    0.13%    passed     99.96%
+ 132  Boltonia_136    0.07%    passed     99.98%
+ 133  Boltonia_137    0.20%    passed     99.99%
+ 134  Boltonia_138    0.13%    passed     99.96%
+ 135  Boltonia_139    0.59%    passed     99.38%
+ 136  Boltonia_140    0.07%    passed     99.75%
+ 137  Boltonia_141    1.30%    passed     99.76%
+ 138  Boltonia_142    0.13%    passed     99.96%
+ 139  Boltonia_143    0.13%    passed     99.96%
+ 140  Boltonia_144    0.13%    passed     99.96%
+ 141  Boltonia_145    0.39%    passed     99.89%
+ 142  Boltonia_146    0.20%    passed    100.00%
+ 143  Boltonia_147    0.13%    passed     99.96%
+ 144  Boltonia_148    0.20%    passed     99.78%
+ 145  Boltonia_149    0.13%    passed     99.96%
+ 146  Boltonia_150    0.20%    passed     99.99%
+ 147  Boltonia_151    1.24%    passed     99.95%
+ 148  Boltonia_152    1.11%    passed     99.83%
+ 149  Boltonia_153    0.07%    passed     99.98%
+ 150  Boltonia_154    0.13%    passed     99.96%
+ 151  Boltonia_155    0.33%    passed    100.00%
+ 152  Boltonia_157    0.46%    passed     99.74%
+ 153  Boltonia_158    0.26%    passed    100.00%
+ 154  Boltonia_159    0.20%    passed     99.99%
+ 155  Boltonia_160    0.13%    passed     99.99%
+ 156  Boltonia_161    0.59%    passed     99.94%
+ 157  Boltonia_162    0.07%    passed     99.75%
+ 158  Boltonia_163    0.13%    passed     99.96%
+ 159  Boltonia_164    0.13%    passed     99.89%
+ 160  Boltonia_165    0.07%    passed     99.98%
+ 161  Boltonia_166    2.61%    passed     87.97%
+ 162  Boltonia_167    0.13%    passed     99.99%
+ 163  Boltonia_168    0.13%    passed     99.99%
+ 164  Boltonia_169    0.26%    passed     99.97%
+ 165  Boltonia_170    0.13%    passed     99.96%
+ 166  Boltonia_171    0.07%    passed     99.98%
+ 167  Boltonia_172    0.13%    passed     99.96%
+ 168  Boltonia_173    0.13%    passed     99.96%
+ 169  Boltonia_174    0.13%    passed     99.91%
+ 170  Boltonia_175    0.07%    passed     99.98%
+ 171  Boltonia_176    0.07%    passed     99.98%
+ 172  Boltonia_177    0.13%    passed     99.96%
+ 173  Boltonia_178    0.07%    passed     99.98%
+ 174  Boltonia_179    0.13%    passed     99.96%
+ 175  Boltonia_180    0.13%    passed     99.96%
+ 176  Boltonia_181    0.07%    passed     99.98%
+ 177  Boltonia_182    0.46%    passed     99.99%
+ 178  Boltonia_183    0.98%    passed     99.88%
+ 179  Boltonia_184    0.78%    passed    100.00%
+ 180  Boltonia_185    1.04%    passed     99.98%
+ 181  Boltonia_186    0.07%    passed     99.98%
+ 182  Boltonia_187    0.13%    passed     99.89%
+ 183  Boltonia_188    0.00%    passed     99.94%
+ 184  Boltonia_189    0.52%    passed     99.99%
+ 185  Boltonia_190    0.07%    passed     99.98%
+ 186  Boltonia_191    0.13%    passed     99.99%
+ 187  Boltonia_192    0.20%    passed     99.99%
+ 188  Boltonia_193    0.13%    passed     99.96%
+ 189  Boltonia_194    0.52%    passed     99.99%
+ 190  Boltonia_195    0.13%    passed     99.96%
+ 191  Boltonia_196    1.50%    passed     99.71%
+ 192  Boltonia_197    0.07%    passed     99.75%
+ 193  Boltonia_198    0.20%    passed     99.95%
+ 194  Boltonia_199    3.13%    passed     85.25%
+ 195  Boltonia_200    0.72%    passed     99.76%
+ 196  Boltonia_201    0.20%    passed     99.99%
+ 197  Boltonia_202    0.13%    passed     99.96%
+ 198  Boltonia_203    0.85%    passed     99.30%
+ 199  Boltonia_204    1.17%    passed     99.74%
+ 200  Boltonia_205    0.52%    passed     99.96%
+ 201  Boltonia_206    1.76%    passed     93.36%
+ 202  Boltonia_207    1.43%    passed     98.18%
+ 203  Boltonia_208    0.52%    passed     99.99%
+ 204  Boltonia_209    0.46%    passed    100.00%
+ 205  Boltonia_210    0.59%    passed     99.90%
+ 206  Boltonia_211    0.07%    passed     99.92%
+ 207  Boltonia_212    0.26%    passed     99.84%
+ 208  Boltonia_213    0.26%    passed    100.00%
+ 209  Boltonia_214    0.20%    passed     99.96%
+ 210  Boltonia_215    0.59%    passed     99.99%
+ 211  Boltonia_216    2.41%    passed     88.04%
+ 212  Boltonia_217    0.13%    passed     99.96%
+ 213  Boltonia_218    0.52%    passed     99.96%
+ 214  Boltonia_219    0.13%    passed     99.96%
+ 215  Boltonia_220    0.07%    passed     99.75%
+ 216  Boltonia_221    0.26%    passed     99.94%
+ 217  Boltonia_222    0.26%    passed     99.99%
+ 218  Boltonia_223    2.15%    passed     91.87%
+ 219  Boltonia_224    0.33%    passed     99.95%
+ 220  Boltonia_225    0.07%    passed     99.98%
+ 221  Boltonia_226    0.13%    passed     99.96%
+ 222  Boltonia_227    0.20%    passed     99.92%
+ 223  Boltonia_228    0.07%    passed     99.98%
+ 224  Boltonia_229    1.43%    passed     99.62%
+ 225  Boltonia_230    0.52%    passed     99.96%
+ 226  Boltonia_231    0.65%    passed     99.99%
+ 227  Boltonia_232    0.13%    passed     99.96%
+ 228  Boltonia_233    0.52%    passed     99.99%
+ 229  Boltonia_234    0.52%    passed     99.99%
+ 230  Boltonia_235    0.13%    passed     99.89%
+ 231  Boltonia_236    0.13%    passed     99.96%
+ 232  Boltonia_237    0.33%    passed     99.78%
+ 233  Boltonia_238    0.46%    passed     99.74%
+ 234  Boltonia_239    0.46%    passed     99.74%
+ 235  Boltonia_240    0.52%    passed     99.96%
+ 236  Boltonia_241    1.30%    passed     98.72%
+ 237  Boltonia_242    0.33%    passed     99.78%
+ 238  Boltonia_243    1.24%    passed     99.95%
+ 239  Boltonia_244    0.46%    passed     99.70%
+ 240  Boltonia_245    0.13%    passed    100.00%
+ 241  Boltonia_246    0.59%    passed     99.99%
+ 242  Boltonia_247    1.04%    passed     99.68%
+ 243  Boltonia_248    1.04%    passed     99.17%
+ 244  Boltonia_249    1.24%    passed     99.41%
+ 245  Boltonia_250    0.13%    passed     99.99%
+ 246  Boltonia_251    0.07%    passed     99.98%
+ 247  Boltonia_252    2.54%    passed     91.08%
+ 248  Boltonia_253    0.52%    passed     99.96%
+ 249  Boltonia_254    0.52%    passed     99.99%
+ 250  Boltonia_255    0.78%    passed     99.39%
+ 251  Boltonia_256    0.52%    passed     99.53%
+ 252  Boltonia_257    0.13%    passed     99.96%
+ 253  Boltonia_258    0.13%    passed     99.99%
+ 254  Boltonia_259    0.07%    passed     99.98%
+ 255  Boltonia_260    0.13%    passed     99.99%
+ 256  Boltonia_261    0.33%    passed     99.99%
+ 257  Boltonia_262    0.59%    passed     99.94%
+ 258  Boltonia_263    0.20%    passed    100.00%
+ 259  Boltonia_264    0.46%    passed     99.97%
+ 260  Boltonia_265    0.39%    passed     99.64%
+ 261  Boltonia_267    0.07%    passed     99.98%
+ 262  Boltonia_268    0.33%    passed     99.97%
+ 263  Boltonia_269    0.46%    passed    100.00%
+ 264  Boltonia_270    1.11%    passed     99.12%
+ 265  Boltonia_271    0.52%    passed     99.99%
+ 266  Boltonia_272    0.20%    passed     99.87%
+ 267  Boltonia_273    0.13%    passed     99.97%
+ 268  Boltonia_274    0.13%    passed     99.96%
+ 269  Boltonia_275    0.13%    passed     99.96%
+ 270  Boltonia_276    0.07%    passed     99.98%
+ 271  Boltonia_277    0.33%    passed     99.95%
+ 272  Boltonia_278    0.52%    passed     99.89%
+ 273  Boltonia_279    0.13%    passed     99.99%
+ 274  Boltonia_280    0.13%    passed     99.96%
+ 275  Boltonia_281    1.63%    passed     99.96%
+ 276  Boltonia_282    0.13%    passed     99.96%
+ 277  Boltonia_283    0.72%    passed     99.97%
+ 278  Boltonia_284    0.33%    passed     99.98%
+ 279  Boltonia_285    0.20%    passed     99.87%
+ 280  Boltonia_286    0.13%    passed     99.99%
+ 281  Boltonia_287    0.33%    passed     99.41%
+ 282  Boltonia_288    0.39%    passed     99.97%
+ 283  Boltonia_289    0.13%    passed     99.96%
+ 284  Boltonia_290    0.59%    passed     99.99%
+ 285  Boltonia_291    0.13%    passed     99.96%
+ 286  Boltonia_292    0.59%    passed    100.00%
+ 287  Boltonia_293    0.52%    passed     99.99%
+ 288  Boltonia_294    0.52%    passed     99.99%
+ 289  Boltonia_295    0.26%    passed    100.00%
+ 290  Boltonia_296    0.13%    passed     99.99%
+ 291  Boltonia_298    1.43%    passed     99.95%
+ 292  Boltonia_299    0.98%    passed     99.78%
+ 293  Boltonia_301    0.39%    passed     99.93%
+ 294  Boltonia_302    0.07%    passed     99.75%
+ 295  Boltonia_303    0.07%    passed     99.98%
+ 296  Boltonia_304    0.20%    passed     99.93%
+ 297  Boltonia_305    0.13%    passed     99.96%
+ 298  Boltonia_306    1.37%    passed     99.88%
+ 299  Boltonia_307    0.26%    passed     99.87%
+ 300  Boltonia_308    0.07%    passed     99.98%
+ 301  Boltonia_309    0.07%    passed     99.99%
+ 302  Boltonia_310    0.26%    passed     99.99%
+ 303  Boltonia_311    0.20%    passed     99.99%
+ 304  Boltonia_312    0.07%    passed     99.98%
+ 305  Boltonia_313    0.13%    passed     99.96%
+ 306  Boltonia_314    3.13%    passed     94.26%
+ 307  Boltonia_315    0.13%    passed     99.89%
+ 308  Boltonia_316    0.13%    passed     99.97%
+ 309  Boltonia_317    0.00%    passed     99.94%
+ 310  Boltonia_318    0.07%    passed     99.98%
+ 311  Boltonia_319    2.48%    passed     90.60%
+ 312  Boltonia_320    0.52%    passed     99.96%
+ 313  Boltonia_321    0.59%    passed     99.54%
+ 314  Boltonia_322    0.26%    passed     99.99%
+ 315  Boltonia_323    0.13%    passed     99.79%
+ 316  Boltonia_324    0.46%    passed     99.23%
+ 317  Boltonia_325    0.20%    passed     99.93%
+ 318  Boltonia_326    0.07%    passed     99.98%
+ 319  Boltonia_327    0.13%    passed     99.99%
+ 320  Boltonia_328    3.00%    passed     89.06%
+ 321  Boltonia_329    0.52%    passed    100.00%
+ 322  Boltonia_330    0.20%    passed     99.99%
+ 323  Boltonia_331    0.13%    passed     99.99%
+ 324  Boltonia_332    0.07%    passed     99.98%
+ 325  Boltonia_334    0.85%    passed     99.40%
+ 326  Boltonia_335    0.39%    passed    100.00%
+ 327  Boltonia_336    0.20%    passed    100.00%
+ 328  Boltonia_337    0.07%    passed     99.98%
+ 329  Boltonia_338    0.13%    passed     99.97%
+ 330  Boltonia_339    0.13%    passed     99.96%
+ 331  Boltonia_340    1.56%    passed     95.51%
+ 332  Boltonia_341    1.11%    passed     99.89%
+ 333  Boltonia_342    0.33%    passed     99.99%
+ 334  Boltonia_343    0.26%    passed     99.99%
+ 335  Boltonia_344    0.20%    passed    100.00%
+ 336  Boltonia_345    0.07%    passed     99.98%
+ 337  Boltonia_346    0.20%    passed     99.99%
+ 338  Boltonia_347    2.48%    passed     95.09%
+ 339  Boltonia_349    0.13%    passed     99.99%
+ 340  Boltonia_350    0.07%    passed     99.98%
+ 341  Boltonia_351    0.07%    passed     99.98%
+ 342  Boltonia_352    0.33%    passed     99.72%
+ 343  Boltonia_353    0.13%    passed     99.96%
+ 344  Boltonia_354    0.20%    passed     99.99%
+ 345  Boltonia_355    0.13%    passed     99.96%
+ 346  Boltonia_356    0.46%    passed     99.90%
+ 347  Boltonia_357    2.87%    passed     89.73%
+ 348  Boltonia_358    1.56%    passed    100.00%
+ 349  Boltonia_359    0.13%    passed     99.99%
+ 350  Boltonia_360    0.33%    passed    100.00%
+ 351  Boltonia_361    0.20%    passed     99.99%
+ 352  Boltonia_362    0.39%    passed     99.99%
+ 353  Boltonia_363    2.54%    passed     99.90%
+ 354  Boltonia_364    0.59%    passed     99.76%
+ 355  Boltonia_365    0.39%    passed     99.99%
+ 356  Boltonia_366    1.04%    passed     99.82%
+ 357  Boltonia_367    0.20%    passed     99.99%
+ 358  Boltonia_368    0.20%    passed     99.99%
+ 359  Boltonia_370    0.26%    passed    100.00%
+ 360  Boltonia_371    0.65%    passed     99.70%
+ 361  Boltonia_372    0.52%    passed     99.93%
+ 362  Boltonia_373    0.20%    passed     99.99%
+ 363  Boltonia_374    0.13%    passed     99.96%
+ 364  Boltonia_375    0.13%    passed     99.99%
+ 365  Boltonia_376    0.59%    passed     99.68%
+ 366  Boltonia_377    0.26%    passed     99.99%
+ 367  Boltonia_378    0.13%    passed     99.93%
+ 368  Boltonia_379    0.33%    passed     99.98%
+ 369  Boltonia_380    0.65%    passed     99.83%
+ 370  Boltonia_381    0.85%    passed     99.89%
+ 371  Boltonia_382    0.78%    passed     99.97%
+ 372  Boltonia_383    0.46%    passed     99.86%
+ 373  Boltonia_384    0.26%    passed    100.00%
+ 374  Boltonia_385    0.39%    passed     99.98%
+ 375  Boltonia_386    0.20%    passed     99.99%
+ 376  Boltonia_387    0.07%    passed     99.98%
+ 377  Boltonia_388    0.20%    passed     99.93%
+ 378  Boltonia_389    0.26%    passed     99.97%
+ 379  Boltonia_390    0.33%    passed    100.00%
+ 380  Boltonia_391    3.00%    passed     97.49%
+ 381  Boltonia_392    0.33%    passed     99.98%
+ 382  Boltonia_393    0.20%    passed     99.93%
+ 383  Boltonia_394    0.07%    passed     99.98%
+ 384  Boltonia_395    0.13%    passed     99.96%
+ 385  Boltonia_396    0.78%    passed     99.78%
+ 386  Boltonia_397    0.13%    passed     99.96%
+ 387  Boltonia_398    0.07%    passed     99.98%
+ 388  Boltonia_399    0.26%    passed     99.99%
+ 389  Boltonia_400    0.07%    passed     99.98%
+ 390  Boltonia_401    1.24%    passed     99.32%
+ 391  Boltonia_402    0.13%    passed     99.96%
+ 392  Boltonia_403    0.13%    passed     99.96%
+ 393  Boltonia_404    0.07%    passed     99.98%
+ 394  Boltonia_405    0.07%    passed     99.98%
+ 395  Boltonia_406    2.48%    passed     89.63%
+ 396  Boltonia_408    0.13%    passed     99.96%
+ 397  Boltonia_409    0.07%    passed     99.98%
+ 398  Boltonia_410    0.39%    passed    100.00%
+ 399  Boltonia_411    0.85%    passed     99.40%
+ 400  Boltonia_412    0.07%    passed     99.75%
+ 401  Boltonia_413    0.07%    passed     99.98%
+ 402  Boltonia_415    0.52%    passed     99.99%
+ 403  Boltonia_417    0.07%    passed     99.87%
+ 404  Boltonia_418    0.13%    passed     99.91%
+ 405  Boltonia_419    1.76%    passed     93.29%
+ 406  Boltonia_420    0.07%    passed     99.75%
+ 407  Boltonia_421    0.13%    passed     99.89%
+ 408  Boltonia_422    0.07%    passed     99.98%
+ 409  Boltonia_423    1.11%    passed     99.56%
+ 410  Boltonia_424    0.07%    passed     99.98%
+ 411  Boltonia_425    1.11%    passed     99.92%
+ 412  Boltonia_426    0.52%    passed    100.00%
+ 413  Boltonia_427    0.33%    passed     99.89%
+ 414  Boltonia_428    0.07%    passed     99.75%
+ 415  Boltonia_429    0.07%    passed     99.94%
+ 416  Boltonia_430    0.39%    passed     99.96%
+ 417  Boltonia_431    1.24%    passed     99.87%
+ 418  Boltonia_432    0.13%    passed     99.96%
+ 419  Boltonia_433    0.72%    passed     99.97%
+ 420  Boltonia_434    0.13%    passed     99.96%
+ 421  Boltonia_435    0.00%    passed     99.94%
+ 422  Boltonia_436    0.07%    passed     99.98%
+ 423  Boltonia_437    0.20%    passed     99.98%
+ 424  Boltonia_438    0.13%    passed     99.89%
+ 425  Boltonia_439    4.24%    passed     94.87%
+ 426  Boltonia_441    0.07%    passed     99.98%
+ 427  Boltonia_442    0.07%    passed     99.98%
+ 428  Boltonia_443    1.04%    passed     99.68%
+ 429  Boltonia_444    0.07%    passed     99.98%
+ 430  Boltonia_445    0.13%    passed     99.96%
+ 431  Boltonia_446    0.39%    passed     99.89%
+ 432  Boltonia_448    0.46%    passed     99.97%
+ 433  Boltonia_449    1.17%    passed     99.93%
+ 434  Boltonia_451    2.87%    passed     89.82%
+ 435  Boltonia_452    0.78%    passed     99.35%
+ 436  Boltonia_453    0.07%    passed     99.98%
+ 437  Boltonia_454    0.13%    passed     99.96%
+ 438  Boltonia_455    0.85%    passed     99.98%
+ 439  Boltonia_456    0.52%    passed     99.96%
+ 440  Boltonia_457    0.98%    passed     99.76%
+ 441  Boltonia_458    1.04%    passed     99.85%
+ 442  Boltonia_459    0.26%    passed    100.00%
+ 443  Boltonia_460    0.07%    passed     99.98%
+ 444  Boltonia_461    0.52%    passed     99.88%
+ 445  Boltonia_462    2.09%    passed     99.87%
+ 446  Boltonia_463    1.50%    passed     97.37%
+ 447  Boltonia_464    2.80%    passed     89.24%
+ 448  Boltonia_465    1.89%    passed     97.94%
+ 449  Boltonia_466    0.72%    passed     99.50%
+ 450  Boltonia_467    1.69%    passed     99.83%
+ 451  Boltonia_468    0.07%    passed     99.98%
+ 452  Boltonia_469    2.54%    passed     82.39%
+ 453  Boltonia_470    2.35%    passed     98.98%
+ 454  Boltonia_471    3.98%    passed     94.48%
+ 455  Boltonia_472    1.96%    passed     93.93%
+ 456  Boltonia_473    3.32%    passed     98.43%
+ 457  Boltonia_474    1.89%    passed    100.00%
+ 458  Boltonia_475    2.41%    passed     90.99%
+ 459  Boltonia_476    1.89%    passed     90.61%
+ 460  Boltonia_477    1.63%    passed     99.60%
+ 461  Boltonia_478    2.87%    passed     98.65%
+ 462  Boltonia_479    2.54%    passed     95.36%
+ 463  Boltonia_481    1.69%    passed     92.56%
+ 464  Boltonia_482    2.15%    passed     93.85%
+ 465  Boltonia_483    4.11%    passed     81.22%
+ 466  Boltonia_484    1.89%    passed     93.26%
+ 467  Boltonia_485    0.65%    passed     91.92%
+ 468  Boltonia_486    1.56%    passed     95.97%
+ 469  Boltonia_489    5.15%    failed      0.45%
+ 470  Boltonia_490    4.50%    failed      0.16%
+ 471  Boltonia_491    6.19%    failed      0.70%
+ 472  Boltonia_492    1.69%    passed     91.90%
+****  TOTAL           0.60%  3 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Boltonia_002 is identical to Boltonia_001 but kept for subsequent analysis
+NOTE: Boltonia_027 is identical to Boltonia_004 but kept for subsequent analysis
+NOTE: Boltonia_023 is identical to Boltonia_005 but kept for subsequent analysis
+NOTE: Boltonia_038 is identical to Boltonia_006 but kept for subsequent analysis
+NOTE: Boltonia_116 is identical to Boltonia_009 but kept for subsequent analysis
+NOTE: Boltonia_053 is identical to Boltonia_013 but kept for subsequent analysis
+NOTE: Boltonia_062 is identical to Boltonia_015 but kept for subsequent analysis
+NOTE: Boltonia_088 is identical to Boltonia_017 but kept for subsequent analysis
+NOTE: Boltonia_034 is identical to Boltonia_019 but kept for subsequent analysis
+NOTE: Boltonia_057 is identical to Boltonia_024 but kept for subsequent analysis
+NOTE: Boltonia_047 is identical to Boltonia_032 but kept for subsequent analysis
+NOTE: Boltonia_091 is identical to Boltonia_040 but kept for subsequent analysis
+NOTE: Boltonia_174 is identical to Boltonia_048 but kept for subsequent analysis
+NOTE: Boltonia_457 is identical to Boltonia_051 but kept for subsequent analysis
+NOTE: Boltonia_124 is identical to Boltonia_066 but kept for subsequent analysis
+NOTE: Boltonia_244 is identical to Boltonia_071 but kept for subsequent analysis
+NOTE: Boltonia_097 is identical to Boltonia_079 but kept for subsequent analysis
+NOTE: Boltonia_188 is identical to Boltonia_102 but kept for subsequent analysis
+NOTE: Boltonia_152 is identical to Boltonia_105 but kept for subsequent analysis
+NOTE: Boltonia_118 is identical to Boltonia_115 but kept for subsequent analysis
+NOTE: Boltonia_461 is identical to Boltonia_126 but kept for subsequent analysis
+NOTE: Boltonia_201 is identical to Boltonia_131 but kept for subsequent analysis
+NOTE: Boltonia_446 is identical to Boltonia_145 but kept for subsequent analysis
+NOTE: Boltonia_349 is identical to Boltonia_160 but kept for subsequent analysis
+NOTE: Boltonia_187 is identical to Boltonia_164 but kept for subsequent analysis
+NOTE: Boltonia_250 is identical to Boltonia_167 but kept for subsequent analysis
+NOTE: Boltonia_290 is identical to Boltonia_215 but kept for subsequent analysis
+NOTE: Boltonia_230 is identical to Boltonia_218 but kept for subsequent analysis
+NOTE: Boltonia_277 is identical to Boltonia_224 but kept for subsequent analysis
+NOTE: Boltonia_242 is identical to Boltonia_237 but kept for subsequent analysis
+NOTE: Boltonia_285 is identical to Boltonia_272 but kept for subsequent analysis
+NOTE: Boltonia_399 is identical to Boltonia_310 but kept for subsequent analysis
+NOTE: Boltonia_361 is identical to Boltonia_346 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.00129158 secs using 774.6% CPU
+Identifying sites to remove: done in 0.00256124 secs using 1851% CPU
+NOTE: 169 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Boltonia_064 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_086 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_100 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_103 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_121 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_125 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_130 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_134 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_153 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_165 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_171 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_175 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_176 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_178 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_181 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_186 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_190 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_225 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_228 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_259 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_267 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_276 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_303 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_308 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_312 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_318 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_326 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_332 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_337 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_345 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_350 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_351 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_387 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_394 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_398 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_400 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_404 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_409 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_413 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_422 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_424 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_441 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_442 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_468 (identical to Boltonia_004) is ignored but added at the end
+NOTE: Boltonia_029 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_030 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_033 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_054 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_060 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_063 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_070 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_073 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_075 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_080 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_081 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_099 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_107 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_110 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_112 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_113 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_117 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_123 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_133 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_135 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_138 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_142 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_143 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_144 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_147 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_149 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_154 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_163 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_170 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_172 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_177 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_179 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_180 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_193 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_195 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_202 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_217 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_219 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_226 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_232 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_236 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_257 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_274 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_275 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_280 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_282 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_289 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_291 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_305 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_313 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_339 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_353 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_374 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_395 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_397 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_402 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_403 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_408 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_432 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_434 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_445 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_454 (identical to Boltonia_005) is ignored but added at the end
+NOTE: Boltonia_043 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_045 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_085 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_092 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_189 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_194 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_208 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_233 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_234 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_254 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_294 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_415 (identical to Boltonia_006) is ignored but added at the end
+NOTE: Boltonia_261 (identical to Boltonia_009) is ignored but added at the end
+NOTE: Boltonia_065 (identical to Boltonia_013) is ignored but added at the end
+NOTE: Boltonia_240 (identical to Boltonia_013) is ignored but added at the end
+NOTE: Boltonia_120 (identical to Boltonia_015) is ignored but added at the end
+NOTE: Boltonia_037 (identical to Boltonia_019) is ignored but added at the end
+NOTE: Boltonia_042 (identical to Boltonia_019) is ignored but added at the end
+NOTE: Boltonia_046 (identical to Boltonia_019) is ignored but added at the end
+NOTE: Boltonia_058 (identical to Boltonia_019) is ignored but added at the end
+NOTE: Boltonia_067 (identical to Boltonia_019) is ignored but added at the end
+NOTE: Boltonia_083 (identical to Boltonia_019) is ignored but added at the end
+NOTE: Boltonia_090 (identical to Boltonia_019) is ignored but added at the end
+NOTE: Boltonia_264 (identical to Boltonia_019) is ignored but added at the end
+NOTE: Boltonia_448 (identical to Boltonia_019) is ignored but added at the end
+NOTE: Boltonia_132 (identical to Boltonia_024) is ignored but added at the end
+NOTE: Boltonia_168 (identical to Boltonia_024) is ignored but added at the end
+NOTE: Boltonia_191 (identical to Boltonia_024) is ignored but added at the end
+NOTE: Boltonia_258 (identical to Boltonia_024) is ignored but added at the end
+NOTE: Boltonia_296 (identical to Boltonia_024) is ignored but added at the end
+NOTE: Boltonia_331 (identical to Boltonia_024) is ignored but added at the end
+NOTE: Boltonia_375 (identical to Boltonia_024) is ignored but added at the end
+NOTE: Boltonia_061 (identical to Boltonia_032) is ignored but added at the end
+NOTE: Boltonia_094 (identical to Boltonia_032) is ignored but added at the end
+NOTE: Boltonia_136 (identical to Boltonia_032) is ignored but added at the end
+NOTE: Boltonia_251 (identical to Boltonia_032) is ignored but added at the end
+NOTE: Boltonia_405 (identical to Boltonia_032) is ignored but added at the end
+NOTE: Boltonia_436 (identical to Boltonia_032) is ignored but added at the end
+NOTE: Boltonia_444 (identical to Boltonia_032) is ignored but added at the end
+NOTE: Boltonia_456 (identical to Boltonia_040) is ignored but added at the end
+NOTE: Boltonia_157 (identical to Boltonia_079) is ignored but added at the end
+NOTE: Boltonia_238 (identical to Boltonia_079) is ignored but added at the end
+NOTE: Boltonia_239 (identical to Boltonia_079) is ignored but added at the end
+NOTE: Boltonia_317 (identical to Boltonia_102) is ignored but added at the end
+NOTE: Boltonia_435 (identical to Boltonia_102) is ignored but added at the end
+NOTE: Boltonia_140 (identical to Boltonia_115) is ignored but added at the end
+NOTE: Boltonia_162 (identical to Boltonia_115) is ignored but added at the end
+NOTE: Boltonia_197 (identical to Boltonia_115) is ignored but added at the end
+NOTE: Boltonia_220 (identical to Boltonia_115) is ignored but added at the end
+NOTE: Boltonia_302 (identical to Boltonia_115) is ignored but added at the end
+NOTE: Boltonia_412 (identical to Boltonia_115) is ignored but added at the end
+NOTE: Boltonia_420 (identical to Boltonia_115) is ignored but added at the end
+NOTE: Boltonia_428 (identical to Boltonia_115) is ignored but added at the end
+NOTE: Boltonia_311 (identical to Boltonia_131) is ignored but added at the end
+NOTE: Boltonia_235 (identical to Boltonia_164) is ignored but added at the end
+NOTE: Boltonia_315 (identical to Boltonia_164) is ignored but added at the end
+NOTE: Boltonia_421 (identical to Boltonia_164) is ignored but added at the end
+NOTE: Boltonia_438 (identical to Boltonia_164) is ignored but added at the end
+NOTE: Boltonia_260 (identical to Boltonia_167) is ignored but added at the end
+NOTE: Boltonia_279 (identical to Boltonia_167) is ignored but added at the end
+NOTE: Boltonia_286 (identical to Boltonia_167) is ignored but added at the end
+NOTE: Boltonia_367 (identical to Boltonia_346) is ignored but added at the end
+NOTE: Boltonia_386 (identical to Boltonia_346) is ignored but added at the end
+Alignment was printed to /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.uniqueseq.phy
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.048 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 540613)...
+
+NOTE: 19 MB RAM (0 GB) is required!
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -8933.020
+2. Current log-likelihood: -8378.178
+3. Current log-likelihood: -8359.817
+4. Current log-likelihood: -8359.650
+Optimal log-likelihood: -8359.648
+Rate parameters:  A-C: 0.90250  A-G: 2.49702  A-T: 1.22904  C-G: 0.52276  C-T: 2.79679  G-T: 1.00000
+Base frequencies:  A: 0.282  C: 0.213  G: 0.241  T: 0.264
+Gamma shape alpha: 998.440
+Parameters optimization took 4 rounds (0.386 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0307969 secs using 1599% CPU
+Computing ML distances took 0.031497 sec (of wall-clock time) 0.492469 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00186247 secs using 67.12% CPU
+Constructing RapidNJ tree: done in 0.00488111 secs using 201.8% CPU
+Computing RapidNJ tree took 0.006804 sec (of wall-clock time) 0.011160 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -8363.434
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 4.828 second
+Computing log-likelihood of 98 initial trees ... 2.599 seconds
+Current best score: -8356.644
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 1.98767 secs using 1590% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -8354.562
+Optimizing NNI: done in 1.93928 secs using 1587% CPU
+Optimizing NNI: done in 1.47693 secs using 1592% CPU
+Optimizing NNI: done in 2.01467 secs using 1593% CPU
+Optimizing NNI: done in 1.44558 secs using 1588% CPU
+Optimizing NNI: done in 1.25259 secs using 1594% CPU
+Optimizing NNI: done in 2.18041 secs using 1593% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 7: -8354.059
+Optimizing NNI: done in 1.64516 secs using 1594% CPU
+Optimizing NNI: done in 1.21849 secs using 1593% CPU
+Optimizing NNI: done in 1.59632 secs using 1594% CPU
+Iteration 10 / LogL: -8355.070 / Time: 0h:0m:25s
+Optimizing NNI: done in 1.52091 secs using 1593% CPU
+Optimizing NNI: done in 1.25789 secs using 1593% CPU
+Optimizing NNI: done in 1.67899 secs using 1593% CPU
+Optimizing NNI: done in 2.01624 secs using 1590% CPU
+Optimizing NNI: done in 2.07799 secs using 1593% CPU
+Optimizing NNI: done in 1.86043 secs using 1592% CPU
+Optimizing NNI: done in 1.4778 secs using 1593% CPU
+Optimizing NNI: done in 2.14953 secs using 1593% CPU
+Optimizing NNI: done in 1.72006 secs using 1594% CPU
+Optimizing NNI: done in 1.08746 secs using 1592% CPU
+Iteration 20 / LogL: -8354.872 / Time: 0h:0m:42s
+Finish initializing candidate tree set (20)
+Current best tree score: -8354.059 / CPU time: 41.252
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 1.06087 secs using 1592% CPU
+Optimizing NNI: done in 0.483679 secs using 1590% CPU
+Optimizing NNI: done in 1.25767 secs using 1593% CPU
+Optimizing NNI: done in 1.39866 secs using 1594% CPU
+Optimizing NNI: done in 1.22413 secs using 1592% CPU
+Optimizing NNI: done in 0.985434 secs using 1593% CPU
+Optimizing NNI: done in 1.04501 secs using 1593% CPU
+Optimizing NNI: done in 1.01248 secs using 1591% CPU
+Optimizing NNI: done in 1.6673 secs using 1594% CPU
+Optimizing NNI: done in 1.10899 secs using 1576% CPU
+Iteration 30 / LogL: -8354.839 / Time: 0h:0m:53s (0h:2m:21s left)
+Optimizing NNI: done in 0.994606 secs using 1592% CPU
+Optimizing NNI: done in 1.15582 secs using 1593% CPU
+Optimizing NNI: done in 0.957482 secs using 1591% CPU
+Optimizing NNI: done in 0.543795 secs using 1592% CPU
+Optimizing NNI: done in 1.11092 secs using 1592% CPU
+Optimizing NNI: done in 0.926116 secs using 1590% CPU
+Optimizing NNI: done in 1.25971 secs using 1594% CPU
+Optimizing NNI: done in 1.06348 secs using 1593% CPU
+Optimizing NNI: done in 1.24276 secs using 1593% CPU
+Optimizing NNI: done in 1.02746 secs using 1592% CPU
+Iteration 40 / LogL: -8360.126 / Time: 0h:1m:3s (0h:1m:49s left)
+Optimizing NNI: done in 0.747414 secs using 1591% CPU
+Optimizing NNI: done in 1.42229 secs using 1593% CPU
+Optimizing NNI: done in 0.758172 secs using 1592% CPU
+Optimizing NNI: done in 0.896112 secs using 1592% CPU
+Optimizing NNI: done in 0.866656 secs using 1593% CPU
+Optimizing NNI: done in 1.19855 secs using 1593% CPU
+Optimizing NNI: done in 1.20466 secs using 1591% CPU
+Optimizing NNI: done in 1.00199 secs using 1593% CPU
+Optimizing NNI: done in 1.29129 secs using 1592% CPU
+Optimizing NNI: done in 0.684383 secs using 1592% CPU
+Iteration 50 / LogL: -8383.539 / Time: 0h:1m:14s (0h:1m:26s left)
+Log-likelihood cutoff on original alignment: -8396.204
+Optimizing NNI: done in 0.775279 secs using 1592% CPU
+Optimizing NNI: done in 1.18816 secs using 1584% CPU
+Optimizing NNI: done in 1.1229 secs using 1592% CPU
+Optimizing NNI: done in 1.05469 secs using 1592% CPU
+Optimizing NNI: done in 0.986905 secs using 1594% CPU
+Optimizing NNI: done in 0.95608 secs using 1593% CPU
+Optimizing NNI: done in 0.82608 secs using 1592% CPU
+Optimizing NNI: done in 0.888176 secs using 1592% CPU
+Optimizing NNI: done in 1.77829 secs using 1593% CPU
+Optimizing NNI: done in 1.60024 secs using 1593% CPU
+Iteration 60 / LogL: -8354.097 / Time: 0h:1m:26s (0h:1m:9s left)
+Optimizing NNI: done in 1.31248 secs using 1594% CPU
+Optimizing NNI: done in 0.868896 secs using 1593% CPU
+Optimizing NNI: done in 1.09678 secs using 1593% CPU
+Optimizing NNI: done in 1.00133 secs using 1594% CPU
+Optimizing NNI: done in 1.06948 secs using 1591% CPU
+Optimizing NNI: done in 0.78657 secs using 1594% CPU
+Optimizing NNI: done in 1.1493 secs using 1594% CPU
+Optimizing NNI: done in 1.27258 secs using 1594% CPU
+Optimizing NNI: done in 0.994637 secs using 1591% CPU
+Optimizing NNI: done in 1.03618 secs using 1593% CPU
+Iteration 70 / LogL: -8354.098 / Time: 0h:1m:37s (0h:0m:52s left)
+Optimizing NNI: done in 1.04168 secs using 1591% CPU
+Optimizing NNI: done in 0.810674 secs using 1591% CPU
+Optimizing NNI: done in 0.943838 secs using 1591% CPU
+Optimizing NNI: done in 0.976721 secs using 1593% CPU
+Optimizing NNI: done in 1.18506 secs using 1593% CPU
+Optimizing NNI: done in 0.988494 secs using 1591% CPU
+Optimizing NNI: done in 1.09692 secs using 1593% CPU
+Optimizing NNI: done in 0.657011 secs using 1593% CPU
+Optimizing NNI: done in 0.698269 secs using 1593% CPU
+Optimizing NNI: done in 1.41316 secs using 1593% CPU
+Iteration 80 / LogL: -8372.507 / Time: 0h:1m:48s (0h:0m:36s left)
+Optimizing NNI: done in 1.21058 secs using 1583% CPU
+Optimizing NNI: done in 0.926754 secs using 1593% CPU
+Optimizing NNI: done in 0.9548 secs using 1593% CPU
+Optimizing NNI: done in 1.13725 secs using 1591% CPU
+Optimizing NNI: done in 1.00287 secs using 1593% CPU
+Optimizing NNI: done in 0.883801 secs using 1593% CPU
+Optimizing NNI: done in 0.623732 secs using 1592% CPU
+Optimizing NNI: done in 1.16975 secs using 1593% CPU
+Optimizing NNI: done in 0.629186 secs using 1591% CPU
+Optimizing NNI: done in 0.935676 secs using 1593% CPU
+Iteration 90 / LogL: -8368.277 / Time: 0h:1m:58s (0h:0m:22s left)
+Optimizing NNI: done in 0.867383 secs using 1592% CPU
+Optimizing NNI: done in 0.994477 secs using 1591% CPU
+Optimizing NNI: done in 1.37281 secs using 1592% CPU
+Optimizing NNI: done in 1.282 secs using 1592% CPU
+Optimizing NNI: done in 1.26419 secs using 1592% CPU
+Optimizing NNI: done in 0.716028 secs using 1592% CPU
+Optimizing NNI: done in 1.19328 secs using 1593% CPU
+Optimizing NNI: done in 1.30696 secs using 1594% CPU
+Optimizing NNI: done in 1.20055 secs using 1582% CPU
+Optimizing NNI: done in 0.909371 secs using 1592% CPU
+Iteration 100 / LogL: -8379.514 / Time: 0h:2m:9s (0h:0m:9s left)
+Log-likelihood cutoff on original alignment: -8394.794
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.987
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Optimizing NNI: done in 1.09562 secs using 1593% CPU
+Optimizing NNI: done in 1.08058 secs using 1592% CPU
+Optimizing NNI: done in 0.828331 secs using 1592% CPU
+Optimizing NNI: done in 1.23558 secs using 1594% CPU
+Optimizing NNI: done in 1.08384 secs using 1593% CPU
+Optimizing NNI: done in 0.687618 secs using 1591% CPU
+Optimizing NNI: done in 1.05565 secs using 1592% CPU
+Optimizing NNI: done in 0.830788 secs using 1593% CPU
+Optimizing NNI: done in 0.829536 secs using 1592% CPU
+Optimizing NNI: done in 0.842806 secs using 1590% CPU
+Iteration 110 / LogL: -8371.762 / Time: 0h:2m:21s (0h:1m:56s left)
+Optimizing NNI: done in 0.993918 secs using 1592% CPU
+Optimizing NNI: done in 1.2667 secs using 1593% CPU
+Optimizing NNI: done in 1.0958 secs using 1593% CPU
+Optimizing NNI: done in 1.88165 secs using 1593% CPU
+Optimizing NNI: done in 0.940565 secs using 1592% CPU
+Optimizing NNI: done in 0.70394 secs using 1592% CPU
+Optimizing NNI: done in 0.662429 secs using 1590% CPU
+Optimizing NNI: done in 1.33639 secs using 1592% CPU
+Optimizing NNI: done in 0.937299 secs using 1593% CPU
+Optimizing NNI: done in 0.838059 secs using 1591% CPU
+Iteration 120 / LogL: -8354.074 / Time: 0h:2m:32s (0h:1m:42s left)
+Optimizing NNI: done in 1.06854 secs using 1592% CPU
+Optimizing NNI: done in 1.04649 secs using 1594% CPU
+Optimizing NNI: done in 0.90556 secs using 1593% CPU
+Optimizing NNI: done in 0.834438 secs using 1592% CPU
+Optimizing NNI: done in 0.857151 secs using 1593% CPU
+Optimizing NNI: done in 0.820937 secs using 1592% CPU
+Optimizing NNI: done in 1.21712 secs using 1594% CPU
+Optimizing NNI: done in 1.06078 secs using 1594% CPU
+Optimizing NNI: done in 0.695211 secs using 1591% CPU
+Optimizing NNI: done in 0.8754 secs using 1594% CPU
+Iteration 130 / LogL: -8354.120 / Time: 0h:2m:43s (0h:1m:28s left)
+Optimizing NNI: done in 0.409053 secs using 1591% CPU
+Optimizing NNI: done in 0.920036 secs using 1593% CPU
+Optimizing NNI: done in 0.850534 secs using 1592% CPU
+Optimizing NNI: done in 1.00494 secs using 1590% CPU
+Optimizing NNI: done in 1.12464 secs using 1578% CPU
+Optimizing NNI: done in 0.741081 secs using 1592% CPU
+Optimizing NNI: done in 0.840988 secs using 1591% CPU
+Optimizing NNI: done in 1.00208 secs using 1594% CPU
+Optimizing NNI: done in 1.00991 secs using 1592% CPU
+Optimizing NNI: done in 0.9883 secs using 1592% CPU
+Iteration 140 / LogL: -8354.101 / Time: 0h:2m:53s (0h:1m:14s left)
+Optimizing NNI: done in 0.899144 secs using 1592% CPU
+Optimizing NNI: done in 0.920456 secs using 1593% CPU
+Optimizing NNI: done in 1.15562 secs using 1591% CPU
+Optimizing NNI: done in 1.14037 secs using 1589% CPU
+Optimizing NNI: done in 0.99359 secs using 1591% CPU
+Optimizing NNI: done in 1.09737 secs using 1592% CPU
+Optimizing NNI: done in 0.911424 secs using 1592% CPU
+Optimizing NNI: done in 1.09378 secs using 1593% CPU
+Optimizing NNI: done in 0.896511 secs using 1591% CPU
+Optimizing NNI: done in 1.02845 secs using 1591% CPU
+Iteration 150 / LogL: -8354.091 / Time: 0h:3m:4s (0h:1m:1s left)
+Log-likelihood cutoff on original alignment: -8395.422
+Optimizing NNI: done in 0.64662 secs using 1589% CPU
+Optimizing NNI: done in 0.737172 secs using 1593% CPU
+Optimizing NNI: done in 0.508035 secs using 1591% CPU
+Optimizing NNI: done in 1.57225 secs using 1593% CPU
+Optimizing NNI: done in 0.726859 secs using 1592% CPU
+Optimizing NNI: done in 0.605204 secs using 1592% CPU
+Optimizing NNI: done in 0.932157 secs using 1592% CPU
+Optimizing NNI: done in 1.07748 secs using 1593% CPU
+Optimizing NNI: done in 1.15364 secs using 1593% CPU
+Optimizing NNI: done in 0.896733 secs using 1590% CPU
+Iteration 160 / LogL: -8368.564 / Time: 0h:3m:15s (0h:0m:49s left)
+Optimizing NNI: done in 1.26906 secs using 1591% CPU
+Optimizing NNI: done in 0.874746 secs using 1592% CPU
+Optimizing NNI: done in 1.07408 secs using 1591% CPU
+Optimizing NNI: done in 1.26887 secs using 1592% CPU
+Optimizing NNI: done in 1.08231 secs using 1591% CPU
+Optimizing NNI: done in 0.657863 secs using 1588% CPU
+Optimizing NNI: done in 1.03404 secs using 1592% CPU
+Optimizing NNI: done in 0.446799 secs using 1593% CPU
+Optimizing NNI: done in 0.831254 secs using 1591% CPU
+Optimizing NNI: done in 1.36826 secs using 1592% CPU
+Iteration 170 / LogL: -8354.116 / Time: 0h:3m:26s (0h:0m:36s left)
+Optimizing NNI: done in 0.725955 secs using 1590% CPU
+Optimizing NNI: done in 1.30545 secs using 1591% CPU
+Optimizing NNI: done in 0.747892 secs using 1590% CPU
+Optimizing NNI: done in 1.23396 secs using 1593% CPU
+Optimizing NNI: done in 0.883832 secs using 1592% CPU
+Optimizing NNI: done in 1.1548 secs using 1592% CPU
+Optimizing NNI: done in 1.15206 secs using 1592% CPU
+Optimizing NNI: done in 1.11149 secs using 1592% CPU
+Optimizing NNI: done in 1.0134 secs using 1592% CPU
+Optimizing NNI: done in 1.04117 secs using 1590% CPU
+Iteration 180 / LogL: -8406.300 / Time: 0h:3m:38s (0h:0m:24s left)
+Optimizing NNI: done in 0.475721 secs using 1592% CPU
+Optimizing NNI: done in 1.28023 secs using 1591% CPU
+Optimizing NNI: done in 0.953148 secs using 1592% CPU
+Optimizing NNI: done in 0.735958 secs using 1591% CPU
+Optimizing NNI: done in 1.08424 secs using 1593% CPU
+Optimizing NNI: done in 1.36137 secs using 1592% CPU
+Optimizing NNI: done in 1.16686 secs using 1592% CPU
+Optimizing NNI: done in 1.02188 secs using 1592% CPU
+Optimizing NNI: done in 0.865065 secs using 1571% CPU
+Optimizing NNI: done in 1.01865 secs using 1593% CPU
+Iteration 190 / LogL: -8354.124 / Time: 0h:3m:49s (0h:0m:12s left)
+Optimizing NNI: done in 0.86134 secs using 1591% CPU
+Optimizing NNI: done in 0.927525 secs using 1581% CPU
+Optimizing NNI: done in 1.25835 secs using 1592% CPU
+Optimizing NNI: done in 0.7412 secs using 1591% CPU
+Optimizing NNI: done in 0.94622 secs using 1592% CPU
+Optimizing NNI: done in 1.31082 secs using 1592% CPU
+Optimizing NNI: done in 1.18354 secs using 1592% CPU
+Optimizing NNI: done in 1.21771 secs using 1592% CPU
+Optimizing NNI: done in 1.17683 secs using 1592% CPU
+Optimizing NNI: done in 0.962751 secs using 1592% CPU
+Iteration 200 / LogL: -8362.775 / Time: 0h:4m:1s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -8395.422
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.982
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Optimizing NNI: done in 0.908639 secs using 1590% CPU
+Optimizing NNI: done in 2.28297 secs using 1593% CPU
+Optimizing NNI: done in 1.01046 secs using 1593% CPU
+Optimizing NNI: done in 1.44891 secs using 1592% CPU
+Optimizing NNI: done in 0.403168 secs using 1589% CPU
+Optimizing NNI: done in 1.33873 secs using 1592% CPU
+Optimizing NNI: done in 1.2014 secs using 1592% CPU
+Optimizing NNI: done in 0.989057 secs using 1592% CPU
+BETTER TREE FOUND at iteration 208: -8354.056
+Optimizing NNI: done in 1.61954 secs using 1592% CPU
+Optimizing NNI: done in 1.49195 secs using 1593% CPU
+Iteration 210 / LogL: -8354.064 / Time: 0h:4m:17s (0h:2m:0s left)
+Optimizing NNI: done in 1.2163 secs using 1592% CPU
+Optimizing NNI: done in 1.40157 secs using 1592% CPU
+Optimizing NNI: done in 1.23367 secs using 1593% CPU
+Optimizing NNI: done in 1.01914 secs using 1595% CPU
+Optimizing NNI: done in 0.618135 secs using 1591% CPU
+Optimizing NNI: done in 0.76296 secs using 1593% CPU
+Optimizing NNI: done in 1.12796 secs using 1592% CPU
+Optimizing NNI: done in 1.51184 secs using 1592% CPU
+Optimizing NNI: done in 0.976235 secs using 1593% CPU
+Optimizing NNI: done in 0.66945 secs using 1591% CPU
+Iteration 220 / LogL: -8392.167 / Time: 0h:4m:29s (0h:1m:48s left)
+Optimizing NNI: done in 0.907898 secs using 1591% CPU
+Optimizing NNI: done in 0.888872 secs using 1591% CPU
+Optimizing NNI: done in 1.4928 secs using 1592% CPU
+Optimizing NNI: done in 1.5054 secs using 1592% CPU
+Optimizing NNI: done in 1.29865 secs using 1591% CPU
+Optimizing NNI: done in 1.06058 secs using 1591% CPU
+Optimizing NNI: done in 0.97048 secs using 1591% CPU
+Optimizing NNI: done in 1.22586 secs using 1594% CPU
+Optimizing NNI: done in 0.670648 secs using 1590% CPU
+Optimizing NNI: done in 1.00713 secs using 1591% CPU
+Iteration 230 / LogL: -8354.109 / Time: 0h:4m:42s (0h:1m:36s left)
+Optimizing NNI: done in 0.957302 secs using 1592% CPU
+Optimizing NNI: done in 1.46944 secs using 1592% CPU
+Optimizing NNI: done in 1.13027 secs using 1592% CPU
+Optimizing NNI: done in 0.935582 secs using 1590% CPU
+Optimizing NNI: done in 1.30256 secs using 1592% CPU
+Optimizing NNI: done in 0.518839 secs using 1592% CPU
+Optimizing NNI: done in 1.26231 secs using 1591% CPU
+Optimizing NNI: done in 0.552923 secs using 1592% CPU
+Optimizing NNI: done in 1.06126 secs using 1592% CPU
+Optimizing NNI: done in 1.00527 secs using 1592% CPU
+Iteration 240 / LogL: -8370.546 / Time: 0h:4m:54s (0h:1m:23s left)
+Optimizing NNI: done in 1.01066 secs using 1593% CPU
+Optimizing NNI: done in 0.95962 secs using 1590% CPU
+Optimizing NNI: done in 1.08206 secs using 1591% CPU
+Optimizing NNI: done in 1.05236 secs using 1591% CPU
+Optimizing NNI: done in 0.535907 secs using 1592% CPU
+Optimizing NNI: done in 1.51945 secs using 1592% CPU
+Optimizing NNI: done in 0.418359 secs using 1590% CPU
+Optimizing NNI: done in 1.26398 secs using 1592% CPU
+Optimizing NNI: done in 0.93509 secs using 1591% CPU
+Optimizing NNI: done in 0.92381 secs using 1591% CPU
+Iteration 250 / LogL: -8422.675 / Time: 0h:5m:5s (0h:1m:11s left)
+Log-likelihood cutoff on original alignment: -8395.422
+Optimizing NNI: done in 1.04457 secs using 1592% CPU
+Optimizing NNI: done in 1.07571 secs using 1593% CPU
+Optimizing NNI: done in 1.41419 secs using 1592% CPU
+Optimizing NNI: done in 0.916417 secs using 1591% CPU
+Optimizing NNI: done in 1.45828 secs using 1593% CPU
+Optimizing NNI: done in 0.994389 secs using 1593% CPU
+Optimizing NNI: done in 0.984931 secs using 1592% CPU
+Optimizing NNI: done in 0.902975 secs using 1590% CPU
+Optimizing NNI: done in 1.13256 secs using 1591% CPU
+Optimizing NNI: done in 1.64299 secs using 1592% CPU
+Iteration 260 / LogL: -8374.339 / Time: 0h:5m:20s (0h:0m:59s left)
+Optimizing NNI: done in 1.70239 secs using 1592% CPU
+Optimizing NNI: done in 0.949675 secs using 1591% CPU
+Optimizing NNI: done in 0.643342 secs using 1592% CPU
+Optimizing NNI: done in 0.845378 secs using 1591% CPU
+Optimizing NNI: done in 1.22546 secs using 1593% CPU
+Optimizing NNI: done in 0.978781 secs using 1590% CPU
+Optimizing NNI: done in 1.0429 secs using 1593% CPU
+Optimizing NNI: done in 1.43804 secs using 1593% CPU
+Optimizing NNI: done in 1.03163 secs using 1591% CPU
+Optimizing NNI: done in 0.823874 secs using 1593% CPU
+Iteration 270 / LogL: -8362.832 / Time: 0h:5m:33s (0h:0m:47s left)
+Optimizing NNI: done in 0.979875 secs using 1592% CPU
+Optimizing NNI: done in 0.910267 secs using 1590% CPU
+Optimizing NNI: done in 0.7547 secs using 1592% CPU
+Optimizing NNI: done in 1.15655 secs using 1593% CPU
+Optimizing NNI: done in 1.09864 secs using 1593% CPU
+Optimizing NNI: done in 0.885568 secs using 1574% CPU
+Optimizing NNI: done in 0.891692 secs using 1592% CPU
+Optimizing NNI: done in 0.998057 secs using 1589% CPU
+Optimizing NNI: done in 1.11215 secs using 1594% CPU
+Optimizing NNI: done in 0.85429 secs using 1591% CPU
+Iteration 280 / LogL: -8354.115 / Time: 0h:5m:45s (0h:0m:34s left)
+Optimizing NNI: done in 0.902031 secs using 1593% CPU
+Optimizing NNI: done in 0.932908 secs using 1571% CPU
+Optimizing NNI: done in 1.02884 secs using 1592% CPU
+Optimizing NNI: done in 1.20382 secs using 1593% CPU
+Optimizing NNI: done in 1.24124 secs using 1593% CPU
+Optimizing NNI: done in 0.957949 secs using 1592% CPU
+Optimizing NNI: done in 0.99627 secs using 1591% CPU
+Optimizing NNI: done in 1.08876 secs using 1591% CPU
+Optimizing NNI: done in 0.943323 secs using 1594% CPU
+Optimizing NNI: done in 1.15491 secs using 1591% CPU
+Iteration 290 / LogL: -8369.401 / Time: 0h:5m:58s (0h:0m:22s left)
+Optimizing NNI: done in 1.02782 secs using 1593% CPU
+Optimizing NNI: done in 1.77201 secs using 1593% CPU
+Optimizing NNI: done in 1.02513 secs using 1591% CPU
+Optimizing NNI: done in 0.947146 secs using 1591% CPU
+Optimizing NNI: done in 1.04799 secs using 1593% CPU
+Optimizing NNI: done in 1.41626 secs using 1593% CPU
+Optimizing NNI: done in 0.79999 secs using 1592% CPU
+Optimizing NNI: done in 1.16777 secs using 1593% CPU
+Optimizing NNI: done in 0.692338 secs using 1592% CPU
+Optimizing NNI: done in 0.830362 secs using 1592% CPU
+Iteration 300 / LogL: -8362.856 / Time: 0h:6m:11s (0h:0m:9s left)
+Log-likelihood cutoff on original alignment: -8394.794
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Optimizing NNI: done in 0.827095 secs using 1592% CPU
+Optimizing NNI: done in 1.15126 secs using 1592% CPU
+Optimizing NNI: done in 0.965701 secs using 1592% CPU
+Optimizing NNI: done in 0.932136 secs using 1592% CPU
+Optimizing NNI: done in 1.57197 secs using 1592% CPU
+Optimizing NNI: done in 1.06232 secs using 1592% CPU
+Optimizing NNI: done in 0.727442 secs using 1591% CPU
+Optimizing NNI: done in 1.01041 secs using 1591% CPU
+Optimizing NNI: done in 0.863406 secs using 1593% CPU
+TREE SEARCH COMPLETED AFTER 309 ITERATIONS / Time: 0h:6m:23s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -8354.056
+Optimal log-likelihood: -8354.052
+Rate parameters:  A-C: 0.89110  A-G: 2.47544  A-T: 1.22562  C-G: 0.52364  C-T: 2.81273  G-T: 1.00000
+Base frequencies:  A: 0.282  C: 0.213  G: 0.241  T: 0.264
+Gamma shape alpha: 998.440
+Parameters optimization took 1 rounds (0.067 sec)
+BEST SCORE FOUND : -8354.052
+Creating bootstrap support values...
+Split supports printed to NEXUS file /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.splits.nex
+Total tree length: 1.323
+
+Total number of iterations: 309
+CPU time used for tree search: 5399.558 sec (1h:29m:59s)
+Wall-clock time used for tree search: 382.939 sec (0h:6m:22s)
+Total CPU time used: 5411.443 sec (1h:30m:11s)
+Total wall-clock time used: 384.906 sec (0h:6m:24s)
+
+Computing bootstrap consensus tree...
+Reading input file /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.splits.nex...
+303 taxa and 12055 splits.
+Consensus tree written to /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.contree
+Reading input trees file /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.contree
+Log-likelihood of consensus tree: -8355.226
+
+Analysis results written to: 
+  IQ-TREE report:                /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.iqtree
+  Maximum-likelihood tree:       /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.treefile
+  Likelihood distances:          /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.splits.nex
+  Consensus tree:                /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.contree
+  Screen log file:               /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.log
+
+Date and Time: Mon Aug 11 20:53:52 2025

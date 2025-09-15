@@ -17,49 +17,47 @@ metadata <- read_xlsx("./data/DNA_stock_Boltonia.xlsx")[1:4] %>%
   mutate(Sample_Name_2 = Sample_Name)
 
 
-tree_file <- read.iqtree("./data/IQTREE_all/Boltonia_all_ID_LD.min1.phy.treefile")%>%
+mis_ID <- read_csv("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Boltonia_asteroides_cass.csv", col_names = FALSE) %>% pull(X1)
+
+
+metadata <- read_xlsx("./data/DNA_stock_Boltonia.xlsx")[1:4] %>%
+  left_join(read_csv("./data/Boltonia_merged_data_20240925.csv")[c(1,7:12)], by = "index")%>%
+  mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, "left","0"), sep = "_"))%>%
+  mutate(Adapted_Longitude = case_when(is.na(Longitude) ~ Google_longitude, TRUE ~ Longitude), Adapted_Latitude = case_when(is.na(Latitude) ~ Google_latitude, TRUE ~ Latitude))%>%
+  mutate(Sample_Species = case_when(index <= 468 ~ "B. decurrens", TRUE ~ MaternalLine))%>%
+  mutate(Sample_Species = case_when(Sample_Name %in% mis_ID ~ "B. asteroides (sympatric)", TRUE ~ Sample_Species))%>%
+  select(Sample_Name,Sample_Species, everything())%>%
+  mutate(Sample_Name_2 = Sample_Name)
+
+
+tree_file1 <- read.iqtree("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.treefile")%>%
+  mutate(label = replace_126_127(label))%>%
+  mutate(UFboot = case_when(UFboot > 70 ~ UFboot, TRUE ~ as.numeric(NA)))%>%
+  left_join(metadata[c(1:8, 15)], by = c("label" = "Sample_Name"))
+
+tree_file2 <- read.iqtree("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/IQTREE_plastome/Boltonia_plastome.vcf.gz.min1.phy.treefile")%>%
   mutate(label = replace_126_127(label))%>%
   mutate(UFboot = case_when(UFboot > 70 ~ UFboot, TRUE ~ as.numeric(NA)))%>%
   left_join(metadata[c(1:8, 15)], by = c("label" = "Sample_Name"))%>%
-  root(outgroup = "Boltonia_489", edgelabel = TRUE)
+  as.phylo()%>%
+  ape::root(outgroup = "Boltonia_491", resolve.root = TRUE) %>%
+  as.treedata()
+
+tree_file1@data
+tree_file2@data <- tree_file1@data
+tree_file2@extraInfo <- tree_file1@extraInfo
 
 
-Sample_info <- tree_file@extraInfo%>%
-  filter(!is.na(Sample_Name_2))%>%
-  select(-node)%>%
-  arrange(Sample_Name_2)
-
-is.rooted(tree_file)
-ggtree(tree_file)
-  
-
-class(tree_file@phylo)
-class(tree_with_length)
-ggtree(tree_with_length)
-
-p <- tree_file %>%
-  ggtree()+
-  geom_nodelab(
-    mapping = aes(
-      x = branch,
-      label = UFboot,
-    ),
-    size = 2,
-    nudge_y = 0.38
-  )+
-  geom_tippoint(
-    mapping = aes(
-      color = Sample_Species,
-      ),
-    size = 2.5
-  ) +
-  geom_tiplab(geom = "text", aes(label = Sample_Species), offset = .2)+
-  xlim(0, 43)+
+p <-ggtree(tree_file2)+
+  geom_nodelab(mapping = aes(x = branch, label = UFboot), size = 2, nudge_y = 0.38)+
+  geom_tippoint(mapping = aes(color = Sample_Species), size = 2.5) +
+  geom_tiplab(geom = "text", aes(label = paste(Sample_Name_2, Sample_Species)), offset = 0.01, align = TRUE)+
+  xlim(0, 0.8)+
   theme(legend.position='none')
 
 p
 
-ggsave("Boltonia_all_tree.png", height = 70, width = 8, limitsize = FALSE)
+ggsave("Boltonia_plastome_tree.png", height = 70, width = 40, limitsize = FALSE)
 
 
 ###################
