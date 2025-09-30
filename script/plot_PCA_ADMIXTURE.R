@@ -25,12 +25,18 @@ total_variance <- sum(eigenval)
 variance_explained <- eigenval / total_variance * 100
 
 # Step 3: Load metadata CSV
-metadata <- read_xlsx("./data/DNA_stock_Boltonia.xlsx")[1:4] %>%
-  left_join(read_csv("./data/Boltonia_merged_data_20240925.csv")[c(1,7:12)], by = "index")%>%
-  mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, "left","0"), sep = "_"))%>%
-  mutate(Adapted_Longitude = case_when(is.na(Longitude) ~ Google_longitude, TRUE ~ Longitude), Adapted_Latitude = case_when(is.na(Latitude) ~ Google_latitude, TRUE ~ Latitude))%>%
-  mutate(Sample_Species = case_when(index <= 468 ~ "B. decurrens", TRUE ~ MaternalLine))%>%
-  select(Sample_Name,Sample_Species, everything())
+# metadata <- read_xlsx("./data/DNA_stock_Boltonia.xlsx")[1:4] %>%
+#   left_join(read_csv("./data/Boltonia_merged_data_20240925.csv")[c(1,7:12)], by = "index")%>%
+#   mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, "left","0"), sep = "_"))%>%
+#   mutate(Adapted_Longitude = case_when(is.na(Longitude) ~ Google_longitude, TRUE ~ Longitude), Adapted_Latitude = case_when(is.na(Latitude) ~ Google_latitude, TRUE ~ Latitude))%>%
+#   mutate(Sample_Species = case_when(index <= 468 ~ "B. decurrens", TRUE ~ MaternalLine))%>%
+#   select(Sample_Name,Sample_Species, everything())
+
+
+Boltonia_metadata <- readxl::read_excel("Boltonia_all_metadata_20250815.xlsx")%>%
+  mutate(Pop = case_when(Pop == "Cooper Park (1995)" ~ "Cooper Park (2000)", TRUE ~ Pop))%>%
+  mutate(Sample_Name = replace_126_127(Sample_Name))
+
 
 # Step 4: Left join PCA results with metadata
 pca_data <- eigenvec %>%
@@ -234,37 +240,128 @@ p
 
 ggsave("Boltonia_PC5_latitude.png", width = 10, height = 10, dpi = 600)
 
-qmat <- read_table("Boltonia_imputed_admixture.3.Q", col_names = FALSE) %>%
-  mutate(Sample_Name = read_table("Boltonia_imputed_admixture.fam", col_names = FALSE) %>% pull(X2))%>%
-  left_join(metadata %>% select(1:14, "Sample_Name"), by = "Sample_Name")%>%
+########################################################
+
+# Files like: Bdecurrens_admix_20250928_K1_cv5.log ... K16 ...
+files <- list.files(
+  path = "./data/ADMIXTURE_decurrens/",
+  pattern = "^Bdecurrens_admix_20250928_K\\d+_cv5\\.log$",
+  full.names = TRUE
+)
+
+# Regex: capture K and the numeric value (supports decimals and scientific notation)
+rx <- "^\\s*CV error \\(K=(\\d+)\\):\\s*([-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?\\d+)?)\\s*$"
+
+CV_error <- do.call(
+  rbind,
+  lapply(files, function(f) {
+    lines <- readLines(f, warn = FALSE)
+    hits  <- grep(rx, lines, perl = TRUE)
+    if (length(hits) == 0) return(NULL)          # no matching line in this file
+    keep  <- lines[hits]                         # keep matching line(s); often length 1
+    m     <- regexec(rx, keep, perl = TRUE)
+    cap   <- regmatches(keep, m)
+    
+    # Build one row per matching line
+    do.call(rbind, lapply(cap, function(x) {
+      data.frame(
+        file     = basename(f),
+        K        = as.integer(x[2]),
+        cv_error = as.numeric(x[3]),
+        line     = x[1],
+        stringsAsFactors = FALSE
+      )
+    }))
+  })
+)
+
+p <- ggplot(data = CV_error, aes(x = K, y = cv_error)) +
+  geom_line()+
+  geom_point()
+p
+
+#########################################################
+
+base <- "./data/ADMIXTURE_decurrens/Boltonia_decurrens_imputed_Low_LD_admixture"
+
+# sample names (IID is column 2 in .fam)
+samples <- read_table(paste0(base, ".fam"),
+                      col_names = FALSE, col_types = cols(.default = "c")) %>%
+  transmute(Sample_Name = X2)
+
+read_one_q <- function(K) {
+  qfile <- sprintf("%s.%d.Q", base, K)
+  
+  # Read Q matrix; number of columns should be K
+  q <- read_table(qfile, col_names = FALSE,
+                  col_types = cols(.default = col_double()))
+  
+  # Name columns Q1..QK deterministically, then pivot
+  q_names <- paste0("Q", seq_len(ncol(q)))  # safer than seq_len(K)
+  colnames(q) <- q_names
+  
+  # Optional sanity check
+  if (ncol(q) != K) {
+    warning(sprintf("File %s has %d columns but K = %d", basename(qfile), ncol(q), K))
+  }
+  
+  q %>%
+    bind_cols(samples) %>%
+    pivot_longer(
+      cols = all_of(q_names),
+      names_to = "Ancestry",
+      values_to = "Proportion"
+    ) %>%
+    mutate(
+      K = K,
+      Ancestry = factor(Ancestry, levels = q_names)
+    )
+}
+
+qmat <-
+  map_dfr(c(3,4,7,9), read_one_q) %>%
+  left_join(Boltonia_metadata, by = "Sample_Name") %>%
+  relocate(Sample_Name, K, Ancestry, Proportion)
+
+
+#########################################################
+
+qmat <- read_table("./data/ADMIXTURE_decurrens/Boltonia_decurrens_imputed_Low_LD_admixture.3.Q", col_names = FALSE) %>%
+  mutate(Sample_Name = read_table("./data/ADMIXTURE_decurrens/Boltonia_decurrens_imputed_Low_LD_admixture.fam", col_names = FALSE) %>% pull(X2))%>%
+  left_join(Boltonia_metadata, by = "Sample_Name")%>%
   pivot_longer(
     cols = starts_with("X"), 
     names_to = "Ancestry", 
     values_to = "Proportion"
   )
 
-p <- ggplot(qmat, aes(x = Sample_Name, y = Proportion, fill = Ancestry)) +
+p <- ggplot(qmat, aes(y = Sample_Name, x = Proportion, fill = Ancestry)) +
   geom_bar(stat = "identity", width = 1) +
   theme_bw() +
-  ggh4x::facet_nested(.~reorder(paste0(County, "\n",MaternalLine), Google_latitude), scales = "free_x", space = "free_x")+
+  ggh4x::facet_nested(reorder(Pop, desc(Adapted_Latitude))~K, scales = "free_y", space = "free_y")+
   labs(
-    title = paste("ADMIXTURE Plot (K =", "3", ")"),
-    x = "Individuals",
-    y = "Ancestry Proportion"
+    x = "",
+    y = ""
   ) +
   theme(
-    axis.text.x = element_text(angle = 90, vjust = 0.5),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks = element_blank(),
     axis.ticks.x.top = element_blank(),
     panel.grid = element_blank(),
-    panel.spacing = unit(0.1, "lines"),
+    panel.spacing.y = unit(0, "lines"),
+    panel.border = element_rect(color = "white"),
+    strip.background = element_rect(color = "white"),
     plot.background = element_rect(fill = "white"),
-    legend.position = "none"
+    legend.position = "none",
+    strip.text.y.right = element_text(angle = 0)
   ) +
-  scale_fill_brewer(palette = "Set3")
+  scale_fill_brewer(palette = "Set3")+
+  scale_x_continuous(expand = c(0,0))
 
 p
 
-ggsave("Boltonia_ADMIXTURE_K_3.png", width = 35, height = 6, dpi = 600)
+ggsave("./figures/ADMIXTURE_decurrens/Boltonia_ADMIXTURE_K_3479.png", width = 8, height = 10, dpi = 600)
 
 
 

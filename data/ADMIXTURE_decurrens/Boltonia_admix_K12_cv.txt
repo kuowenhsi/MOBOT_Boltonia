@@ -1,0 +1,7 @@
+1.3.0: Pulling from creepyorangeus/admixture
+Digest: sha256:268fab680a56315708f320de426bb33ebd44142fa03b282790cfd1f0af5578b1
+Status: Image is up to date for creepyorangeus/admixture:1.3.0
+docker.io/creepyorangeus/admixture:1.3.0
+🔍 Running ADMIXTURE for K = 12 with 5-fold cross-validation...
+✅ ADMIXTURE run complete.
+  Log file: Bdecurrens_admix_20250928_K12_cv5.log

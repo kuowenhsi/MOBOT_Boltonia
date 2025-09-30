@@ -1,0 +1,52 @@
+# (GONE v2.0)
+# Command: ./gone2 -g 0 -r 1.1 -t 16 -o ./GONE2_results/GONE2_result_Pop_16 /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia_decurrens_imputed_MAF_Low_LD/VCFs/Boltonia_decurrens_imputed_Low_LD_Pop_16.vcf
+# Running time:246.843sec
+#
+# PREPROCESSING INFORMATION:
+# Temporal Ne estimation using unphased diploid data under the assumption of
+#   a single population model with panmixia.
+# The marker locations in a physical map are known and the chromosome sizes and the
+#   total genome size will be calculated using those locations. The physical map will be
+#   converted into a genetic map using a constant recombination rate across the genome: 
+#   distances in Morgans will be calculated using the physical distances (in Mb).
+# Ne will be inferred using the recombination rates between loci and the weighted cuadratic
+#   correlations of alleles of loci pairs.
+# The complete theoretical model will be used to search for the historical Ne series
+#   that best fit the the observed correlations across bins of recomination.
+#
+# INPUT PARAMETERS:
+# Type of genotyping data. 0:unphased diploids, 1:haploids, 2:phased diploids, 3:pseudohaploids:
+0
+# Rate of base call errors:
+0.00000
+# Number of chromosomes:
+9
+# Genome size in Morgans:
+4.8129
+# Genome size in Mb:
+437.54
+# Total number of individuals in the input file:
+15
+# Number of individuals included in the analysis:
+15
+# Average Number of individuals included in the analysis (corrected for missing genotypes):
+15.0000
+# Effective Number of individuals for correlations (corrected for missing genotypes):
+15.0000
+# Number of markers in the input file:
+1863350
+# Number of SNPs included in the analysis (only polymorphic and with less than 20% missing data):
+1309507
+# Proportion of missing data:
+0.00000000
+#
+# Estimated Fis value of the population (deviation from H-W proportions):
+0.02560851
+# Heterozygosity observed in the sample (only polymorphic sites):
+0.27933271
+# Heterozygosity observed in the sample (all sites):
+0.19630672
+# Heterozygosity expected (H-W eq.) in the sample (only polymorphic sites):
+0.27687349
+# Heterozygosity expected (H-W eq.) in the sample (all sites):
+0.19457846
