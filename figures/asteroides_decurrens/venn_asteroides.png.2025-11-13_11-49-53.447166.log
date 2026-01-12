@@ -1,0 +1,8 @@
+INFO [2025-11-13 11:49:53] $x
+INFO [2025-11-13 11:49:53] list(Fst = filter(fst_data, color == TRUE)$ID, theta = filter(Pi_data_c, 
+INFO [2025-11-13 11:49:53]     color == TRUE)$ID, TajimaD_asteroides = filter(TajD_data[[1]], 
+INFO [2025-11-13 11:49:53]     color == TRUE)$ID)
+INFO [2025-11-13 11:49:53] 
+INFO [2025-11-13 11:49:53] $filename
+INFO [2025-11-13 11:49:53] [1] "./figures/asteroides_decurrens/venn_asteroides.png"
+INFO [2025-11-13 11:49:53] 

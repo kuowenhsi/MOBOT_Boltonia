@@ -1,0 +1,8 @@
+INFO [2025-11-13 11:37:00] $x
+INFO [2025-11-13 11:37:00] list(filter(fst_data, color == TRUE)$ID, filter(Pi_data_c, color == 
+INFO [2025-11-13 11:37:00]     TRUE)$ID, filter(TajD_data[[2]], color == TRUE)$ID)
+INFO [2025-11-13 11:37:00] 
+INFO [2025-11-13 11:37:00] $filename
+INFO [2025-11-13 11:37:00] [1] "./figures/asteroides_decurrens/venn.png"
+INFO [2025-11-13 11:37:00] 
+ERROR [2025-11-13 11:37:00] Unexpected parameter length for "category"

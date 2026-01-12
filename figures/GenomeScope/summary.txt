@@ -1,0 +1,14 @@
+GenomeScope version 2.0
+input file = /Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/GenomeScope/jellyfish_out/Boltonia_bc2046.histo
+output directory = ./figures/GenomeScope
+p = 2
+k = 21
+
+property                      min               max               
+Homozygous (aa)               98.3568%          98.3822%          
+Heterozygous (ab)             1.61781%          1.64317%          
+Genome Haploid Length         430,631,199 bp    431,387,756 bp    
+Genome Repeat Length          184,306,229 bp    184,630,028 bp    
+Genome Unique Length          246,324,970 bp    246,757,727 bp    
+Model Fit                     63.1076%          95.1015%          
+Read Error Rate               0.154251%         0.154251%         
