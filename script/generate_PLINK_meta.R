@@ -8,25 +8,21 @@ replace_126_127 <- function(x){
   case_when(x == "Boltonia_126" ~ "Boltonia_127", x == "Boltonia_127" ~ "Boltonia_126", TRUE ~ x)
 }
 
-input_psam <- read_tsv("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/alloutgroup/VCF_decurrens/Boltonia_decurrens_100kb0.8.psam")
+input_psam <- read_tsv("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/PLINK_meta/Boltonia_decurrens_imputed_Low_LD_maf.psam")
 
-Boltonia_Flower <- read_csv("./data/Boltonia_merged_data_tidy_20240925.csv")%>%
-  mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, pad = "0"), sep = "_"))%>%
-  filter(num_traits == "numDiscF")%>%
-  group_by(Sample_Name, MaternalLine, County)%>%
-  summarize(Cul_Flowers = sum(num_values, na.rm = TRUE))%>%
-  mutate(Flowered_2024 = case_when(Cul_Flowers == 0 ~ 1, TRUE ~ 2))%>%
-  mutate(Cul_Flowers = case_when(Cul_Flowers == 0 ~ "NA", TRUE ~ as.character(Cul_Flowers)))%>%
-  mutate(MaternalLine = paste0("M", MaternalLine), County = str_replace_all(County, " ", "_"))
+Boltonia_metadata <- readxl::read_excel("Boltonia_all_metadata_20251010.xlsx", na = c("NA", "", "NA (NA)"))%>%
+  mutate(Pop = case_when(Pop == "Cooper Park (1995)" ~ "Cooper Park (2000)", TRUE ~ Pop))%>%
+  mutate(Flowered_2024 = case_when(is.na(FlowerDays.2024) ~ 1, TRUE ~ 2))
 
-Boltonia_Stem <- read_csv("./data/Boltonia_stemLength_data_20240925.csv")%>%
-  mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, pad = "0"), sep = "_"))%>%
-  select(Sample_Name, Stem_Length = mean_stemLength)
+Boltonia_Pop_ABCD <- tibble(Pop_Index = c("Pop_01", "Pop_02", "Pop_03", "Pop_04", "Pop_05", 
+                                          "Pop_06", "Pop_07", "Pop_08", "Pop_09", "Pop_10", 
+                                          "Pop_11", "Pop_12", "Pop_13", "Pop_14", "Pop_15", "Pop_16", "Pop_17" ),
+                            Pop_ABCD = c("A", "A", "A", "B", "C",
+                                         "C", "C", "C", "C", "D",
+                                         "D", "E", "E", "E", "F", "F", "F"))
 
-Boltonia_Climate <- read_csv("./data/Boltonia_buf_climate_data_20250421.csv")%>%
-  select(-2, -3)
 
-Boltonia_Variance <- read_tsv("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/alloutgroup/VCF_decurrens/Boltonia_decurrens_100kb0.8_pca.eigenval", col_names = "Variance")%>%
+Boltonia_Variance <- read_tsv("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/PCA_decurrens/Boltonia_decurrens_imputed_Low_LD_pca.eigenval", col_names = "Variance")%>%
   mutate(Variance_Percent = Variance/sum(Variance), PC = seq(n()))
 
 ggplot(data = filter(Boltonia_Variance, PC < 11), aes(x = PC, y = Variance_Percent))+
@@ -34,17 +30,17 @@ ggplot(data = filter(Boltonia_Variance, PC < 11), aes(x = PC, y = Variance_Perce
   geom_line()
 
 
-Boltonia_PCA <- read_tsv("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/alloutgroup/VCF_decurrens/Boltonia_decurrens_100kb0.8_pca.eigenvec")%>%
-  select(Sample_Name = `#IID`, PC1, PC2, PC3, PC4)
+Boltonia_PCA <- read_tsv("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/PCA_decurrens/Boltonia_decurrens_imputed_Low_LD_pca.eigenvec")%>%
+  select(Sample_Name = `#IID`, PC1, PC2,PC3,PC4)
 
-Boltonia_meta <- Boltonia_PCA %>%
-  left_join(Boltonia_Flower, by = "Sample_Name")%>%
-  left_join(Boltonia_Stem, by = "Sample_Name")%>%
-  left_join(Boltonia_Climate, by = "Sample_Name")%>%
-  mutate(Sample_Name = replace_126_127(Sample_Name))
+Boltonia_meta <- Boltonia_metadata[,c(1,26:34)] %>%
+  left_join(Boltonia_PCA, by = "Sample_Name")%>%
+  mutate(Sample_Name = replace_126_127(Sample_Name))%>%
+  select(c(-2, -5))
 
 output_psam <- input_psam %>%
-  left_join(Boltonia_meta, by = c("#IID" = "Sample_Name"))
+  left_join(Boltonia_meta, by = c("#IID" = "Sample_Name"))%>%
+  select(`#IID`, SEX, PC1, PC2, PC3, PC4, everything())
 
-write_tsv(output_psam, "/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/alloutgroup/VCF_decurrens/Boltonia_decurrens_100kb0.8_meta.psam")
+write_tsv(output_psam, "/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/PLINK_meta/Boltonia_decurrens_imputed_metapheno.psam")
 

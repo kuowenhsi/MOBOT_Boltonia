@@ -12,7 +12,7 @@ setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.L
 Boltonia_dilution <- readxl::read_xlsx("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/DNA_stock/DNA_stock_Boltonia_dilution.xlsx")%>%
   select(index, Plate, Position)%>% mutate(Used_in_library = "Yes")
 
-Boltonia_data <- read_csv("./data/Boltonia_merged_data_tidy_20240925.csv")%>%
+Boltonia_data <- read_csv("./data/Boltonia_merged_data_tidy_20251010.csv")%>%
   left_join(Boltonia_dilution, by = "index")%>%
   mutate(Used_in_library = case_when(Used_in_library == "Yes" ~ "Yes", TRUE ~ "No"))%>%
   mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, pad = "0"), sep = "_"))%>%
@@ -166,15 +166,33 @@ Boltonia_data_FlowerRatio_county <- Boltonia_data %>%
 # make days to flower data
 
 Boltonia_data_DaysToFlower <- Boltonia_data %>%
-  mutate(index = as.factor(index))%>%
+  mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, pad = "0"), sep = "_"))%>%
+  select(Sample_Name, PlantingDate, FirstLeafDate, Date, num_traits, num_values)%>%
   mutate(PlantingDate = as.Date(PlantingDate, "%m/%d/%y"), FirstLeafDate = as.Date(FirstLeafDate, "%m/%d/%y"))%>%
   filter(num_traits %in% c("numFlwrB", "numRayF", "numDiscF"))%>%
   mutate(num_values = case_when(is.na(num_values) ~ 0, TRUE ~ num_values))%>%
-  group_by(index, num_traits)%>%
+  group_by(Sample_Name, num_traits)%>%
   arrange(Date, .by_group = TRUE)%>%
   mutate(is_first = case_when((lag(num_values) == 0 & num_values > 0) ~ TRUE, TRUE ~ FALSE))%>%
   filter(is_first == TRUE)%>%
-  filter(Date == min(Date))%>%
+  filter(Date == min(Date)) %>%
+  ungroup()%>%
+  filter(num_traits == "numDiscF")%>%
+  select(Sample_Name, PlantingDate, FirstLeafDate, Disc.Flower.Date.2024 = Date)
+
+write_csv(Boltonia_data_DaysToFlower, "./data/Boltonia_FirstFloweringDate_2024.csv")
+
+
+Boltonia_data_Num.Stems.2024 <- Boltonia_data %>%
+  mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, pad = "0"), sep = "_"))%>%
+  select(Sample_Name, Date, num_traits, num_values)%>%
+  filter(num_traits %in% c("numStem"))%>%
+  group_by(Sample_Name, num_traits)%>%
+  arrange(Date, .by_group = TRUE)%>%
+  filter(Date == max(Date)) %>%
+  ungroup()
+
+%>%
   select(index, PlantingDate, FirstLeafDate, num_traits, Date)%>%
   mutate(DaysToFlower = Date -PlantingDate)%>%
   ungroup()%>%
@@ -458,14 +476,14 @@ Boltonia_stemLength_data <- Boltonia_data %>%
   pivot_wider(names_from = "num_traits", values_from = "num_values")%>%
   filter(!is.na(stemLength), numDiscF >= 1)%>%
   group_by(index)%>%
-  summarise(mean_stemLength = mean(stemLength), c_stemLength = str_c(as.character(stemLength), collapse = ", "), SD_stemLength = sd(stemLength), sample_size = n())%>%
+  summarise(median_stemLength = median(stemLength), c_stemLength = str_c(as.character(stemLength), collapse = ", "), SD_stemLength = sd(stemLength), sample_size = n())%>%
   ungroup()%>%
   mutate(index = factor(index, levels = 1:468))%>%
   complete(index)%>%
-  filter(sample_size > 1)%>%
+  filter(sample_size >= 1)%>%
   complete(index)
 
-write_csv(Boltonia_stemLength_data, "./data/Boltonia_stemLength_data_20240925.csv")
+write_csv(Boltonia_stemLength_data, "./data/Boltonia_stemLength_data_20251010.csv")
 
 ## only Site (MaternalLine is included because otherwise the model cannot be fitted)
 

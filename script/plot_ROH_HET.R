@@ -57,6 +57,8 @@ ROH_data_40 <- ROH_data %>%
   summarize(ROH_40 = sum(length_bp))%>%
   mutate(ROH_frac = ROH_40/437.8e6)
 
+write_csv(ROH_data_40, "./data/ROH_HET/ROH_data_40.csv")
+
 read_psc <- function(path) {
   lines <- readLines("./data/ROH_HET/Boltonia_decurrens_imputed_per_sample_het.tsv", warn = FALSE)
   
@@ -102,7 +104,10 @@ HET_data <- read_psc("./data/ROH_HET/Boltonia_decurrens_imputed_per_sample_het.t
 
 ROH_data_40_HET <- ROH_data_40 %>%
   left_join(HET_data, by = c("Sample_Name" = "sample"))%>%
-  left_join(Boltonia_metadata, by = "Sample_Name")
+  left_join(Boltonia_metadata, by = "Sample_Name")%>%
+  select(Sample_Name, ROH_frac, Heterozygosity, Adapted_Latitude, Adapted_Longitude)
+
+write_csv(ROH_data_40_HET, "./data/ROH_HET/ROH_data_40_HET.csv")
 
 ROH_data_40_HET_Pop <-ROH_data_40_HET %>%
   group_by(Pop)%>%
@@ -115,7 +120,7 @@ ROH_data_40_HET_Pop <-ROH_data_40_HET %>%
             Adapted_Latitude = median(Adapted_Latitude))%>%
   arrange(Adapted_Latitude)%>%
   mutate(Pop_index = 1:n())%>%
-  mutate(Pop = paste(Pop_index, Pop, sep = " - "))
+  mutate(shape_number = (Pop_index + 3)%%4 + 21)
 
 p <- ggplot(data = ROH_data_40_HET, aes(x = Heterozygosity, y = ROH_frac))+
   geom_point(color = "gray80")+
@@ -126,15 +131,19 @@ p <- ggplot(data = ROH_data_40_HET, aes(x = Heterozygosity, y = ROH_frac))+
 p
 
 p <- ggplot(data = ROH_data_40_HET_Pop, aes(x = Heterozygosity_median, y = ROH_frac_median))+
-  geom_errorbar(aes(ymax = ROH_frac_max, ymin = ROH_frac_min, color = reorder(Pop, desc(Adapted_Latitude))))+
+  geom_errorbar(aes(ymax = ROH_frac_max, ymin = ROH_frac_min, color = Pop))+
   # geom_errorbar(aes(xmax = Heterozygosity_max, xmin = Heterozygosity_min, color = reorder(Pop, desc(Adapted_Latitude))))+
-  geom_point(aes(fill = reorder(Pop, desc(Adapted_Latitude)), shape = reorder(Pop, desc(Adapted_Latitude))), size = 3)+
-  geom_text(aes(y = ROH_frac_min - 0.01, label = Pop_index))+
-  scale_y_continuous("Fraction of RON (>40Kb)")+
-  scale_shape_manual(values = rep(c(21,22,23,24), length = 17))+
+  geom_point(aes(fill = Pop, shape = I(shape_number)), size = 3)+
+  geom_text(aes(y = ROH_frac_min - 0.01, label = Pop_index), 
+            position = position_nudge(y = c(0,0.05,0.05,0,0,-0.005,0.06,0,0,0,0,0,0,0,0,0,0)))+
+  scale_y_continuous("Fraction of ROH ( > 40Kb )")+
+  scale_x_continuous("Median Heterozygosity")+
   theme_bw()+
   theme(legend.title = element_blank())
 
 p
 
 p + theme(legend.position = "none")
+
+
+ggsave("./figures/ROH_HET/ROH_HET_20250930.png", width = 7, height = 4, dpi = 600)
