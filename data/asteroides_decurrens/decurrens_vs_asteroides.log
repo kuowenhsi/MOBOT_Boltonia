@@ -1,0 +1,30 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf ../IMLS_Illumina/Boltonia_vcf/alloutgroup/asteroides_samples.vcf.gz
+	--fst-window-size 10000
+	--fst-window-step 5000
+	--weir-fst-pop pop_decurrens.invcf.txt
+	--weir-fst-pop pop_asteroides.invcf.txt
+	--keep pop_decurrens.invcf.txt
+	--keep pop_asteroides.invcf.txt
+	--out decurrens_vs_asteroides
+
+Using zlib version: 1.2.11
+Warning: Expected at least 2 parts in FORMAT entry: ID=PGT,Number=1,Type=String,Description="Physical phasing haplotype information, describing how the alternate alleles are phased in relation to one another; will always be heterozygous and is not intended to describe called alleles">
+Warning: Expected at least 2 parts in FORMAT entry: ID=PID,Number=1,Type=String,Description="Physical phasing ID information, where each unique ID within a given sample (but not across samples) connects records within a phasing group">
+Warning: Expected at least 2 parts in FORMAT entry: ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+Warning: Expected at least 2 parts in FORMAT entry: ID=RGQ,Number=1,Type=Integer,Description="Unconditional reference genotype confidence, encoded as a phred quality -10*log10 p(genotype call is wrong)">
+Warning: Expected at least 2 parts in INFO entry: ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+Keeping individuals in 'keep' list
+After filtering, kept 423 out of 453 Individuals
+Outputting Windowed Weir and Cockerham Fst estimates.
+Weir and Cockerham mean Fst estimate: 0.21543
+Weir and Cockerham weighted Fst estimate: 0.16633
+After filtering, kept 1538608 out of a possible 1538608 Sites
+Run Time = 103.00 seconds

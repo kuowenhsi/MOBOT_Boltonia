@@ -1,0 +1,26 @@
+PLINK v2.0.0-a.6.9LM 64-bit Intel (29 Jan 2025)
+Options in effect:
+  --out Dsamples_B484_B485_nomiss_FMISS001_PCA
+  --pca 455
+  --pfile Dsamples_B484_B485_nomiss_FMISS001
+
+Hostname: compute1-exec-131.ris.wustl.edu
+Working directory: /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_Illumina/Boltonia_vcf/alloutgroup/vcf_D
+Start time: Wed Dec  3 17:23:45 2025
+
+Random number seed: 1764782625
+385047 MiB RAM detected, ~335384 available; reserving 192523 MiB for main
+workspace.
+Using up to 64 threads (change this with --threads).
+455 samples (0 females, 0 males, 455 ambiguous; 455 founders) loaded from
+Dsamples_B484_B485_nomiss_FMISS001.psam.
+170217 variants loaded from Dsamples_B484_B485_nomiss_FMISS001.pvar.
+Note: No phenotype data present.
+Calculating allele frequencies... done.
+Constructing GRM: done.
+Correcting for missingness... done.
+Extracting eigenvalues and eigenvectors... done.
+--pca: Eigenvectors written to Dsamples_B484_B485_nomiss_FMISS001_PCA.eigenvec
+, and eigenvalues written to Dsamples_B484_B485_nomiss_FMISS001_PCA.eigenval .
+
+End time: Wed Dec  3 17:23:47 2025

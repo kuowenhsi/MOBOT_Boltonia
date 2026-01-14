@@ -1,0 +1,26 @@
+qseqid	gene	tier	prioritized_for_stem_length	rationale
+g20277	AHA9	Tier1	yes	Plasma membrane H+-ATPase; central to acid growth and cell wall loosening, directly controls cell elongation and thus stem length.
+g16073	Os07g0190000	Tier1	yes	DXS2 in plastidic MEP pathway; controls isoprenoid (including GA/CK) biosynthesis and chloroplast development, strongly linked to growth and stem elongation.
+g20278	DCL4	Tier1	yes	Dicer-like involved in 21-nt siRNAs and ta-siRNAs that regulate ARF/auxin pathways and shoot architecture; good developmental regulator candidate.
+g20276	ERF003	Tier1	yes	Ethylene-responsive TF; integrates stress and ethylene signaling known to modulate stem elongation and growth–defense trade-offs.
+g1954	At1g07650	Tier1	yes	LRR receptor-like kinase; plausible regulator of hormone or peptide signaling influencing cell expansion and meristem activity.
+g30592	KIN7K	Tier1	maybe	Kinesin-like protein; cytoskeleton/organelle dynamics may impact cell elongation and organ growth, though mechanism is less specific than AHA9/DXS2.
+g1493	MTERF4	Tier2	maybe	Organellar transcription termination; affects chloroplast and mitochondrial function and thus overall vigor and size, but not stem-specific.
+g18437	CURT1A	Tier2	maybe	Controls thylakoid curvature and photosynthetic efficiency; may influence biomass and stem length via general photosynthetic capacity.
+g32849	CCB4	Tier2	maybe	Required for cytochrome b6 maturation and photosynthetic electron transport; impacts energy supply and growth, indirectly affecting stem length.
+g1495	PFP-ALPHA	Tier2	maybe	PPi-dependent phosphofructokinase; central carbon metabolism, could modulate growth rate but highly pleiotropic.
+g19707	HSP23.9	Tier2	maybe	Mitochondrial small HSP; stress-responsive chaperone that may influence growth under stress conditions.
+g13703	NA	Tier2	maybe	Peroxisomal Lon protease; protein quality control and metabolic homeostasis, potentially influencing growth under stress.
+g13704	GOT1	Tier2	maybe	Vesicle transport protein; ER–Golgi trafficking may affect delivery of wall components or receptors, but link to stem length is indirect.
+g15790	LIS	Tier2	maybe	Core splicing factor; global effects on gene expression and development, growth phenotypes possible but not stem-specific.
+g15791	At1g62670	Tier2	maybe	PPR protein; organellar RNA metabolism; can affect vigor and development but mechanism for stem-specific variation is unclear.
+g22200	RPL21A	Tier2	maybe	Ribosomal protein; general translation; variation could change overall growth rate but very pleiotropic.
+g22202	PCMP-H3	Tier2	maybe	PPR protein; as above, likely affects organelle gene expression and overall vigor rather than specific stem elongation pathways.
+g2404	WRKY51	Tier2	maybe	Defense-related TF; may influence growth through SA/JA trade-offs, especially under stress conditions.
+g30628	NHL2	Tier2	maybe	Defense/stress-associated membrane protein; plausible growth–defense trade-off effects but no clear stem-specific mechanism.
+g34435	OFUT38	Tier2	maybe	O-fucosyltransferase; may modify receptors or secreted proteins involved in growth signaling; mechanistic link is speculative.
+g8081	nmd3	Tier2	maybe	60S ribosomal export factor; essential for protein synthesis and growth, but very general.
+g17972	Terf1	Tier3	no	Best hit is a mouse telomere protein with low query coverage; likely spurious domain-level match rather than a true plant ortholog.
+g18435	1a	Tier3	no	Coronavirus replicase polyprotein; almost certainly spurious alignment, not a genuine plant gene driving stem length.
+g1953	hspC2	Tier3	no	Bacterial small HSP; likely a conserved domain hit; limited relevance for interpreting plant stem length variation.
+g30175	fam136a	Tier3	no	Animal protein of unknown function; low identity/coverage; unlikely to be informative for plant stem length.

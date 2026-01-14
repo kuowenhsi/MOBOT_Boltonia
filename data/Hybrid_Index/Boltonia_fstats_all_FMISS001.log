@@ -1,0 +1,26 @@
+PLINK v2.00a5 M1 (16 May 2023)
+Options in effect:
+  --bfile Boltonia_fstats_all
+  --geno 0.01
+  --make-bed
+  --out Boltonia_fstats_all_FMISS001
+
+Hostname: Wenhsis-MacBook-Pro.local
+Working directory: /Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Hybrid_Index
+Start time: Fri Dec  5 11:53:43 2025
+
+Random number seed: 1764957223
+16384 MiB RAM detected; reserving 8192 MiB for main workspace.
+Using up to 10 threads (change this with --threads).
+458 samples (0 females, 0 males, 458 ambiguous; 458 founders) loaded from
+Boltonia_fstats_all.fam.
+674444 variants loaded from Boltonia_fstats_all.bim.
+Note: No phenotype data present.
+Calculating allele frequencies... done.
+--geno: 619680 variants removed due to missing genotype data.
+54764 variants remaining after main filters.
+Writing Boltonia_fstats_all_FMISS001.fam ... done.
+Writing Boltonia_fstats_all_FMISS001.bim ... done.
+Writing Boltonia_fstats_all_FMISS001.bed ... done.
+
+End time: Fri Dec  5 11:53:43 2025

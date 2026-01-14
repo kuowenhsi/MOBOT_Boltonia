@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="defb9a47-c1a7-4fb2-9a0b-2da7c5260cad"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/7nd66f</alternateIdentifier>
+        <alternateIdentifier>https://portal.torcherbaria.org/portal/collections/misc/collprofiles.php?collid=370</alternateIdentifier>
+        <title>Botanical Research Institute of Texas, Philecology Herbarium</title>
+        <creator>
+            <organizationName>TORCH Portal</organizationName>
+            <electronicMailAddress>jbest@brit.org</electronicMailAddress>
+            <onlineUrl>https://portal.torcherbaria.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>TORCH Portal</organizationName>
+            <electronicMailAddress>jbest@brit.org</electronicMailAddress>
+            <onlineUrl>https://portal.torcherbaria.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Tiana</givenName>
+                <surName>Rehman</surName>
+            </individualName>
+            <positionName>Herbarium Director</positionName>
+            <electronicMailAddress>trehman@brit.org</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Ashley</givenName>
+                <surName>Bordelon</surName>
+            </individualName>
+            <positionName>Collections Manager</positionName>
+            <electronicMailAddress>abordelon@brit.org</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2025-10-03
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>The core of BRIT&amp;rsquo;s herbarium is the Lloyd H. Shinners Collection in Systematic Botany, begun at Southern Methodist University in Dallas, Texas, in 1944. The Botanical Research Institute of Texas was formed in 1987 to house the transfer of this collection, which moved to Fort Worth in 1991.&amp;nbsp; Areas of geographic concentration encompass Texas, the southeastern United States, Mexico, Central America, South America, and Southeast Asia. The BRIT herbarium holdings are worldwide in scope, and represent most of the earth&amp;rsquo;s plant families.</para>
+        </abstract>
+        <intellectualRights>
+            <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Zero v1.0 Universal</licenseName>
+            <url>https://spdx.org/licenses/CC0-1.0.html</url>
+            <identifier>CC0-1.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://portal.torcherbaria.org/portal/content/dwca/BRIT-BRIT_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>Botanical Research Institute of Texas, Philecology Herbarium</organizationName>
+            <phone>817-332-4441</phone>
+            <electronicMailAddress>trehman@brit.org</electronicMailAddress>
+            <onlineUrl>https://fwbg.org/research/herbarium/about-the-brit-herbarium/</onlineUrl>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2025-10-03T20:19:01Z</dateStamp>
+                <citation>Botanical Research Institute of Texas (2025). Botanical Research Institute of Texas, Philecology Herbarium. Occurrence dataset https://doi.org/10.15468/7nd66f accessed via GBIF.org on 2025-10-03.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

@@ -1,0 +1,214 @@
+g1629	sp|Q8S8S2|LPCT2_ARATH	63.477	512	95	0.0	684	sp|Q8S8S2|LPCT2_ARATH Lysophospholipid acyltransferase LPEAT2 OS=Arabidopsis thaliana OX=3702 GN=LPEAT2 PE=1 SV=1	0	N/A	N/A
+g1629	sp|Q8BYI6|PCAT2_MOUSE	30.635	457	83	1.17e-54	196	sp|Q8BYI6|PCAT2_MOUSE Lysophosphatidylcholine acyltransferase 2 OS=Mus musculus OX=10090 GN=Lpcat2 PE=1 SV=1	0	N/A	N/A
+g1629	sp|Q3TFD2|PCAT1_MOUSE	31.368	424	78	2.03e-54	195	sp|Q3TFD2|PCAT1_MOUSE Lysophosphatidylcholine acyltransferase 1 OS=Mus musculus OX=10090 GN=Lpcat1 PE=1 SV=1	0	N/A	N/A
+g1629	sp|Q1HAQ0|PCAT1_RAT	31.368	424	78	2.59e-54	194	sp|Q1HAQ0|PCAT1_RAT Lysophosphatidylcholine acyltransferase 1 OS=Rattus norvegicus OX=10116 GN=Lpcat1 PE=1 SV=2	0	N/A	N/A
+g1629	sp|Q7L5N7|PCAT2_HUMAN	31.415	417	76	3.77e-54	194	sp|Q7L5N7|PCAT2_HUMAN Lysophosphatidylcholine acyltransferase 2 OS=Homo sapiens OX=9606 GN=LPCAT2 PE=1 SV=1	0	N/A	N/A
+g2481	sp|A5JTQ3|XYL2_MEDSV	71.891	772	99	0.0	1188	sp|A5JTQ3|XYL2_MEDSV Beta-xylosidase/alpha-L-arabinofuranosidase 2 OS=Medicago sativa subsp. varia OX=36902 GN=Xyl2 PE=2 SV=1	0	N/A	N/A
+g2481	sp|Q9FLG1|BXL4_ARATH	70.218	779	100	0.0	1174	sp|Q9FLG1|BXL4_ARATH Beta-D-xylosidase 4 OS=Arabidopsis thaliana OX=3702 GN=BXL4 PE=1 SV=1	0	N/A	N/A
+g2481	sp|A5JTQ2|XYL1_MEDSV	70.298	771	99	0.0	1137	sp|A5JTQ2|XYL1_MEDSV Beta-xylosidase/alpha-L-arabinofuranosidase 1 (Fragment) OS=Medicago sativa subsp. varia OX=36902 GN=Xyl1 PE=1 SV=1	0	N/A	N/A
+g2481	sp|Q9LXD6|BXL3_ARATH	66.925	774	100	0.0	1113	sp|Q9LXD6|BXL3_ARATH Beta-D-xylosidase 3 OS=Arabidopsis thaliana OX=3702 GN=BXL3 PE=1 SV=1	0	N/A	N/A
+g2481	sp|Q9FGY1|BXL1_ARATH	56.226	779	99	0.0	883	sp|Q9FGY1|BXL1_ARATH Beta-D-xylosidase 1 OS=Arabidopsis thaliana OX=3702 GN=BXL1 PE=1 SV=1	0	N/A	N/A
+g2850	sp|P43254|COP1_ARATH	68.824	680	100	0.0	983	sp|P43254|COP1_ARATH E3 ubiquitin-protein ligase COP1 OS=Arabidopsis thaliana OX=3702 GN=COP1 PE=1 SV=2	0	N/A	N/A
+g2850	sp|P93471|COP1_PEA	67.651	677	100	0.0	934	sp|P93471|COP1_PEA E3 ubiquitin-protein ligase COP1 OS=Pisum sativum OX=3888 GN=COP1 PE=2 SV=1	0	N/A	N/A
+g2850	sp|Q8NHY2|COP1_HUMAN	39.724	652	94	2.66e-154	466	sp|Q8NHY2|COP1_HUMAN E3 ubiquitin-protein ligase COP1 OS=Homo sapiens OX=9606 GN=COP1 PE=1 SV=1	0	N/A	N/A
+g2850	sp|Q9R1A8|COP1_MOUSE	39.663	653	94	8.00e-154	465	sp|Q9R1A8|COP1_MOUSE E3 ubiquitin-protein ligase COP1 OS=Mus musculus OX=10090 GN=Cop1 PE=1 SV=2	0	N/A	N/A
+g2850	sp|Q9LJR3|SPA3_ARATH	35.752	565	79	1.47e-108	350	sp|Q9LJR3|SPA3_ARATH Protein SPA1-RELATED 3 OS=Arabidopsis thaliana OX=3702 GN=SPA3 PE=1 SV=1	0	N/A	N/A
+g3159	sp|Q9XI36|MBD10_ARATH	64.762	105	36	4.23e-40	146	sp|Q9XI36|MBD10_ARATH Methyl-CpG-binding domain-containing protein 10 OS=Arabidopsis thaliana OX=3702 GN=MBD10 PE=1 SV=1	0	N/A	N/A
+g3159	sp|Q9LW00|MBD11_ARATH	65.385	104	35	3.44e-37	135	sp|Q9LW00|MBD11_ARATH Methyl-CpG-binding domain-containing protein 11 OS=Arabidopsis thaliana OX=3702 GN=MBD11 PE=1 SV=1	0	N/A	N/A
+g3160	sp|O22773|TL16_ARATH	64.804	179	81	9.49e-74	225	sp|O22773|TL16_ARATH Thylakoid lumenal 16.5 kDa protein, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=At4g02530 PE=1 SV=3	0	N/A	N/A
+g3862	sp|Q8L4M1|THOC6_ARATH	58.082	365	96	3.51e-148	426	sp|Q8L4M1|THOC6_ARATH THO complex subunit 6 OS=Arabidopsis thaliana OX=3702 GN=THO6 PE=1 SV=1	0	N/A	N/A
+g3862	sp|Q5XJS5|THOC6_DANRE	27.795	331	87	4.03e-34	131	sp|Q5XJS5|THOC6_DANRE THO complex subunit 6 homolog OS=Danio rerio OX=7955 GN=thoc6 PE=2 SV=1	0	N/A	N/A
+g3862	sp|Q5U4D9|THOC6_MOUSE	27.055	292	78	1.88e-31	124	sp|Q5U4D9|THOC6_MOUSE THO complex subunit 6 homolog OS=Mus musculus OX=10090 GN=Thoc6 PE=1 SV=1	0	N/A	N/A
+g3862	sp|Q6AY87|THOC6_RAT	27.055	292	78	1.96e-31	124	sp|Q6AY87|THOC6_RAT THO complex subunit 6 homolog OS=Rattus norvegicus OX=10116 GN=Thoc6 PE=2 SV=1	0	N/A	N/A
+g3862	sp|Q86W42|THOC6_HUMAN	27.055	292	78	1.04e-28	117	sp|Q86W42|THOC6_HUMAN THO complex subunit 6 OS=Homo sapiens OX=9606 GN=THOC6 PE=1 SV=1	0	N/A	N/A
+g3863	sp|F4IEY4|TRB5_ARATH	45.238	294	99	1.64e-69	219	sp|F4IEY4|TRB5_ARATH Telomere repeat-binding factor 5 OS=Arabidopsis thaliana OX=3702 GN=At1g72740 PE=2 SV=1	0	N/A	N/A
+g3863	sp|Q6WLH4|SMH3_MAIZE	47.766	291	99	2.79e-68	216	sp|Q6WLH4|SMH3_MAIZE Single myb histone 3 OS=Zea mays OX=4577 GN=SMH3 PE=2 SV=1	0	N/A	N/A
+g3863	sp|F4I7L1|TRB4_ARATH	46.309	298	99	5.59e-67	213	sp|F4I7L1|TRB4_ARATH Telomere repeat-binding factor 4 OS=Arabidopsis thaliana OX=3702 GN=At1g17520 PE=2 SV=2	0	N/A	N/A
+g3863	sp|Q8W119|SMH4_MAIZE	47.751	289	99	1.44e-65	209	sp|Q8W119|SMH4_MAIZE Single myb histone 4 OS=Zea mays OX=4577 GN=SMH4 PE=2 SV=1	0	N/A	N/A
+g3863	sp|Q8VWK4|TRB1_ARATH	43.750	192	66	7.32e-45	156	sp|Q8VWK4|TRB1_ARATH Telomere repeat-binding factor 1 OS=Arabidopsis thaliana OX=3702 GN=TRB1 PE=1 SV=1	0	N/A	N/A
+g5248	sp|Q9FLE8|Y5986_ARATH	48.513	437	100	2.37e-119	355	sp|Q9FLE8|Y5986_ARATH Uncharacterized protein At5g39865 OS=Arabidopsis thaliana OX=3702 GN=At5g39865 PE=2 SV=1	0	N/A	N/A
+g5248	sp|Q9LH89|Y3885_ARATH	49.666	449	100	2.18e-114	344	sp|Q9LH89|Y3885_ARATH Uncharacterized protein At3g28850 OS=Arabidopsis thaliana OX=3702 GN=At3g28850 PE=4 SV=1	0	N/A	N/A
+g5248	sp|Q9W4S1|GRCR2_DROME	29.341	167	40	8.33e-19	92.0	sp|Q9W4S1|GRCR2_DROME Glutaredoxin domain-containing cysteine-rich protein CG12206 OS=Drosophila melanogaster OX=7227 GN=CG12206 PE=2 SV=2	0	N/A	N/A
+g5248	sp|Q9VNL4|GRCR1_DROME	28.144	167	40	1.56e-17	87.8	sp|Q9VNL4|GRCR1_DROME Glutaredoxin domain-containing cysteine-rich protein CG31559 OS=Drosophila melanogaster OX=7227 GN=CG31559 PE=2 SV=2	0	N/A	N/A
+g5248	sp|A8MXD5|GRCR1_HUMAN	30.588	170	40	2.58e-14	76.6	sp|A8MXD5|GRCR1_HUMAN Glutaredoxin domain-containing cysteine-rich protein 1 OS=Homo sapiens OX=9606 GN=GRXCR1 PE=1 SV=1	0	N/A	N/A
+g5249	sp|Q8GW32|PRE6_ARATH	74.667	75	85	2.82e-34	115	sp|Q8GW32|PRE6_ARATH Transcription factor PRE6 OS=Arabidopsis thaliana OX=3702 GN=PRE6 PE=1 SV=1	0	N/A	N/A
+g5249	sp|Q9LJX1|PRE5_ARATH	63.736	91	99	5.37e-34	115	sp|Q9LJX1|PRE5_ARATH Transcription factor PRE5 OS=Arabidopsis thaliana OX=3702 GN=PRE5 PE=1 SV=1	0	N/A	N/A
+g5249	sp|Q9FLE9|PRE1_ARATH	65.000	80	90	8.14e-33	112	sp|Q9FLE9|PRE1_ARATH Transcription factor PRE1 OS=Arabidopsis thaliana OX=3702 GN=PRE1 PE=1 SV=1	0	N/A	N/A
+g5249	sp|Q9LXG5|PRE2_ARATH	71.053	76	85	3.43e-32	110	sp|Q9LXG5|PRE2_ARATH Transcription factor PRE2 OS=Arabidopsis thaliana OX=3702 GN=PRE2 PE=1 SV=1	0	N/A	N/A
+g5249	sp|Q0DUR2|ILI6_ORYSJ	67.105	76	86	3.64e-28	100	sp|Q0DUR2|ILI6_ORYSJ Transcription factor ILI6 OS=Oryza sativa subsp. japonica OX=39947 GN=ILI6 PE=1 SV=1	0	N/A	N/A
+g11049	sp|Q1GT88|RL32_SPHAL	50.000	44	33	4.87e-06	44.7	sp|Q1GT88|RL32_SPHAL Large ribosomal subunit protein bL32 OS=Sphingopyxis alaskensis (strain DSM 13593 / LMG 18877 / RB2256) OX=317655 GN=rpmF PE=3 SV=1	0	N/A	N/A
+g11049	sp|Q2N923|RL32_ERYLH	47.727	44	33	7.94e-06	43.9	sp|Q2N923|RL32_ERYLH Large ribosomal subunit protein bL32 OS=Erythrobacter litoralis (strain HTCC2594) OX=314225 GN=rpmF PE=3 SV=1	0	N/A	N/A
+g11049	sp|Q0BTE2|RL32_GRABC	50.000	44	33	8.30e-06	44.3	sp|Q0BTE2|RL32_GRABC Large ribosomal subunit protein bL32 OS=Granulibacter bethesdensis (strain ATCC BAA-1260 / CGDNIH1) OX=391165 GN=rpmF PE=3 SV=1	0	N/A	N/A
+g11467	sp|O23593|RGGB_ARATH	51.206	373	99	2.59e-79	249	sp|O23593|RGGB_ARATH RGG repeats nuclear RNA binding protein B OS=Arabidopsis thaliana OX=3702 GN=RGGB PE=1 SV=1	0	N/A	N/A
+g11467	sp|Q9SQ56|RGGA_TOBAC	60.714	280	77	3.39e-73	232	sp|Q9SQ56|RGGA_TOBAC RGG repeats nuclear RNA binding protein A (Fragment) OS=Nicotiana tabacum OX=4097 GN=RggA PE=2 SV=1	0	N/A	N/A
+g11467	sp|O23523|RGGA_ARATH	50.678	369	99	1.68e-60	201	sp|O23523|RGGA_ARATH RGG repeats nuclear RNA binding protein A OS=Arabidopsis thaliana OX=3702 GN=RGGA PE=1 SV=1	0	N/A	N/A
+g11467	sp|Q9LVT8|RGGC_ARATH	51.381	362	99	4.51e-60	200	sp|Q9LVT8|RGGC_ARATH RGG repeats nuclear RNA binding protein C OS=Arabidopsis thaliana OX=3702 GN=RGGC PE=1 SV=1	0	N/A	N/A
+g12067	sp|Q8RY59|RCD1_ARATH	39.037	602	98	5.22e-116	359	sp|Q8RY59|RCD1_ARATH Inactive poly [ADP-ribose] polymerase RCD1 OS=Arabidopsis thaliana OX=3702 GN=RCD1 PE=1 SV=1	0	N/A	N/A
+g12067	sp|O82289|SRO1_ARATH	37.354	514	85	1.21e-93	300	sp|O82289|SRO1_ARATH Probable inactive poly [ADP-ribose] polymerase SRO1 OS=Arabidopsis thaliana OX=3702 GN=SRO1 PE=1 SV=2	0	N/A	N/A
+g12067	sp|Q9ZUD9|SRO2_ARATH	33.712	264	45	1.50e-39	150	sp|Q9ZUD9|SRO2_ARATH Probable inactive poly [ADP-ribose] polymerase SRO2 OS=Arabidopsis thaliana OX=3702 GN=SRO2 PE=1 SV=1	0	N/A	N/A
+g12067	sp|O64592|SRO3_ARATH	34.637	179	39	1.72e-27	115	sp|O64592|SRO3_ARATH Probable inactive poly [ADP-ribose] polymerase SRO3 OS=Arabidopsis thaliana OX=3702 GN=SRO3 PE=1 SV=2	0	N/A	N/A
+g12067	sp|O64592|SRO3_ARATH	41.071	56	39	6.26e-06	52.0	sp|O64592|SRO3_ARATH Probable inactive poly [ADP-ribose] polymerase SRO3 OS=Arabidopsis thaliana OX=3702 GN=SRO3 PE=1 SV=2	0	N/A	N/A
+g12067	sp|Q9FJJ3|SRO5_ARATH	33.117	154	40	1.39e-19	93.2	sp|Q9FJJ3|SRO5_ARATH Probable inactive poly [ADP-ribose] polymerase SRO5 OS=Arabidopsis thaliana OX=3702 GN=SRO5 PE=1 SV=1	0	N/A	N/A
+g12067	sp|Q9FJJ3|SRO5_ARATH	30.000	80	40	1.30e-06	54.3	sp|Q9FJJ3|SRO5_ARATH Probable inactive poly [ADP-ribose] polymerase SRO5 OS=Arabidopsis thaliana OX=3702 GN=SRO5 PE=1 SV=1	0	N/A	N/A
+g12068	sp|Q7ZVZ7|AB17C_DANRE	43.071	267	68	2.89e-70	225	sp|Q7ZVZ7|AB17C_DANRE Alpha/beta hydrolase domain-containing protein 17C OS=Danio rerio OX=7955 GN=abhd17c PE=2 SV=1	0	N/A	N/A
+g12068	sp|Q5ZJX1|AB17C_CHICK	42.652	279	68	2.31e-68	221	sp|Q5ZJX1|AB17C_CHICK Alpha/beta hydrolase domain-containing protein 17C OS=Gallus gallus OX=9031 GN=ABHD17C PE=2 SV=1	0	N/A	N/A
+g12068	sp|Q6DD70|AB17C_XENLA	40.702	285	68	1.78e-67	219	sp|Q6DD70|AB17C_XENLA Alpha/beta hydrolase domain-containing protein 17C OS=Xenopus laevis OX=8355 GN=abhd17c PE=2 SV=1	0	N/A	N/A
+g12068	sp|Q6DEY3|AB17B_XENTR	40.377	265	68	6.05e-67	216	sp|Q6DEY3|AB17B_XENTR Alpha/beta hydrolase domain-containing protein 17B OS=Xenopus tropicalis OX=8364 GN=abhd17b PE=2 SV=1	0	N/A	N/A
+g12068	sp|Q5ZJ01|AB17B_CHICK	40.000	265	68	6.11e-67	216	sp|Q5ZJ01|AB17B_CHICK Alpha/beta hydrolase domain-containing protein 17B OS=Gallus gallus OX=9031 GN=ABHD17B PE=2 SV=1	0	N/A	N/A
+g12105	sp|Q0V7V2|P2C42_ARATH	72.141	341	90	0.0	516	sp|Q0V7V2|P2C42_ARATH Probable protein phosphatase 2C 42 OS=Arabidopsis thaliana OX=3702 GN=PP2C42 PE=1 SV=1	0	N/A	N/A
+g12105	sp|Q5Z8P0|P2C60_ORYSJ	59.524	378	99	7.75e-161	459	sp|Q5Z8P0|P2C60_ORYSJ Probable protein phosphatase 2C 60 OS=Oryza sativa subsp. japonica OX=39947 GN=Os06g0717800 PE=2 SV=1	0	N/A	N/A
+g12105	sp|Q7Y138|P2C36_ORYSJ	61.919	344	91	1.57e-158	453	sp|Q7Y138|P2C36_ORYSJ Probable protein phosphatase 2C 36 OS=Oryza sativa subsp. japonica OX=39947 GN=Os03g0832400 PE=2 SV=1	0	N/A	N/A
+g12105	sp|Q10S32|P2C28_ORYSJ	57.143	378	99	2.11e-153	441	sp|Q10S32|P2C28_ORYSJ Probable protein phosphatase 2C 28 OS=Oryza sativa subsp. japonica OX=39947 GN=Os03g0137200 PE=2 SV=1	0	N/A	N/A
+g12105	sp|Q5PNS9|P2C64_ARATH	56.168	381	99	1.73e-151	436	sp|Q5PNS9|P2C64_ARATH Probable protein phosphatase 2C 64 OS=Arabidopsis thaliana OX=3702 GN=PP2C64 PE=1 SV=1	0	N/A	N/A
+g12106	sp|Q9C9U5|SIS8_ARATH	60.932	279	36	1.66e-109	360	sp|Q9C9U5|SIS8_ARATH Probable serine/threonine-protein kinase SIS8 OS=Arabidopsis thaliana OX=3702 GN=SIS8 PE=1 SV=1	0	N/A	N/A
+g12106	sp|Q9FPR3|EDR1_ARATH	58.303	271	35	6.31e-108	354	sp|Q9FPR3|EDR1_ARATH Serine/threonine-protein kinase EDR1 OS=Arabidopsis thaliana OX=3702 GN=EDR1 PE=1 SV=1	0	N/A	N/A
+g12106	sp|Q05609|CTR1_ARATH	56.727	275	36	4.79e-100	330	sp|Q05609|CTR1_ARATH Serine/threonine-protein kinase CTR1 OS=Arabidopsis thaliana OX=3702 GN=CTR1 PE=1 SV=1	0	N/A	N/A
+g12106	sp|Q54H46|DRKA_DICDI	43.985	266	35	3.34e-69	243	sp|Q54H46|DRKA_DICDI Probable serine/threonine-protein kinase drkA OS=Dictyostelium discoideum OX=44689 GN=drkA PE=3 SV=1	0	N/A	N/A
+g12106	sp|Q54TA1|DRKC_DICDI	44.161	274	34	8.03e-68	241	sp|Q54TA1|DRKC_DICDI Probable serine/threonine-protein kinase drkC OS=Dictyostelium discoideum OX=44689 GN=drkC PE=3 SV=1	0	N/A	N/A
+g12166	sp|P46248|AAT5_ARATH	82.468	462	100	0.0	790	sp|P46248|AAT5_ARATH Aspartate aminotransferase, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=ASP5 PE=1 SV=2	0	N/A	N/A
+g12166	sp|P26563|AATM_LUPAN	82.805	442	96	0.0	772	sp|P26563|AATM_LUPAN Aspartate aminotransferase P2, mitochondrial (Fragment) OS=Lupinus angustifolius OX=3871 PE=2 SV=1	0	N/A	N/A
+g12166	sp|P28734|AATC_DAUCA	57.683	397	86	4.58e-167	479	sp|P28734|AATC_DAUCA Aspartate aminotransferase, cytoplasmic OS=Daucus carota OX=4039 PE=2 SV=1	0	N/A	N/A
+g12166	sp|P37833|AATC_ORYSJ	56.281	398	86	4.56e-166	476	sp|P37833|AATC_ORYSJ Aspartate aminotransferase, cytoplasmic OS=Oryza sativa subsp. japonica OX=39947 GN=Os01g0760600 PE=2 SV=1	0	N/A	N/A
+g12166	sp|P46645|AAT2_ARATH	55.556	396	85	4.34e-163	469	sp|P46645|AAT2_ARATH Aspartate aminotransferase, cytoplasmic isozyme 1 OS=Arabidopsis thaliana OX=3702 GN=ASP2 PE=1 SV=2	0	N/A	N/A
+g12167	sp|Q0V7T5|Y1864_ARATH	54.717	371	83	1.03e-138	407	sp|Q0V7T5|Y1864_ARATH Probable receptor-like protein kinase At1g80640 OS=Arabidopsis thaliana OX=3702 GN=At1g80640 PE=2 SV=1	0	N/A	N/A
+g12167	sp|Q9SIB6|PBL6_ARATH	45.603	307	68	1.10e-82	263	sp|Q9SIB6|PBL6_ARATH Probable serine/threonine-protein kinase PBL6 OS=Arabidopsis thaliana OX=3702 GN=PBL6 PE=2 SV=1	0	N/A	N/A
+g12167	sp|F4JEQ2|PBL23_ARATH	46.575	292	64	8.64e-81	257	sp|F4JEQ2|PBL23_ARATH Probable serine/threonine-protein kinase PBL23 OS=Arabidopsis thaliana OX=3702 GN=PBL23 PE=2 SV=1	0	N/A	N/A
+g12167	sp|Q8RWW0|ALE2_ARATH	39.109	404	86	8.95e-79	262	sp|Q8RWW0|ALE2_ARATH Receptor-like serine/threonine-protein kinase ALE2 OS=Arabidopsis thaliana OX=3702 GN=ALE2 PE=1 SV=1	0	N/A	N/A
+g12167	sp|Q9FE20|PBS1_ARATH	46.667	285	63	1.56e-78	254	sp|Q9FE20|PBS1_ARATH Serine/threonine-protein kinase PBS1 OS=Arabidopsis thaliana OX=3702 GN=PBS1 PE=1 SV=1	0	N/A	N/A
+g13193	sp|O22193|PUB4_ARATH	30.058	173	48	4.51e-11	69.3	sp|O22193|PUB4_ARATH U-box domain-containing protein 4 OS=Arabidopsis thaliana OX=3702 GN=PUB4 PE=1 SV=3	0	N/A	N/A
+g13193	sp|O22193|PUB4_ARATH	27.723	202	48	5.13e-10	66.2	sp|O22193|PUB4_ARATH U-box domain-containing protein 4 OS=Arabidopsis thaliana OX=3702 GN=PUB4 PE=1 SV=3	0	N/A	N/A
+g13193	sp|Q8GWV5|PUB3_ARATH	25.843	267	47	6.96e-11	68.9	sp|Q8GWV5|PUB3_ARATH U-box domain-containing protein 3 OS=Arabidopsis thaliana OX=3702 GN=PUB3 PE=2 SV=2	0	N/A	N/A
+g13193	sp|Q6C5Y8|VAC8_YARLI	24.586	362	63	2.93e-10	66.6	sp|Q6C5Y8|VAC8_YARLI Vacuolar protein 8 OS=Yarrowia lipolytica (strain CLIB 122 / E 150) OX=284591 GN=VAC8 PE=3 SV=1	0	N/A	N/A
+g13193	sp|Q6CX49|VAC8_KLULA	24.915	293	51	4.57e-10	65.9	sp|Q6CX49|VAC8_KLULA Vacuolar protein 8 OS=Kluyveromyces lactis (strain ATCC 8585 / CBS 2359 / DSM 70799 / NBRC 1267 / NRRL Y-1140 / WM37) OX=284590 GN=VAC8 PE=3 SV=3	0	N/A	N/A
+g13193	sp|Q757R0|VAC8_EREGS	23.588	301	53	4.60e-08	59.7	sp|Q757R0|VAC8_EREGS Vacuolar protein 8 OS=Eremothecium gossypii (strain ATCC 10895 / CBS 109.51 / FGSC 9923 / NRRL Y-1056) OX=284811 GN=VAC8 PE=3 SV=3	0	N/A	N/A
+g20119	sp|Q7XUF4|CDKG2_ORYSJ	67.619	315	54	1.08e-154	463	sp|Q7XUF4|CDKG2_ORYSJ Cyclin-dependent kinase G-2 OS=Oryza sativa subsp. japonica OX=39947 GN=CDKG-2 PE=2 SV=2	0	N/A	N/A
+g20119	sp|A2XUW1|CDKG2_ORYSI	67.619	315	54	1.08e-154	463	sp|A2XUW1|CDKG2_ORYSI Cyclin-dependent kinase G-2 OS=Oryza sativa subsp. indica OX=39946 GN=CDKG-2 PE=3 SV=1	0	N/A	N/A
+g20119	sp|Q6K5F8|CDKG1_ORYSJ	66.447	304	52	1.94e-143	434	sp|Q6K5F8|CDKG1_ORYSJ Cyclin-dependent kinase G-1 OS=Oryza sativa subsp. japonica OX=39947 GN=CDKG-1 PE=2 SV=1	0	N/A	N/A
+g20119	sp|A2X6X1|CDKG1_ORYSI	66.447	304	52	2.11e-143	433	sp|A2X6X1|CDKG1_ORYSI Cyclin-dependent kinase G-1 OS=Oryza sativa subsp. indica OX=39946 GN=CDKG-1 PE=3 SV=1	0	N/A	N/A
+g20119	sp|Q9FGW5|CDKG1_ARATH	60.714	308	52	3.49e-134	407	sp|Q9FGW5|CDKG1_ARATH Cyclin-dependent kinase G1 OS=Arabidopsis thaliana OX=3702 GN=CDKG1 PE=1 SV=1	0	N/A	N/A
+g20122	sp|Q3E6Q1|PPR32_ARATH	66.216	74	90	2.35e-26	103	sp|Q3E6Q1|PPR32_ARATH Pentatricopeptide repeat-containing protein At1g11290, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=PCMP-H40 PE=2 SV=1	0	N/A	N/A
+g20122	sp|Q3E6Q1|PPR32_ARATH	51.562	64	90	1.02e-15	73.6	sp|Q3E6Q1|PPR32_ARATH Pentatricopeptide repeat-containing protein At1g11290, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=PCMP-H40 PE=2 SV=1	0	N/A	N/A
+g20122	sp|Q9C866|PPR65_ARATH	44.304	79	92	1.86e-13	67.0	sp|Q9C866|PPR65_ARATH Pentatricopeptide repeat-containing protein At1g31430 OS=Arabidopsis thaliana OX=3702 GN=PCMP-E55 PE=2 SV=1	0	N/A	N/A
+g20122	sp|Q9SJG6|PP200_ARATH	44.928	69	82	5.76e-13	65.5	sp|Q9SJG6|PP200_ARATH Pentatricopeptide repeat-containing protein At2g42920, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=PCMP-E75 PE=2 SV=1	0	N/A	N/A
+g20122	sp|Q9LJJ1|PP259_ARATH	42.466	73	86	1.32e-12	64.7	sp|Q9LJJ1|PP259_ARATH Putative pentatricopeptide repeat-containing protein At3g28640 OS=Arabidopsis thaliana OX=3702 GN=PCMP-E79 PE=3 SV=1	0	N/A	N/A
+g20122	sp|Q9FK93|PP406_ARATH	39.189	74	88	4.75e-12	63.2	sp|Q9FK93|PP406_ARATH Pentatricopeptide repeat-containing protein At5g39680 OS=Arabidopsis thaliana OX=3702 GN=EMB2744 PE=1 SV=1	0	N/A	N/A
+g20123	sp|Q84P23|4CLL9_ARATH	56.216	555	99	0.0	619	sp|Q84P23|4CLL9_ARATH 4-coumarate--CoA ligase-like 9 OS=Arabidopsis thaliana OX=3702 GN=4CLL9 PE=1 SV=2	0	N/A	N/A
+g20123	sp|Q8RU95|4CLL6_ORYSJ	49.554	561	98	0.0	547	sp|Q8RU95|4CLL6_ORYSJ 4-coumarate--CoA ligase-like 6 OS=Oryza sativa subsp. japonica OX=39947 GN=4CLL6 PE=2 SV=2	0	N/A	N/A
+g20123	sp|Q7F1X5|4CLL5_ORYSJ	50.805	559	99	0.0	538	sp|Q7F1X5|4CLL5_ORYSJ 4-coumarate--CoA ligase-like 5 OS=Oryza sativa subsp. japonica OX=39947 GN=4CLL5 PE=2 SV=1	0	N/A	N/A
+g20123	sp|Q69RG7|4CLL7_ORYSJ	46.964	560	98	1.81e-162	477	sp|Q69RG7|4CLL7_ORYSJ 4-coumarate--CoA ligase-like 7 OS=Oryza sativa subsp. japonica OX=39947 GN=4CLL7 PE=2 SV=1	0	N/A	N/A
+g20123	sp|Q84P21|4CLL5_ARATH	41.304	552	98	3.63e-152	450	sp|Q84P21|4CLL5_ARATH Peroxisomal OPC-8:0-CoA ligase 1 OS=Arabidopsis thaliana OX=3702 GN=4CLL5 PE=1 SV=2	0	N/A	N/A
+g20124	sp|Q84P23|4CLL9_ARATH	57.979	564	99	0.0	642	sp|Q84P23|4CLL9_ARATH 4-coumarate--CoA ligase-like 9 OS=Arabidopsis thaliana OX=3702 GN=4CLL9 PE=1 SV=2	0	N/A	N/A
+g20124	sp|Q7F1X5|4CLL5_ORYSJ	51.607	560	99	0.0	549	sp|Q7F1X5|4CLL5_ORYSJ 4-coumarate--CoA ligase-like 5 OS=Oryza sativa subsp. japonica OX=39947 GN=4CLL5 PE=2 SV=1	0	N/A	N/A
+g20124	sp|Q8RU95|4CLL6_ORYSJ	49.027	565	99	0.0	548	sp|Q8RU95|4CLL6_ORYSJ 4-coumarate--CoA ligase-like 6 OS=Oryza sativa subsp. japonica OX=39947 GN=4CLL6 PE=2 SV=2	0	N/A	N/A
+g20124	sp|Q84P21|4CLL5_ARATH	43.563	567	99	9.92e-162	474	sp|Q84P21|4CLL5_ARATH Peroxisomal OPC-8:0-CoA ligase 1 OS=Arabidopsis thaliana OX=3702 GN=4CLL5 PE=1 SV=2	0	N/A	N/A
+g20124	sp|Q69RG7|4CLL7_ORYSJ	46.869	559	98	3.58e-160	471	sp|Q69RG7|4CLL7_ORYSJ 4-coumarate--CoA ligase-like 7 OS=Oryza sativa subsp. japonica OX=39947 GN=4CLL7 PE=2 SV=1	0	N/A	N/A
+g22695	sp|P42495|CADH1_ARACO	82.451	359	100	0.0	564	sp|P42495|CADH1_ARACO Probable cinnamyl alcohol dehydrogenase 1 OS=Aralia cordata OX=29746 GN=CAD1 PE=2 SV=1	0	N/A	N/A
+g22695	sp|Q2KNL5|CADH1_OCIBA	81.972	355	99	0.0	561	sp|Q2KNL5|CADH1_OCIBA Cinnamyl alcohol dehydrogenase 1 OS=Ocimum basilicum OX=39350 GN=CAD1 PE=1 SV=1	0	N/A	N/A
+g22695	sp|B5LAT8|CAD1_CAPAN	81.513	357	99	0.0	553	sp|B5LAT8|CAD1_CAPAN Cinnamyl alcohol dehydrogenase 1 OS=Capsicum annuum OX=4072 GN=CAD1 PE=1 SV=1	0	N/A	N/A
+g22695	sp|O64969|CADH_EUCGL	76.620	355	99	0.0	549	sp|O64969|CADH_EUCGL Probable cinnamyl alcohol dehydrogenase OS=Eucalyptus globulus OX=34317 GN=CAD PE=2 SV=1	0	N/A	N/A
+g22695	sp|P30359|CADH1_TOBAC	80.392	357	99	0.0	549	sp|P30359|CADH1_TOBAC Probable cinnamyl alcohol dehydrogenase 1 OS=Nicotiana tabacum OX=4097 GN=CAD14 PE=1 SV=1	0	N/A	N/A
+g22696	sp|Q54DD7|UNC50_DICDI	44.788	259	99	2.44e-73	227	sp|Q54DD7|UNC50_DICDI Protein unc-50 homolog OS=Dictyostelium discoideum OX=44689 GN=DDB_G0292320 PE=3 SV=1	0	N/A	N/A
+g22696	sp|Q53HI1|UNC50_HUMAN	37.984	258	98	3.05e-55	181	sp|Q53HI1|UNC50_HUMAN Protein unc-50 homolog OS=Homo sapiens OX=9606 GN=UNC50 PE=1 SV=2	0	N/A	N/A
+g22696	sp|Q3ZBG6|UNC50_BOVIN	37.751	249	97	6.71e-55	180	sp|Q3ZBG6|UNC50_BOVIN Protein unc-50 homolog OS=Bos taurus OX=9913 GN=UNC50 PE=2 SV=1	0	N/A	N/A
+g22696	sp|O55227|UNC50_RAT	37.209	258	98	1.58e-54	179	sp|O55227|UNC50_RAT Protein unc-50 homolog OS=Rattus norvegicus OX=10116 GN=Unc50 PE=1 SV=1	0	N/A	N/A
+g22696	sp|Q9CQ61|UNC50_MOUSE	38.554	249	94	1.63e-54	179	sp|Q9CQ61|UNC50_MOUSE Protein unc-50 homolog OS=Mus musculus OX=10090 GN=Unc50 PE=2 SV=1	0	N/A	N/A
+g22697	sp|Q9SD53|Y3720_ARATH	26.196	439	94	3.33e-34	136	sp|Q9SD53|Y3720_ARATH UPF0481 protein At3g47200 OS=Arabidopsis thaliana OX=3702 GN=At3g47200 PE=2 SV=1	0	N/A	N/A
+g22697	sp|P0C897|Y3264_ARATH	32.317	164	88	6.67e-18	89.4	sp|P0C897|Y3264_ARATH Putative UPF0481 protein At3g02645 OS=Arabidopsis thaliana OX=3702 GN=At3g02645 PE=3 SV=1	0	N/A	N/A
+g22697	sp|P0C897|Y3264_ARATH	25.764	229	88	6.52e-07	55.1	sp|P0C897|Y3264_ARATH Putative UPF0481 protein At3g02645 OS=Arabidopsis thaliana OX=3702 GN=At3g02645 PE=3 SV=1	0	N/A	N/A
+g24468	sp|Q6NUT3|MFS12_HUMAN	32.706	425	86	3.93e-62	212	sp|Q6NUT3|MFS12_HUMAN Major facilitator superfamily domain-containing protein 12 OS=Homo sapiens OX=9606 GN=MFSD12 PE=1 SV=2	0	N/A	N/A
+g24468	sp|Q3U481|MFS12_MOUSE	32.938	422	86	3.85e-60	207	sp|Q3U481|MFS12_MOUSE Major facilitator superfamily domain-containing protein 12 OS=Mus musculus OX=10090 GN=Mfsd12 PE=1 SV=1	0	N/A	N/A
+g24468	sp|F1PZV2|MFS12_CANLF	32.026	459	93	1.03e-59	206	sp|F1PZV2|MFS12_CANLF Major facilitator superfamily domain-containing protein 12 OS=Canis lupus familiaris OX=9615 GN=MFSD12 PE=1 SV=3	0	N/A	N/A
+g24468	sp|A0A3Q2HW92|MFS12_HORSE	31.291	457	93	8.97e-58	201	sp|A0A3Q2HW92|MFS12_HORSE Major facilitator superfamily domain-containing protein 12 OS=Equus caballus OX=9796 GN=MFSD12 PE=3 SV=2	0	N/A	N/A
+g24470	sp|Q06009|PP2A_MEDSA	96.466	283	99	0.0	582	sp|Q06009|PP2A_MEDSA Serine/threonine-protein phosphatase PP2A catalytic subunit OS=Medicago sativa OX=3879 GN=PP2A PE=2 SV=1	0	N/A	N/A
+g24470	sp|P48578|PP2A4_ARATH	95.406	283	99	0.0	575	sp|P48578|PP2A4_ARATH Serine/threonine-protein phosphatase PP2A-4 catalytic subunit OS=Arabidopsis thaliana OX=3702 GN=PP2A4 PE=1 SV=1	0	N/A	N/A
+g24470	sp|A3C4N5|PP2A4_ORYSJ	94.700	283	99	0.0	574	sp|A3C4N5|PP2A4_ORYSJ Serine/threonine-protein phosphatase PP2A-4 catalytic subunit OS=Oryza sativa subsp. japonica OX=39947 GN=PP2A4 PE=2 SV=2	0	N/A	N/A
+g24470	sp|Q07100|PP2A3_ARATH	94.700	283	99	0.0	573	sp|Q07100|PP2A3_ARATH Serine/threonine-protein phosphatase PP2A-3 catalytic subunit OS=Arabidopsis thaliana OX=3702 GN=PP2A3 PE=1 SV=2	0	N/A	N/A
+g24470	sp|P0C5D7|PP2A4_ORYSI	94.346	283	99	0.0	573	sp|P0C5D7|PP2A4_ORYSI Putative serine/threonine-protein phosphatase PP2A-4 catalytic subunit OS=Oryza sativa subsp. indica OX=39946 GN=PP2A4 PE=3 SV=1	0	N/A	N/A
+g24471	sp|Q9SMU4|U496N_ARATH	49.280	347	93	3.71e-103	313	sp|Q9SMU4|U496N_ARATH UPF0496 protein At3g49070 OS=Arabidopsis thaliana OX=3702 GN=At3g49070 PE=2 SV=1	0	N/A	N/A
+g24471	sp|A2XCJ1|U496C_ORYSI	40.616	357	92	1.52e-69	225	sp|A2XCJ1|U496C_ORYSI UPF0496 protein 3 OS=Oryza sativa subsp. indica OX=39946 GN=OsI_009784 PE=3 SV=2	0	N/A	N/A
+g24471	sp|Q10RR9|U496C_ORYSJ	40.336	357	92	1.23e-68	223	sp|Q10RR9|U496C_ORYSJ UPF0496 protein 3 OS=Oryza sativa subsp. japonica OX=39947 GN=Os03g0148000 PE=2 SV=1	0	N/A	N/A
+g24471	sp|Q6DYE5|U496K_ARATH	29.945	364	92	2.37e-32	128	sp|Q6DYE5|U496K_ARATH UPF0496 protein At1g20180 OS=Arabidopsis thaliana OX=3702 GN=At1g20180 PE=2 SV=2	0	N/A	N/A
+g24471	sp|Q9LJK4|U496L_ARATH	28.947	380	98	2.56e-28	116	sp|Q9LJK4|U496L_ARATH UPF0496 protein At3g19250 OS=Arabidopsis thaliana OX=3702 GN=At3g19250 PE=2 SV=1	0	N/A	N/A
+g25346	sp|Q9FI49|PP428_ARATH	52.964	523	95	0.0	587	sp|Q9FI49|PP428_ARATH Pentatricopeptide repeat-containing protein At5g50990 OS=Arabidopsis thaliana OX=3702 GN=PCMP-H59 PE=2 SV=2	0	N/A	N/A
+g25346	sp|Q9SZT8|PP354_ARATH	42.593	486	89	1.08e-140	423	sp|Q9SZT8|PP354_ARATH Pentatricopeptide repeat-containing protein ELI1, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=ELI1 PE=3 SV=1	0	N/A	N/A
+g25346	sp|Q9SZT8|PP354_ARATH	28.235	255	89	9.32e-25	112	sp|Q9SZT8|PP354_ARATH Pentatricopeptide repeat-containing protein ELI1, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=ELI1 PE=3 SV=1	0	N/A	N/A
+g25346	sp|Q9FJY7|PP449_ARATH	41.517	501	92	9.98e-138	415	sp|Q9FJY7|PP449_ARATH Pentatricopeptide repeat-containing protein At5g66520 OS=Arabidopsis thaliana OX=3702 GN=PCMP-H61 PE=2 SV=1	0	N/A	N/A
+g25346	sp|Q9FJY7|PP449_ARATH	24.188	277	92	8.08e-18	90.5	sp|Q9FJY7|PP449_ARATH Pentatricopeptide repeat-containing protein At5g66520 OS=Arabidopsis thaliana OX=3702 GN=PCMP-H61 PE=2 SV=1	0	N/A	N/A
+g25346	sp|A8MQA3|PP330_ARATH	43.409	440	80	3.05e-134	405	sp|A8MQA3|PP330_ARATH Pentatricopeptide repeat-containing protein At4g21065 OS=Arabidopsis thaliana OX=3702 GN=PCMP-H28 PE=2 SV=2	0	N/A	N/A
+g25346	sp|A8MQA3|PP330_ARATH	27.434	226	80	8.06e-22	102	sp|A8MQA3|PP330_ARATH Pentatricopeptide repeat-containing protein At4g21065 OS=Arabidopsis thaliana OX=3702 GN=PCMP-H28 PE=2 SV=2	0	N/A	N/A
+g25346	sp|Q683I9|PP295_ARATH	39.837	492	89	2.27e-132	400	sp|Q683I9|PP295_ARATH Pentatricopeptide repeat-containing protein At3g62890 OS=Arabidopsis thaliana OX=3702 GN=PCMP-H82 PE=2 SV=1	0	N/A	N/A
+g25347	sp|P37707|B2_DAUCA	36.301	146	27	1.22e-16	82.0	sp|P37707|B2_DAUCA B2 protein OS=Daucus carota OX=4039 PE=2 SV=1	0	N/A	N/A
+g25347	sp|Q8RXN8|NRP_ARATH	38.298	141	26	3.10e-16	83.6	sp|Q8RXN8|NRP_ARATH DCD domain-containing protein NRP OS=Arabidopsis thaliana OX=3702 GN=NRP PE=1 SV=1	0	N/A	N/A
+g25347	sp|C6TAQ0|NRPB_SOYBN	37.313	134	25	3.25e-16	83.2	sp|C6TAQ0|NRPB_SOYBN DCD domain-containing protein NRP-B OS=Glycine max OX=3847 GN=NRP-B PE=2 SV=1	0	N/A	N/A
+g25347	sp|Q5JZR1|NRPA_SOYBN	36.567	134	25	3.20e-15	80.9	sp|Q5JZR1|NRPA_SOYBN DCD domain-containing protein NRP-A OS=Glycine max OX=3847 GN=NRP-A PE=2 SV=1	0	N/A	N/A
+g25347	sp|Q7TQC7|GPTC2_MOUSE	52.727	55	11	5.37e-10	65.5	sp|Q7TQC7|GPTC2_MOUSE G patch domain-containing protein 2 OS=Mus musculus OX=10090 GN=Gpatch2 PE=1 SV=2	0	N/A	N/A
+g25352	sp|Q9IA00|BIC1A_XENLA	38.272	81	31	1.00e-07	56.2	sp|Q9IA00|BIC1A_XENLA Protein bicaudal C homolog 1-A OS=Xenopus laevis OX=8355 GN=bicc1-a PE=2 SV=1	0	N/A	N/A
+g25352	sp|Q5U4T7|BIC1B_XENLA	38.272	81	31	1.08e-07	56.2	sp|Q5U4T7|BIC1B_XENLA Protein bicaudal C homolog 1-B OS=Xenopus laevis OX=8355 GN=bicc1-b PE=2 SV=1	0	N/A	N/A
+g25352	sp|Q9H694|BICC1_HUMAN	33.333	105	40	1.33e-07	55.8	sp|Q9H694|BICC1_HUMAN Protein bicaudal C homolog 1 OS=Homo sapiens OX=9606 GN=BICC1 PE=1 SV=2	0	N/A	N/A
+g25352	sp|Q99MQ1|BICC1_MOUSE	32.381	105	40	1.34e-07	55.8	sp|Q99MQ1|BICC1_MOUSE Protein bicaudal C homolog 1 OS=Mus musculus OX=10090 GN=Bicc1 PE=1 SV=1	0	N/A	N/A
+g25353	sp|Q8RWD5|SCD2_ARATH	62.862	587	99	0.0	646	sp|Q8RWD5|SCD2_ARATH Coiled-coil domain-containing protein SCD2 OS=Arabidopsis thaliana OX=3702 GN=SCD2 PE=1 SV=1	0	N/A	N/A
+g26310	sp|Q9STN3|SPT51_ARATH	71.910	979	93	0.0	1387	sp|Q9STN3|SPT51_ARATH Putative transcription elongation factor SPT5 homolog 1 OS=Arabidopsis thaliana OX=3702 GN=At4g08350 PE=1 SV=2	0	N/A	N/A
+g26310	sp|O80770|SPT52_ARATH	61.335	944	89	0.0	1098	sp|O80770|SPT52_ARATH Putative transcription elongation factor SPT5 homolog 2 OS=Arabidopsis thaliana OX=3702 GN=At2g34210 PE=3 SV=2	0	N/A	N/A
+g26310	sp|Q5ZI08|SPT5H_CHICK	35.025	1005	90	1.80e-151	481	sp|Q5ZI08|SPT5H_CHICK Transcription elongation factor SPT5 OS=Gallus gallus OX=9031 GN=SUPT5H PE=2 SV=1	0	N/A	N/A
+g26310	sp|O55201|SPT5H_MOUSE	34.455	1010	90	2.09e-150	479	sp|O55201|SPT5H_MOUSE Transcription elongation factor SPT5 OS=Mus musculus OX=10090 GN=Supt5h PE=1 SV=1	0	N/A	N/A
+g26310	sp|O00267|SPT5H_HUMAN	34.353	1013	90	8.92e-148	472	sp|O00267|SPT5H_HUMAN Transcription elongation factor SPT5 OS=Homo sapiens OX=9606 GN=SUPT5H PE=1 SV=1	0	N/A	N/A
+g26906	sp|Q9M2R0|FTIP3_ARATH	86.287	773	99	0.0	1429	sp|Q9M2R0|FTIP3_ARATH FT-interacting protein 3 OS=Arabidopsis thaliana OX=3702 GN=FTIP3 PE=1 SV=1	0	N/A	N/A
+g26906	sp|Q9C8H3|FTIP4_ARATH	83.247	776	99	0.0	1370	sp|Q9C8H3|FTIP4_ARATH FT-interacting protein 4 OS=Arabidopsis thaliana OX=3702 GN=FTIP4 PE=1 SV=1	0	N/A	N/A
+g26906	sp|Q60EW9|FTIP7_ORYSJ	82.088	776	100	0.0	1358	sp|Q60EW9|FTIP7_ORYSJ FT-interacting protein 7 OS=Oryza sativa subsp. japonica OX=39947 GN=FTIP7 PE=1 SV=1	0	N/A	N/A
+g26906	sp|Q9LXU2|MCTP5_ARATH	80.362	774	99	0.0	1307	sp|Q9LXU2|MCTP5_ARATH Multiple C2 domain and transmembrane region protein 5 OS=Arabidopsis thaliana OX=3702 GN=MCTP5 PE=2 SV=1	0	N/A	N/A
+g26906	sp|Q9FL59|FTIP1_ARATH	66.921	786	99	0.0	1130	sp|Q9FL59|FTIP1_ARATH FT-interacting protein 1 OS=Arabidopsis thaliana OX=3702 GN=FTIP1 PE=1 SV=1	0	N/A	N/A
+g26914	sp|Q9SCU1|PATL6_ARATH	49.185	368	94	7.11e-122	361	sp|Q9SCU1|PATL6_ARATH Patellin-6 OS=Arabidopsis thaliana OX=3702 GN=PATL6 PE=2 SV=1	0	N/A	N/A
+g26914	sp|Q56Z59|PATL3_ARATH	38.286	350	86	2.32e-68	226	sp|Q56Z59|PATL3_ARATH Patellin-3 OS=Arabidopsis thaliana OX=3702 GN=PATL3 PE=1 SV=2	0	N/A	N/A
+g26914	sp|Q9M0R2|PATL5_ARATH	35.054	368	90	1.06e-64	221	sp|Q9M0R2|PATL5_ARATH Patellin-5 OS=Arabidopsis thaliana OX=3702 GN=PATL5 PE=1 SV=2	0	N/A	N/A
+g26914	sp|Q94C59|PATL4_ARATH	32.551	341	86	5.55e-59	202	sp|Q94C59|PATL4_ARATH Patellin-4 OS=Arabidopsis thaliana OX=3702 GN=PATL4 PE=1 SV=2	0	N/A	N/A
+g26914	sp|Q56ZI2|PATL2_ARATH	33.154	371	91	2.61e-57	201	sp|Q56ZI2|PATL2_ARATH Patellin-2 OS=Arabidopsis thaliana OX=3702 GN=PATL2 PE=1 SV=2	0	N/A	N/A
+g26915	sp|O48529|STR9_ARATH	65.502	229	97	4.98e-108	313	sp|O48529|STR9_ARATH Rhodanese-like domain-containing protein 9, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=STR9 PE=2 SV=1	0	N/A	N/A
+g26915	sp|Q9SR92|STR10_ARATH	39.490	157	66	3.98e-31	117	sp|Q9SR92|STR10_ARATH Rhodanese-like domain-containing protein 10 OS=Arabidopsis thaliana OX=3702 GN=STR10 PE=2 SV=1	0	N/A	N/A
+g26915	sp|Q0WWT7|STR11_ARATH	30.636	173	73	4.88e-17	81.3	sp|Q0WWT7|STR11_ARATH Rhodanese-like domain-containing protein 11, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=STR11 PE=2 SV=1	0	N/A	N/A
+g26915	sp|Q9FKW8|STR18_ARATH	27.737	137	57	9.53e-07	50.1	sp|Q9FKW8|STR18_ARATH Thiosulfate sulfurtransferase 18 OS=Arabidopsis thaliana OX=3702 GN=STR18 PE=1 SV=1	0	N/A	N/A
+g26916	sp|O48528|OP163_ARATH	72.152	158	100	3.04e-82	242	sp|O48528|OP163_ARATH Outer envelope pore protein 16-3, chloroplastic/mitochondrial OS=Arabidopsis thaliana OX=3702 GN=OEP163 PE=1 SV=1	0	N/A	N/A
+g26916	sp|P0CR88|TIM22_CRYNJ	40.845	71	45	1.50e-06	49.3	sp|P0CR88|TIM22_CRYNJ Mitochondrial import inner membrane translocase subunit TIM22 OS=Cryptococcus neoformans var. neoformans serotype D (strain JEC21 / ATCC MYA-565) OX=214684 GN=TIM22 PE=3 SV=1	0	N/A	N/A
+g26916	sp|P0CR89|TIM22_CRYNB	40.845	71	45	1.50e-06	49.3	sp|P0CR89|TIM22_CRYNB Mitochondrial import inner membrane translocase subunit TIM22 OS=Cryptococcus neoformans var. neoformans serotype D (strain B-3501A) OX=283643 GN=TIM22 PE=3 SV=1	0	N/A	N/A
+g30468	sp|Q9FJH9|LPAH1_ARATH	61.580	747	96	0.0	813	sp|Q9FJH9|LPAH1_ARATH P-loop NTPase domain-containing protein LPA1 homolog 1 OS=Arabidopsis thaliana OX=3702 GN=At5g60760 PE=2 SV=1	0	N/A	N/A
+g30468	sp|Q93ZS1|LPAH2_ARATH	60.749	721	96	0.0	805	sp|Q93ZS1|LPAH2_ARATH P-loop NTPase domain-containing protein LPA1 homolog 2 OS=Arabidopsis thaliana OX=3702 GN=At3g45090 PE=2 SV=1	0	N/A	N/A
+g30468	sp|B9F4I8|LPA1_ORYSJ	64.363	651	86	0.0	799	sp|B9F4I8|LPA1_ORYSJ P-loop NTPase domain-containing protein LPA1 OS=Oryza sativa subsp. japonica OX=39947 GN=LPA1 PE=2 SV=1	0	N/A	N/A
+g30468	sp|Q651A1|LPA1H_ORYSJ	59.535	645	86	0.0	719	sp|Q651A1|LPA1H_ORYSJ P-loop NTPase domain-containing protein LPA1 homolog OS=Oryza sativa subsp. japonica OX=39947 GN=Os09g0572200 PE=3 SV=1	0	N/A	N/A
+g30468	sp|Q8T1P1|Y3453_DICDI	39.583	432	59	2.94e-95	317	sp|Q8T1P1|Y3453_DICDI Uncharacterized protein DDB_G0273453/DDB_G0273565 OS=Dictyostelium discoideum OX=44689 GN=DDB_G0273453 PE=4 SV=2	0	N/A	N/A
+g30915	sp|Q43292|RL372_ARATH	87.234	94	99	2.40e-55	169	sp|Q43292|RL372_ARATH Large ribosomal subunit protein eL37y OS=Arabidopsis thaliana OX=3702 GN=RPL37B PE=3 SV=2	0	N/A	N/A
+g30915	sp|Q8LFH7|RL371_ARATH	86.316	95	100	1.83e-54	167	sp|Q8LFH7|RL371_ARATH Large ribosomal subunit protein eL37z OS=Arabidopsis thaliana OX=3702 GN=RPL37A PE=3 SV=1	0	N/A	N/A
+g30915	sp|Q8LEM8|RL373_ARATH	86.170	94	99	3.16e-54	166	sp|Q8LEM8|RL373_ARATH Large ribosomal subunit protein eL37x OS=Arabidopsis thaliana OX=3702 GN=RPL37C PE=3 SV=1	0	N/A	N/A
+g30915	sp|Q9VXX8|RL371_DROME	71.264	87	92	3.29e-40	130	sp|Q9VXX8|RL371_DROME Large ribosomal subunit protein eL37A OS=Drosophila melanogaster OX=7227 GN=RpL37-1 PE=1 SV=1	0	N/A	N/A
+g30915	sp|Q9C0T1|RL37_EMENI	73.171	82	86	1.20e-37	124	sp|Q9C0T1|RL37_EMENI Large ribosomal subunit protein eL37 OS=Emericella nidulans (strain FGSC A4 / ATCC 38163 / CBS 112.46 / NRRL 194 / M139) OX=227321 GN=rpl37 PE=3 SV=1	0	N/A	N/A
+g30917	sp|Q2KIN6|MPV17_BOVIN	34.031	191	88	2.57e-25	100	sp|Q2KIN6|MPV17_BOVIN Mitochondrial inner membrane protein Mpv17 OS=Bos taurus OX=9913 GN=MPV17 PE=2 SV=1	0	N/A	N/A
+g30917	sp|Q54XX9|PX24B_DICDI	28.426	197	91	2.91e-25	100	sp|Q54XX9|PX24B_DICDI PXMP2/4 family protein 2 OS=Dictyostelium discoideum OX=44689 GN=DDB_G0278529 PE=3 SV=1	0	N/A	N/A
+g30917	sp|Q5BK62|MPV17_RAT	32.308	195	89	3.28e-25	100	sp|Q5BK62|MPV17_RAT Mitochondrial inner membrane protein Mpv17 OS=Rattus norvegicus OX=10116 GN=Mpv17 PE=2 SV=1	0	N/A	N/A
+g30917	sp|P39210|MPV17_HUMAN	34.031	191	88	4.02e-25	99.8	sp|P39210|MPV17_HUMAN Mitochondrial inner membrane protein Mpv17 OS=Homo sapiens OX=9606 GN=MPV17 PE=1 SV=1	0	N/A	N/A
+g30917	sp|Q66GV0|MPV17_XENLA	34.896	192	88	1.26e-24	98.6	sp|Q66GV0|MPV17_XENLA Mitochondrial inner membrane protein Mpv17 OS=Xenopus laevis OX=8355 GN=mpv17 PE=2 SV=2	0	N/A	N/A
+g30918	sp|Q9XZC0|LCTA_LATTR	28.889	135	21	8.96e-07	56.2	sp|Q9XZC0|LCTA_LATTR Alpha-latrocrustotoxin-Lt1a (Fragment) OS=Latrodectus tredecimguttatus OX=6925 PE=1 SV=2	0	N/A	N/A
+g30919	sp|Q9C7A2|ITN1_ARATH	21.690	355	42	7.57e-09	62.8	sp|Q9C7A2|ITN1_ARATH Ankyrin repeat-containing protein ITN1 OS=Arabidopsis thaliana OX=3702 GN=ITN1 PE=1 SV=1	0	N/A	N/A
+g30919	sp|A2CIR5|NPR4_ORYSJ	23.261	417	50	4.59e-08	60.1	sp|A2CIR5|NPR4_ORYSJ Ankyrin repeat-containing protein NPR4 OS=Oryza sativa subsp. japonica OX=39947 GN=NPR4 PE=2 SV=1	0	N/A	N/A
+g30919	sp|Q6AWW5|Y5262_ARATH	22.253	364	42	7.07e-06	53.1	sp|Q6AWW5|Y5262_ARATH Ankyrin repeat-containing protein At5g02620 OS=Arabidopsis thaliana OX=3702 GN=At5g02620 PE=1 SV=1	0	N/A	N/A
+g31578	sp|Q9C6S5|PHSB_ARATH	73.511	487	84	0.0	746	sp|Q9C6S5|PHSB_ARATH Probable polyamine transporter At1g31830 OS=Arabidopsis thaliana OX=3702 GN=At1g31830 PE=2 SV=1	0	N/A	N/A
+g31578	sp|Q9FFL1|RMV1_ARATH	70.515	485	84	0.0	709	sp|Q9FFL1|RMV1_ARATH Polyamine transporter RMV1 OS=Arabidopsis thaliana OX=3702 GN=RMV1 PE=1 SV=1	0	N/A	N/A
+g31578	sp|Q6Z8D0|PUT1_ORYSJ	69.072	485	84	0.0	695	sp|Q6Z8D0|PUT1_ORYSJ Polyamine transporter PUT1 OS=Oryza sativa subsp. japonica OX=39947 GN=PUT1 PE=1 SV=1	0	N/A	N/A
+g31578	sp|A2X8M8|PUT1_ORYSI	69.072	485	84	0.0	695	sp|A2X8M8|PUT1_ORYSI Polyamine transporter PUT1 OS=Oryza sativa subsp. indica OX=39946 GN=PUT1 PE=3 SV=1	0	N/A	N/A
+g31578	sp|Q9C6S4|PHSA_ARATH	65.481	478	83	0.0	642	sp|Q9C6S4|PHSA_ARATH Probable polyamine transporter At1g31820 OS=Arabidopsis thaliana OX=3702 GN=At1g31820 PE=3 SV=1	0	N/A	N/A
+g31612	sp|Q9LRZ5|PLDZ1_ARATH	69.794	1119	100	0.0	1506	sp|Q9LRZ5|PLDZ1_ARATH Phospholipase D zeta 1 OS=Arabidopsis thaliana OX=3702 GN=PLDZETA1 PE=1 SV=1	0	N/A	N/A
+g31612	sp|Q9M9W8|PLDZ2_ARATH	60.502	1076	97	0.0	1303	sp|Q9M9W8|PLDZ2_ARATH Phospholipase D zeta 2 OS=Arabidopsis thaliana OX=3702 GN=PLPZETA2 PE=1 SV=2	0	N/A	N/A
+g31612	sp|Q5BMR2|PLD_PHYIN	35.744	719	60	3.94e-121	413	sp|Q5BMR2|PLD_PHYIN Phospholipase D OS=Phytophthora infestans OX=4787 GN=PLD PE=3 SV=1	0	N/A	N/A
+g31612	sp|Q9Z280|PLD1_MOUSE	43.305	351	83	8.94e-80	286	sp|Q9Z280|PLD1_MOUSE Phospholipase D1 OS=Mus musculus OX=10090 GN=Pld1 PE=1 SV=1	0	N/A	N/A
+g31612	sp|Q9Z280|PLD1_MOUSE	31.076	502	83	3.50e-58	222	sp|Q9Z280|PLD1_MOUSE Phospholipase D1 OS=Mus musculus OX=10090 GN=Pld1 PE=1 SV=1	0	N/A	N/A
+g31612	sp|Q9Z280|PLD1_MOUSE	39.506	81	83	8.91e-10	67.0	sp|Q9Z280|PLD1_MOUSE Phospholipase D1 OS=Mus musculus OX=10090 GN=Pld1 PE=1 SV=1	0	N/A	N/A
+g31612	sp|P70496|PLD1_RAT	44.444	351	83	1.41e-79	286	sp|P70496|PLD1_RAT Phospholipase D1 OS=Rattus norvegicus OX=10116 GN=Pld1 PE=1 SV=3	0	N/A	N/A
+g31612	sp|P70496|PLD1_RAT	30.140	501	83	1.71e-56	217	sp|P70496|PLD1_RAT Phospholipase D1 OS=Rattus norvegicus OX=10116 GN=Pld1 PE=1 SV=3	0	N/A	N/A
+g31612	sp|P70496|PLD1_RAT	39.506	81	83	8.05e-10	67.0	sp|P70496|PLD1_RAT Phospholipase D1 OS=Rattus norvegicus OX=10116 GN=Pld1 PE=1 SV=3	0	N/A	N/A
+g33467	sp|A7SWD3|GID8_NEMVE	31.481	162	75	1.41e-22	94.4	sp|A7SWD3|GID8_NEMVE Glucose-induced degradation protein 8 homolog OS=Nematostella vectensis OX=45351 GN=v1g247787 PE=3 SV=1	0	N/A	N/A
+g33467	sp|E7FGY2|GID8B_DANRE	35.404	161	74	2.67e-22	93.6	sp|E7FGY2|GID8B_DANRE Glucose-induced degradation protein 8-B homolog OS=Danio rerio OX=7955 GN=gid8b PE=2 SV=2	0	N/A	N/A
+g33467	sp|Q6PC55|GID8A_DANRE	34.783	161	74	7.04e-22	92.4	sp|Q6PC55|GID8A_DANRE Glucose-induced degradation protein 8-A homolog OS=Danio rerio OX=7955 GN=gid8a PE=2 SV=1	0	N/A	N/A
+g33467	sp|Q5ZKQ7|GID8_CHICK	35.404	161	74	1.33e-21	92.0	sp|Q5ZKQ7|GID8_CHICK Glucose-induced degradation protein 8 homolog OS=Gallus gallus OX=9031 GN=GID8 PE=2 SV=1	0	N/A	N/A
+g33467	sp|Q32L52|GID8_BOVIN	34.783	161	74	3.61e-21	90.9	sp|Q32L52|GID8_BOVIN Glucose-induced degradation protein 8 homolog OS=Bos taurus OX=9913 GN=GID8 PE=2 SV=1	0	N/A	N/A
+g33468	sp|Q9FMH8|RD21B_ARATH	48.649	407	89	3.43e-130	387	sp|Q9FMH8|RD21B_ARATH Probable cysteine protease RD21B OS=Arabidopsis thaliana OX=3702 GN=RD21B PE=1 SV=1	0	N/A	N/A
+g33468	sp|Q9LT78|RD21C_ARATH	45.814	430	94	8.74e-130	385	sp|Q9LT78|RD21C_ARATH Probable cysteine protease RD21C OS=Arabidopsis thaliana OX=3702 GN=RD21C PE=1 SV=1	0	N/A	N/A
+g33468	sp|P25776|ORYA_ORYSJ	46.437	435	95	4.55e-129	384	sp|P25776|ORYA_ORYSJ Oryzain alpha chain OS=Oryza sativa subsp. japonica OX=39947 GN=Os04g0650000 PE=1 SV=2	0	N/A	N/A
+g33468	sp|B2LSD2|MUCIN_MUCPR	48.020	404	89	9.04e-128	379	sp|B2LSD2|MUCIN_MUCPR Cysteine proteinase mucunain (Fragment) OS=Mucuna pruriens OX=157652 GN=MUCUNAIN PE=1 SV=2	0	N/A	N/A
+g33468	sp|P43297|RD21A_ARATH	47.030	404	89	2.81e-127	379	sp|P43297|RD21A_ARATH Cysteine proteinase RD21A OS=Arabidopsis thaliana OX=3702 GN=RD21A PE=1 SV=1	0	N/A	N/A

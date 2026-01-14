@@ -1,0 +1,21 @@
+TY  - DATA
+T1  - Occurrence Download
+AU  - GBIF.org User
+DO  - 10.15468/DL.WHNWMB
+UR  - https://www.gbif.org/occurrence/download/0044146-250920141307145
+AB  - A dataset containing 292 species occurrences available in GBIF matching the query:
+{
+ "TaxonKey" : [
+ "is Boltonia decurrens"
+ ]
+}
+
+ The dataset includes 292 records from 44 constituent datasets; see https://api.gbif.org/v1/occurrence/download/0044146-250920141307145/datasets/export for details.
+ 
+Data from some individual datasets included in this download may be licensed under less restrictive terms.
+KW  - GBIF
+KW  - biodiversity
+KW  - species occurrences
+PY  - 2025
+PB  - The Global Biodiversity Information Facility
+ER  - 

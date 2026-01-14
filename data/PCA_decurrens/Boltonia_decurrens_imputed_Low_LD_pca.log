@@ -1,0 +1,27 @@
+PLINK v2.00a2.3LM 64-bit Intel (24 Jan 2020)
+Options in effect:
+  --extract Boltonia_decurrens_imputed_Low_LD_ld.prune.in
+  --out Boltonia_decurrens_imputed_Low_LD_pca
+  --pca 424
+  --pfile Boltonia_decurrens_imputed_Low_LD
+
+Hostname: compute1-exec-120.ris.wustl.edu
+Working directory: /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses
+Start time: Fri Sep 26 21:51:15 2025
+
+Random number seed: 1758923475
+385047 MiB RAM detected; reserving 192523 MiB for main workspace.
+Using up to 64 threads (change this with --threads).
+424 samples (0 females, 0 males, 424 ambiguous; 424 founders) loaded from
+Boltonia_decurrens_imputed_Low_LD.psam.
+9957183 variants loaded from Boltonia_decurrens_imputed_Low_LD.pvar.
+Note: No phenotype data present.
+--extract: 1863350 variants remaining.
+Calculating allele frequencies... done.
+1863350 variants remaining after main filters.
+Constructing GRM: done.
+Extracting eigenvalues and eigenvectors... done.
+--pca: Eigenvectors written to Boltonia_decurrens_imputed_Low_LD_pca.eigenvec ,
+and eigenvalues written to Boltonia_decurrens_imputed_Low_LD_pca.eigenval .
+
+End time: Fri Sep 26 21:51:19 2025

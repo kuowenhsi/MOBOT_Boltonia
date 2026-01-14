@@ -1,0 +1,39 @@
+// Priors and rules file for fastsimcoal2
+// *********************
+[PARAMETERS]
+// #isInt? #name #dist. #min #max
+// Sizes (haploid counts)
+1 N_A unif 100 100000 output
+1 N_B unif 100 100000 output
+1 N_C unif 100 100000 output
+1 N_D unif 100 100000 output
+1 N_E unif 100 100000 output
+1 N_F unif 100 100000 output
+// “Number of migrants per generation” hyper-params (converted to rates below)
+0 NMIG_1POP logunif 1e-2 20 output
+0 NMIG_2POP logunif 1e-3 2 output
+
+// Split time
+1 TDIV unif 10 200 output
+
+[COMPLEX PARAMETERS]
+// Convert “migrants per gen” to per-generation migration RATES m_{source,dest}
+// Using rate = N_migrants / N_source
+0 MIG_AB = NMIG_1POP/N_A output
+0 MIG_BC = NMIG_1POP/N_B output
+0 MIG_CD = NMIG_1POP/N_C output
+0 MIG_DE = NMIG_1POP/N_D output
+0 MIG_EF = NMIG_1POP/N_E output
+0 MIG_AC = NMIG_2POP/N_A output
+0 MIG_BD = NMIG_2POP/N_B output
+0 MIG_CE = NMIG_2POP/N_C output
+0 MIG_DF = NMIG_2POP/N_D output
+0 MIG_BA = NMIG_1POP/N_B output
+0 MIG_CB = NMIG_1POP/N_C output
+0 MIG_DC = NMIG_1POP/N_D output
+0 MIG_ED = NMIG_1POP/N_E output
+0 MIG_FE = NMIG_1POP/N_F output
+0 MIG_CA = NMIG_2POP/N_B output
+0 MIG_DB = NMIG_2POP/N_C output
+0 MIG_EC = NMIG_2POP/N_D output
+0 MIG_FD = NMIG_2POP/N_E output

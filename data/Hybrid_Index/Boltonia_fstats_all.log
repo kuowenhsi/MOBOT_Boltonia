@@ -1,0 +1,34 @@
+PLINK v2.0.0-a.6.26LM 64-bit Intel (26 Oct 2025)
+Options in effect:
+  --geno 0.9
+  --keep /home/antares/Box/MOBOT_Boltonia/hybridization/scripts/fstat_analyses/sample_list.txt
+  --mac 1
+  --make-bed
+  --out admixtools/Boltonia_fstats_all
+  --pfile /home/antares/Box/MOBOT_Boltonia/hybridization/sequence_data/Boltonia_all_good_ld100kb08.pruned
+
+Hostname: LAPTOP-9DFDQMJ8
+Working directory: /home/antares/Box/MOBOT_Boltonia/hybridization
+Start time: Fri Dec  5 10:24:10 2025
+
+Random number seed: 1764951850
+3854 MiB RAM detected, ~3463 available; reserving 1927 MiB for main workspace.
+Using up to 8 compute threads.
+464 samples (0 females, 0 males, 464 ambiguous; 464 founders) loaded from
+/home/antares/Box/MOBOT_Boltonia/hybridization/sequence_data/Boltonia_all_good_ld100kb08.pruned.psam.
+693436 variants loaded from
+/home/antares/Box/MOBOT_Boltonia/hybridization/sequence_data/Boltonia_all_good_ld100kb08.pruned.pvar.
+Note: No phenotype data present.
+--keep: 458 samples remaining.
+458 samples (0 females, 0 males, 458 ambiguous; 458 founders) remaining after
+main filters.
+Calculating allele frequencies... done.
+--geno: 0 variants removed due to missing genotype data.
+18992 variants removed due to allele frequency threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+674444 variants remaining after main filters.
+Writing admixtools/Boltonia_fstats_all.fam ... done.
+Writing admixtools/Boltonia_fstats_all.bim ... done.
+Writing admixtools/Boltonia_fstats_all.bed ... done.
+
+End time: Fri Dec  5 10:24:17 2025

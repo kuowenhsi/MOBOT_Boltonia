@@ -1,0 +1,27 @@
+PLINK v2.0.0-a.6.9LM 64-bit Intel (29 Jan 2025)
+Options in effect:
+  --out Boltonia_Hybrid_samples_maf0.01_ld100kb0.8_PCA
+  --pca 457
+  --pfile Boltonia_Hybrid_samples_maf0.01_ld100kb0.8
+
+Hostname: compute1-exec-130.ris.wustl.edu
+Working directory: /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia_alloutput_hybrid_samples
+Start time: Wed Dec  3 22:07:35 2025
+
+Random number seed: 1764799655
+385047 MiB RAM detected, ~321030 available; reserving 192523 MiB for main
+workspace.
+Using up to 64 threads (change this with --threads).
+457 samples (0 females, 0 males, 457 ambiguous; 457 founders) loaded from
+Boltonia_Hybrid_samples_maf0.01_ld100kb0.8.psam.
+500750 variants loaded from Boltonia_Hybrid_samples_maf0.01_ld100kb0.8.pvar.
+Note: No phenotype data present.
+Calculating allele frequencies... done.
+Constructing GRM: done.
+Correcting for missingness... done.
+Extracting eigenvalues and eigenvectors... done.
+--pca: Eigenvectors written to
+Boltonia_Hybrid_samples_maf0.01_ld100kb0.8_PCA.eigenvec , and eigenvalues
+written to Boltonia_Hybrid_samples_maf0.01_ld100kb0.8_PCA.eigenval .
+
+End time: Wed Dec  3 22:07:40 2025

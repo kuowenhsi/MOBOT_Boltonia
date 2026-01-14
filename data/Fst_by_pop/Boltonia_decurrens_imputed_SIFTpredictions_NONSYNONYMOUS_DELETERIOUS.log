@@ -1,0 +1,27 @@
+PLINK v2.0.0-a.6.9LM 64-bit Intel (29 Jan 2025)
+Options in effect:
+  --fst Pop_Index
+  --out Boltonia_decurrens_imputed_SIFTpredictions_NONSYNONYMOUS_DELETERIOUS
+  --pfile Boltonia_decurrens_imputed_SIFTpredictions_NONSYNONYMOUS_DELETERIOUS
+  --psam Boltonia_decurrens_imputed_meta.psam
+
+Hostname: compute1-exec-131.ris.wustl.edu
+Working directory: /storage1/fs1/christine.e.edwards/Active/Wen/IMLS_analyses/Boltonia_SIFT_annotated
+Start time: Thu Oct  9 17:16:41 2025
+
+Random number seed: 1760030201
+385047 MiB RAM detected, ~317690 available; reserving 192523 MiB for main
+workspace.
+Using up to 64 threads (change this with --threads).
+424 samples (0 females, 0 males, 424 ambiguous; 424 founders) loaded from
+Boltonia_decurrens_imputed_meta.psam.
+145209 variants loaded from
+Boltonia_decurrens_imputed_SIFTpredictions_NONSYNONYMOUS_DELETERIOUS.pvar.
+1 categorical phenotype loaded (424 values).
+--fst: Analyzing 424 samples across 17 populations.
+Autosomal --fst: done.
+Autosomal --fst: Summary written to
+Boltonia_decurrens_imputed_SIFTpredictions_NONSYNONYMOUS_DELETERIOUS.fst.summary
+.
+
+End time: Thu Oct  9 17:16:41 2025

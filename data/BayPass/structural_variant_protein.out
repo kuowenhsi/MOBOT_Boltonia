@@ -1,0 +1,296 @@
+g1066	sp|Q9M0Y3|ENT3_ARATH	70.000	410	98	0.0	600	sp|Q9M0Y3|ENT3_ARATH Equilibrative nucleotide transporter 3 OS=Arabidopsis thaliana OX=3702 GN=ENT3 PE=1 SV=1	0	N/A	N/A
+g1066	sp|Q9M0Y1|ENT5_ARATH	66.098	410	98	0.0	572	sp|Q9M0Y1|ENT5_ARATH Equilibrative nucleotide transporter 5 OS=Arabidopsis thaliana OX=3702 GN=ENT5 PE=2 SV=1	0	N/A	N/A
+g1066	sp|Q944N8|ENT6_ARATH	66.341	410	98	0.0	569	sp|Q944N8|ENT6_ARATH Equilibrative nucleotide transporter 6 OS=Arabidopsis thaliana OX=3702 GN=ENT6 PE=1 SV=1	0	N/A	N/A
+g1066	sp|Q9M0Y2|ENT4_ARATH	64.878	410	98	0.0	555	sp|Q9M0Y2|ENT4_ARATH Equilibrative nucleotide transporter 4 OS=Arabidopsis thaliana OX=3702 GN=ENT4 PE=1 SV=1	0	N/A	N/A
+g1066	sp|Q944P0|ENT7_ARATH	60.432	417	99	0.0	525	sp|Q944P0|ENT7_ARATH Equilibrative nucleotide transporter 7 OS=Arabidopsis thaliana OX=3702 GN=ENT7 PE=1 SV=1	0	N/A	N/A
+g1067	sp|Q9LTC4|MYB15_ARATH	66.102	118	51	5.37e-49	165	sp|Q9LTC4|MYB15_ARATH Transcription factor MYB15 OS=Arabidopsis thaliana OX=3702 GN=MYB15 PE=1 SV=1	0	N/A	N/A
+g1067	sp|Q7XBH4|MYB4_ORYSJ	67.544	114	49	7.32e-49	164	sp|Q7XBH4|MYB4_ORYSJ Transcription factor MYB4 OS=Oryza sativa subsp. japonica OX=39947 GN=MYB4 PE=2 SV=2	0	N/A	N/A
+g1067	sp|Q9M0Y5|MYB74_ARATH	64.035	114	49	1.56e-47	162	sp|Q9M0Y5|MYB74_ARATH Transcription factor MYB74 OS=Arabidopsis thaliana OX=3702 GN=MYB74 PE=2 SV=1	0	N/A	N/A
+g1067	sp|Q6K1S6|MYB30_ORYSJ	63.793	116	50	2.23e-47	160	sp|Q6K1S6|MYB30_ORYSJ Transcription factor MYB30 OS=Oryza sativa subsp. japonica OX=39947 GN=MYB30 PE=1 SV=1	0	N/A	N/A
+g1067	sp|Q9SJX8|MYB14_ARATH	46.193	197	84	4.49e-47	159	sp|Q9SJX8|MYB14_ARATH Transcription factor MYB14 OS=Arabidopsis thaliana OX=3702 GN=MYB14 PE=2 SV=1	0	N/A	N/A
+g1069	sp|Q8VYN2|VAP42_ARATH	62.963	297	93	9.32e-126	363	sp|Q8VYN2|VAP42_ARATH Vesicle-associated protein 4-2 OS=Arabidopsis thaliana OX=3702 GN=PVA42 PE=1 SV=1	0	N/A	N/A
+g1069	sp|Q1ECE0|VAP41_ARATH	71.739	230	78	1.37e-102	303	sp|Q1ECE0|VAP41_ARATH Vesicle-associated protein 4-1 OS=Arabidopsis thaliana OX=3702 GN=PVA41 PE=2 SV=1	0	N/A	N/A
+g1069	sp|Q8LPQ7|VAP43_ARATH	60.702	285	95	2.30e-101	301	sp|Q8LPQ7|VAP43_ARATH Vesicle-associated protein 4-3 OS=Arabidopsis thaliana OX=3702 GN=PVA43 PE=2 SV=1	0	N/A	N/A
+g1069	sp|Q84WW5|VAP13_ARATH	29.134	127	43	2.63e-07	53.9	sp|Q84WW5|VAP13_ARATH Vesicle-associated protein 1-3 OS=Arabidopsis thaliana OX=3702 GN=PVA13 PE=2 SV=1	0	N/A	N/A
+g1072	sp|Q9ZVX1|UBC23_ARATH	66.667	66	92	2.09e-26	106	sp|Q9ZVX1|UBC23_ARATH Probable ubiquitin-conjugating enzyme E2 23 OS=Arabidopsis thaliana OX=3702 GN=UBC23 PE=1 SV=1	0	N/A	N/A
+g1072	sp|Q9ZVX1|UBC23_ARATH	39.394	66	92	1.75e-06	49.7	sp|Q9ZVX1|UBC23_ARATH Probable ubiquitin-conjugating enzyme E2 23 OS=Arabidopsis thaliana OX=3702 GN=UBC23 PE=1 SV=1	0	N/A	N/A
+g1072	sp|Q8VY10|UBC24_ARATH	66.667	54	80	5.15e-19	85.5	sp|Q8VY10|UBC24_ARATH Probable ubiquitin-conjugating enzyme E2 24 OS=Arabidopsis thaliana OX=3702 GN=UBC24 PE=1 SV=1	0	N/A	N/A
+g1072	sp|Q8VY10|UBC24_ARATH	49.180	61	80	3.09e-11	63.2	sp|Q8VY10|UBC24_ARATH Probable ubiquitin-conjugating enzyme E2 24 OS=Arabidopsis thaliana OX=3702 GN=UBC24 PE=1 SV=1	0	N/A	N/A
+g1072	sp|Q9LUQ5|UBC25_ARATH	51.515	66	46	1.89e-18	84.0	sp|Q9LUQ5|UBC25_ARATH Probable ubiquitin-conjugating enzyme E2 25 OS=Arabidopsis thaliana OX=3702 GN=UBC25 PE=2 SV=1	0	N/A	N/A
+g1072	sp|Q9C918|UBC38_ARATH	56.061	66	46	1.06e-17	80.9	sp|Q9C918|UBC38_ARATH Putative ubiquitin-conjugating enzyme E2 38 OS=Arabidopsis thaliana OX=3702 GN=UBC38 PE=3 SV=2	0	N/A	N/A
+g1072	sp|Q8GY87|UBC26_ARATH	51.515	66	46	1.73e-17	81.3	sp|Q8GY87|UBC26_ARATH Probable ubiquitin-conjugating enzyme E2 26 OS=Arabidopsis thaliana OX=3702 GN=UBC26 PE=2 SV=2	0	N/A	N/A
+g1074	sp|Q8VY10|UBC24_ARATH	38.824	85	60	6.94e-13	67.8	sp|Q8VY10|UBC24_ARATH Probable ubiquitin-conjugating enzyme E2 24 OS=Arabidopsis thaliana OX=3702 GN=UBC24 PE=1 SV=1	0	N/A	N/A
+g1074	sp|Q9ZVX1|UBC23_ARATH	44.231	52	38	1.19e-09	58.5	sp|Q9ZVX1|UBC23_ARATH Probable ubiquitin-conjugating enzyme E2 23 OS=Arabidopsis thaliana OX=3702 GN=UBC23 PE=1 SV=1	0	N/A	N/A
+g1078	sp|Q41144|STC_RICCO	73.750	80	67	1.10e-33	125	sp|Q41144|STC_RICCO Sugar carrier protein C OS=Ricinus communis OX=3988 GN=STC PE=2 SV=1	0	N/A	N/A
+g1078	sp|Q7EZD7|MST3_ORYSJ	67.089	79	66	8.10e-28	108	sp|Q7EZD7|MST3_ORYSJ Sugar transport protein MST3 OS=Oryza sativa subsp. japonica OX=39947 GN=MST3 PE=2 SV=1	0	N/A	N/A
+g1078	sp|P23586|STP1_ARATH	67.500	80	67	2.53e-27	107	sp|P23586|STP1_ARATH Sugar transport protein 1 OS=Arabidopsis thaliana OX=3702 GN=STP1 PE=1 SV=2	0	N/A	N/A
+g1078	sp|O65413|STP12_ARATH	74.627	67	56	6.48e-27	106	sp|O65413|STP12_ARATH Sugar transport protein 12 OS=Arabidopsis thaliana OX=3702 GN=STP12 PE=2 SV=1	0	N/A	N/A
+g1078	sp|Q94EC4|MST8_ORYSJ	60.000	80	67	6.77e-27	106	sp|Q94EC4|MST8_ORYSJ Sugar transport protein MST8 OS=Oryza sativa subsp. japonica OX=39947 GN=MST8 PE=2 SV=2	0	N/A	N/A
+g1079	sp|Q5IBC5|ESP1_ARATH	40.800	125	52	1.32e-18	88.2	sp|Q5IBC5|ESP1_ARATH Separase OS=Arabidopsis thaliana OX=3702 GN=ESP1 PE=2 SV=1	0	N/A	N/A
+g1080	sp|Q5IBC5|ESP1_ARATH	36.601	153	93	2.83e-21	92.8	sp|Q5IBC5|ESP1_ARATH Separase OS=Arabidopsis thaliana OX=3702 GN=ESP1 PE=2 SV=1	0	N/A	N/A
+g1081	sp|Q5IBC5|ESP1_ARATH	35.294	153	94	9.66e-22	94.0	sp|Q5IBC5|ESP1_ARATH Separase OS=Arabidopsis thaliana OX=3702 GN=ESP1 PE=2 SV=1	0	N/A	N/A
+g1082	sp|O22193|PUB4_ARATH	24.752	303	69	4.75e-14	79.0	sp|O22193|PUB4_ARATH U-box domain-containing protein 4 OS=Arabidopsis thaliana OX=3702 GN=PUB4 PE=1 SV=3	0	N/A	N/A
+g1082	sp|O22193|PUB4_ARATH	25.366	205	69	7.74e-06	52.8	sp|O22193|PUB4_ARATH U-box domain-containing protein 4 OS=Arabidopsis thaliana OX=3702 GN=PUB4 PE=1 SV=3	0	N/A	N/A
+g1082	sp|Q9ZV31|PUB12_ARATH	21.865	311	53	1.71e-07	57.8	sp|Q9ZV31|PUB12_ARATH U-box domain-containing protein 12 OS=Arabidopsis thaliana OX=3702 GN=PUB12 PE=2 SV=1	0	N/A	N/A
+g1082	sp|Q8GWV5|PUB3_ARATH	23.045	243	42	5.65e-07	56.2	sp|Q8GWV5|PUB3_ARATH U-box domain-containing protein 3 OS=Arabidopsis thaliana OX=3702 GN=PUB3 PE=2 SV=2	0	N/A	N/A
+g1082	sp|Q8GUG9|PUB11_ARATH	20.851	235	40	3.30e-06	53.9	sp|Q8GUG9|PUB11_ARATH U-box domain-containing protein 11 OS=Arabidopsis thaliana OX=3702 GN=PUB11 PE=2 SV=2	0	N/A	N/A
+g1082	sp|Q757R0|VAC8_EREGS	20.891	359	61	3.62e-06	53.5	sp|Q757R0|VAC8_EREGS Vacuolar protein 8 OS=Eremothecium gossypii (strain ATCC 10895 / CBS 109.51 / FGSC 9923 / NRRL Y-1056) OX=284811 GN=VAC8 PE=3 SV=3	0	N/A	N/A
+g1084	sp|Q570C0|TIR1_ARATH	57.645	569	96	0.0	666	sp|Q570C0|TIR1_ARATH Protein TRANSPORT INHIBITOR RESPONSE 1 OS=Arabidopsis thaliana OX=3702 GN=TIR1 PE=1 SV=2	0	N/A	N/A
+g1084	sp|Q7XVM8|TIR1B_ORYSJ	55.979	577	96	0.0	654	sp|Q7XVM8|TIR1B_ORYSJ Transport inhibitor response 1-like protein Os04g0395600 OS=Oryza sativa subsp. japonica OX=39947 GN=Os04g0395600 PE=2 SV=1	0	N/A	N/A
+g1084	sp|Q9LPW7|AFB3_ARATH	53.633	578	96	0.0	642	sp|Q9LPW7|AFB3_ARATH Protein AUXIN SIGNALING F-BOX 3 OS=Arabidopsis thaliana OX=3702 GN=AFB3 PE=1 SV=1	0	N/A	N/A
+g1084	sp|Q9ZR12|GRH1_ARATH	55.185	569	96	0.0	636	sp|Q9ZR12|GRH1_ARATH GRR1-like protein 1 OS=Arabidopsis thaliana OX=3702 GN=GRH1 PE=1 SV=1	0	N/A	N/A
+g1084	sp|Q9LW29|AFB2_ARATH	54.467	582	96	0.0	633	sp|Q9LW29|AFB2_ARATH Protein AUXIN SIGNALING F-BOX 2 OS=Arabidopsis thaliana OX=3702 GN=AFB2 PE=1 SV=1	0	N/A	N/A
+g1085	sp|Q7LHG5|YI31B_YEAST	31.268	678	87	1.00e-88	307	sp|Q7LHG5|YI31B_YEAST Transposon Ty3-I Gag-Pol polyprotein OS=Saccharomyces cerevisiae (strain ATCC 204508 / S288c) OX=559292 GN=TY3B-I PE=1 SV=2	0	N/A	N/A
+g1085	sp|Q99315|YG31B_YEAST	31.268	678	87	9.19e-88	305	sp|Q99315|YG31B_YEAST Transposon Ty3-G Gag-Pol polyprotein OS=Saccharomyces cerevisiae (strain ATCC 204508 / S288c) OX=559292 GN=TY3B-G PE=1 SV=3	0	N/A	N/A
+g1085	sp|P0CT40|TF29_SCHPO	29.300	686	89	1.81e-76	271	sp|P0CT40|TF29_SCHPO Transposon Tf2-9 polyprotein OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) OX=284812 GN=Tf2-9 PE=3 SV=1	0	N/A	N/A
+g1085	sp|P0CT37|TF24_SCHPO	29.300	686	89	1.81e-76	271	sp|P0CT37|TF24_SCHPO Transposon Tf2-4 polyprotein OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) OX=284812 GN=Tf2-4 PE=3 SV=1	0	N/A	N/A
+g1085	sp|P0CT35|TF22_SCHPO	29.300	686	89	1.81e-76	271	sp|P0CT35|TF22_SCHPO Transposon Tf2-2 polyprotein OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) OX=284812 GN=Tf2-2 PE=3 SV=1	0	N/A	N/A
+g1087	sp|Q94BV7|NDB2_ARATH	74.144	584	100	0.0	887	sp|Q94BV7|NDB2_ARATH External alternative NAD(P)H-ubiquinone oxidoreductase B2, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=NDB2 PE=1 SV=1	0	N/A	N/A
+g1087	sp|F4JJJ3|NDB3_ARATH	72.089	584	100	0.0	855	sp|F4JJJ3|NDB3_ARATH External alternative NAD(P)H-ubiquinone oxidoreductase B3, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=NDB3 PE=2 SV=1	0	N/A	N/A
+g1087	sp|M1BYJ7|ENDB1_SOLTU	63.700	573	98	0.0	788	sp|M1BYJ7|ENDB1_SOLTU External alternative NAD(P)H-ubiquinone oxidoreductase B1, mitochondrial OS=Solanum tuberosum OX=4113 GN=NDB1 PE=3 SV=1	0	N/A	N/A
+g1087	sp|Q9ST62|NDB1_SOLTU	63.525	573	98	0.0	785	sp|Q9ST62|NDB1_SOLTU External alternative NAD(P)H-ubiquinone oxidoreductase B1, mitochondrial OS=Solanum tuberosum OX=4113 GN=NDB1 PE=1 SV=1	0	N/A	N/A
+g1087	sp|Q9SKT7|NDB4_ARATH	63.497	589	99	0.0	762	sp|Q9SKT7|NDB4_ARATH External alternative NAD(P)H-ubiquinone oxidoreductase B4, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=NDB4 PE=1 SV=1	0	N/A	N/A
+g1089	sp|O94683|RRP7_SCHPO	32.117	137	39	1.09e-08	58.5	sp|O94683|RRP7_SCHPO Ribosomal RNA-processing protein 7 OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) OX=284812 GN=rrp7 PE=3 SV=2	0	N/A	N/A
+g1089	sp|Q9Y3A4|RRP7A_HUMAN	30.460	174	50	2.69e-08	57.8	sp|Q9Y3A4|RRP7A_HUMAN Ribosomal RNA-processing protein 7 homolog A OS=Homo sapiens OX=9606 GN=RRP7A PE=1 SV=2	0	N/A	N/A
+g1089	sp|Q5RA17|RRP7A_PONAB	30.460	174	50	3.59e-08	57.4	sp|Q5RA17|RRP7A_PONAB Ribosomal RNA-processing protein 7 homolog A OS=Pongo abelii OX=9601 GN=RRP7A PE=2 SV=1	0	N/A	N/A
+g1089	sp|Q9D1C9|RRP7A_MOUSE	35.227	88	26	4.35e-08	57.4	sp|Q9D1C9|RRP7A_MOUSE Ribosomal RNA-processing protein 7 homolog A OS=Mus musculus OX=10090 GN=Rrp7a PE=2 SV=1	0	N/A	N/A
+g1089	sp|Q9NSQ0|RRP7B_HUMAN	34.091	88	26	3.64e-07	51.2	sp|Q9NSQ0|RRP7B_HUMAN Putative ribosomal RNA-processing protein 7 homolog B OS=Homo sapiens OX=9606 GN=RRP7BP PE=5 SV=1	0	N/A	N/A
+g1091	sp|P0CT40|TF29_SCHPO	35.235	894	79	1.48e-164	524	sp|P0CT40|TF29_SCHPO Transposon Tf2-9 polyprotein OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) OX=284812 GN=Tf2-9 PE=3 SV=1	0	N/A	N/A
+g1091	sp|P0CT37|TF24_SCHPO	35.235	894	79	1.48e-164	524	sp|P0CT37|TF24_SCHPO Transposon Tf2-4 polyprotein OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) OX=284812 GN=Tf2-4 PE=3 SV=1	0	N/A	N/A
+g1091	sp|P0CT35|TF22_SCHPO	35.235	894	79	1.48e-164	524	sp|P0CT35|TF22_SCHPO Transposon Tf2-2 polyprotein OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) OX=284812 GN=Tf2-2 PE=3 SV=1	0	N/A	N/A
+g1091	sp|P0CT34|TF21_SCHPO	35.235	894	79	1.48e-164	524	sp|P0CT34|TF21_SCHPO Transposon Tf2-1 polyprotein OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) OX=284812 GN=Tf2-1 PE=3 SV=1	0	N/A	N/A
+g1091	sp|P0CT39|TF26_SCHPO	35.235	894	79	1.50e-164	524	sp|P0CT39|TF26_SCHPO Transposon Tf2-6 polyprotein OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) OX=284812 GN=Tf2-6 PE=3 SV=1	0	N/A	N/A
+g1092	sp|O65416|SKI27_ARATH	40.491	163	82	6.52e-28	107	sp|O65416|SKI27_ARATH F-box protein SKIP27 OS=Arabidopsis thaliana OX=3702 GN=SKIP27 PE=1 SV=2	0	N/A	N/A
+g1092	sp|Q8GX77|FB316_ARATH	44.578	166	86	9.16e-27	102	sp|Q8GX77|FB316_ARATH F-box protein At1g61340 OS=Arabidopsis thaliana OX=3702 GN=At1g61340 PE=2 SV=1	0	N/A	N/A
+g1092	sp|Q9S9T6|FB220_ARATH	45.455	154	85	2.31e-25	98.6	sp|Q9S9T6|FB220_ARATH F-box protein At4g05010 OS=Arabidopsis thaliana OX=3702 GN=At4g05010 PE=2 SV=1	0	N/A	N/A
+g1092	sp|Q5XF11|FB248_ARATH	30.172	116	58	5.90e-08	54.3	sp|Q5XF11|FB248_ARATH F-box protein At4g35930 OS=Arabidopsis thaliana OX=3702 GN=At4g35930 PE=2 SV=1	0	N/A	N/A
+g1093	sp|O65418|APC4_ARATH	63.021	768	99	0.0	946	sp|O65418|APC4_ARATH Anaphase-promoting complex subunit 4 OS=Arabidopsis thaliana OX=3702 GN=APC4 PE=2 SV=2	0	N/A	N/A
+g1093	sp|Q91W96|APC4_MOUSE	26.711	453	59	3.17e-40	162	sp|Q91W96|APC4_MOUSE Anaphase-promoting complex subunit 4 OS=Mus musculus OX=10090 GN=Anapc4 PE=1 SV=1	0	N/A	N/A
+g1093	sp|Q9UJX5|APC4_HUMAN	25.495	455	59	8.11e-40	161	sp|Q9UJX5|APC4_HUMAN Anaphase-promoting complex subunit 4 OS=Homo sapiens OX=9606 GN=ANAPC4 PE=1 SV=2	0	N/A	N/A
+g1093	sp|Q5RAQ5|APC4_PONAB	26.222	450	59	1.02e-39	160	sp|Q5RAQ5|APC4_PONAB Anaphase-promoting complex subunit 4 OS=Pongo abelii OX=9601 GN=ANAPC4 PE=2 SV=1	0	N/A	N/A
+g1093	sp|Q54NI1|APC4_DICDI	25.566	309	41	1.25e-19	97.8	sp|Q54NI1|APC4_DICDI Anaphase-promoting complex subunit 4 OS=Dictyostelium discoideum OX=44689 GN=anapc4 PE=3 SV=1	0	N/A	N/A
+g1094	sp|Q9FKL6|CB60B_ARATH	61.051	647	98	0.0	740	sp|Q9FKL6|CB60B_ARATH Calmodulin-binding protein 60 B OS=Arabidopsis thaliana OX=3702 GN=CBP60B PE=2 SV=1	0	N/A	N/A
+g1094	sp|C0SV51|CB60C_ARATH	59.219	640	99	0.0	709	sp|C0SV51|CB60C_ARATH Calmodulin-binding protein 60 C OS=Arabidopsis thaliana OX=3702 GN=CBP60C PE=2 SV=1	0	N/A	N/A
+g1094	sp|Q0WVV6|CB60D_ARATH	60.987	628	97	0.0	707	sp|Q0WVV6|CB60D_ARATH Calmodulin-binding protein 60 D OS=Arabidopsis thaliana OX=3702 GN=CBP60D PE=2 SV=1	0	N/A	N/A
+g1094	sp|F4IPM3|CB60E_ARATH	52.707	628	99	0.0	612	sp|F4IPM3|CB60E_ARATH Calmodulin-binding protein 60 E OS=Arabidopsis thaliana OX=3702 GN=CBP60E PE=2 SV=1	0	N/A	N/A
+g1094	sp|F4JR57|CB60F_ARATH	64.946	368	76	2.52e-172	504	sp|F4JR57|CB60F_ARATH Calmodulin-binding protein 60 F OS=Arabidopsis thaliana OX=3702 GN=CBP60F PE=2 SV=1	0	N/A	N/A
+g1094	sp|F4JR57|CB60F_ARATH	51.327	113	76	8.62e-22	103	sp|F4JR57|CB60F_ARATH Calmodulin-binding protein 60 F OS=Arabidopsis thaliana OX=3702 GN=CBP60F PE=2 SV=1	0	N/A	N/A
+g1096	sp|F2Y4A3|SPHK2_ARATH	58.723	470	95	0.0	574	sp|F2Y4A3|SPHK2_ARATH Sphingosine kinase 2 OS=Arabidopsis thaliana OX=3702 GN=SPHK2 PE=1 SV=1	0	N/A	N/A
+g1096	sp|Q8L7L1|SPHK1_ARATH	56.639	482	98	0.0	558	sp|Q8L7L1|SPHK1_ARATH Sphingosine kinase 1 OS=Arabidopsis thaliana OX=3702 GN=SPHK1 PE=1 SV=1	0	N/A	N/A
+g1096	sp|Q91V26|SPHK1_RAT	32.571	350	69	1.75e-46	169	sp|Q91V26|SPHK1_RAT Sphingosine kinase 1 OS=Rattus norvegicus OX=10116 GN=Sphk1 PE=1 SV=1	0	N/A	N/A
+g1096	sp|Q9NYA1|SPHK1_HUMAN	32.578	353	69	2.18e-46	169	sp|Q9NYA1|SPHK1_HUMAN Sphingosine kinase 1 OS=Homo sapiens OX=9606 GN=SPHK1 PE=1 SV=1	0	N/A	N/A
+g1096	sp|Q8CI15|SPHK1_MOUSE	31.214	346	69	8.86e-44	161	sp|Q8CI15|SPHK1_MOUSE Sphingosine kinase 1 OS=Mus musculus OX=10090 GN=Sphk1 PE=1 SV=1	0	N/A	N/A
+g1100	sp|Q9FL69|AGD5_ARATH	37.000	500	99	2.20e-73	241	sp|Q9FL69|AGD5_ARATH ADP-ribosylation factor GTPase-activating protein AGD5 OS=Arabidopsis thaliana OX=3702 GN=AGD5 PE=1 SV=1	0	N/A	N/A
+g1100	sp|Q0WQQ1|AGD15_ARATH	72.222	108	24	2.86e-54	184	sp|Q0WQQ1|AGD15_ARATH Probable ADP-ribosylation factor GTPase-activating protein AGD15 OS=Arabidopsis thaliana OX=3702 GN=AGD15 PE=2 SV=1	0	N/A	N/A
+g1100	sp|Q5F413|SMAP2_CHICK	50.000	112	24	4.75e-33	132	sp|Q5F413|SMAP2_CHICK Stromal membrane-associated protein 2 OS=Gallus gallus OX=9031 GN=SMAP2 PE=2 SV=1	0	N/A	N/A
+g1100	sp|Q5EA00|SMAP2_BOVIN	40.854	164	34	2.04e-32	130	sp|Q5EA00|SMAP2_BOVIN Stromal membrane-associated protein 2 OS=Bos taurus OX=9913 GN=SMAP2 PE=2 SV=1	0	N/A	N/A
+g1100	sp|Q8WU79|SMAP2_HUMAN	39.375	160	34	3.49e-32	130	sp|Q8WU79|SMAP2_HUMAN Stromal membrane-associated protein 2 OS=Homo sapiens OX=9606 GN=SMAP2 PE=1 SV=1	0	N/A	N/A
+g1101	sp|Q9SVG3|BBE21_ARATH	55.289	501	94	0.0	561	sp|Q9SVG3|BBE21_ARATH Berberine bridge enzyme-like 21 OS=Arabidopsis thaliana OX=3702 GN=At4g20840 PE=2 SV=1	0	N/A	N/A
+g1101	sp|Q9SA99|BBE2_ARATH	52.930	529	98	0.0	559	sp|Q9SA99|BBE2_ARATH Berberine bridge enzyme-like 2 OS=Arabidopsis thaliana OX=3702 GN=At1g11770 PE=2 SV=1	0	N/A	N/A
+g1101	sp|Q9SVG4|RETOL_ARATH	55.686	510	96	0.0	540	sp|Q9SVG4|RETOL_ARATH Berberine bridge enzyme-like 19 OS=Arabidopsis thaliana OX=3702 GN=At4g20830 PE=1 SV=2	0	N/A	N/A
+g1101	sp|Q9LPC3|BBE1_ARATH	54.545	506	94	0.0	535	sp|Q9LPC3|BBE1_ARATH Berberine bridge enzyme-like 1 OS=Arabidopsis thaliana OX=3702 GN=SEC1A PE=2 SV=1	0	N/A	N/A
+g1101	sp|Q9SA89|BBE12_ARATH	50.377	530	99	2.01e-174	505	sp|Q9SA89|BBE12_ARATH Berberine bridge enzyme-like 12 OS=Arabidopsis thaliana OX=3702 GN=At1g30740 PE=2 SV=1	0	N/A	N/A
+g1102	sp|P37545|YABD_BACSU	30.108	279	96	2.11e-32	123	sp|P37545|YABD_BACSU Uncharacterized metal-dependent hydrolase YabD OS=Bacillus subtilis (strain 168) OX=224308 GN=yabD PE=3 SV=1	0	N/A	N/A
+g1102	sp|Q05AV0|TAT3A_XENLA	28.956	297	98	6.33e-25	103	sp|Q05AV0|TAT3A_XENLA Putative deoxyribonuclease tatdn3-A OS=Xenopus laevis OX=8355 GN=tatdn3-a PE=2 SV=1	0	N/A	N/A
+g1102	sp|P73335|DTD3_SYNY3	27.018	285	96	1.41e-24	102	sp|P73335|DTD3_SYNY3 D-aminoacyl-tRNA deacylase OS=Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa) OX=1111708 GN=dtd3 PE=1 SV=1	0	N/A	N/A
+g1102	sp|Q8K9J1|Y343_BUCAP	26.132	287	96	3.03e-24	101	sp|Q8K9J1|Y343_BUCAP Uncharacterized metal-dependent hydrolase BUsg_343 OS=Buchnera aphidicola subsp. Schizaphis graminum (strain Sg) OX=198804 GN=BUsg_343 PE=3 SV=1	0	N/A	N/A
+g1102	sp|Q6P8M1|TATD1_MOUSE	25.589	297	97	1.01e-21	95.5	sp|Q6P8M1|TATD1_MOUSE Deoxyribonuclease TATDN1 OS=Mus musculus OX=10090 GN=Tatdn1 PE=1 SV=1	0	N/A	N/A
+g1103	sp|Q8K9J1|Y343_BUCAP	31.068	103	78	5.93e-07	49.7	sp|Q8K9J1|Y343_BUCAP Uncharacterized metal-dependent hydrolase BUsg_343 OS=Buchnera aphidicola subsp. Schizaphis graminum (strain Sg) OX=198804 GN=BUsg_343 PE=3 SV=1	0	N/A	N/A
+g1103	sp|P39408|YJJV_ECOLI	28.000	100	80	1.21e-06	48.9	sp|P39408|YJJV_ECOLI Uncharacterized metal-dependent hydrolase YjjV OS=Escherichia coli (strain K12) OX=83333 GN=yjjV PE=1 SV=2	0	N/A	N/A
+g1103	sp|A1A4M4|TATD3_BOVIN	30.088	113	85	1.38e-06	48.9	sp|A1A4M4|TATD3_BOVIN Putative deoxyribonuclease TATDN3 OS=Bos taurus OX=9913 GN=TATDN3 PE=2 SV=1	0	N/A	N/A
+g1103	sp|Q05AV0|TAT3A_XENLA	31.967	122	90	1.96e-06	48.5	sp|Q05AV0|TAT3A_XENLA Putative deoxyribonuclease tatdn3-A OS=Xenopus laevis OX=8355 GN=tatdn3-a PE=2 SV=1	0	N/A	N/A
+g1103	sp|P37545|YABD_BACSU	31.579	95	78	2.07e-06	48.1	sp|P37545|YABD_BACSU Uncharacterized metal-dependent hydrolase YabD OS=Bacillus subtilis (strain 168) OX=224308 GN=yabD PE=3 SV=1	0	N/A	N/A
+g1104	sp|P0AFQ7|YCFH_ECOLI	30.534	131	92	5.62e-10	58.9	sp|P0AFQ7|YCFH_ECOLI Uncharacterized metal-dependent hydrolase YcfH OS=Escherichia coli (strain K12) OX=83333 GN=ycfH PE=1 SV=1	0	N/A	N/A
+g1104	sp|P0AFQ8|YCFH_ECOL6	30.534	131	92	5.62e-10	58.9	sp|P0AFQ8|YCFH_ECOL6 Uncharacterized metal-dependent hydrolase YcfH OS=Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC) OX=199310 GN=ycfH PE=3 SV=1	0	N/A	N/A
+g1104	sp|P0AFQ9|YCFH_ECO57	30.534	131	92	5.62e-10	58.9	sp|P0AFQ9|YCFH_ECO57 Uncharacterized metal-dependent hydrolase YcfH OS=Escherichia coli O157:H7 OX=83334 GN=ycfH PE=3 SV=1	0	N/A	N/A
+g1104	sp|P37545|YABD_BACSU	28.358	134	94	1.56e-09	57.8	sp|P37545|YABD_BACSU Uncharacterized metal-dependent hydrolase YabD OS=Bacillus subtilis (strain 168) OX=224308 GN=yabD PE=3 SV=1	0	N/A	N/A
+g1104	sp|Q05AV0|TAT3A_XENLA	29.323	133	94	1.86e-09	57.4	sp|Q05AV0|TAT3A_XENLA Putative deoxyribonuclease tatdn3-A OS=Xenopus laevis OX=8355 GN=tatdn3-a PE=2 SV=1	0	N/A	N/A
+g1105	sp|Q9SCV4|BGAL8_ARATH	56.631	837	97	0.0	963	sp|Q9SCV4|BGAL8_ARATH Beta-galactosidase 8 OS=Arabidopsis thaliana OX=3702 GN=BGAL8 PE=2 SV=2	0	N/A	N/A
+g1105	sp|Q10NX8|BGAL6_ORYSJ	55.114	831	97	0.0	963	sp|Q10NX8|BGAL6_ORYSJ Beta-galactosidase 6 OS=Oryza sativa subsp. japonica OX=39947 GN=Os03g0255100 PE=1 SV=2	0	N/A	N/A
+g1105	sp|P45582|BGAL_ASPOF	52.289	830	97	0.0	884	sp|P45582|BGAL_ASPOF Beta-galactosidase OS=Asparagus officinalis OX=4686 PE=2 SV=1	0	N/A	N/A
+g1105	sp|Q5N8X6|BGAL3_ORYSJ	52.439	820	97	0.0	880	sp|Q5N8X6|BGAL3_ORYSJ Beta-galactosidase 3 OS=Oryza sativa subsp. japonica OX=39947 GN=Os01g0875500 PE=3 SV=1	0	N/A	N/A
+g1105	sp|Q9SCW1|BGAL1_ARATH	51.826	849	99	0.0	879	sp|Q9SCW1|BGAL1_ARATH Beta-galactosidase 1 OS=Arabidopsis thaliana OX=3702 GN=BGAL1 PE=2 SV=1	0	N/A	N/A
+g1108	sp|Q9Y493|ZAN_HUMAN	27.273	231	48	9.09e-15	82.4	sp|Q9Y493|ZAN_HUMAN Zonadhesin OS=Homo sapiens OX=9606 GN=ZAN PE=2 SV=5	0	N/A	N/A
+g1108	sp|Q9Y493|ZAN_HUMAN	25.817	306	48	4.01e-11	70.5	sp|Q9Y493|ZAN_HUMAN Zonadhesin OS=Homo sapiens OX=9606 GN=ZAN PE=2 SV=5	0	N/A	N/A
+g1108	sp|Q9Y493|ZAN_HUMAN	23.158	380	48	1.38e-08	62.4	sp|Q9Y493|ZAN_HUMAN Zonadhesin OS=Homo sapiens OX=9606 GN=ZAN PE=2 SV=5	0	N/A	N/A
+g1108	sp|Q9Y493|ZAN_HUMAN	27.711	166	48	3.29e-06	54.3	sp|Q9Y493|ZAN_HUMAN Zonadhesin OS=Homo sapiens OX=9606 GN=ZAN PE=2 SV=5	0	N/A	N/A
+g1108	sp|Q28983|ZAN_PIG	29.710	276	34	1.04e-13	79.0	sp|Q28983|ZAN_PIG Zonadhesin OS=Sus scrofa OX=9823 GN=ZAN PE=1 SV=1	0	N/A	N/A
+g1109	sp|Q53FA7|QORX_HUMAN	42.073	328	99	1.38e-79	248	sp|Q53FA7|QORX_HUMAN Quinone oxidoreductase PIG3 OS=Homo sapiens OX=9606 GN=TP53I3 PE=1 SV=2	0	N/A	N/A
+g1109	sp|Q6AYT0|QOR_RAT	33.639	327	99	7.15e-50	172	sp|Q6AYT0|QOR_RAT Quinone oxidoreductase OS=Rattus norvegicus OX=10116 GN=Cryz PE=2 SV=1	0	N/A	N/A
+g1109	sp|P11415|QOR_CAVPO	32.722	327	99	2.00e-48	168	sp|P11415|QOR_CAVPO Quinone oxidoreductase OS=Cavia porcellus OX=10141 GN=CRYZ PE=1 SV=1	0	N/A	N/A
+g1109	sp|P47199|QOR_MOUSE	33.435	329	99	3.14e-47	165	sp|P47199|QOR_MOUSE Quinone oxidoreductase OS=Mus musculus OX=10090 GN=Cryz PE=1 SV=1	0	N/A	N/A
+g1109	sp|O97764|QOR_BOVIN	32.110	327	99	1.80e-44	157	sp|O97764|QOR_BOVIN Zeta-crystallin OS=Bos taurus OX=9913 GN=CRYZ PE=2 SV=2	0	N/A	N/A
+g1111	sp|Q9Y493|ZAN_HUMAN	27.982	218	50	3.12e-15	83.6	sp|Q9Y493|ZAN_HUMAN Zonadhesin OS=Homo sapiens OX=9606 GN=ZAN PE=2 SV=5	0	N/A	N/A
+g1111	sp|Q9Y493|ZAN_HUMAN	25.938	320	50	7.70e-15	82.4	sp|Q9Y493|ZAN_HUMAN Zonadhesin OS=Homo sapiens OX=9606 GN=ZAN PE=2 SV=5	0	N/A	N/A
+g1111	sp|Q9Y493|ZAN_HUMAN	23.096	407	50	5.87e-11	69.7	sp|Q9Y493|ZAN_HUMAN Zonadhesin OS=Homo sapiens OX=9606 GN=ZAN PE=2 SV=5	0	N/A	N/A
+g1111	sp|Q9Y493|ZAN_HUMAN	30.612	147	50	3.61e-08	60.8	sp|Q9Y493|ZAN_HUMAN Zonadhesin OS=Homo sapiens OX=9606 GN=ZAN PE=2 SV=5	0	N/A	N/A
+g1111	sp|Q28983|ZAN_PIG	30.142	282	39	7.24e-15	82.4	sp|Q28983|ZAN_PIG Zonadhesin OS=Sus scrofa OX=9823 GN=ZAN PE=1 SV=1	0	N/A	N/A
+g1112	sp|Q3E984|AGO8_ARATH	55.140	107	88	1.69e-29	114	sp|Q3E984|AGO8_ARATH Protein argonaute 8 OS=Arabidopsis thaliana OX=3702 GN=AGO8 PE=3 SV=1	0	N/A	N/A
+g1112	sp|Q9SDG8|AGO4A_ORYSJ	57.547	106	88	2.68e-29	113	sp|Q9SDG8|AGO4A_ORYSJ Protein argonaute 4A OS=Oryza sativa subsp. japonica OX=39947 GN=AGO4A PE=2 SV=1	0	N/A	N/A
+g1112	sp|Q6YSJ5|AGO16_ORYSJ	54.717	106	88	6.84e-28	109	sp|Q6YSJ5|AGO16_ORYSJ Protein argonaute 16 OS=Oryza sativa subsp. japonica OX=39947 GN=AGO16 PE=2 SV=2	0	N/A	N/A
+g1112	sp|Q5NBN9|AGO15_ORYSJ	54.455	101	84	5.15e-27	107	sp|Q5NBN9|AGO15_ORYSJ Protein argonaute 15 OS=Oryza sativa subsp. japonica OX=39947 GN=AGO15 PE=2 SV=2	0	N/A	N/A
+g1112	sp|Q84VQ0|AGO9_ARATH	54.717	106	88	9.97e-27	106	sp|Q84VQ0|AGO9_ARATH Protein argonaute 9 OS=Arabidopsis thaliana OX=3702 GN=AGO9 PE=2 SV=2	0	N/A	N/A
+g1113	sp|P10978|POLX_TOBAC	40.268	894	98	0.0	619	sp|P10978|POLX_TOBAC Retrovirus-related Pol polyprotein from transposon TNT 1-94 OS=Nicotiana tabacum OX=4097 PE=2 SV=1	0	N/A	N/A
+g1113	sp|P10978|POLX_TOBAC	53.901	141	98	1.30e-33	144	sp|P10978|POLX_TOBAC Retrovirus-related Pol polyprotein from transposon TNT 1-94 OS=Nicotiana tabacum OX=4097 PE=2 SV=1	0	N/A	N/A
+g1113	sp|P04146|COPIA_DROME	29.036	954	94	2.56e-88	313	sp|P04146|COPIA_DROME Copia protein OS=Drosophila melanogaster OX=7227 GN=GIP PE=1 SV=3	0	N/A	N/A
+g1113	sp|P04146|COPIA_DROME	32.716	162	94	5.20e-11	70.9	sp|P04146|COPIA_DROME Copia protein OS=Drosophila melanogaster OX=7227 GN=GIP PE=1 SV=3	0	N/A	N/A
+g1113	sp|Q9ZT94|POLR2_ARATH	32.624	423	52	6.12e-55	212	sp|Q9ZT94|POLR2_ARATH Retrovirus-related Pol polyprotein from transposon RE2 OS=Arabidopsis thaliana OX=3702 GN=RE2 PE=4 SV=1	0	N/A	N/A
+g1113	sp|Q9ZT94|POLR2_ARATH	30.909	110	52	4.93e-07	57.8	sp|Q9ZT94|POLR2_ARATH Retrovirus-related Pol polyprotein from transposon RE2 OS=Arabidopsis thaliana OX=3702 GN=RE2 PE=4 SV=1	0	N/A	N/A
+g1113	sp|Q94HW2|POLR1_ARATH	29.343	426	52	1.55e-50	198	sp|Q94HW2|POLR1_ARATH Retrovirus-related Pol polyprotein from transposon RE1 OS=Arabidopsis thaliana OX=3702 GN=RE1 PE=2 SV=1	0	N/A	N/A
+g1113	sp|Q94HW2|POLR1_ARATH	32.727	110	52	4.35e-08	61.2	sp|Q94HW2|POLR1_ARATH Retrovirus-related Pol polyprotein from transposon RE1 OS=Arabidopsis thaliana OX=3702 GN=RE1 PE=2 SV=1	0	N/A	N/A
+g1113	sp|P0C2J3|YL21B_YEAST	23.004	526	48	6.68e-25	116	sp|P0C2J3|YL21B_YEAST Transposon Ty2-LR1 Gag-Pol polyprotein OS=Saccharomyces cerevisiae (strain ATCC 204508 / S288c) OX=559292 GN=TY2B-LR1 PE=3 SV=1	0	N/A	N/A
+g1117	sp|Q8GWA1|NDA1_ARATH	68.487	476	89	0.0	672	sp|Q8GWA1|NDA1_ARATH Internal alternative NAD(P)H-ubiquinone oxidoreductase A1, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=NDA1 PE=2 SV=1	0	N/A	N/A
+g1117	sp|M0ZYF3|INDA1_SOLTU	71.957	460	86	0.0	670	sp|M0ZYF3|INDA1_SOLTU Internal alternative NAD(P)H-ubiquinone oxidoreductase A1, mitochondrial OS=Solanum tuberosum OX=4113 GN=NDA1 PE=3 SV=1	0	N/A	N/A
+g1117	sp|Q9ST63|NDA1_SOLTU	71.957	460	86	0.0	667	sp|Q9ST63|NDA1_SOLTU Internal alternative NAD(P)H-ubiquinone oxidoreductase A1, mitochondrial OS=Solanum tuberosum OX=4113 GN=NDA1 PE=1 SV=1	0	N/A	N/A
+g1117	sp|O80874|NDA2_ARATH	71.239	452	84	0.0	665	sp|O80874|NDA2_ARATH Internal alternative NAD(P)H-ubiquinone oxidoreductase A2, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=NDA2 PE=1 SV=1	0	N/A	N/A
+g1117	sp|Q55CD9|NDH_DICDI	40.000	440	81	3.91e-97	305	sp|Q55CD9|NDH_DICDI Probable NADH dehydrogenase OS=Dictyostelium discoideum OX=44689 GN=DDB_G0270104 PE=3 SV=2	0	N/A	N/A
+g1120	sp|Q10NX8|BGAL6_ORYSJ	55.596	831	97	0.0	970	sp|Q10NX8|BGAL6_ORYSJ Beta-galactosidase 6 OS=Oryza sativa subsp. japonica OX=39947 GN=Os03g0255100 PE=1 SV=2	0	N/A	N/A
+g1120	sp|Q9SCV4|BGAL8_ARATH	56.631	837	97	0.0	959	sp|Q9SCV4|BGAL8_ARATH Beta-galactosidase 8 OS=Arabidopsis thaliana OX=3702 GN=BGAL8 PE=2 SV=2	0	N/A	N/A
+g1120	sp|P45582|BGAL_ASPOF	52.410	830	97	0.0	882	sp|P45582|BGAL_ASPOF Beta-galactosidase OS=Asparagus officinalis OX=4686 PE=2 SV=1	0	N/A	N/A
+g1120	sp|Q5N8X6|BGAL3_ORYSJ	52.561	820	97	0.0	879	sp|Q5N8X6|BGAL3_ORYSJ Beta-galactosidase 3 OS=Oryza sativa subsp. japonica OX=39947 GN=Os01g0875500 PE=3 SV=1	0	N/A	N/A
+g1120	sp|Q9SCW1|BGAL1_ARATH	52.284	832	98	0.0	873	sp|Q9SCW1|BGAL1_ARATH Beta-galactosidase 1 OS=Arabidopsis thaliana OX=3702 GN=BGAL1 PE=2 SV=1	0	N/A	N/A
+g1121	sp|P37545|YABD_BACSU	30.769	273	95	1.38e-32	123	sp|P37545|YABD_BACSU Uncharacterized metal-dependent hydrolase YabD OS=Bacillus subtilis (strain 168) OX=224308 GN=yabD PE=3 SV=1	0	N/A	N/A
+g1121	sp|Q05AV0|TAT3A_XENLA	30.584	291	98	1.66e-29	115	sp|Q05AV0|TAT3A_XENLA Putative deoxyribonuclease tatdn3-A OS=Xenopus laevis OX=8355 GN=tatdn3-a PE=2 SV=1	0	N/A	N/A
+g1121	sp|P73335|DTD3_SYNY3	28.520	277	95	1.02e-26	108	sp|P73335|DTD3_SYNY3 D-aminoacyl-tRNA deacylase OS=Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa) OX=1111708 GN=dtd3 PE=1 SV=1	0	N/A	N/A
+g1121	sp|Q8K9J1|Y343_BUCAP	29.078	282	96	1.20e-26	108	sp|Q8K9J1|Y343_BUCAP Uncharacterized metal-dependent hydrolase BUsg_343 OS=Buchnera aphidicola subsp. Schizaphis graminum (strain Sg) OX=198804 GN=BUsg_343 PE=3 SV=1	0	N/A	N/A
+g1121	sp|A1A4M4|TATD3_BOVIN	29.329	283	95	4.55e-25	103	sp|A1A4M4|TATD3_BOVIN Putative deoxyribonuclease TATDN3 OS=Bos taurus OX=9913 GN=TATDN3 PE=2 SV=1	0	N/A	N/A
+g1122	sp|P37545|YABD_BACSU	30.108	279	96	1.96e-32	123	sp|P37545|YABD_BACSU Uncharacterized metal-dependent hydrolase YabD OS=Bacillus subtilis (strain 168) OX=224308 GN=yabD PE=3 SV=1	0	N/A	N/A
+g1122	sp|P73335|DTD3_SYNY3	27.018	285	96	1.60e-24	102	sp|P73335|DTD3_SYNY3 D-aminoacyl-tRNA deacylase OS=Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa) OX=1111708 GN=dtd3 PE=1 SV=1	0	N/A	N/A
+g1122	sp|Q05AV0|TAT3A_XENLA	29.153	295	97	2.45e-24	102	sp|Q05AV0|TAT3A_XENLA Putative deoxyribonuclease tatdn3-A OS=Xenopus laevis OX=8355 GN=tatdn3-a PE=2 SV=1	0	N/A	N/A
+g1122	sp|Q8K9J1|Y343_BUCAP	26.132	287	96	8.00e-24	100	sp|Q8K9J1|Y343_BUCAP Uncharacterized metal-dependent hydrolase BUsg_343 OS=Buchnera aphidicola subsp. Schizaphis graminum (strain Sg) OX=198804 GN=BUsg_343 PE=3 SV=1	0	N/A	N/A
+g1122	sp|Q6P8M1|TATD1_MOUSE	25.926	297	97	4.86e-22	96.7	sp|Q6P8M1|TATD1_MOUSE Deoxyribonuclease TATDN1 OS=Mus musculus OX=10090 GN=Tatdn1 PE=1 SV=1	0	N/A	N/A
+g1124	sp|Q9SA99|BBE2_ARATH	51.765	425	98	1.91e-145	427	sp|Q9SA99|BBE2_ARATH Berberine bridge enzyme-like 2 OS=Arabidopsis thaliana OX=3702 GN=At1g11770 PE=2 SV=1	0	N/A	N/A
+g1124	sp|Q9SVG3|BBE21_ARATH	53.149	397	93	4.40e-144	424	sp|Q9SVG3|BBE21_ARATH Berberine bridge enzyme-like 21 OS=Arabidopsis thaliana OX=3702 GN=At4g20840 PE=2 SV=1	0	N/A	N/A
+g1124	sp|Q9LPC3|BBE1_ARATH	53.367	401	93	9.36e-136	402	sp|Q9LPC3|BBE1_ARATH Berberine bridge enzyme-like 1 OS=Arabidopsis thaliana OX=3702 GN=SEC1A PE=2 SV=1	0	N/A	N/A
+g1124	sp|Q9SVG4|RETOL_ARATH	52.475	404	95	3.03e-132	395	sp|Q9SVG4|RETOL_ARATH Berberine bridge enzyme-like 19 OS=Arabidopsis thaliana OX=3702 GN=At4g20830 PE=1 SV=2	0	N/A	N/A
+g1124	sp|Q9SA85|BBE8_ARATH	49.299	428	99	1.36e-122	369	sp|Q9SA85|BBE8_ARATH Berberine bridge enzyme-like 8 OS=Arabidopsis thaliana OX=3702 GN=At1g30700 PE=2 SV=1	0	N/A	N/A
+g1125	sp|Q9SVG4|RETOL_ARATH	70.833	72	97	3.29e-29	110	sp|Q9SVG4|RETOL_ARATH Berberine bridge enzyme-like 19 OS=Arabidopsis thaliana OX=3702 GN=At4g20830 PE=1 SV=2	0	N/A	N/A
+g1125	sp|Q9LPC3|BBE1_ARATH	67.606	71	96	1.28e-28	109	sp|Q9LPC3|BBE1_ARATH Berberine bridge enzyme-like 1 OS=Arabidopsis thaliana OX=3702 GN=SEC1A PE=2 SV=1	0	N/A	N/A
+g1125	sp|Q9SA89|BBE12_ARATH	66.197	71	96	1.47e-28	108	sp|Q9SA89|BBE12_ARATH Berberine bridge enzyme-like 12 OS=Arabidopsis thaliana OX=3702 GN=At1g30740 PE=2 SV=1	0	N/A	N/A
+g1125	sp|Q9SVG3|BBE21_ARATH	67.606	71	96	2.88e-28	108	sp|Q9SVG3|BBE21_ARATH Berberine bridge enzyme-like 21 OS=Arabidopsis thaliana OX=3702 GN=At4g20840 PE=2 SV=1	0	N/A	N/A
+g1125	sp|A6P6V9|CBDAS_CANSA	70.833	72	96	1.23e-27	106	sp|A6P6V9|CBDAS_CANSA Cannabidiolic acid synthase OS=Cannabis sativa OX=3483 GN=CBDAS PE=1 SV=1	0	N/A	N/A
+g1134	sp|Q94JU2|WTR18_ARATH	54.118	85	71	3.90e-19	84.0	sp|Q94JU2|WTR18_ARATH WAT1-related protein At3g28050 OS=Arabidopsis thaliana OX=3702 GN=At3g28050 PE=2 SV=1	0	N/A	N/A
+g1134	sp|Q9FL08|WTR42_ARATH	48.485	66	54	4.18e-12	64.3	sp|Q9FL08|WTR42_ARATH WAT1-related protein At5g40240 OS=Arabidopsis thaliana OX=3702 GN=At5g40240 PE=2 SV=1	0	N/A	N/A
+g1134	sp|F4KHA8|WTR41_ARATH	50.000	66	54	4.63e-12	64.3	sp|F4KHA8|WTR41_ARATH WAT1-related protein At5g40230 OS=Arabidopsis thaliana OX=3702 GN=At5g40230 PE=3 SV=1	0	N/A	N/A
+g1134	sp|F4JK59|WTR33_ARATH	48.485	66	54	3.22e-09	56.2	sp|F4JK59|WTR33_ARATH WAT1-related protein At4g15540 OS=Arabidopsis thaliana OX=3702 GN=At4g15540 PE=2 SV=1	0	N/A	N/A
+g1134	sp|O22060|SPSA1_CITUN	60.000	35	30	1.30e-06	48.9	sp|O22060|SPSA1_CITUN Probable sucrose-phosphate synthase 1 OS=Citrus unshiu OX=55188 GN=SPS1 PE=2 SV=1	0	N/A	N/A
+g1135	sp|Q94JU2|WTR18_ARATH	61.538	65	74	2.18e-18	80.5	sp|Q94JU2|WTR18_ARATH WAT1-related protein At3g28050 OS=Arabidopsis thaliana OX=3702 GN=At3g28050 PE=2 SV=1	0	N/A	N/A
+g1135	sp|F4KHA8|WTR41_ARATH	48.485	66	76	3.92e-12	63.2	sp|F4KHA8|WTR41_ARATH WAT1-related protein At5g40230 OS=Arabidopsis thaliana OX=3702 GN=At5g40230 PE=3 SV=1	0	N/A	N/A
+g1135	sp|Q9FL08|WTR42_ARATH	46.970	66	76	4.53e-12	62.8	sp|Q9FL08|WTR42_ARATH WAT1-related protein At5g40240 OS=Arabidopsis thaliana OX=3702 GN=At5g40240 PE=2 SV=1	0	N/A	N/A
+g1135	sp|F4JK59|WTR33_ARATH	46.269	67	77	2.48e-09	55.1	sp|F4JK59|WTR33_ARATH WAT1-related protein At4g15540 OS=Arabidopsis thaliana OX=3702 GN=At4g15540 PE=2 SV=1	0	N/A	N/A
+g1135	sp|F4IXT6|WTR19_ARATH	37.681	69	79	7.43e-07	47.8	sp|F4IXT6|WTR19_ARATH WAT1-related protein At3g28060 OS=Arabidopsis thaliana OX=3702 GN=At3g28060 PE=3 SV=1	0	N/A	N/A
+g1146	sp|M0ZYF3|INDA1_SOLTU	71.739	460	86	0.0	669	sp|M0ZYF3|INDA1_SOLTU Internal alternative NAD(P)H-ubiquinone oxidoreductase A1, mitochondrial OS=Solanum tuberosum OX=4113 GN=NDA1 PE=3 SV=1	0	N/A	N/A
+g1146	sp|Q8GWA1|NDA1_ARATH	68.067	476	89	0.0	668	sp|Q8GWA1|NDA1_ARATH Internal alternative NAD(P)H-ubiquinone oxidoreductase A1, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=NDA1 PE=2 SV=1	0	N/A	N/A
+g1146	sp|Q9ST63|NDA1_SOLTU	71.739	460	86	0.0	667	sp|Q9ST63|NDA1_SOLTU Internal alternative NAD(P)H-ubiquinone oxidoreductase A1, mitochondrial OS=Solanum tuberosum OX=4113 GN=NDA1 PE=1 SV=1	0	N/A	N/A
+g1146	sp|O80874|NDA2_ARATH	71.239	452	84	0.0	666	sp|O80874|NDA2_ARATH Internal alternative NAD(P)H-ubiquinone oxidoreductase A2, mitochondrial OS=Arabidopsis thaliana OX=3702 GN=NDA2 PE=1 SV=1	0	N/A	N/A
+g1146	sp|Q55CD9|NDH_DICDI	39.773	440	81	2.76e-96	303	sp|Q55CD9|NDH_DICDI Probable NADH dehydrogenase OS=Dictyostelium discoideum OX=44689 GN=DDB_G0270104 PE=3 SV=2	0	N/A	N/A
+g1149	sp|Q38945|DPNPH_ARATH	64.267	375	83	7.85e-172	489	sp|Q38945|DPNPH_ARATH 3',5'-bisphosphate nucleotidase AHL OS=Arabidopsis thaliana OX=3702 GN=AHL PE=1 SV=1	0	N/A	N/A
+g1149	sp|Q42546|DPNP1_ARATH	44.173	369	82	1.04e-89	280	sp|Q42546|DPNP1_ARATH 3'(2'),5'-bisphosphate nucleotidase 1 OS=Arabidopsis thaliana OX=3702 GN=SAL1 PE=1 SV=1	0	N/A	N/A
+g1149	sp|Q84VY5|DPNP4_ARATH	39.153	378	84	7.09e-79	251	sp|Q84VY5|DPNP4_ARATH Probable 3'(2'),5'-bisphosphate nucleotidase 4 OS=Arabidopsis thaliana OX=3702 GN=SAL4 PE=2 SV=1	0	N/A	N/A
+g1149	sp|Q2QWT4|DPNP_ORYSJ	40.947	359	79	1.05e-78	251	sp|Q2QWT4|DPNP_ORYSJ 3'(2'),5'-bisphosphate nucleotidase OS=Oryza sativa subsp. japonica OX=39947 GN=Os12g0183300 PE=2 SV=1	0	N/A	N/A
+g1149	sp|P0C5A3|DPNP_ORYSA	40.947	359	79	1.05e-78	251	sp|P0C5A3|DPNP_ORYSA 3'(2'),5'-bisphosphate nucleotidase OS=Oryza sativa OX=4530 GN=RHL PE=1 SV=1	0	N/A	N/A
+g1150	sp|Q9M5P2|SCAM3_ARATH	65.132	304	100	2.71e-142	405	sp|Q9M5P2|SCAM3_ARATH Secretory carrier-associated membrane protein 3 OS=Arabidopsis thaliana OX=3702 GN=SCAMP3 PE=1 SV=1	0	N/A	N/A
+g1150	sp|A2YMP7|SCAM1_ORYSI	64.052	306	100	9.96e-142	404	sp|A2YMP7|SCAM1_ORYSI Putative secretory carrier-associated membrane protein 1 OS=Oryza sativa subsp. indica OX=39946 GN=SCAMP1 PE=3 SV=1	0	N/A	N/A
+g1150	sp|Q8H5X5|SCAM1_ORYSJ	64.052	306	100	1.65e-141	404	sp|Q8H5X5|SCAM1_ORYSJ Secretory carrier-associated membrane protein 1 OS=Oryza sativa subsp. japonica OX=39947 GN=SCAMP1 PE=2 SV=1	0	N/A	N/A
+g1150	sp|Q75IC7|SCAM4_ORYSJ	63.245	302	98	1.70e-140	401	sp|Q75IC7|SCAM4_ORYSJ Secretory carrier-associated membrane protein 4 OS=Oryza sativa subsp. japonica OX=39947 GN=SCAMP4 PE=2 SV=1	0	N/A	N/A
+g1150	sp|Q9SXA5|SCAM5_ARATH	64.052	306	100	3.86e-139	397	sp|Q9SXA5|SCAM5_ARATH Secretory carrier-associated membrane protein 5 OS=Arabidopsis thaliana OX=3702 GN=SCAMP5 PE=2 SV=2	0	N/A	N/A
+g1151	sp|Q9FVC8|DAPA2_ARATH	81.081	333	88	0.0	585	sp|Q9FVC8|DAPA2_ARATH 4-hydroxy-tetrahydrodipicolinate synthase 2, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=DHDPS2 PE=1 SV=2	0	N/A	N/A
+g1151	sp|Q42948|DAPA_TOBAC	80.180	333	88	0.0	582	sp|Q42948|DAPA_TOBAC 4-hydroxy-tetrahydrodipicolinate synthase, chloroplastic OS=Nicotiana tabacum OX=4097 GN=DHPS1 PE=2 SV=1	0	N/A	N/A
+g1151	sp|Q9LZX6|DAPA1_ARATH	74.933	371	97	0.0	575	sp|Q9LZX6|DAPA1_ARATH 4-hydroxy-tetrahydrodipicolinate synthase 1, chloroplastic OS=Arabidopsis thaliana OX=3702 GN=DHDPS1 PE=1 SV=2	0	N/A	N/A
+g1151	sp|Q42800|DAPA_SOYBN	77.982	327	86	0.0	548	sp|Q42800|DAPA_SOYBN 4-hydroxy-tetrahydrodipicolinate synthase, chloroplastic OS=Glycine max OX=3847 GN=DHPS1 PE=2 SV=1	0	N/A	N/A
+g1151	sp|P26259|DAPA_MAIZE	69.377	369	97	0.0	545	sp|P26259|DAPA_MAIZE 4-hydroxy-tetrahydrodipicolinate synthase, chloroplastic OS=Zea mays OX=4577 PE=1 SV=2	0	N/A	N/A
+g1153	sp|F4HTH8|KTN82_ARATH	73.876	356	75	0.0	580	sp|F4HTH8|KTN82_ARATH Katanin p80 WD40 repeat-containing subunit B1 homolog KTN80.2 OS=Arabidopsis thaliana OX=3702 GN=KTN80.2 PE=1 SV=1	0	N/A	N/A
+g1153	sp|F4HTH8|KTN82_ARATH	42.627	373	75	7.89e-64	238	sp|F4HTH8|KTN82_ARATH Katanin p80 WD40 repeat-containing subunit B1 homolog KTN80.2 OS=Arabidopsis thaliana OX=3702 GN=KTN80.2 PE=1 SV=1	0	N/A	N/A
+g1153	sp|A0A1P8AW69|KTN81_ARATH	69.274	358	37	3.55e-179	549	sp|A0A1P8AW69|KTN81_ARATH Katanin p80 WD40 repeat-containing subunit B1 homolog KTN80.1 OS=Arabidopsis thaliana OX=3702 GN=KTN80.1 PE=1 SV=1	0	N/A	N/A
+g1153	sp|Q8H0T9|KTN84_ARATH	51.619	494	69	1.43e-157	487	sp|Q8H0T9|KTN84_ARATH Katanin p80 WD40 repeat-containing subunit B1 homolog KTN80.4 OS=Arabidopsis thaliana OX=3702 GN=KTN80.4 PE=1 SV=3	0	N/A	N/A
+g1153	sp|Q8H0T9|KTN84_ARATH	48.193	166	69	1.42e-32	139	sp|Q8H0T9|KTN84_ARATH Katanin p80 WD40 repeat-containing subunit B1 homolog KTN80.4 OS=Arabidopsis thaliana OX=3702 GN=KTN80.4 PE=1 SV=3	0	N/A	N/A
+g1153	sp|F4KB17|KTN83_ARATH	70.333	300	50	6.44e-156	483	sp|F4KB17|KTN83_ARATH Katanin p80 WD40 repeat-containing subunit B1 homolog KTN80.3 OS=Arabidopsis thaliana OX=3702 GN=KTN80.3 PE=1 SV=1	0	N/A	N/A
+g1153	sp|F4KB17|KTN83_ARATH	46.988	166	50	4.67e-35	147	sp|F4KB17|KTN83_ARATH Katanin p80 WD40 repeat-containing subunit B1 homolog KTN80.3 OS=Arabidopsis thaliana OX=3702 GN=KTN80.3 PE=1 SV=1	0	N/A	N/A
+g1153	sp|O61585|KTNB1_STRPU	54.362	298	59	1.05e-116	375	sp|O61585|KTNB1_STRPU Katanin p80 WD40 repeat-containing subunit B1 OS=Strongylocentrotus purpuratus OX=7668 GN=KATNB1 PE=1 SV=1	0	N/A	N/A
+g1153	sp|O61585|KTNB1_STRPU	24.603	252	59	6.58e-14	79.7	sp|O61585|KTNB1_STRPU Katanin p80 WD40 repeat-containing subunit B1 OS=Strongylocentrotus purpuratus OX=7668 GN=KATNB1 PE=1 SV=1	0	N/A	N/A
+g1157	sp|Q0WW40|FBK5_ARATH	25.688	327	81	3.32e-19	91.7	sp|Q0WW40|FBK5_ARATH F-box/kelch-repeat protein At1g16250 OS=Arabidopsis thaliana OX=3702 GN=At1g16250 PE=2 SV=1	0	N/A	N/A
+g1157	sp|Q9P2G9|KLHL8_HUMAN	27.511	229	59	3.70e-13	74.7	sp|Q9P2G9|KLHL8_HUMAN Kelch-like protein 8 OS=Homo sapiens OX=9606 GN=KLHL8 PE=1 SV=4	0	N/A	N/A
+g1157	sp|Q84M94|FBK15_ARATH	24.790	238	58	4.40e-13	73.9	sp|Q84M94|FBK15_ARATH F-box/kelch-repeat protein At1g26930 OS=Arabidopsis thaliana OX=3702 GN=At1g26930 PE=2 SV=1	0	N/A	N/A
+g1157	sp|P59280|KLHL8_MOUSE	27.948	229	59	4.68e-13	74.3	sp|P59280|KLHL8_MOUSE Kelch-like protein 8 OS=Mus musculus OX=10090 GN=Klhl8 PE=2 SV=2	0	N/A	N/A
+g1157	sp|Q9CAG8|FBK28_ARATH	29.586	169	42	3.19e-12	70.9	sp|Q9CAG8|FBK28_ARATH F-box/kelch-repeat protein At1g67480 OS=Arabidopsis thaliana OX=3702 GN=At1g67480 PE=2 SV=1	0	N/A	N/A
+g1160	sp|Q8LK56|DME_ARATH	77.570	107	36	5.97e-47	172	sp|Q8LK56|DME_ARATH Transcriptional activator DEMETER OS=Arabidopsis thaliana OX=3702 GN=DME PE=1 SV=2	0	N/A	N/A
+g1160	sp|Q9SJQ6|ROS1_ARATH	84.848	99	33	6.10e-47	172	sp|Q9SJQ6|ROS1_ARATH DNA glycosylase/AP lyase ROS1 OS=Arabidopsis thaliana OX=3702 GN=ROS1 PE=1 SV=2	0	N/A	N/A
+g1160	sp|B8YIE8|ROS1C_ORYSJ	75.455	110	37	6.21e-46	169	sp|B8YIE8|ROS1C_ORYSJ Protein ROS1C OS=Oryza sativa subsp. japonica OX=39947 GN=ROS1C PE=2 SV=2	0	N/A	N/A
+g1160	sp|C7IW64|ROS1A_ORYSJ	64.964	137	45	9.80e-45	166	sp|C7IW64|ROS1A_ORYSJ Protein ROS1A OS=Oryza sativa subsp. japonica OX=39947 GN=ROS1A PE=1 SV=2	0	N/A	N/A
+g1160	sp|Q9SR66|DML2_ARATH	76.768	99	33	2.15e-42	159	sp|Q9SR66|DML2_ARATH DEMETER-like protein 2 OS=Arabidopsis thaliana OX=3702 GN=DML2 PE=3 SV=2	0	N/A	N/A
+g1161	sp|Q8LK56|DME_ARATH	52.817	142	96	7.01e-40	145	sp|Q8LK56|DME_ARATH Transcriptional activator DEMETER OS=Arabidopsis thaliana OX=3702 GN=DME PE=1 SV=2	0	N/A	N/A
+g1161	sp|Q9SJQ6|ROS1_ARATH	53.957	139	96	2.22e-39	143	sp|Q9SJQ6|ROS1_ARATH DNA glycosylase/AP lyase ROS1 OS=Arabidopsis thaliana OX=3702 GN=ROS1 PE=1 SV=2	0	N/A	N/A
+g1161	sp|C7IW64|ROS1A_ORYSJ	52.703	148	96	1.46e-35	132	sp|C7IW64|ROS1A_ORYSJ Protein ROS1A OS=Oryza sativa subsp. japonica OX=39947 GN=ROS1A PE=1 SV=2	0	N/A	N/A
+g1161	sp|B8YIE8|ROS1C_ORYSJ	52.857	140	96	9.31e-33	124	sp|B8YIE8|ROS1C_ORYSJ Protein ROS1C OS=Oryza sativa subsp. japonica OX=39947 GN=ROS1C PE=2 SV=2	0	N/A	N/A
+g1161	sp|Q9SR66|DML2_ARATH	45.000	140	91	2.02e-24	100	sp|Q9SR66|DML2_ARATH DEMETER-like protein 2 OS=Arabidopsis thaliana OX=3702 GN=DML2 PE=3 SV=2	0	N/A	N/A
+g1162	sp|Q9SJQ6|ROS1_ARATH	68.657	67	93	1.35e-24	98.2	sp|Q9SJQ6|ROS1_ARATH DNA glycosylase/AP lyase ROS1 OS=Arabidopsis thaliana OX=3702 GN=ROS1 PE=1 SV=2	0	N/A	N/A
+g1162	sp|C7IW64|ROS1A_ORYSJ	64.179	67	93	1.04e-23	95.5	sp|C7IW64|ROS1A_ORYSJ Protein ROS1A OS=Oryza sativa subsp. japonica OX=39947 GN=ROS1A PE=1 SV=2	0	N/A	N/A
+g1162	sp|Q8LK56|DME_ARATH	62.687	67	93	1.17e-22	92.4	sp|Q8LK56|DME_ARATH Transcriptional activator DEMETER OS=Arabidopsis thaliana OX=3702 GN=DME PE=1 SV=2	0	N/A	N/A
+g1162	sp|Q9SR66|DML2_ARATH	60.606	66	90	1.79e-20	86.3	sp|Q9SR66|DML2_ARATH DEMETER-like protein 2 OS=Arabidopsis thaliana OX=3702 GN=DML2 PE=3 SV=2	0	N/A	N/A
+g1162	sp|O49498|DML3_ARATH	53.125	64	89	1.29e-16	75.5	sp|O49498|DML3_ARATH DEMETER-like protein 3 OS=Arabidopsis thaliana OX=3702 GN=DML3 PE=2 SV=2	0	N/A	N/A
+g1163	sp|C7IW64|ROS1A_ORYSJ	79.762	84	95	2.44e-45	158	sp|C7IW64|ROS1A_ORYSJ Protein ROS1A OS=Oryza sativa subsp. japonica OX=39947 GN=ROS1A PE=1 SV=2	0	N/A	N/A
+g1163	sp|Q8LK56|DME_ARATH	74.118	85	97	2.24e-41	146	sp|Q8LK56|DME_ARATH Transcriptional activator DEMETER OS=Arabidopsis thaliana OX=3702 GN=DME PE=1 SV=2	0	N/A	N/A
+g1163	sp|Q9SJQ6|ROS1_ARATH	77.500	80	91	6.65e-40	142	sp|Q9SJQ6|ROS1_ARATH DNA glycosylase/AP lyase ROS1 OS=Arabidopsis thaliana OX=3702 GN=ROS1 PE=1 SV=2	0	N/A	N/A
+g1163	sp|B8YIE8|ROS1C_ORYSJ	70.000	80	91	7.54e-36	130	sp|B8YIE8|ROS1C_ORYSJ Protein ROS1C OS=Oryza sativa subsp. japonica OX=39947 GN=ROS1C PE=2 SV=2	0	N/A	N/A
+g1163	sp|Q9SR66|DML2_ARATH	55.405	74	84	2.85e-23	95.1	sp|Q9SR66|DML2_ARATH DEMETER-like protein 2 OS=Arabidopsis thaliana OX=3702 GN=DML2 PE=3 SV=2	0	N/A	N/A
+g1166	sp|Q5Z818|SPL12_ORYSJ	48.214	56	42	3.27e-09	57.0	sp|Q5Z818|SPL12_ORYSJ Squamosa promoter-binding-like protein 12 OS=Oryza sativa subsp. japonica OX=39947 GN=SPL12 PE=2 SV=1	0	N/A	N/A
+g1166	sp|A2YGR5|SPL12_ORYSI	48.214	56	42	3.27e-09	57.0	sp|A2YGR5|SPL12_ORYSI Squamosa promoter-binding-like protein 12 OS=Oryza sativa subsp. indica OX=39946 GN=SPL12 PE=2 SV=1	0	N/A	N/A
+g1166	sp|A3A2Z8|SPL3_ORYSJ	52.273	44	33	8.07e-06	47.4	sp|A3A2Z8|SPL3_ORYSJ Squamosa promoter-binding-like protein 3 OS=Oryza sativa subsp. japonica OX=39947 GN=SPL3 PE=2 SV=1	0	N/A	N/A
+g1166	sp|A2X0Q6|SPL3_ORYSI	52.273	44	33	8.07e-06	47.4	sp|A2X0Q6|SPL3_ORYSI Squamosa promoter-binding-like protein 3 OS=Oryza sativa subsp. indica OX=39946 GN=SPL3 PE=2 SV=1	0	N/A	N/A
+g1167	sp|Q9SJQ6|ROS1_ARATH	40.187	107	69	9.98e-12	64.3	sp|Q9SJQ6|ROS1_ARATH DNA glycosylase/AP lyase ROS1 OS=Arabidopsis thaliana OX=3702 GN=ROS1 PE=1 SV=2	0	N/A	N/A
+g1167	sp|Q8LK56|DME_ARATH	37.168	113	69	2.15e-10	60.5	sp|Q8LK56|DME_ARATH Transcriptional activator DEMETER OS=Arabidopsis thaliana OX=3702 GN=DME PE=1 SV=2	0	N/A	N/A
+g1168	sp|Q9SJQ6|ROS1_ARATH	68.657	67	93	1.02e-24	98.6	sp|Q9SJQ6|ROS1_ARATH DNA glycosylase/AP lyase ROS1 OS=Arabidopsis thaliana OX=3702 GN=ROS1 PE=1 SV=2	0	N/A	N/A
+g1168	sp|C7IW64|ROS1A_ORYSJ	64.179	67	93	1.24e-23	95.5	sp|C7IW64|ROS1A_ORYSJ Protein ROS1A OS=Oryza sativa subsp. japonica OX=39947 GN=ROS1A PE=1 SV=2	0	N/A	N/A
+g1168	sp|Q8LK56|DME_ARATH	62.687	67	93	2.35e-23	94.7	sp|Q8LK56|DME_ARATH Transcriptional activator DEMETER OS=Arabidopsis thaliana OX=3702 GN=DME PE=1 SV=2	0	N/A	N/A
+g1168	sp|Q9SR66|DML2_ARATH	60.294	68	93	1.17e-20	87.0	sp|Q9SR66|DML2_ARATH DEMETER-like protein 2 OS=Arabidopsis thaliana OX=3702 GN=DML2 PE=3 SV=2	0	N/A	N/A
+g1168	sp|O49498|DML3_ARATH	50.685	73	97	6.20e-17	76.3	sp|O49498|DML3_ARATH DEMETER-like protein 3 OS=Arabidopsis thaliana OX=3702 GN=DML3 PE=2 SV=2	0	N/A	N/A
+g1169	sp|C7IW64|ROS1A_ORYSJ	75.000	84	95	1.52e-41	147	sp|C7IW64|ROS1A_ORYSJ Protein ROS1A OS=Oryza sativa subsp. japonica OX=39947 GN=ROS1A PE=1 SV=2	0	N/A	N/A
+g1169	sp|Q8LK56|DME_ARATH	71.765	85	97	6.42e-39	139	sp|Q8LK56|DME_ARATH Transcriptional activator DEMETER OS=Arabidopsis thaliana OX=3702 GN=DME PE=1 SV=2	0	N/A	N/A
+g1169	sp|Q9SJQ6|ROS1_ARATH	73.750	80	91	5.72e-37	134	sp|Q9SJQ6|ROS1_ARATH DNA glycosylase/AP lyase ROS1 OS=Arabidopsis thaliana OX=3702 GN=ROS1 PE=1 SV=2	0	N/A	N/A
+g1169	sp|B8YIE8|ROS1C_ORYSJ	67.500	80	91	4.63e-33	123	sp|B8YIE8|ROS1C_ORYSJ Protein ROS1C OS=Oryza sativa subsp. japonica OX=39947 GN=ROS1C PE=2 SV=2	0	N/A	N/A
+g1169	sp|Q9SR66|DML2_ARATH	52.703	74	84	3.98e-22	92.0	sp|Q9SR66|DML2_ARATH DEMETER-like protein 2 OS=Arabidopsis thaliana OX=3702 GN=DML2 PE=3 SV=2	0	N/A	N/A
+g1173	sp|Q9SCZ4|FERON_ARATH	49.851	335	95	1.53e-94	303	sp|Q9SCZ4|FERON_ARATH Receptor-like protein kinase FERONIA OS=Arabidopsis thaliana OX=3702 GN=FER PE=1 SV=1	0	N/A	N/A
+g1173	sp|Q9FID8|Y5900_ARATH	51.316	304	85	1.11e-93	300	sp|Q9FID8|Y5900_ARATH Putative receptor-like protein kinase At5g39000 OS=Arabidopsis thaliana OX=3702 GN=At5g39000 PE=3 SV=1	0	N/A	N/A
+g1173	sp|Q9FID9|Y5389_ARATH	51.140	307	86	5.81e-93	298	sp|Q9FID9|Y5389_ARATH Probable receptor-like protein kinase At5g38990 OS=Arabidopsis thaliana OX=3702 GN=At5g38990 PE=2 SV=1	0	N/A	N/A
+g1173	sp|Q3E8W4|ANX2_ARATH	50.820	305	87	6.78e-91	293	sp|Q3E8W4|ANX2_ARATH Receptor-like protein kinase ANXUR2 OS=Arabidopsis thaliana OX=3702 GN=ANX2 PE=1 SV=1	0	N/A	N/A
+g1173	sp|Q9SR05|ANX1_ARATH	49.835	303	86	6.92e-90	290	sp|Q9SR05|ANX1_ARATH Receptor-like protein kinase ANXUR1 OS=Arabidopsis thaliana OX=3702 GN=ANX1 PE=1 SV=1	0	N/A	N/A
+g1174	sp|Q5S1S6|PRXQ_WHEAT	66.316	95	96	2.56e-32	114	sp|Q5S1S6|PRXQ_WHEAT Peroxiredoxin Q, chloroplastic OS=Triticum aestivum OX=4565 GN=PRX1 PE=2 SV=1	0	N/A	N/A
+g1174	sp|Q75SY5|PRXQ_GENTR	81.818	66	69	2.21e-31	112	sp|Q75SY5|PRXQ_GENTR Peroxiredoxin Q, chloroplastic OS=Gentiana triflora OX=55190 GN=AFP1 PE=2 SV=1	0	N/A	N/A
+g1174	sp|Q6UBI3|PERQ_SUASA	78.788	66	69	9.73e-31	110	sp|Q6UBI3|PERQ_SUASA Peroxiredoxin Q, chloroplastic OS=Suaeda salsa OX=126914 GN=PRXQ PE=2 SV=1	0	N/A	N/A
+g1174	sp|Q6QPJ6|PRXQ_POPJC	83.607	61	64	1.13e-29	107	sp|Q6QPJ6|PRXQ_POPJC Peroxiredoxin Q, chloroplastic OS=Populus jackii OX=640484 GN=PRXQ PE=1 SV=1	0	N/A	N/A
+g1174	sp|P0C5D5|PRXQ_ORYSJ	69.620	79	83	1.53e-29	107	sp|P0C5D5|PRXQ_ORYSJ Peroxiredoxin Q, chloroplastic OS=Oryza sativa subsp. japonica OX=39947 GN=Os06g0196300 PE=2 SV=1	0	N/A	N/A
+g1175	sp|O81906|B120_ARATH	46.518	359	96	1.19e-91	305	sp|O81906|B120_ARATH G-type lectin S-receptor-like serine/threonine-protein kinase B120 OS=Arabidopsis thaliana OX=3702 GN=B120 PE=2 SV=1	0	N/A	N/A
+g1175	sp|O81906|B120_ARATH	35.986	289	96	3.60e-40	161	sp|O81906|B120_ARATH G-type lectin S-receptor-like serine/threonine-protein kinase B120 OS=Arabidopsis thaliana OX=3702 GN=B120 PE=2 SV=1	0	N/A	N/A
+g1175	sp|Q9SCZ4|FERON_ARATH	50.789	317	91	5.28e-91	305	sp|Q9SCZ4|FERON_ARATH Receptor-like protein kinase FERONIA OS=Arabidopsis thaliana OX=3702 GN=FER PE=1 SV=1	0	N/A	N/A
+g1175	sp|Q9SCZ4|FERON_ARATH	35.172	290	91	2.46e-41	164	sp|Q9SCZ4|FERON_ARATH Receptor-like protein kinase FERONIA OS=Arabidopsis thaliana OX=3702 GN=FER PE=1 SV=1	0	N/A	N/A
+g1175	sp|Q8GWJ7|CRK19_ARATH	48.903	319	93	4.07e-90	296	sp|Q8GWJ7|CRK19_ARATH Cysteine-rich receptor-like protein kinase 19 OS=Arabidopsis thaliana OX=3702 GN=CRK19 PE=1 SV=2	0	N/A	N/A
+g1175	sp|Q8GWJ7|CRK19_ARATH	34.323	303	93	9.38e-43	167	sp|Q8GWJ7|CRK19_ARATH Cysteine-rich receptor-like protein kinase 19 OS=Arabidopsis thaliana OX=3702 GN=CRK19 PE=1 SV=2	0	N/A	N/A
+g1175	sp|Q9FID8|Y5900_ARATH	50.987	304	91	7.24e-90	301	sp|Q9FID8|Y5900_ARATH Putative receptor-like protein kinase At5g39000 OS=Arabidopsis thaliana OX=3702 GN=At5g39000 PE=3 SV=1	0	N/A	N/A
+g1175	sp|Q9FID8|Y5900_ARATH	39.610	308	91	7.61e-54	201	sp|Q9FID8|Y5900_ARATH Putative receptor-like protein kinase At5g39000 OS=Arabidopsis thaliana OX=3702 GN=At5g39000 PE=3 SV=1	0	N/A	N/A
+g1175	sp|Q9FID9|Y5389_ARATH	50.987	304	91	3.11e-89	300	sp|Q9FID9|Y5389_ARATH Probable receptor-like protein kinase At5g38990 OS=Arabidopsis thaliana OX=3702 GN=At5g38990 PE=2 SV=1	0	N/A	N/A
+g1175	sp|Q9FID9|Y5389_ARATH	40.777	309	91	4.33e-54	202	sp|Q9FID9|Y5389_ARATH Probable receptor-like protein kinase At5g38990 OS=Arabidopsis thaliana OX=3702 GN=At5g38990 PE=2 SV=1	0	N/A	N/A
+g1178	sp|O00370|LORF2_HUMAN	23.235	878	70	7.44e-48	191	sp|O00370|LORF2_HUMAN LINE-1 retrotransposable element ORF2 protein OS=Homo sapiens OX=9606 PE=1 SV=1	0	N/A	N/A
+g1178	sp|P08548|LIN1_NYCCO	23.857	809	65	4.70e-46	185	sp|P08548|LIN1_NYCCO LINE-1 reverse transcriptase homolog OS=Nycticebus coucang OX=9470 PE=4 SV=1	0	N/A	N/A
+g1178	sp|P14381|YTX2_XENLA	24.677	851	68	2.72e-43	176	sp|P14381|YTX2_XENLA Transposon TX1 uncharacterized 149 kDa protein OS=Xenopus laevis OX=8355 PE=4 SV=1	0	N/A	N/A
+g1178	sp|P11369|LORF2_MOUSE	22.670	869	69	7.72e-43	174	sp|P11369|LORF2_MOUSE LINE-1 retrotransposable element ORF2 protein OS=Mus musculus OX=10090 GN=Pol PE=1 SV=2	0	N/A	N/A
+g1178	sp|P0C2F6|RNHX1_ARATH	28.635	447	35	1.80e-32	138	sp|P0C2F6|RNHX1_ARATH Putative ribonuclease H protein At1g65750 OS=Arabidopsis thaliana OX=3702 GN=At1g65750 PE=3 SV=1	0	N/A	N/A
+g1179	sp|Q94BR5|CHR28_ARATH	55.502	827	66	0.0	855	sp|Q94BR5|CHR28_ARATH Helicase-like transcription factor CHR28 OS=Arabidopsis thaliana OX=3702 GN=CHR28 PE=1 SV=1	0	N/A	N/A
+g1179	sp|Q9LHE4|CHR27_ARATH	53.278	839	66	0.0	809	sp|Q9LHE4|CHR27_ARATH Helicase-like transcription factor CHR27 OS=Arabidopsis thaliana OX=3702 GN=CHR27 PE=1 SV=1	0	N/A	N/A
+g1179	sp|O60177|YG42_SCHPO	32.288	765	62	1.51e-110	374	sp|O60177|YG42_SCHPO Uncharacterized ATP-dependent helicase C23E6.02 OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) OX=284812 GN=SPBC23E6.02 PE=3 SV=1	0	N/A	N/A
+g1179	sp|Q9FNI6|SM3L2_ARATH	32.917	720	58	2.26e-108	368	sp|Q9FNI6|SM3L2_ARATH DNA repair protein RAD5A OS=Arabidopsis thaliana OX=3702 GN=RAD5A PE=1 SV=1	0	N/A	N/A
+g1179	sp|Q9FIY7|SM3L3_ARATH	33.516	728	59	4.63e-105	363	sp|Q9FIY7|SM3L3_ARATH DNA repair protein RAD5B OS=Arabidopsis thaliana OX=3702 GN=RAD5B PE=3 SV=1	0	N/A	N/A
+g1180	sp|Q9C942|CSE_ARATH	41.801	311	94	1.91e-76	240	sp|Q9C942|CSE_ARATH Caffeoylshikimate esterase OS=Arabidopsis thaliana OX=3702 GN=CSE PE=1 SV=1	0	N/A	N/A
+g1180	sp|A0QNZ7|MGLL_MYCS2	27.797	295	89	2.75e-24	103	sp|A0QNZ7|MGLL_MYCS2 Monoacylglycerol lipase OS=Mycolicibacterium smegmatis (strain ATCC 700084 / mc(2)155) OX=246196 GN=MSMEG_0220 PE=1 SV=1	0	N/A	N/A
+g1180	sp|Q99685|MGLL_HUMAN	29.682	283	86	1.22e-22	99.0	sp|Q99685|MGLL_HUMAN Monoglyceride lipase OS=Homo sapiens OX=9606 GN=MGLL PE=1 SV=2	0	N/A	N/A
+g1180	sp|O35678|MGLL_MOUSE	28.223	287	86	7.95e-21	94.0	sp|O35678|MGLL_MOUSE Monoglyceride lipase OS=Mus musculus OX=10090 GN=Mgll PE=1 SV=1	0	N/A	N/A
+g1180	sp|Q8R431|MGLL_RAT	28.571	287	86	1.40e-19	90.5	sp|Q8R431|MGLL_RAT Monoglyceride lipase OS=Rattus norvegicus OX=10116 GN=Mgll PE=1 SV=1	0	N/A	N/A
+g1181	sp|O04084|SCP31_ARATH	67.822	202	79	1.92e-94	289	sp|O04084|SCP31_ARATH Serine carboxypeptidase-like 31 OS=Arabidopsis thaliana OX=3702 GN=SCPL31 PE=2 SV=2	0	N/A	N/A
+g1181	sp|Q4PSY2|SCP32_ARATH	64.216	204	79	5.34e-88	271	sp|Q4PSY2|SCP32_ARATH Serine carboxypeptidase-like 32 OS=Arabidopsis thaliana OX=3702 GN=SCPL32 PE=2 SV=1	0	N/A	N/A
+g1181	sp|O23364|SCP30_ARATH	64.532	203	79	1.82e-86	268	sp|O23364|SCP30_ARATH Putative serine carboxypeptidase-like 30 OS=Arabidopsis thaliana OX=3702 GN=SCPL30 PE=2 SV=2	0	N/A	N/A
+g1181	sp|Q0WPR4|SCP34_ARATH	63.372	172	67	1.16e-72	233	sp|Q0WPR4|SCP34_ARATH Serine carboxypeptidase-like 34 OS=Arabidopsis thaliana OX=3702 GN=SCPL34 PE=2 SV=2	0	N/A	N/A
+g1181	sp|Q9LEY1|SCP35_ARATH	57.353	204	77	1.53e-72	232	sp|Q9LEY1|SCP35_ARATH Serine carboxypeptidase-like 35 OS=Arabidopsis thaliana OX=3702 GN=SCPL35 PE=2 SV=1	0	N/A	N/A
+g1182	sp|O04084|SCP31_ARATH	68.401	269	28	2.13e-127	397	sp|O04084|SCP31_ARATH Serine carboxypeptidase-like 31 OS=Arabidopsis thaliana OX=3702 GN=SCPL31 PE=2 SV=2	0	N/A	N/A
+g1182	sp|Q4PSY2|SCP32_ARATH	64.179	268	28	6.38e-114	361	sp|Q4PSY2|SCP32_ARATH Serine carboxypeptidase-like 32 OS=Arabidopsis thaliana OX=3702 GN=SCPL32 PE=2 SV=1	0	N/A	N/A
+g1182	sp|O23364|SCP30_ARATH	62.825	269	28	5.23e-112	357	sp|O23364|SCP30_ARATH Putative serine carboxypeptidase-like 30 OS=Arabidopsis thaliana OX=3702 GN=SCPL30 PE=2 SV=2	0	N/A	N/A
+g1182	sp|Q5W727|SCP26_ORYSJ	46.840	269	28	3.59e-74	255	sp|Q5W727|SCP26_ORYSJ Serine carboxypeptidase-like 26 OS=Oryza sativa subsp. japonica OX=39947 GN=SCP26 PE=2 SV=1	0	N/A	N/A
+g1182	sp|Q9LSM9|SCP33_ARATH	45.421	273	27	4.11e-69	241	sp|Q9LSM9|SCP33_ARATH Serine carboxypeptidase-like 33 OS=Arabidopsis thaliana OX=3702 GN=SCPL33 PE=2 SV=2	0	N/A	N/A

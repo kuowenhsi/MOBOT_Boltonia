@@ -1,0 +1,27 @@
+PLINK v2.00a5 M1 (16 May 2023)
+Options in effect:
+  --bfile Dsamples_B484_B485_nomiss_FMISS001
+  --maf 0.05
+  --make-bed
+  --out Dsamples_B484_B485_nomiss_FMISS001_MAF005
+
+Hostname: Wenhsis-MacBook-Pro.local
+Working directory: /Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Hybrid_Index
+Start time: Thu Dec  4 11:46:42 2025
+
+Random number seed: 1764870402
+16384 MiB RAM detected; reserving 8192 MiB for main workspace.
+Using up to 10 threads (change this with --threads).
+455 samples (0 females, 0 males, 455 ambiguous; 455 founders) loaded from
+Dsamples_B484_B485_nomiss_FMISS001.fam.
+170217 variants loaded from Dsamples_B484_B485_nomiss_FMISS001.bim.
+Note: No phenotype data present.
+Calculating allele frequencies... done.
+144198 variants removed due to allele frequency threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+26019 variants remaining after main filters.
+Writing Dsamples_B484_B485_nomiss_FMISS001_MAF005.fam ... done.
+Writing Dsamples_B484_B485_nomiss_FMISS001_MAF005.bim ... done.
+Writing Dsamples_B484_B485_nomiss_FMISS001_MAF005.bed ... done.
+
+End time: Thu Dec  4 11:46:42 2025

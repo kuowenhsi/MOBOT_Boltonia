@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="b8811bf9-abcf-4600-9245-eda1017c3978"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/w5g8jz</alternateIdentifier>
+        <alternateIdentifier>https://intermountainbiota.org/portal/collections/misc/collprofiles.php?collid=159</alternateIdentifier>
+        <title>University of Nevada, Reno (UNR) Herbarium</title>
+        <creator>
+            <organizationName>Intermountain Herbaria Portal</organizationName>
+            <electronicMailAddress>help@symbiota.org</electronicMailAddress>
+            <onlineUrl>https://intermountainbiota.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>Intermountain Herbaria Portal</organizationName>
+            <electronicMailAddress>help@symbiota.org</electronicMailAddress>
+            <onlineUrl>https://intermountainbiota.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Arnold</givenName>
+                <surName>Tiehm</surName>
+            </individualName>
+            <positionName>Curator</positionName>
+            <electronicMailAddress>atiehm@unr.edu</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Elizabeth</givenName>
+                <surName>Leger</surName>
+            </individualName>
+            <positionName>Director</positionName>
+            <electronicMailAddress>lelizabeth@unr.edu</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2025-10-01
+        </pubDate>
+        <language>ENGLISH</language>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://intermountainbiota.org/portal/content/dwca/RENO-V_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>University of Nevada, Reno (UNR) Herbarium</organizationName>
+            <phone>[1] (775) 784-1105</phone>
+            <electronicMailAddress>atiehm@unr.edu</electronicMailAddress>
+            <onlineUrl>http://www.cabnr.unr.edu/reno_herbarium/</onlineUrl>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2025-10-03T20:19:08Z</dateStamp>
+                <citation>University of Nevada, Reno (2025). University of Nevada, Reno (UNR) Herbarium. Occurrence dataset https://doi.org/10.15468/w5g8jz accessed via GBIF.org on 2025-10-03.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

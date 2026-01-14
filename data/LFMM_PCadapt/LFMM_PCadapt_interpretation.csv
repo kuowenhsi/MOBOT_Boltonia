@@ -1,0 +1,139 @@
+﻿qseqid,gene,concise_function,why candidate
+g1092,SKIP27,F-box in SCF E3 ligase,SCF complexes control many hormone & growth regulators.
+g1093,APC4,APC/C subunit,"Cell cycle, endoreduplication, cell division/elongation → architecture."
+g1160,DME,DNA glycosylase DEMETER,Epigenetic imprinting; affects floral & vegetative development patterns.
+g11850,AHL24,AT-hook TF,Nuclear MAR-binding TF; broadly affects chromatin and growth patterning.
+g12243,LUG,Corepressor LEUNIG,"Floral meristem, ovule, leaf morphogenesis; strong dev regulator."
+g1252,ERF12,Ethylene-responsive TF,Stress/ethylene TF; modulates many downstream growth & stress genes.
+g13006,BHLH62,bHLH TF,Transcription factor; obvious regulatory candidate even if function poorly defined.
+g1355,TPS7,Trehalose-P synthase,Sugar signaling; trehalose pathway often affects growth and stress tolerance.
+g15989,PEP,KH RNA-binding regulator,Negative regulator of flowering via FLC; integrates flowering & gynoecium development.
+g1599,CER1,VLC alkane synthase,Cuticular wax & pollen fertility; links to drought tolerance and shoot surface traits.
+g1601,BIG2,ARF-GEF,Vesicle trafficking; affects cell expansion and membrane protein routing.
+g20134,RID3,ROOT INITIATION DEFECTIVE 3,Meristem development; modulates CUC–STM pathway; strong architecture locus.
+g20141,KING1,SnRK γ subunit,Central energy/carbon–N signaling; can rewire growth vs stress allocation.
+g20142,EXO70B1,Exocyst subunit,Autophagy & ABA/drought-induced stomatal closure; lateral root formation.
+g20168,MADS6,MADS-box TF,Floral organ identity & flowering time; classic major-effect candidate.
+g20263,CIPK5,CBL-interacting kinase,Ca²⁺-dependent signaling; stress & ion balance; often impacts growth under stress.
+g20277,AHA9,PM H⁺-ATPase,Drives apoplastic acidification & growth responses; stomatal and nutrient uptake effects.
+g20278,DCL4,Dicer-like 4,"ta-siRNA production; controls SAM, leaf polarity, and shoot architecture."
+g20404,IAA27,Aux/IAA repressor,"Auxin signaling core component; key for branching, elongation, gravitropism."
+g20763,WRKY2,WRKY TF,Zygote polarization and early embryogenesis; strong dev regulator.
+g20764,BRL1,BR receptor-like kinase,Brassinosteroid signaling in vascular tissues; growth & vascular differentiation.
+g22861,SHL,Chromatin reader SHL,H3K4me binder; represses flowering integrators; global chromatin/flowering control.
+g24111,SPL7,SBP-box TF,Panicle development / SPL-like; also links to nutrient (Cu) homeostasis.
+g26187,FRS5,FAR1-related TF,Light-regulated development; photomorphogenesis candidate.
+g26957,DIVARICATA,DIV TF,Establishes dorsal–ventral floral asymmetry; strong morphology gene.
+g26992,CLO,U5 snRNP factor CLO,Essential for female gametophyte & embryo development; also controls polarized growth.
+g26993,CLO,(same as above),Duplicate hit; same interpretation.
+g27331,OXI1,OXI1 kinase,ROS-dependent signaling; required for root hair growth & basal resistance.
+g28766,RUS2,Root UV-B sensitive 2,Controls root UV-B response & polar auxin transport; root architecture.
+g28799,FLK,KH-domain flowering regulator,Represses FLC; classic flowering-time regulator.
+g28837,NEK2,NEK-family kinase,Cell cycle and development roles; plausible architecture regulator.
+g29605,LNK3,LNK coactivator,Circadian/photoperiodic coactivator; tends to affect flowering & growth rhythms.
+g29608,RBL,RBL TF,Promotes FLC & WRKY70/LTP7 expression; integrates flowering and defense.
+g29609,PIP5K6,PI4P 5-kinase,PI signaling in tip growth; affects cell polarity and expansion.
+g29742,FER,FERONIA RLK,"Master regulator: cell expansion, BR/auxin/ABA cross-talk, immunity, fertilization."
+g29745,CKX6,Cytokinin oxidase,"Controls CK levels; directly linked to branching, meristem activity, root/shoot balance."
+g30200,PATROL1,AHA1 tether,Controls PM H⁺-ATPase localization; central to stomatal opening & carbon gain.
+g30376,BPG2,BR pale green 2,BR-mediated chloroplast differentiation and rRNA accumulation; growth vs light.
+g30385,PES,Pescadillo homolog,rRNA maturation & mitosis; affects root cell growth and overall vigor.
+g30386,CALS9,Callose synthase 9,Required for pollen mitosis & general development; regulates callose-dependent cell wall dynamics.
+g30714,UXS1,UDP-xylose synthase,UDP-xylose supply for cell wall glycans; morphology & wall mechanics.
+g30720,CAND7,GPCR-like,Perceives bacterial AHLs affecting root growth; microbe–plant interaction & root architecture.
+g30760,DOT2,SART-1 family,"Meristem organization, vasculature patterning; strong developmental regulator."
+g30763,DOT2,(same as above),Duplicate hit; same interpretation.
+g30764,MBR2,E3 ligase,Controls MED25 stability & FT expression; directly tied to flowering promotion.
+g30772,HERK1,HERK RLK,Works with FER in BR-independent cell elongation; growth regulator.
+g30777,SAUR54,SAUR protein,Links auxin to PM H⁺-ATPase activation; drives cell expansion and tropic bending.
+g30793,DPB,E2F-dimer partner,Cell cycle G1/S regulator; affects division vs differentiation and lateral root initiation.
+g30935,NPF1.2,Nitrate transporter,Xylem–phloem nitrate redistribution; affects leaf nutrient status & growth.
+g30936,NPF1.2,(same as above),Duplicate hit.
+g31334,MYB111,Flavonol TF,Controls flavonol biosynthesis & UV-B tolerance; links pigmentation with stress.
+g3167,TPR4,TOPLESS-related,Corepressor in GA homeostasis/signaling; integrates hormone cues and growth.
+g32199,AGL80,MADS-box,"Central cell differentiation; female gametophyte function, pollen tube attraction."
+g33062,ACR11,ACT-domain regulator,Amino-acid feedback regulation (likely glutamine); metabolic control of growth.
+g33963,SVP,MADS-box floral repressor,Major flowering repressor; dosage-dependent effects on transition & meristem identity.
+g1096,SPHK2,Sphingosine kinase 2,ABA-dependent stomatal closure & root growth; drought/salt signaling node.
+g11207,ABCC3,ABC transporter C3,Exports glutathione conjugates & chlorophyll catabolites; detox & senescence.
+g1149,AHL,PAPS/3'-PAP phosphatase,Regulates sulfur flux & detox of PAP (RNA processing inhibitor); sulfate assimilation.
+g14876,SLAH1,S-type anion channel,Roots; anion homeostasis and possibly stomatal/ionic responses.
+g15965,BC10,Glycosyltransferase,Cell wall hexose composition & AGPs; affects stem strength and wall properties.
+g1598,DTX24,MATE transporter,Likely exports specialized metabolites/xenobiotics; detox & possibly Al tolerance.
+g19536,ACA1,PM Ca²⁺-ATPase,Ca²⁺ export; central in Ca²⁺ signaling and growth/stress responses.
+g19871,FMO GS-OX-like 9,Glucosinolate side-chain oxidase,Alters aliphatic glucosinolates; nutrient–defense trade-off and sulfur use.
+g19966,L-ascorbate oxidase (Cucumis),Ascorbate redox enzyme,Controls apoplastic redox state; impacts cell expansion & stress tolerance.
+g19967,AAO (Cucurbita),Ascorbate oxidase,Same rationale as above.
+g20072,NRT3.1,High-affinity nitrate partner,Essential co-factor for NRT2; high-affinity nitrate uptake & root architecture.
+g20075,NRT3.1,(same),Duplicate.
+g20073,Os07g0688000,ADP-ribose/CDP-alcohol hydrolase,NAD- and phospholipid-related metabolite turnover; redox/membrane-stress link.
+g20076,Os07g0688000,(same),Duplicate.
+g20372,SULTR3;4,Sulfate transporter,"H⁺/sulfate cotransporter; sulfate assimilation, NSC–N–S balance."
+g24105,AOP1,2-OG dioxygenase,Aliphatic glucosinolate modification; sulfur/N/defense integration.
+g244,At1g34470 (NIPA3),Mg²⁺ transporter,Magensium & other divalent cations; key for photosynthesis & stress tolerance.
+g25567,TIC40,Chloroplast import co-chaperone,Protein import to chloroplast inner membrane; plastid biogenesis/efficiency.
+g26175,OTP43,Mito PPR splicing nad1,Complex I assembly; respiration and energy under stress.
+g29642,ALIS2,ALA flippase subunit,"Phospholipid flippase helper; membrane asymmetry, possibly stress/transport."
+g30418,HMA4,Cu-transporting ATPase,Sequestration of Cu into root vacuoles; classic metal tolerance gene.
+g30425,DIT1,Chloroplast dicarboxylate transporter,"2-OG/malate exchange for ammonia assimilation, photorespiration."
+g30426,DTX42,MATE citrate exporter,Root citrate exudation for Al tolerance; strong edaphic adaptation gene.
+g30464,ACA7,Carbonic anhydrase,CO₂/HCO₃⁻ balance; photosynthesis & stomatal responses.
+g31096,CHX15,Cation/H⁺ antiporter,pH and cation homeostasis in endomembranes.
+g31097,NPF6.3 (NRT1.1),Dual-affinity nitrate transporter/sensor,Central nitrate uptake and nitrate-dependent auxin transport; root architecture.
+g33934,PUP3,Purine permease,Purine transport during pollen germination & tube growth; reproductive success.
+g34240,ADK2,Adenosine kinase,Adenosine → AMP; essential for methyl recycling & SAM-related methylation.
+g1105,BGAL8,β-galactosidase 8,Cell-wall galactan remodeling; affects wall porosity & growth.
+g1120,BGAL6,β-galactosidase 6 (rice),Hydrolyzes galacto-xyloglucan & pectic galactan; wall loosening/structure.
+g15763,PPD1,PSI assembly factor,Photosystem I biogenesis; canopy photosynthetic capacity.
+g15965,BC10,(also in B),Wall sugars & AGP; stem strength & flexibility.
+g18437,CURT1A,Thylakoid curvature protein,"Thylakoid ultrastructure; photosynthetic efficiency, especially under stress."
+g28997,PMEI2,Pectinesterase inhibitor,"Controls PME activity → pectin methylesterification, wall stiffness, and growth."
+g28998,PME41,Pectinesterase,Cell wall pectin modification; cell adhesion & expansion.
+g29979,WAK4,Wall-associated kinase,"Senses pectin status; controls expansion, morphogenesis, and wall integrity."
+g30202,ARPC2B,Arp2/3 subunit,Branched actin cytoskeleton; cell polarity & morphogenesis.
+g30225,CTPA2,D1 C-terminal protease,PSII repair/turnover; photosynthetic robustness under high light.
+g30226,CTPA2,(same),Duplicate.
+g30363,PPH,Pheophytinase,Chlorophyll catabolism; senescence and remobilization.
+g30375,PSA2,PSI assembly factor (maize),PSI accumulation during development; affects light-use efficiency.
+g32209,XTH6,Xyloglucan endotransglycosylase,XET activity; wall remodeling during fruit softening / growth.
+g1094,CBP60B (At),Calmodulin-binding TF,Pathogen-responsive TF (CBP60 family); SA & defense regulation.
+g11207,ABCC3,ABC GSH-conjugate pump,Detox of xenobiotics; chlorophyll breakdown products; herbivore/pathogen tolerance.
+g13533,EDR2L,EDR2-like,Modulates SA-mediated resistance; negative regulator of cell death.
+g14102,CES101,G-type lectin RLK,Promotes photosynthesis genes; also RLK family often defense-linked.
+g14961,LECRK91,L-type lectin RLK,Promotes H₂O₂ and cell death; involved in Phytophthora resistance.
+g14962,Bark agglutinin I,Storage lectin,Nitrogen storage & anti-herbivore lectin; defensive role.
+g1529,ERF2 (tobacco),Ethylene TF,Disease resistance TF; GCC-box binding; classic pathogen-response gene.
+g1530,ERF2,(same),Duplicate.
+g15764,PR thaumatin-like 3.5,PR-5 family,Pathogenesis-related protein; fungal defense.
+g15765,RUN1,NLR R protein,Strong R gene; mildew resistance & NADase-dependent cell death.
+g15968,CYP71BL3,Costunolide synthase,Sesquiterpene lactone biosynthesis; defense metabolites.
+g18438,CHIB1,Endochitinase,Anti-fungal PR chitinase.
+g18439,WRKY19,WRKY TF,Disease resistance and W-box dependent defense transcription.
+g19871,FMO GS-OX-like 9,GS modification,Alters glucosinolate profiles; affects herbivory/pathogen interactions.
+g20393,HPPR,Rosmarinic acid pathway,Phenolic defense metabolite biosynthesis.
+g20394,GL2,HD-ZIP TF GLABRA2,Trichome/root hair patterning; impacts physical and chemical defense + seed coat traits.
+g20843,At4g10780,RPP-like protein,Putative R protein; strong candidate for pathogen-driven selection.
+g25560,UGT85C1,UDP-GT 85C1,Glycosylates diterpenes/flavonols; detox & defense metabolite modification.
+g25561,UGT85C1,(same),Duplicate.
+g25562,UGT85C1,(same),Duplicate.
+g25565,CYP93A1,Pterocarpan monooxygenase,Phytoalexin glyceollin biosynthesis; pathogen defense.
+g28845,LTPG16,GPI-anchored LTP,"Essential for female gametophytes; also cuticle/fatty acid flux, pathogen barrier."
+g28846,LTPG5,GPI-anchored LTP,Seed/ovule maturation and pre-invasive defense against powdery mildew.
+g28847,LTPG5,(same),Duplicate.
+g29506,CYS5,Cystatin,Inhibits cysteine proteases; anti-herbivore and pathogen defense.
+g30377,RPPL1,RPP13-like R protein,Classic NLR-type candidate for biotic niche adaptation.
+g30378,RPPL1,(same),Duplicate.
+g30420,RPPL1,(same),Another duplicate.
+g30455,RPPL1,(same),Another duplicate.
+g30387,LIN,E3 ligase for nodulation,Rhizobial infection thread formation; symbiosis & N-acquisition niche.
+g30436,TOGT1,Scopoletin GT,Phenylpropanoid GT; virus resistance and phenolic defense.
+g30457,EDR2,ENHANCED DISEASE RESISTANCE 2,Negative SA-mediated resistance regulator; trade-off between defense & growth.
+g30458,VPS37-1,ESCRT-I subunit,Ubiquitinated cargo sorting; many immune receptors sorted via ESCRT.
+g30459,MOM1,Helicase-like silencing factor,Epigenetic control of repeats and RdDM; often under selection in transposon/virus-rich environments.
+g30460,MOM1,(same),Duplicate.
+g30785,PCRK2,RLK in FLS2 pathway,Works with PCRK1 in basal immunity & SA transcription (SARD1/CBP60g).
+g30795,ABCB1,ABCB auxin/BR exporter,Also confers resistance to several herbicides & xenobiotics; defense–growth cross-talk.
+g34161,CHIT5,Nod-factor/chitinase,Chitinase with Nod-factor hydrolase activity; nodulation & fungal interactions.
+g34163,CHIT5,(same),Duplicate.
+g34155,ARR2,Cytokinin response regulator,Integrates cytokinin & ethylene; controls mitochondrial complex I genes and leaf longevity; implicated in defense signaling.
+g34156,DI19-6,Dehydration-induced TF,Drought/stress-induced TF; abiotic–biotic stress interface.
