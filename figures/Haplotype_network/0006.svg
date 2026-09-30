@@ -25,17 +25,37 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="1"
-     inkscape:cx="126"
-     inkscape:cy="191"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="258.09398"
+     inkscape:cy="176.7767"
      inkscape:window-width="1390"
      inkscape:window-height="954"
      inkscape:window-x="0"
-     inkscape:window-y="38"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer4" />
+     inkscape:current-layer="layer5" />
   <defs
-     id="defs132" />
+     id="defs132">
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
   <g
      inkscape:groupmode="layer"
      id="layer3"
@@ -1796,4 +1816,23 @@
        id="tspan6180"
        x="25.432867"
        y="368.94128">Outgroup</tspan></text>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Layer 5">
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.667;stroke-linejoin:round;paint-order:stroke fill markers;stroke-dasharray:none;marker-end:url(#TriangleStart)"
+       d="m 381.13056,177.13025 c 0,0 44.54772,-53.38656 38.53731,-89.449009"
+       id="path13823" />
+    <text
+       xml:space="preserve"
+       style="font-size:13.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';fill:#ff0000;stroke:none;stroke-width:0.666667;stroke-linejoin:round;paint-order:stroke fill markers"
+       x="402.5864"
+       y="84.145706"
+       id="text15161"><tspan
+         sodipodi:role="line"
+         id="tspan15159"
+         x="402.5864"
+         y="84.145706">&quot;477&quot;</tspan></text>
+  </g>
 </svg>

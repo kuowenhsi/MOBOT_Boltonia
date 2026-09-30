@@ -28,7 +28,9 @@ chr_len_temp <- read_tsv("/Users/kuowenhsi/Library/CloudStorage/OneDrive-Missour
 glm_path <- "/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/asteroides_decurrens/"
 
 
-Pi_input <- sort(list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/asteroides_decurrens", pattern = ".windowed.pi" ))
+Pi_input <- sort(list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/asteroides_decurrens", pattern = ".windowed.pi" ))[c(1,3)]
+
+Pi_input
 
 TajD_input <- sort(list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/asteroides_decurrens", pattern = ".Tajima.D" ))
 
@@ -57,7 +59,7 @@ Pi_data_c <- full_join(Pi_data[[1]], Pi_data[[2]], by = c("CHROM", "BIN_START", 
 
 Pi_data <- lapply(paste0(glm_path, Pi_input), read_tsv)
 Pi_data_l <-bind_rows(Pi_data[[1]]%>%mutate(Sample_Species = "B. asteroides"), Pi_data[[2]]%>%mutate(Sample_Species = "B. decurrens"))%>%
-  filter(N_VARIANTS >= 20)%>%
+  # filter(N_VARIANTS >= 20)%>%
   drop_na()
 
 stat.test <- Pi_data_l %>%
@@ -71,9 +73,10 @@ pi <- ggplot(data = Pi_data_l,aes(x = Sample_Species, y = PI))+
   geom_boxplot(width = 0.25, median.color = "red", linewidth = 0.2, outlier.size = 0.2)+
   stat_pvalue_manual(stat.test, label = "p.signif", vjust = 0, bracket.nudge.y = .1) +
   scale_x_discrete(NULL)+
-  scale_y_sqrt(expression(theta[pi]),expand = expansion(mult = c(0.05, 0.15)))+
+  scale_y_sqrt(expand = expansion(mult = c(0.05, 0.15)))+
+  labs(y = "Nucleotide Diversity (π)")+
   theme_bw()+
-  theme(axis.title.y = element_text(size = 12))
+  theme(axis.title.y = element_text(size = 8), axis.text.x = element_text(face = "italic"))
 
 pi
 
@@ -155,7 +158,7 @@ TajD <- ggplot(data = TajD_data_l,aes(x = Sample_Species, y = TajimaD))+
   scale_x_discrete(NULL)+
   scale_y_continuous("Tajima's D",expand = expansion(mult = c(0.05, 0.15)))+
   theme_bw()+
-  theme(axis.title.y = element_text(size = 8))
+  theme(axis.title.y = element_text(size = 8), axis.text.x = element_text(face = "italic"))
 
 TajD
 

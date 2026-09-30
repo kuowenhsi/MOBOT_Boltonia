@@ -144,7 +144,7 @@ annotate_blast_hits <- function(
   return(best_hits_annot)
 }
 
-
+#####
 intersect_decurrens_tb <- read_tsv("./data/asteroides_decurrens/intersect_decurrens_tb.tsv")
 result_tb <- genes_in_ranges(intersect_decurrens_tb, "/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/Boltonia_hap1/Boltonia_hap1_1.0_braker.gff3")
 
@@ -281,6 +281,145 @@ merged_sig <- merged %>%
 
 writexl::write_xlsx(merged_sig, "./data/asteroides_decurrens/intersect_decurrens_window_proteins_function_candidate.xlsx")
 
+###############################
+###############################
+# Total flower
+
+intersect_decurrens_tb <- read_tsv("./data/GWAS/GLM_sig_markers_all_window.tsv")%>%
+  filter(GWAS_TRAIT == "FlowerDays_total")
+
+result_tb <- genes_in_ranges(intersect_decurrens_tb, "/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/Boltonia_hap1/Boltonia_hap1_1.0_braker.gff3")%>%
+  group_by(gene_chr, gene_start, gene_end, gene_strand, gene_id)%>%
+  summarise_all(.funs = function(x){dplyr::first(x)})
+
+
+# 1. Unique gene IDs from your result tibble
+gene_ids <- unique(result_tb$gene_id)
+
+# 2. Read your protein FASTA file
+#    Change this path to your actual file
+prot <- readAAStringSet("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/Boltonia_hap1/Boltonia_hap1_1.0_protein.fasta")
+# strip transcript suffix like .t1, .t2
+prot_gene_id <- sub("\\.t\\d+$", "", names(prot))
+
+# one transcript per gene: first match
+keep_idx <- match(gene_ids, prot_gene_id)
+sel <- prot[keep_idx[!is.na(keep_idx)]]
+
+# rename to plain gene IDs
+names(sel) <- gene_ids[!is.na(keep_idx)]
+
+writeXStringSet(sel, filepath = "./data/GWAS/GLM_sig_markers_Total_flower_protein.tsv")
+
+
+blast_out <- read_tsv(
+  "./data/GWAS/GLM_sig_markers_Total_flower_protein.out",
+  col_names = c(
+    "qseqid","sacc","pident","length","qcovs",
+    "evalue","bitscore","stitle","staxids","sscinames","sskingdoms"
+  ),
+  col_types = cols(
+    qseqid     = col_character(),
+    sacc       = col_character(),
+    pident     = col_double(),
+    length     = col_integer(),
+    qcovs      = col_double(),
+    evalue     = col_double(),
+    bitscore   = col_double(),
+    stitle     = col_character(),
+    staxids    = col_character(),
+    sscinames  = col_character(),
+    sskingdoms = col_character()
+  )
+)
+
+best_hits <- blast_out %>%
+  group_by(qseqid) %>%
+  slice_max(order_by = bitscore, n = 1, with_ties = FALSE) %>%
+  ungroup()%>%
+  mutate(
+    # accession and entry name from the first chunk
+    uniprot_acc   = str_match(stitle, "^[^|]+\\|([^|]+)\\|")[,2],
+    uniprot_entry = str_match(stitle, "^[^|]+\\|[^|]+\\|([^ ]+)")[,2],
+    
+    # full description after the first space
+    full_desc = str_replace(stitle, "^[^ ]+\\s+", ""),
+    
+    # protein name (before OS=...)
+    protein_name = str_squish(str_replace(full_desc, " OS=.*$", "")),
+    
+    # organism, taxid, gene, PE, SV
+    organism = str_match(stitle, " OS=([^=]+?) OX=")[,2],
+    taxid    = str_match(stitle, " OX=(\\d+)")[,2],
+    gene     = str_match(stitle, " GN=([^ =]+)")[,2],
+    PE       = str_match(stitle, " PE=(\\d+)")[,2],
+    SV       = str_match(stitle, " SV=(\\d+)")[,2]
+  )%>%
+  select(
+    qseqid,
+    gene,
+    protein_name,
+    uniprot_acc,
+    sacc,
+    organism,
+    taxid,
+    pident,
+    qcovs,
+    evalue,
+    bitscore,
+    stitle,
+    sscinames,
+    sskingdoms,
+    PE,
+    SV,
+    everything()
+  )
+
+colnames(best_hits)
+
+ids <- best_hits$uniprot_acc
+
+func_df <- GetProteinFunction(ids)        # function text
+
+# 1. Move rownames (UniProt IDs) into a column
+func_df2 <- func_df %>%
+  rownames_to_column(var = "uniprot_acc") %>% 
+  select(uniprot_acc, `Function..CC.`)
+
+# 2. Left-join onto your best_hits table
+best_hits_annot <- best_hits %>%
+  left_join(func_df2, by = "uniprot_acc")%>%
+  select(
+    qseqid,
+    gene,
+    protein_name,
+    uniprot_acc,
+    organism,
+    Function = `Function..CC.`,
+    sacc,
+    taxid,
+    pident,
+    qcovs,
+    evalue,
+    bitscore,
+    stitle,
+    sscinames,
+    sskingdoms,
+    PE,
+    SV,
+    everything()
+  )%>%
+  mutate(Function = str_remove(Function, "FUNCTION: "))
+
+
+
+merged <- best_hits_annot[,1:6] %>%
+  left_join(result_tb, by = c("qseqid" = "gene_id"))
+
+merged_sig <- merged %>% 
+  select(qseqid, gene, gene_chr, gene_start, gene_end, gene_strand,protein_name, uniprot_acc, organism, Function)
+
+writexl::write_xlsx(merged_sig, "./data/GWAS/GLM_sig_markers_Total_flower_protein_function_candidate.xlsx")
 ###############################
 ###############################
 # Stem_Length
@@ -520,6 +659,152 @@ merged_sig <- merged %>%
   select(qseqid, gene, gene_chr, gene_start, gene_end, gene_strand,protein_name, uniprot_acc, organism, Function , Flowering_stem_interpretation)
 
 writexl::write_xlsx(merged_sig, "./data/GWAS/GLM_sig_markers_Num_Stems_protein_function_candidate.xlsx")
+
+###############################
+###############################
+# Flower days total
+
+intersect_decurrens_tb <- read_tsv("./data/GWAS/GLM_sig_markers_all_window.tsv")%>%
+  filter(GWAS_TRAIT == "FlowerDays_total")
+
+result_tb <- genes_in_ranges(intersect_decurrens_tb, "/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/Boltonia_hap1/Boltonia_hap1_1.0_braker.gff3")%>%
+  group_by(gene_chr, gene_start, gene_end, gene_strand, gene_id)%>%
+  summarise_all(.funs = "first")
+
+
+# 1. Unique gene IDs from your result tibble
+gene_ids <- unique(result_tb$gene_id)
+
+# 2. Read your protein FASTA file
+#    Change this path to your actual file
+prot <- readAAStringSet("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/Boltonia_hap1/Boltonia_hap1_1.0_protein.fasta")
+# strip transcript suffix like .t1, .t2
+prot_gene_id <- sub("\\.t\\d+$", "", names(prot))
+
+# one transcript per gene: first match
+keep_idx <- match(gene_ids, prot_gene_id)
+sel <- prot[keep_idx[!is.na(keep_idx)]]
+
+# rename to plain gene IDs
+names(sel) <- gene_ids[!is.na(keep_idx)]
+
+# writeXStringSet(sel, filepath = "./data/GWAS/GLM_sig_markers_Stem_Length_protein.tsv")
+
+
+blast_out <- read_tsv(
+  "./data/GWAS/GLM_sig_markers_Stem_Length_protein.out",
+  col_names = c(
+    "qseqid","sacc","pident","length","qcovs",
+    "evalue","bitscore","stitle","staxids","sscinames","sskingdoms"
+  ),
+  col_types = cols(
+    qseqid     = col_character(),
+    sacc       = col_character(),
+    pident     = col_double(),
+    length     = col_integer(),
+    qcovs      = col_double(),
+    evalue     = col_double(),
+    bitscore   = col_double(),
+    stitle     = col_character(),
+    staxids    = col_character(),
+    sscinames  = col_character(),
+    sskingdoms = col_character()
+  )
+)
+
+best_hits <- blast_out %>%
+  group_by(qseqid) %>%
+  slice_max(order_by = bitscore, n = 1, with_ties = FALSE) %>%
+  ungroup()%>%
+  mutate(
+    # accession and entry name from the first chunk
+    uniprot_acc   = str_match(stitle, "^[^|]+\\|([^|]+)\\|")[,2],
+    uniprot_entry = str_match(stitle, "^[^|]+\\|[^|]+\\|([^ ]+)")[,2],
+    
+    # full description after the first space
+    full_desc = str_replace(stitle, "^[^ ]+\\s+", ""),
+    
+    # protein name (before OS=...)
+    protein_name = str_squish(str_replace(full_desc, " OS=.*$", "")),
+    
+    # organism, taxid, gene, PE, SV
+    organism = str_match(stitle, " OS=([^=]+?) OX=")[,2],
+    taxid    = str_match(stitle, " OX=(\\d+)")[,2],
+    gene     = str_match(stitle, " GN=([^ =]+)")[,2],
+    PE       = str_match(stitle, " PE=(\\d+)")[,2],
+    SV       = str_match(stitle, " SV=(\\d+)")[,2]
+  )%>%
+  select(
+    qseqid,
+    gene,
+    protein_name,
+    uniprot_acc,
+    sacc,
+    organism,
+    taxid,
+    pident,
+    qcovs,
+    evalue,
+    bitscore,
+    stitle,
+    sscinames,
+    sskingdoms,
+    PE,
+    SV,
+    everything()
+  )
+
+colnames(best_hits)
+
+ids <- best_hits$uniprot_acc
+
+func_df <- GetProteinFunction(ids)        # function text
+
+# 1. Move rownames (UniProt IDs) into a column
+func_df2 <- func_df %>%
+  rownames_to_column(var = "uniprot_acc") %>% 
+  select(uniprot_acc, `Function..CC.`)
+
+# 2. Left-join onto your best_hits table
+best_hits_annot <- best_hits %>%
+  left_join(func_df2, by = "uniprot_acc")%>%
+  select(
+    qseqid,
+    gene,
+    protein_name,
+    uniprot_acc,
+    organism,
+    Function = `Function..CC.`,
+    sacc,
+    taxid,
+    pident,
+    qcovs,
+    evalue,
+    bitscore,
+    stitle,
+    sscinames,
+    sskingdoms,
+    PE,
+    SV,
+    everything()
+  )%>%
+  mutate(Function = str_remove(Function, "FUNCTION: "))
+
+interp <- read.delim("./data/GWAS/Stem_Length_interpretation.tsv", stringsAsFactors = FALSE)%>%
+  dplyr::filter(tier == "Tier1")%>%
+  select(qseqid, Stem_Length_interpretation = rationale)
+
+merged <- left_join(interp, best_hits_annot[,1:6], by = "qseqid")%>%
+  left_join(result_tb, by = c("qseqid" = "gene_id"))
+
+write_tsv(best_hits_annot, "./data/GWAS/GLM_sig_markers_Stem_Length_protein_function.tsv")
+writexl::write_xlsx(merged, "./data/GWAS/GLM_sig_markers_Stem_Length_protein_function.xlsx")
+
+merged_sig <- merged %>% 
+  select(qseqid, gene, gene_chr, gene_start, gene_end, gene_strand,protein_name, uniprot_acc, organism, Function , Stem_Length_interpretation)
+
+writexl::write_xlsx(merged_sig, "./data/GWAS/GLM_sig_markers_Stem_Length_protein_function_candidate.xlsx")
+
 
 ##########################################
 ########################

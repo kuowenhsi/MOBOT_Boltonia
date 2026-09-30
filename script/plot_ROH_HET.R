@@ -60,7 +60,7 @@ ROH_data_40 <- ROH_data %>%
 write_csv(ROH_data_40, "./data/ROH_HET/ROH_data_40.csv")
 
 read_psc <- function(path) {
-  lines <- readLines("./data/ROH_HET/Boltonia_decurrens_imputed_per_sample_het.tsv", warn = FALSE)
+  lines <- readLines(path, warn = FALSE)
   
   # 1) first '# PSC...' header
   hdr_line <- grep("^#\\s*PSC\\b", lines, value = TRUE)[2]

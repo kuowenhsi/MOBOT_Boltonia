@@ -1,0 +1,4 @@
+g10396	sp|Q84WS8|U1125_ARATH	68.627	153	86	2.26e-67	205	sp|Q84WS8|U1125_ARATH U11/U12 small nuclear ribonucleoprotein 25 kDa protein OS=Arabidopsis thaliana OX=3702 GN=SNRNP25 PE=2 SV=1	0	N/A	N/A
+g10396	sp|Q9BV90|SNR25_HUMAN	40.650	123	69	8.20e-27	101	sp|Q9BV90|SNR25_HUMAN U11/U12 small nuclear ribonucleoprotein 25 kDa protein OS=Homo sapiens OX=9606 GN=SNRNP25 PE=1 SV=1	0	N/A	N/A
+g10396	sp|Q3ZBQ4|SNR25_BOVIN	41.379	116	65	1.42e-25	98.2	sp|Q3ZBQ4|SNR25_BOVIN U11/U12 small nuclear ribonucleoprotein 25 kDa protein OS=Bos taurus OX=9913 GN=SNRNP25 PE=2 SV=2	0	N/A	N/A
+g10396	sp|Q8VIK1|SNR25_MOUSE	41.379	116	65	1.55e-25	98.2	sp|Q8VIK1|SNR25_MOUSE U11/U12 small nuclear ribonucleoprotein 25 kDa protein OS=Mus musculus OX=10090 GN=Snrnp25 PE=1 SV=1	0	N/A	N/A

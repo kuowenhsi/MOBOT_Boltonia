@@ -34,12 +34,18 @@ Sample_Outgroup <- metadata %>%
   filter(Sample_Species != "B. decurrens") %>%
   pull(Sample_Name)
 
+Sample_Outgroup
+
 Sample_Hybrid <- metadata %>%
   filter(Sample_Name %in% (read_tsv("./data/Hybrid_Index/samples_for_analysis.txt", col_names = "Sample_Name") %>% pull(Sample_Name)))%>%
   pull(Sample_Name)
 
-Sample_Keep <- c(Sample_Outgroup, Sample_Hybrid) %>% unique() %>% sort() %>% intersect(tree_file2@phylo$tip.label)
-Sample_Keep
+Boltonia_rep <- paste("Boltonia", c("001","114","034","165","418","422","171","360","256","038","071","463","260","417",
+                                    "167","046","162","197","289","394","158","106","322","147","310","186","098","317",
+                                    "217","085","316","268","445","065"), sep = "_")
+
+Sample_Keep <- c(Sample_Outgroup, Boltonia_rep) %>% unique() %>% sort() %>% intersect(tree_file2@phylo$tip.label)
+Sample_Keep 
 
 # class(tree_file1)
 # class(tree_file2)
@@ -53,18 +59,21 @@ Sample_Keep
 # keep.tip()
 
 plot(drop.tip(tree_file1, c(1:440)) %>% as.phylo())
-drop.tip(tree_file1, extract.clade(tree_file1 %>% as.phylo(), getMRCA(as.phylo(tree_file1), c(450:470)))$tip.label)
-
 
 tree_file1@data
 tree_file2@data <- tree_file1@data
 tree_file2@extraInfo <- tree_file1@extraInfo
 
-tree_file2_keep <- tree_file2%>%
+tree_file2_keep <- tree_file2 %>%
   keep.tip(Sample_Keep) %>%
-  drop.tip(paste("Boltonia", c("216","082","223","314","347","319","451","439","464","068","419","069","340",
-                               "010","166","252","005","106","256","178","042", "018", "199", "072", "461",
-                               "255", "114", "368","064","196","035","466","321"), sep = "_"))
+  drop.tip(paste("Boltonia", c("216","082","223", "018","314", "166","347","319","451","439","199","464",
+                               "104", "010", "328","068","419", "252","069", "406","340"), sep = "_"))
+
+# %>%
+  # keep.tip(Sample_Keep) %>%
+  # drop.tip(paste("Boltonia", c("216","082","223","314","347","319","451","439","464","068","419","069","340",
+  #                              "010","166","252","005","106","256","178","042", "018", "199", "072", "461",
+  #                              "255", "114", "368","064","196","035","466","321"), sep = "_"))
 
 tree_file2_keep
 tree_file2_keep@phylo
@@ -77,7 +86,8 @@ p <-ggtree(tree_file2_keep)+
 
 p
 
-ggsave("./figures/iqtree/Boltonia_tree_keep_20251108.png", height = 10, width = 6, dpi = 900)
+ggsave("./figures/iqtree/Boltonia_tree_all_20260320.png", height = 55, width = 6, dpi = 900, limitsize = FALSE)
+# ggsave("./figures/iqtree/Boltonia_tree_keep_20251108.png", height = 10, width = 6, dpi = 900)
 
 
 ########################
@@ -224,7 +234,18 @@ p2
 
 facet_widths(p2, widths = 5)
 
-ggsave("./figures/iqtree/Boltonia_all_tree_admix4_12_20251204.png", height = 10, width = 25, dpi = 900)
+ggsave("./figures/iqtree/Boltonia_all_tree_admix4_12_20260320.png", height = 10, width = 25, dpi = 900)
+
+
+p3 <- p + xlim(0,1.01) + 
+  geom_facet(panel = 'K=5', data = qmat_list[[4]], geom = geom_col, 
+             mapping = aes(x = Proportion, fill = Ancestry), 
+             orientation = 'y', width = 1, position = position_stack())+
+  scale_fill_brewer(palette = "Set3")
+p3
+
+ggsave("./figures/iqtree/Boltonia_all_tree_admix5_20260320.svg", height = 8, width = 25)
+ggsave("./figures/iqtree/Boltonia_all_tree_admix5_20260320.png", height = 55, width = 6, dpi = 900, limitsize = FALSE)
 
 +theme(strip.background = element_blank(), strip.text.x.top = element_blank(), legend.position = "none", panel.spacing.x = unit(0, "in"))
   

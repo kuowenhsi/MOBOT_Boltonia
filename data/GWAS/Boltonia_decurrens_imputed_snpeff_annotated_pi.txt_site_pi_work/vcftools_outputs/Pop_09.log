@@ -1,0 +1,16 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf Boltonia_decurrens_imputed_snpeff_annotated.vcf.gz
+	--keep Boltonia_decurrens_imputed_snpeff_annotated_pi.txt_site_pi_work/keep_files/Pop_09.keep
+	--out Boltonia_decurrens_imputed_snpeff_annotated_pi.txt_site_pi_work/vcftools_outputs/Pop_09
+	--site-pi
+
+Using zlib version: 1.2.12
+Keeping individuals in 'keep' list
+After filtering, kept 23 out of 424 Individuals
+Outputting Per-Site Nucleotide Diversity Statistics...
+After filtering, kept 131 out of a possible 131 Sites
+Run Time = 0.00 seconds

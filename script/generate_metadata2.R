@@ -28,7 +28,11 @@ Boltonia_metadata <- Boltonia_metadata %>%
 Boltonia_pheno_2025 <- read_excel("./data/BoltoniaPhenotypeData_2025.xlsx", na = c("NA", "", "NA (NA)"))[,2:7]%>%
   select(Sample_Name, Disc.Flower.Date.2025 = Disc.Flower.Date, Stem.Length.2025 = Stem.Length, Num.Stems.2025 = Num.Stems)
 
-Boltonia_pheno_2024 <- read_csv("./data/Boltonia_merged_data_tidy_20251010.csv")
+Boltonia_pheno_2024 <- read_csv("./data/Boltonia_merged_data_tidy_20251010.csv")%>%
+  filter(Date == as.Date("2024-05-15"), num_traits %in% c("leafLong", "leafWide"))%>%
+  dplyr::select(Sample_Name, num_traits, num_values)%>%
+  pivot_wider(names_from = "num_traits", values_from = "num_values")%>%
+  mutate(leafWide = ifelse(leafWide > 10, leafWide/10, leafWide))
 
 Boltonia_FirstFloweringDate_2024 <- read_csv("./data/Boltonia_FirstFloweringDate_2024.csv")%>%
   select(-PlantingDate, -FirstLeafDate)
@@ -41,6 +45,7 @@ Boltonia_metadata_pheno <- Boltonia_metadata %>%
   left_join(Boltonia_pheno_2025, by = "Sample_Name") %>%
   left_join(Boltonia_FirstFloweringDate_2024, by = "Sample_Name") %>%
   left_join(Boltonia_StemLength_2024, by = "Sample_Name")%>%
+  left_join(Boltonia_pheno_2024, by = "Sample_Name")%>%
   mutate(Disc.Flower.Date.2025 = as.Date(Disc.Flower.Date.2025))%>%
   mutate(FlowerDays.2024 = as.numeric(Disc.Flower.Date.2024 -PlantingDate),
          FlowerDays.2025 = as.numeric(Disc.Flower.Date.2025 -PlantingDate))%>%
@@ -51,4 +56,4 @@ Boltonia_metadata_pheno <- Boltonia_metadata %>%
 str(Boltonia_metadata_pheno)
 
 
-write_xlsx(Boltonia_metadata_pheno, "Boltonia_all_metadata_20251010.xlsx")
+write_xlsx(Boltonia_metadata_pheno, "Boltonia_all_metadata_20260205.xlsx")

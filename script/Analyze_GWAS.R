@@ -358,7 +358,7 @@ FlowerDays_total <- GWAS_sites_parsed %>% filter(GWAS_TRAIT == "FlowerDays_total
 
 write_tsv(FlowerDays_total, "./data/GWAS/FlowerDays_total_bin.tsv")
 
-Num_peak = seq(1, nrow(FlowerDays_total))[FlowerDays_total$IF_peak == TRUE]
+Num_peak = seq(1, nrow(FlowerDays_total)) #[FlowerDays_total$IF_peak == TRUE]
 
 for (i in Num_peak){
   
@@ -384,6 +384,14 @@ for (i in Num_peak){
                  geom = "text",
                  aes(label = after_stat(ymin)),              # y is the returned value
                  vjust = 2)+
+    stat_summary(fun.data = function(y) {data.frame(ymin = sum((y > 250), na.rm = TRUE), y = 500)},        # return n for each x
+                 geom = "text",
+                 aes(label = after_stat(ymin)),              # y is the returned value
+                 hjust = 2)+
+    stat_summary(fun.data = function(y) {data.frame(ymin = sum((y < 250), na.rm = TRUE), y = 150)},        # return n for each x
+                 geom = "text",
+                 aes(label = after_stat(ymin)),              # y is the returned value
+                 hjust = 2)+
     stat_summary(geom = "line", fun = "mean", color = "red", group = 1)+
     stat_summary(geom = "point", fun = "mean", color = "black", fill = "red", shape = 23, size = 4)+
     scale_x_discrete(name = NULL, labels = c(paste0(FlowerDays_total_peak$REF[[1]], "/",FlowerDays_total_peak$REF[[1]]),

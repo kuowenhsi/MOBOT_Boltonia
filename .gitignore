@@ -1,1 +1,22 @@
-data/IQTREE_all/Boltonia_all_ID_LD.min1.phy
+# Local data files above GitHub's 100 MiB per-file limit.
+# These remain in the working folder but are intentionally not committed.
+/data/BayPass/Boltonia_decurrens_imputed_maf_XtX_XtX_summary_pi_xtx.out.gz
+/data/Boltonia_decurrens_imputed.vcf.gz
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt.population_site_pi.csv
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_01.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_02.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_03.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_04.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_05.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_06.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_07.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_08.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_09.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_10.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_11.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_12.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_13.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_14.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_15.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_16.sites.pi
+/data/GWAS/Boltonia_decurrens_imputed_neutral_pi.txt_site_pi_work/vcftools_outputs/Pop_17.sites.pi

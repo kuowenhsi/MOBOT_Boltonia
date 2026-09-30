@@ -56,9 +56,6 @@ LFMM_GWAS <- LFMM_data %>%
   filter(IF_sig == TRUE)
 
 
-
-# Download LFMM_output_20230606.txt from Dryad https://doi.org/10.5061/dryad.s7h44j1fd
-
 glm_path <- "/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/GWAS/"
 glm_input <- list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/Boltonia/GWAS")
 length(glm_input)
@@ -125,6 +122,12 @@ Stem_Length_gene <- readxl::read_xlsx("./data/GWAS/GLM_sig_markers_Stem_Length_p
   mutate(padded_pos = POSITION + pos_pad)%>%
   arrange(padded_pos)
 
+Total_flower_gene <- readxl::read_xlsx("./data/GWAS/GLM_sig_markers_Total_flower_protein_function_candidate.xlsx")%>%
+  mutate(chr = as.integer(str_remove(gene_chr, "Chr_")), POSITION = (gene_start + gene_end)/2)%>%
+  left_join(chr_len_temp, by = "chr") %>%
+  mutate(padded_pos = POSITION + pos_pad)%>%
+  arrange(padded_pos)
+
 glm_input
 for (i in 1:7){
   
@@ -174,6 +177,7 @@ for (i in 1:7){
   ggsave(paste0("./figures/glm_output/", str_remove(glm_input[[i]], ".txt"), "_combqq",".png"), width = 9.5, height = 2, dpi = 600)
   
   i = 2
+  glm_input[[i]]
   
   GLM_data <- fread(file = paste0(glm_path, glm_input[[i]]))%>%
     rename(chr = `#CHROM`, POSITION = POS, pvalue = P)%>%
@@ -195,14 +199,14 @@ for (i in 1:7){
     geom_segment(data = FlowerDays_2025_gene, aes(xend = padded_pos), y = 0, yend = 5, linewidth = 0.2)+
     geom_label(data = FlowerDays_2025_gene, aes(label = gene), y = c(5,5,5,6.3), linewidth = 0.2, size = 2.5, position = position_nudge(x = rep(-2e6, 4)))+
     scale_fill_manual(name = "", values = rep(c("white", "gray95"), 8)) +
-    scale_x_continuous("", expand = c(0, 0), breaks = chr_len_temp$padded_chr_pos, labels = 1:9) +
+    scale_x_continuous(expand = c(0, 0), breaks = chr_len_temp$padded_chr_pos, labels = 1:9) +
     scale_y_continuous(expression("-" * log[10] * "(p value)"), expand = c(0, 0, 0.1, 0.1)) +
     theme_bw() +
-    theme(panel.grid = element_blank(), plot.margin = unit(c(0.2, 0.2, 0.2, 0.2), "lines")) +
+    theme(panel.grid = element_blank(), plot.margin = unit(c(0.2, 0.2, 0.2, 0.2), "lines"), axis.title.x = element_blank()) +
     guides(fill = "none")
   
   # Save the combined figure
-  ggsave(paste0("./figures/glm_output/", str_remove(glm_input[[i]], ".txt"), ".png"), width = 7.5, height = 2, dpi = 600)
+  ggsave(paste0("./figures/glm_output/", str_remove(glm_input[[i]], ".txt"), ".png"), width = 5.15, height = 2.5, dpi = 600)
   
   # Q-Q plot for PCadapt result
   p_QQ_PCadapt <- ggplot(data = GLM_data, aes(sample = -log(pvalue))) +
@@ -221,6 +225,7 @@ for (i in 1:7){
   ggsave(paste0("./figures/glm_output/", str_remove(glm_input[[i]], ".txt"), "_combqq",".png"), width = 9.5, height = 2, dpi = 600)
   
   i = 7
+  glm_input[[i]]
   
   GLM_data <- fread(file = paste0(glm_path, glm_input[[i]]))%>%
     rename(chr = `#CHROM`, POSITION = POS, pvalue = P)%>%
@@ -242,14 +247,14 @@ for (i in 1:7){
     geom_segment(data = Stem_Length_gene, aes(xend = padded_pos), y = 0, yend = c(5,5,4,4,4,5), linewidth = 0.2)+
     geom_label(data = Stem_Length_gene, aes(label = gene), y = c(5,5,4,5.3,6.6,5), linewidth = 0.2, size = 2.5, position = position_nudge(x = rep(-2e6, 6)))+
     scale_fill_manual(name = "", values = rep(c("white", "gray95"), 8)) +
-    scale_x_continuous("", expand = c(0, 0), breaks = chr_len_temp$padded_chr_pos, labels = 1:9) +
+    scale_x_continuous(expand = c(0, 0), breaks = chr_len_temp$padded_chr_pos, labels = 1:9) +
     scale_y_continuous(expression("-" * log[10] * "(p value)"), expand = c(0, 0, 0.1, 0.1)) +
     theme_bw() +
-    theme(panel.grid = element_blank(), plot.margin = unit(c(0.2, 0.2, 0.2, 0.2), "lines")) +
+    theme(panel.grid = element_blank(), plot.margin = unit(c(0.2, 0.2, 0.2, 0.2), "lines"), axis.title.x = element_blank()) +
     guides(fill = "none")
   
   # Save the combined figure
-  ggsave(paste0("./figures/glm_output/", str_remove(glm_input[[i]], ".txt"), ".png"), width = 7.5, height = 2, dpi = 600)
+  ggsave(paste0("./figures/glm_output/", str_remove(glm_input[[i]], ".txt"), ".png"), width = 5.15, height = 2.5, dpi = 600)
   
   # Q-Q plot for PCadapt result
   p_QQ_PCadapt <- ggplot(data = GLM_data, aes(sample = -log(pvalue))) +
@@ -262,6 +267,35 @@ for (i in 1:7){
     theme(panel.grid = element_blank())
   
   ggsave(paste0("./figures/LFMM_output/", str_remove(glm_input[[i]], ".txt"), "_QQplot",".png"), width = 2, height = 2, dpi = 600)
+  
+  i = 3
+  glm_input[[i]]
+  
+  GLM_data <- fread(file = paste0(glm_path, glm_input[[i]]))%>%
+    rename(chr = `#CHROM`, POSITION = POS, pvalue = P)%>%
+    left_join(chr_len_temp, by = "chr") %>%
+    mutate(padded_pos = POSITION + pos_pad) %>%
+    mutate(dot_color = case_when(pvalue < 5e-8 ~ "#00AAFF", TRUE ~ "gray80")) 
+  
+  # Plot result of PCadapt analysis
+  pGLM <- ggplot(data = GLM_data, aes(x = padded_pos, y = -log10(pvalue))) +
+    geom_rect(data = chr_len_temp, aes(xmin = padded_start, xmax = padded_end, ymin = -Inf, ymax = Inf, fill = factor(chr, levels = 1:9)), inherit.aes = FALSE) +
+    geom_point(data = filter(GLM_data, dot_color == "gray80"), color = "gray80", size = 0.1) +
+    geom_point(data = filter(GLM_data, dot_color == "#00AAFF"), color = "#00AAFF", size = 0.5) +
+    annotate(geom = "text", x = 5e6, y = 0, label = "Annual/Biennial", hjust = 0, vjust = -1, check_overlap = TRUE)+
+    geom_hline(yintercept = -log10(5e-8), color = "red", linewidth = 0.1, alpha = 0.7) +
+    geom_segment(data = Total_flower_gene, aes(xend = padded_pos), y = 0, yend = c(5), linewidth = 0.2)+
+    geom_label(data = Total_flower_gene, aes(label = gene), y = c(5), linewidth = 0.2, size = 2.5, position = position_nudge(x = rep(-2e6, 6)))+
+    scale_fill_manual(name = "", values = rep(c("white", "gray95"), 8)) +
+    scale_x_continuous(expand = c(0, 0), breaks = chr_len_temp$padded_chr_pos, labels = 1:9) +
+    scale_y_continuous(expression("-" * log[10] * "(p value)"), expand = c(0, 0, 0.1, 0.1)) +
+    theme_bw() +
+    theme(panel.grid = element_blank(), plot.margin = unit(c(0.2, 0.2, 0.2, 0.2), "lines"), axis.title.x = element_blank()) +
+    guides(fill = "none")
+  
+  # Save the combined figure
+  ggsave(paste0("./figures/glm_output/", str_remove(glm_input[[i]], ".txt"), ".png"), width = 5.15, height = 2, dpi = 600)
+  
   
   p_comb <- plot_grid(pGLM, p_QQ_PCadapt, align = "h", nrow = 1, rel_widths = c(7.5, 2))
   

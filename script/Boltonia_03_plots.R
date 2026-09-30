@@ -5,110 +5,35 @@ library(car)
 library(cowplot)
 library(ggraph)
 library(igraph)
-library(openxlsx)
+
 
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
-Boltonia_dilution <- readxl::read_xlsx("/Users/kuowenhsi/Library/CloudStorage/OneDrive-MissouriBotanicalGarden/General - IMLS National Leadership Grant 2023/Genotyping/DNA_stock/DNA_stock_Boltonia_dilution.xlsx")%>%
-  select(index, Plate, Position)%>% mutate(Used_in_library = "Yes")
+Boltonia_data_rep <-readxl::read_xlsx("Boltonia_all_metadata_20251010.xlsx")%>%
+  filter(!is.na(Pop), Sample_Species == "B. decurrens")%>%
+  mutate(FlowerHead = paste(Pop_Index, FlowerHead, sep = "_"))
 
-Boltonia_data <- read_csv("./data/Boltonia_merged_data_tidy_20251010.csv")%>%
-  left_join(Boltonia_dilution, by = "index")%>%
-  mutate(Used_in_library = case_when(Used_in_library == "Yes" ~ "Yes", TRUE ~ "No"))%>%
-  mutate(Sample_Name = paste("Boltonia", str_pad(index, 3, pad = "0"), sep = "_"))%>%
-  filter(!(Sample_Name %in% (read_table("./data/Boltonia_asteroides_cass.csv", col_names = FALSE)%>%pull(X1))))
-
-
-unique(Boltonia_data$num_traits)
-# MaternalLine is actually the site (Accession).
-# FlowerHead is actually the individual (real maternal genotype).
-Boltonia_data_rep <- Boltonia_data %>%
-  group_by(County, MaternalLine, FlowerHead, index, Plate, Position, Used_in_library)%>%
-  summarise()%>%
-  ungroup()%>%
-  mutate(species = "Boltonia")
-
-# Create a workbook
-wb <- createWorkbook()
-
-# Add a worksheet
-addWorksheet(wb, "Sheet1")
-
-# Write data to the worksheet
-writeData(wb, sheet = "Sheet1", x = Boltonia_data_rep)
-
-
-# Unique colors for alternating groups
-group_colors <- c("#F1C40F", "#E74C3C")  # Two alternating colors
-current_color_index <- 1
-
-group_colors2 <- c("#D9EAD3", "#FCE5CD")  # Two alternating colors
-current_color_index2 <- 1
-
-# Initialize variables for tracking groups
-prev_county <- ""
-prev_MaternalLine <- ""
-
-# Apply row styling based on the "County" column
-for (i in 1:nrow(Boltonia_data_rep)) {
-
-  # Check if the County value has changed
-  if (Boltonia_data_rep$County[i] != prev_county) {
-    # Switch to the next color
-    current_color_index <- ifelse(current_color_index == 1, 2, 1)
-    prev_county <- Boltonia_data_rep$County[i]
-  }
-  
-  if (Boltonia_data_rep$MaternalLine[i] != prev_MaternalLine) {
-    # Switch to the next color
-    current_color_index2 <- ifelse(current_color_index2 == 1, 2, 1)
-    prev_MaternalLine <- Boltonia_data_rep$MaternalLine[i]
-  }
-  
-  # Apply the current color style
-  addStyle(
-    wb,
-    sheet = "Sheet1",
-    style = createStyle(fgFill = group_colors[current_color_index]),  # Corrected argument
-    rows = i + 1,  # Adjust for header row
-    cols = 1,
-    gridExpand = TRUE
-  )
-  
-  addStyle(
-    wb,
-    sheet = "Sheet1",
-    style = createStyle(fgFill = group_colors2[current_color_index2]),  # Corrected argument
-    rows = i + 1,  # Adjust for header row
-    cols = 2,
-    gridExpand = TRUE
-  )
-}
-
-
-# Save the workbook
-saveWorkbook(wb, "Boltonia_accession_used_in_library.xlsx", overwrite = TRUE)
 
 # transform it to a edge list!
-edges_level1_2 <- Boltonia_data_rep %>% select(level1 = species, level2 = County) %>% unique %>% rename(from=level1, to=level2)
-edges_level2_3 <- Boltonia_data_rep %>% select(level2 = County, level3 = MaternalLine) %>% unique %>% rename(from=level2, to=level3)
-edges_level3_4 <- Boltonia_data_rep %>% mutate(FlowerHead = paste0(FlowerHead, " (", rep, ")")) %>% select(level3 = MaternalLine, level4 = FlowerHead)  %>% rename(from=level3, to=level4)
+edges_level1_2 <- Boltonia_data_rep %>% select(level1 = Sample_Species, level2 = Pop) %>% unique %>% rename(from=level1, to=level2)
+edges_level2_3 <- Boltonia_data_rep %>% select(level2 = Pop, level3 = FlowerHead) %>% unique %>% rename(from=level2, to=level3)
+edges_level3_4 <- Boltonia_data_rep %>% select(level3 = FlowerHead, level4 = Sample_Name)  %>% rename(from=level3, to=level4)
 
-edge_list=rbind(edges_level1_2, edges_level2_3, edges_level3_4)
+edge_list=rbind(edges_level1_2, edges_level2_3,edges_level3_4)
 
 # Now we can plot that
 mygraph <- graph_from_data_frame( edge_list )
-ggraph(mygraph, layout = 'dendrogram', circular = F, ) + 
+ggraph(mygraph, layout = 'dendrogram', circular = F) + 
   geom_edge_diagonal2(color = "gray80") +
   geom_node_point() +
   scale_y_reverse()+
-  geom_node_label(aes(label=name, filter = !leaf), angle=0 , hjust=0.5, size = 4) +
+  geom_node_label(aes(label=name, filter = !leaf), angle=0 , hjust=0.5, size = 2, fill = "white") +
   geom_node_text(aes(label=name, filter = leaf), angle=0 , hjust=0, size = 2, nudge_y = 0.05) +
   theme_void()+
   theme(plot.background = element_rect(fill = "white"))+
   coord_flip()
 
-ggsave("test_out.png", width = 10, height = 25)
+ggsave("./figures/Boltonia_sample_structure_20260204.png", width = 12, height = 50, limitsize = FALSE)
 
 unique(Boltonia_data$MaternalLine)
 unique(Boltonia_data$Google_latitude)

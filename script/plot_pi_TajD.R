@@ -22,8 +22,9 @@ chr_len_temp <- read_tsv("/Users/kuowenhsi/Library/CloudStorage/OneDrive-Missour
 
 # Download LFMM_output_20230606.txt from Dryad https://doi.org/10.5061/dryad.s7h44j1fd
 
-glm_path <- "/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Pi_TajD/Pop_Group/"
-glm_input <- sort(list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Pi_TajD/Pop_Group"))
+glm_path <- "/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Pi_TajD/Pop_Index_nonoverlapping/"
+glm_path2 <- "/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Pi_TajD/Pop_Index/"
+glm_input <- sort(list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Pi_TajD/Pop_Index"))
 length(glm_input)
 
 xpclr_path <- "/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/XPCLR/"
@@ -46,20 +47,67 @@ read_xpclr <- function(x){
                                     align = "center"))
 }
 
-Pi_input <- sort(list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Pi_TajD/Pop_Index", pattern = ".windowed.pi" ))
+GWAS_sig <- read_tsv("./data/GWAS/GLM_sig_markers_all.tsv")%>%
+  rename
 
-TajD_input <- sort(list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Pi_TajD/Pop_index", pattern = ".Tajima.D" ))
+Pi_input <- sort(list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Pi_TajD/Pop_Index_nonoverlapping", pattern = ".windowed.pi" ))
 
-Pi_data <- bind_rows(lapply(paste0(glm_path, Pi_input), fread), .id = "Pop_Index")%>%
-  filter(N_VARIANTS >= 100) %>%
+TajD_input <- sort(list.files("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia/data/Pi_TajD/Pop_Index", pattern = ".Tajima.D" ))
+
+Pi_data <- bind_rows(lapply(paste0(glm_path, Pi_input), fread), .id = "Pop_Index")
+
+p <- ggplot(data = Pi_data, aes(x = N_VARIANTS, y = PI))+
+  geom_point()+
+  theme_bw()
+ggsave("./figures/Pi_TajD_output/nonoverlapping_PI_N_variants.png", width = 5, height = 5, dpi = 600)
+
+
+Pi_data <- bind_rows(lapply(paste0(glm_path, Pi_input), fread), .id = "Pop_Index") %>%
+  rename(chr = CHROM)%>%
+  mutate(POSITION = (BIN_START + BIN_END)/2)%>%
   group_by(Pop_Index)%>%
   summarize(PI_median = median(PI), PI_25 = quantile(PI, 0.25), PI_75 = quantile(PI, 0.75))
 
+p <- ggplot(data = Pi_data, aes(x = Pop_Index, y = PI_median))+
+  geom_violin(aes(fill = Pop_Index), alpha = 0.7, show.legend = FALSE)+
+  geom_boxplot(width = 0.2, outlier.shape = NA)+
+  stat_summary(fun = "mean", geom = "point", color = "red", shape = 2)+
+  scale_y_continuous(limits = c(0, 0.013))+
+  theme_bw()
+p
 
-TajD_data <- bind_rows(lapply(paste0(glm_path, TajD_input), fread), .id = "Pop_Index")%>%
+ggsave("./figures/Pi_TajD_output/Total_PI_Pop.png", width = 10, height = 5, dpi = 600)
+
+TajD_data <- bind_rows(lapply(paste0(glm_path2, TajD_input), fread), .id = "Pop_Index")
+
+p <- ggplot(data = TajD_data, aes(x = N_SNPS, y = TajimaD))+
+  geom_point()+
+  theme_bw()
+ggsave("./figures/Pi_TajD_output/nonoverlapping_TajimaD_N_SNPS.png", width = 5, height = 5, dpi = 600)
+
+
+TajD_data <- bind_rows(lapply(paste0(glm_path2, TajD_input), fread), .id = "Pop_Index")%>%
   filter(N_SNPS >= 100)%>%
+  rename(chr = CHROM)%>%
+  mutate(POSITION = (BIN_START + 5000))%>%
   group_by(Pop_Index)%>%
   summarize(TajimaD_median = median(TajimaD), TajimaD_25 = quantile(TajimaD, 0.25), TajimaD_75 = quantile(TajimaD, 0.75))
+
+
+# pPiTajD <- ggplot() +
+#   geom_vline(data = GWAS_sig %>% rename(chr = `#CHROM`, POSITION = POS), aes(xintercept = POSITION), color = "red", alpha = 1)+
+#   geom_line(data = Pi_data, aes(x = POSITION, y = PI), linewidth = 0.3) +
+#   geom_line(data = TajD_data, aes(x = POSITION, y = TajimaD/120 - 0.02), color = "#FF8B2A", linewidth = 0.3) +
+#   # annotate(geom = "text",label = str_split_i(glm_input[[2*i - 1]], "[.]", i = 1), x = -Inf, y = Inf, size = 5, hjust = 0, vjust = 1)+
+#   scale_x_continuous(paste("Chromosome", unique(Pi_data$chr), "(Mbp)"), expand = c(0, 0), labels = function(x){x/1e6}, limits = c(43601669-500000, 43601669+500000)) +
+#   scale_y_continuous(expression("Pi"), sec.axis = sec_axis(transform = function(x){(x + 0.02)*120}, name = "Tajima's D")) +
+#   theme_bw() +
+#   theme(panel.grid = element_blank(), plot.margin = unit(c(0.2, 0.2, 0.2, 0.2), "lines"), axis.title.y.right = element_text(color = "#FF8B2A"),
+#         axis.text.y.right = element_text(color = "#FF8B2A"), axis.ticks.y.right = element_line(color = "#FF8B2A")) +
+#   guides(fill = "none")+
+#   coord_cartesian(clip = TRUE)
+# 
+# pPiTajD
 
 Boltonia_metadata <- readxl::read_excel("Boltonia_all_metadata_20251010.xlsx")%>%
   group_by(Pop, Pop_Index)%>%
@@ -77,35 +125,33 @@ PI_TajD <- Pi_data %>%
   arrange(Pop_Index)%>%
   mutate(shape_number = (Pop_Index + 3)%%4 + 21)
 
-BayPass_data <- read_tsv("./data/BayPass/intersect_sig_tbl.tsv")%>%
-  rename(chr = CHR, POSITION = POS)%>%
-  left_join(chr_len_temp, by = "chr") %>%
-  mutate(padded_pos = POSITION + pos_pad)
+# BayPass_data <- read_tsv("./data/BayPass/intersect_sig_tbl.tsv")%>%
+#   rename(chr = CHR, POSITION = POS)%>%
+#   left_join(chr_len_temp, by = "chr") %>%
+#   mutate(padded_pos = POSITION + pos_pad)
+# 
+# BayPass_Keys <- read_tsv("./data/BayPass/Intersect_keys.tsv")%>%
+#   rename(chr = CHROM, POSITION = POS)%>%
+#   left_join(chr_len_temp, by = "chr") %>%
+#   mutate(padded_pos = POSITION + pos_pad)
 
-BayPass_Keys <- read_tsv("./data/BayPass/Intersect_keys.tsv")%>%
-  rename(chr = CHROM, POSITION = POS)%>%
-  left_join(chr_len_temp, by = "chr") %>%
-  mutate(padded_pos = POSITION + pos_pad)
 
-p <- ggplot(data = Pi_data, aes(x = Pop_Index, y = PI))+
-  geom_violin(aes(fill = Pop_Index), alpha = 0.7, show.legend = FALSE)+
-  geom_boxplot(width = 0.2, outlier.shape = NA)+
-  scale_y_continuous(limits = c(0, 0.013))+
-  theme_bw()
 
-ggsave("./figures/Pi_TajD_output/Total_PI_Pop.png", width = 10, height = 5, dpi = 600)
-
-p <- ggplot(data = TajD_data, aes(x = Pop_Index, y = TajimaD))+
+p <- ggplot(data = TajD_data, aes(x = Pop_Index, y = TajimaD_median))+
   geom_violin(aes(fill = Pop_Index), alpha = 0.7, show.legend = FALSE)+
   geom_boxplot(width = 0.2, outlier.shape = NA)+
   theme_bw()
+
+p
+
 
 ggsave("./figures/Pi_TajD_output/Total_TajimaD_Pop.png", width = 10, height = 5, dpi = 600)
 
 
 p <- ggplot(data = PI_TajD, aes(x = PI_median, y = TajimaD_median, fill = Pop))+
   geom_point(aes(shape = I(shape_number)), show.legend = FALSE, size = 4)+
-  geom_text(aes(label = Pop_Index), size = 4, position = position_nudge(x = 0.000025, y = - 0.04), show.legend = FALSE)+
+  ggrepel::geom_text_repel(aes(label = Pop_Index), size = 4, show.legend = FALSE)+
+  labs(x = "Median Nucleotide Diversity (π)", y = "Median Tajima’s D")+
   theme_bw()
 p
 

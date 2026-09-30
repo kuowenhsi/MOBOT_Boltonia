@@ -29,7 +29,7 @@ Boltonia_metadata <- readxl::read_excel("Boltonia_all_metadata_20251010.xlsx")%>
   # mutate(Pop_Index = ifelse(Pop_Index %in% c("Pop_01", "Pop_02", "Pop_03"), "P2", "P1"))%>%
   mutate(Pop_Index = ifelse(str_detect(Sample_Species, "asteroides"), "asteroides", Pop_Index))%>%
   mutate(Pop_Index = ifelse(Sample_Species == "B. apalachicolensis", "apalachicolensis", Pop_Index))%>%
-  mutate(Pop_Index = ifelse(Sample_Name %in% c("Boltonia_492", "Boltonia_479", "Boltonia_483", "Boltonia_477", "Boltonia_467"), "hybrid", Pop_Index))
+  mutate(Pop_Index = ifelse(Sample_Name %in% c("Boltonia_492", "Boltonia_479", "Boltonia_483", "Boltonia_477"), "hybrid", Pop_Index))
   
   
 
@@ -59,14 +59,14 @@ p
 
 # ggsave("./figures/PCA_all.png", width =6 , height = 4)
 
-mydata.fam <- read_tsv("./data/Hybrid_Index/Boltonia_fstats_all.famoriginal", col_names = FALSE)%>%
+mydata.fam <- read_tsv("./data/Hybrid_Index/Dsamples_B484_B485_nomiss_FMISS001.famoriginal", col_names = FALSE)%>%
   left_join(Boltonia_metadata[,c(1,3)], by = c("X2" = "Sample_Name"))%>%
   mutate(X1 = Pop_Index)
 
-write_tsv(mydata.fam[,1:6], "./data/Hybrid_Index/Boltonia_fstats_all.fam", col_names = FALSE)
+write_tsv(mydata.fam[,1:6], "./data/Hybrid_Index/Dsamples_B484_B485_nomiss_FMISS001.fam", col_names = FALSE)
 
 
-prefix <- "./data/Hybrid_Index/Boltonia_fstats_all_FMISS001"  # clover_genotypes.bed/bim/fam
+prefix <- "./data/Hybrid_Index/Dsamples_B484_B485_nomiss_FMISS001"  # clover_genotypes.bed/bim/fam
 
 res <- f4(
   prefix,
@@ -82,13 +82,92 @@ res
 
 
 p <- ggplot(data = res, aes(x = pop2, y = z))+
-  geom_point(aes(color = pop1))+
+  geom_point(aes(fill = pop1, shape = pop1), size = 3)+
   geom_boxplot(width = 0.2, outlier.shape = NA, fill = NA)+
-  annotate(geom = "text", x = 1, y = Inf, label = "MAF > 0", vjust = 1.5, hjust = 0)+
-  theme_bw()
-
+  annotate(geom = "text", x = 1, y = Inf, label = "MAF > 0, 170217 SNPs", vjust = 1.5, hjust = 0)+
+  labs(x = "P2", y = "Z score of D (P3 <-> P2)", color = "P1")+
+  scale_shape_manual(values = rep(c(21, 22, 23, 24), length = 17))+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
 p
 
+library(ape)
+library(ggtree)
+
+## Newick for ((P1, P2), asteroides), apalachicolensis
+tree_text <- "(((P2_decurrens,P1_decurrens),P3_asteroides),O_apalachicolensis);"
+tr <- read.tree(text = tree_text)
+
+tr
+
+p_tree <- ggtree(tr) +
+  geom_tiplab() +
+  scale_x_continuous(expand = c(0,0,2,0))+
+  theme_tree()+
+  theme(panel.background = element_rect(fill = NA), plot.background = element_rect(fill = NA, color = NA))
+p_tree
+
+library(patchwork)
+p_with_tree <- p + inset_element(
+  p_tree,
+  left   = 0.7,  # adjust these four numbers to move/resize
+  bottom = 0,
+  right  = 1,
+  top    = 0.4
+)
+
+p_with_tree
+
+
+ggsave("./figures/Hybrid_Index/ABBA_MAF00_20260417.png", width = 12, height = 7, dpi = 600)
+
+
+res <- f4(
+  prefix,
+  pop1   = "asteroides",
+  pop2   = "hybrid",
+  pop3   = paste("Pop", str_pad(1:17, width = 2, pad = "0"), sep = "_"),
+  pop4   = "apalachicolensis",
+  f4mode = FALSE  # D-statistic = ABBA–BABA test
+)
+
+
+res
+
+p <- ggplot(data = res, aes(x = pop3, y = z))+
+  geom_point(size = 3)+
+  annotate(geom = "text", x = 1, y = Inf, label = "MAF > 0, 170217 SNPs", vjust = 1.5, hjust = 0)+
+  labs(x = "P3", y = "Z score of D (P3 <-> P2)", color = "P1")+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
+p
+
+## Newick for ((P1, P2), asteroides), apalachicolensis
+tree_text <- "(((P2_hybrid,P1_asteroides),P3_decurrens),O_apalachicolensis);"
+tr <- read.tree(text = tree_text)
+
+tr
+
+p_tree <- ggtree(tr) +
+  geom_tiplab() +
+  scale_x_continuous(expand = c(0,0,2,0))+
+  theme_tree()+
+  theme(panel.background = element_rect(fill = NA), plot.background = element_rect(fill = NA, color = NA))
+p_tree
+
+library(patchwork)
+p_with_tree <- p + inset_element(
+  p_tree,
+  left   = 0.7,  # adjust these four numbers to move/resize
+  bottom = 0.6,
+  right  = 1,
+  top    = 1
+)
+
+p_with_tree
+
+
+ggsave("./figures/Hybrid_Index/Boltonia_introgressed_to_asteroides_MAF00_20260417.png", width = 10, height = 7, dpi = 600)
 
 ####
 
@@ -166,32 +245,4 @@ p <- ggplot(data = res, aes(x = pop2, y = z))+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
 
 p
-library(ape)
-library(ggtree)
 
-## Newick for ((P1, P2), asteroides), apalachicolensis
-tree_text <- "(((P2,P1),P3_asteroides),O_apalachicolensis);"
-tr <- read.tree(text = tree_text)
-
-tr
-
-p_tree <- ggtree(tr) +
-  geom_tiplab() +
-  scale_x_continuous(expand = c(0,0,2,0))+
-  theme_tree()+
-  theme(panel.background = element_rect(fill = NA), plot.background = element_rect(fill = NA, color = NA))
-p_tree
-
-library(patchwork)
-p_with_tree <- p + inset_element(
-  p_tree,
-  left   = 0.7,  # adjust these four numbers to move/resize
-  bottom = 0,
-  right  = 1,
-  top    = 0.4
-)
-
-p_with_tree
-
-
-ggsave("./figures/Hybrid_Index/ABBA_MAF01_20251204.png", width = 10, height = 7, dpi = 600)

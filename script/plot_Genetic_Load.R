@@ -1,4 +1,5 @@
 library(tidyverse)
+library(ggpmisc)
 
 setwd("/Users/kuowenhsi/Library/CloudStorage/OneDrive-WashingtonUniversityinSt.Louis/MOBOT/MOBOT_Boltonia")
 
@@ -6,9 +7,47 @@ replace_126_127 <- function(x){
   case_when(x == "Boltonia_126" ~ "Boltonia_127", x == "Boltonia_127" ~ "Boltonia_126", TRUE ~ x)
 }
 
+read_psc <- function(path) {
+  lines <- readLines(path, warn = FALSE)
+  
+  # 1) first '# PSC...' header
+  hdr_line <- grep("^#\\s*PSC\\b", lines, value = TRUE)[2]
+  if (is.na(hdr_line)) stop("No '# PSC' header line found.")
+  header <- strsplit(sub("^#\\s*", "", hdr_line), "\t", fixed = TRUE)[[1]]
+  # strip bracketed indices like [2], [3], ...
+  header <- trimws(gsub("^\\[\\d+\\]", "", header))
+  
+  # 2) PSC data lines only
+  dat_lines <- grep("^PSC\\t", lines, value = TRUE)
+  if (length(dat_lines) == 0) stop("No 'PSC' data lines found.")
+  
+  # 3) read PSC block
+  tc <- textConnection(paste(dat_lines, collapse = "\n"))
+  on.exit(close(tc), add = TRUE)
+  df <- read.table(tc, sep = "\t", header = FALSE,
+                   quote = "", comment.char = "", stringsAsFactors = FALSE,
+                   na.strings = c(".", "NA"), check.names = FALSE)
+  colnames(df) <- header
+  
+  # 4) keep PSC + sample as character, numeric-ify the rest
+  keep_char <- intersect(c("PSC", "sample"), colnames(df))
+  num_cols <- setdiff(colnames(df), keep_char)
+  if (length(num_cols)) {
+    df[num_cols] <- lapply(df[num_cols], function(x) type.convert(x, as.is = TRUE))
+  }
+  
+  # quick sanity check
+  if (!"sample" %in% colnames(df)) {
+    warning("Column 'sample' not found after header normalization. Names are: ",
+            paste(colnames(df), collapse = ", "))
+  }
+  
+  df
+}
+
 Boltonia_metadata <- readxl::read_excel("Boltonia_all_metadata_20250815.xlsx", na = c("NA", "", "NA (NA)"))%>%
-  mutate(Pop = case_when(Pop == "Cooper Park (1995)" ~ "Cooper Park (2000)", TRUE ~ Pop))%>%
-  mutate(Sample_Name = replace_126_127(Sample_Name))
+  mutate(Pop = case_when(Pop == "Cooper Park (1995)" ~ "Cooper Park (2000)", TRUE ~ Pop))
+  
 
 Boltonia_metadata_Pop_Index <- Boltonia_metadata %>%
   group_by(Pop)%>%
@@ -22,7 +61,8 @@ Boltonia_metadata_Pop_Index <- Boltonia_metadata %>%
 
 Boltonia_metadata <- Boltonia_metadata %>%
   left_join(select(Boltonia_metadata_Pop_Index, c(1:2,4)), by = "Pop") %>%
-  select(Sample_Name, Pop, Pop_Index, everything())
+  select(Sample_Name, Pop, Pop_Index, everything())%>%
+  mutate(Sample_Name = replace_126_127(Sample_Name))
 
 
 ################
@@ -87,7 +127,7 @@ SIFT_total <-bind_rows(SIFT_combined %>% mutate(Load_type = "Total Load"),
                        SIFT_combined_homo %>% mutate(Load_type = "Homozygous Load"))
 
 
-write_csv(SIFT_total, "./data/SIFT_result/SIFT_total_20251013.csv")
+write_csv(SIFT_total, "./data/SIFT_result/SIFT_total_20260122.csv")
 
 
 ###############################
@@ -132,6 +172,15 @@ SIFT_combined_HET <- SIFT_combined %>%
 
 p <- ggplot(data = SIFT_combined_HET, aes(x = Heterozygosity, y = Pd/(Pn + Ps)))+
   geom_point(size = 1)+
+  stat_poly_line(formula = y ~ x, se = FALSE, color = "orange") +
+  stat_poly_eq(
+    formula = y ~ x,
+    use_label("eq", "R2", "p"),
+    parse = TRUE,
+    label.x = "left",   # left side
+    label.y = "top",     # near the top
+    size = 3.5
+  ) +
   theme_bw()
 
 p  
